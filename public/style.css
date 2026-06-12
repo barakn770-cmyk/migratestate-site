@@ -122,6 +122,7 @@ section{padding:72px 0}
 .byline{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14.5px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px}
 .byline .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dark));display:grid;place-items:center;color:#fff;font-weight:700;font-family:'Fraunces',serif}
 .article-body{font-size:18px}
+.article-body p,.article-body li{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
 .article-body h2{font-size:28px;margin:42px 0 14px;padding-top:8px}
 .article-body h3{font-size:21px;margin:28px 0 10px}
 .answer-box{background:var(--cream);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;font-size:18px}
