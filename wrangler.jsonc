@@ -1,0 +1,11 @@
+{
+  // Cloudflare Worker (static assets) config for migratestate.com
+  // On every push to the connected GitHub repo, Cloudflare Workers Builds
+  // runs `wrangler deploy`, which uploads everything in ./public as the
+  // site's static assets. No build step is required.
+  "name": "migratestate",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
