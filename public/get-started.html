@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-46194TH8M5"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-46194TH8M5');</script>
+<title>Get Matched with a Vetted Expert | MigrateState</title>
+<meta name="description" content="Tell us about your overseas property or residency plans and get matched, free, with vetted lawyers, brokers and advisers for your target country.">
+<link rel="canonical" href="https://migratestate.com/get-started">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Get Matched with a Vetted Expert | MigrateState">
+<meta property="og:description" content="Free matching with vetted lawyers, brokers and advisers for buying property or residency abroad.">
+<meta property="og:url" content="https://migratestate.com/get-started">
+<meta property="og:site_name" content="MigrateState">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .lead-wrap{max-width:760px;margin:0 auto;padding:40px 24px 72px}
+  .lead-form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);margin-top:6px}
+  .lead-form .row{margin:0 0 18px}
+  .lead-form label{display:block;font-weight:600;color:var(--navy);font-size:15px;margin:0 0 7px}
+  .lead-form input[type=text],.lead-form input[type=email],.lead-form input[type=tel],.lead-form select{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff}
+  .lead-form input:focus,.lead-form select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,162,74,.15)}
+  .lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);margin:6px 0 20px;line-height:1.5}
+  .consent input{margin-top:3px;width:18px;height:18px;flex:none}
+  .lead-form button{width:100%;font-size:17px;padding:15px}
+  .trust-row{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin:14px 0 0}
+  .trust-row span{display:flex;align-items:center;gap:7px}
+  .partners{background:var(--cream);border-radius:16px;padding:26px;margin:34px 0 0}
+  .partners h2{font-size:22px;margin:0 0 6px}
+  .partners p{color:var(--muted);margin:0 0 18px;font-size:15.5px}
+  .partner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .partner{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .partner h3{font-size:16px;margin:0 0 4px}
+  .partner p{font-size:14px;color:var(--muted);margin:0 0 10px}
+  .partner a{font-weight:600;color:var(--gold-dark);font-size:14px}
+  @media(max-width:680px){.lead-grid,.partner-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="mark">M</span> MigrateState</a>
+    <nav class="nav-links">
+      <a href="index.html#guides">All Guides</a>
+      <a href="index.html#guides">Buy Property</a>
+      <a href="index.html#about">About</a>
+      <a class="btn nav-cta" href="get-started.html">Get Matched</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<article class="lead-wrap">
+  <div class="breadcrumb"><a href="index.html">Home</a> › Get Started</div>
+  <span class="eyebrow">Free matching</span>
+  <h1 style="font-size:clamp(28px,4vw,40px);margin:8px 0 12px;line-height:1.18">Get matched with a vetted expert for your move</h1>
+  <p style="color:var(--muted);font-size:18px;max-width:60ch;margin:0 0 8px">Tell us about your plans and we'll connect you — at no cost — with vetted, independent professionals for your target country: property lawyers, cross-border mortgage brokers, tax advisers and licensed residency/Golden-Visa specialists.</p>
+
+  <div class="trust-row">
+    <span>✦ Lawyer-reviewed network</span>
+    <span>✦ No obligation</span>
+    <span>✦ Your data stays private</span>
+  </div>
+
+  <form class="lead-form" id="lead-form" onsubmit="return msLead(event)">
+    <div class="lead-grid">
+      <div class="row">
+        <label for="lf-name">Full name</label>
+        <input type="text" id="lf-name" name="fields[name]" autocomplete="name" required>
+      </div>
+      <div class="row">
+        <label for="lf-email">Email</label>
+        <input type="email" id="lf-email" name="fields[email]" autocomplete="email" required>
+      </div>
+    </div>
+    <div class="lead-grid">
+      <div class="row">
+        <label for="lf-phone">Phone (with country code)</label>
+        <input type="tel" id="lf-phone" name="fields[phone]" autocomplete="tel" placeholder="+1 ...">
+      </div>
+      <div class="row">
+        <label for="lf-nationality">Your nationality / citizenship</label>
+        <input type="text" id="lf-nationality" name="fields[nationality]" placeholder="e.g. American, British, Israeli…">
+      </div>
+    </div>
+    <div class="lead-grid">
+      <div class="row">
+        <label for="lf-goal">I'm interested in</label>
+        <select id="lf-goal" name="fields[goal]" required>
+          <option value="">Select…</option>
+          <option>Buying property</option>
+          <option>Residency / Golden Visa</option>
+          <option>Both property &amp; residency</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="lf-country">Target country / region</label>
+        <select id="lf-country" name="fields[country]" required>
+          <option value="">Select…</option>
+          <option>Portugal</option>
+          <option>Spain</option>
+          <option>Greece</option>
+          <option>Italy</option>
+          <option>Mexico</option>
+          <option>Dubai / UAE</option>
+          <option>Still deciding</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="lead-grid">
+      <div class="row">
+        <label for="lf-budget">Budget</label>
+        <select id="lf-budget" name="fields[budget]" required>
+          <option value="">Select…</option>
+          <option>Under $250K</option>
+          <option>$250K – $500K</option>
+          <option>$500K – $1M</option>
+          <option>$1M+</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="lf-timeline">Timeline</label>
+        <select id="lf-timeline" name="fields[timeline]" required>
+          <option value="">Select…</option>
+          <option>Ready in 0–3 months</option>
+          <option>3–6 months</option>
+          <option>6–12 months</option>
+          <option>Just researching</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <label for="lf-financing">Financing</label>
+      <select id="lf-financing" name="fields[financing]">
+        <option value="">Select…</option>
+        <option>Paying cash</option>
+        <option>Will need a mortgage</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+
+    <label class="consent">
+      <input type="checkbox" id="lf-consent" required>
+      <span>I agree that MigrateState may contact me about my enquiry and may share the details I provide with vetted partner professionals (such as lawyers, brokers and advisers) relevant to my request, as described in the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. I can withdraw consent at any time.</span>
+    </label>
+
+    <button class="btn" type="submit">Match me with an expert →</button>
+    <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">No spam. We never sell your data to mass lists — your details are shared only with the specific vetted partners relevant to your enquiry, with your consent.</p>
+    <p class="ms-success" style="display:none;color:var(--green);font-weight:600;font-size:17px;margin:10px 0 0">✓ Thank you — your request is in. A relevant vetted specialist will be in touch shortly.</p>
+  </form>
+  <script>
+  function msLead(e){
+    e.preventDefault();
+    var f=e.target;
+    if(!document.getElementById('lf-consent').checked){return false;}
+    var b=f.querySelector('button'),d=new FormData(f);
+    d.append('ml-submit','1');d.append('anticsrf','true');
+    b.textContent='Sending…';b.disabled=true;
+    // NOTE: posts to the MigrateState MailerLite form (same account as the newsletter).
+    // For full lead routing, create a dedicated MailerLite group/form or connect Zapier → your CRM / lead buyer.
+    fetch('https://assets.mailerlite.com/jsonp/2428927/forms/190085025285276727/subscribe',{method:'POST',body:d,mode:'no-cors'})
+      .finally(function(){
+        var s=f.querySelector('.ms-success'); if(s){s.style.display='block';}
+        Array.prototype.forEach.call(f.querySelectorAll('.row,.consent,button'),function(el){el.style.display='none';});
+        if(window.gtag){gtag('event','generate_lead',{form:'get-started'});}
+      });
+    return false;
+  }
+  </script>
+
+  <!-- AFFILIATE PARTNERS — replace the '#' hrefs with your real affiliate/referral links once you've joined each program. -->
+  <div class="partners">
+    <h2>Trusted services for buying abroad</h2>
+    <p>While we match you with experts, these are the tools most overseas buyers need. (We may earn a commission, at no extra cost to you.)</p>
+    <div class="partner-grid">
+      <div class="partner">
+        <h3>Send money abroad at the real rate</h3>
+        <p>Skip the 3–4% bank markup on your deposit and purchase funds with a specialist FX/transfer service.</p>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Compare transfer options →</a>
+      </div>
+      <div class="partner">
+        <h3>Golden Visa &amp; residency specialists</h3>
+        <p>Licensed advisers who handle qualifying investments, paperwork and timelines end-to-end.</p>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Explore programs →</a>
+      </div>
+      <div class="partner">
+        <h3>Cross-border mortgage brokers</h3>
+        <p>Non-resident financing in Spain, Portugal, Mexico and beyond — pre-qualify before you offer.</p>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Check your options →</a>
+      </div>
+      <div class="partner">
+        <h3>International tax &amp; FBAR/FATCA help</h3>
+        <p>Cross-border CPAs who model the US (or your home-country) tax before you sign.</p>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Find an adviser →</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">MigrateState</div>
+        <p style="max-width:34ch">The legal &amp; tax-first guide for Americans buying property and residency abroad.</p>
+      </div>
+      <div><h4>Buy Property</h4><a href="mexico.html">Mexico</a><a href="buying-property-portugal.html">Portugal</a><a href="buying-property-spain.html">Spain</a><a href="buying-property-dubai.html">Dubai (UAE)</a></div>
+      <div><h4>Residency</h4><a href="portugal-golden-visa.html">Portugal Golden Visa</a><a href="greece-golden-visa.html">Greece Golden Visa</a><a href="greece-vs-portugal-golden-visa.html">Greece vs Portugal</a></div>
+      <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="index.html#about">About</a></div>
+    </div>
+    <div class="disclaimer">
+      © 2026 MigrateState. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html" style="display:inline">Privacy</a> · <a href="terms.html" style="display:inline">Terms</a><br>
+      <strong>Disclaimer:</strong> MigrateState provides general information for educational purposes only and does not constitute legal, tax, or investment advice. Rules vary by country and change frequently. Always consult a qualified attorney and a cross-border tax advisor before making a purchase or relocation decision. Some links may be affiliate links, which may earn us a commission at no extra cost to you.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.menu-toggle').addEventListener('click',function(){
+  var n=document.querySelector('.nav-links');
+  n.style.display=(n.style.display==='flex')?'none':'flex';
+  n.style.flexDirection='column';n.style.position='absolute';n.style.top='72px';n.style.right='24px';
+  n.style.background='#fff';n.style.padding='18px 22px';n.style.borderRadius='12px';n.style.boxShadow='0 24px 60px rgba(15,42,67,.14)';
+});
+</script>
+<script src="anim.js" defer></script>
+</body>
+</html>
