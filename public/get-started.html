@@ -162,17 +162,23 @@
     e.preventDefault();
     var f=e.target;
     if(!document.getElementById('lf-consent').checked){return false;}
-    var b=f.querySelector('button'),d=new FormData(f);
-    d.append('ml-submit','1');d.append('anticsrf','true');
-    b.textContent='Sending…';b.disabled=true;
-    // NOTE: posts to the MigrateState MailerLite form (same account as the newsletter).
-    // For full lead routing, create a dedicated MailerLite group/form or connect Zapier → your CRM / lead buyer.
-    fetch('https://assets.mailerlite.com/jsonp/2428927/forms/190085025285276727/subscribe',{method:'POST',body:d,mode:'no-cors'})
-      .finally(function(){
-        var s=f.querySelector('.ms-success'); if(s){s.style.display='block';}
-        Array.prototype.forEach.call(f.querySelectorAll('.row,.consent,button'),function(el){el.style.display='none';});
-        if(window.gtag){gtag('event','generate_lead',{form:'get-started'});}
-      });
+    var b=f.querySelector('button');
+    function v(id){var el=document.getElementById(id);return el&&el.value?(''+el.value).trim():'';}
+    var full=v('lf-name'), sp=full.indexOf(' ');
+    var first=sp>0?full.slice(0,sp):full, last=sp>0?full.slice(sp+1):'';
+    var msg='Goal: '+v('lf-goal')+' | Target country: '+v('lf-country')+' | Budget: '+v('lf-budget')+' | Timeline: '+v('lf-timeline')+' | Financing: '+v('lf-financing')+' | Nationality: '+v('lf-nationality');
+    var payload={fields:[
+      {name:'email',value:v('lf-email')},
+      {name:'firstname',value:first},
+      {name:'lastname',value:last},
+      {name:'phone',value:v('lf-phone')},
+      {name:'message',value:msg}
+    ],context:{pageUri:location.href,pageName:document.title}};
+    b.textContent='Sending...';b.disabled=true;
+    function done(){var s=f.querySelector('.ms-success');if(s){s.style.display='block';}Array.prototype.forEach.call(f.querySelectorAll('.row,.consent,button'),function(el){el.style.display='none';});if(window.gtag){gtag('event','generate_lead',{form:'get-started'});}}
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/148691139/257410c6-8798-4a99-82a2-21f52b77faa9',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){if(r&&!r.ok){return fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/148691139/257410c6-8798-4a99-82a2-21f52b77faa9',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}})
+      .catch(function(){}).finally(done);
     return false;
   }
   </script>
