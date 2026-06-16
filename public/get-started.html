@@ -16,7 +16,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148691139.js"></script>
 <link rel="stylesheet" href="style.css">
 <style>
   .lead-wrap{max-width:760px;margin:0 auto;padding:40px 24px 72px}
@@ -162,23 +161,17 @@
     e.preventDefault();
     var f=e.target;
     if(!document.getElementById('lf-consent').checked){return false;}
-    var b=f.querySelector('button');
-    function v(id){var el=document.getElementById(id);return el&&el.value?(''+el.value).trim():'';}
-    var full=v('lf-name'), sp=full.indexOf(' ');
-    var first=sp>0?full.slice(0,sp):full, last=sp>0?full.slice(sp+1):'';
-    var msg='Goal: '+v('lf-goal')+' | Target country: '+v('lf-country')+' | Budget: '+v('lf-budget')+' | Timeline: '+v('lf-timeline')+' | Financing: '+v('lf-financing')+' | Nationality: '+v('lf-nationality');
-    var payload={fields:[
-      {name:'email',value:v('lf-email')},
-      {name:'firstname',value:first},
-      {name:'lastname',value:last},
-      {name:'phone',value:v('lf-phone')},
-      {name:'message',value:msg}
-    ],context:{pageUri:location.href,pageName:document.title}};
-    b.textContent='Sending...';b.disabled=true;
-    function done(){var s=f.querySelector('.ms-success');if(s){s.style.display='block';}Array.prototype.forEach.call(f.querySelectorAll('.row,.consent,button'),function(el){el.style.display='none';});if(window.gtag){gtag('event','generate_lead',{form:'get-started'});}}
-    fetch('https://api.hsforms.com/submissions/v3/integration/submit/148691139/257410c6-8798-4a99-82a2-21f52b77faa9',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-      .then(function(r){if(r&&!r.ok){return fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/148691139/257410c6-8798-4a99-82a2-21f52b77faa9',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}})
-      .catch(function(){}).finally(done);
+    var b=f.querySelector('button'),d=new FormData(f);
+    d.append('ml-submit','1');d.append('anticsrf','true');
+    b.textContent='Sending…';b.disabled=true;
+    // NOTE: posts to the MigrateState MailerLite form (same account as the newsletter).
+    // For full lead routing, create a dedicated MailerLite group/form or connect Zapier → your CRM / lead buyer.
+    fetch('https://assets.mailerlite.com/jsonp/2428927/forms/190085025285276727/subscribe',{method:'POST',body:d,mode:'no-cors'})
+      .finally(function(){
+        var s=f.querySelector('.ms-success'); if(s){s.style.display='block';}
+        Array.prototype.forEach.call(f.querySelectorAll('.row,.consent,button'),function(el){el.style.display='none';});
+        if(window.gtag){gtag('event','generate_lead',{form:'get-started'});}
+      });
     return false;
   }
   </script>
@@ -191,22 +184,22 @@
       <div class="partner">
         <h3>Send money abroad at the real rate</h3>
         <p>Skip the 3–4% bank markup on your deposit and purchase funds with a specialist FX/transfer service.</p>
-        <a href="#lead-form" rel="nofollow">Compare transfer options →</a>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Compare transfer options →</a>
       </div>
       <div class="partner">
         <h3>Golden Visa &amp; residency specialists</h3>
         <p>Licensed advisers who handle qualifying investments, paperwork and timelines end-to-end.</p>
-        <a href="#lead-form" rel="nofollow">Explore programs →</a>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Explore programs →</a>
       </div>
       <div class="partner">
         <h3>Cross-border mortgage brokers</h3>
         <p>Non-resident financing in Spain, Portugal, Mexico and beyond — pre-qualify before you offer.</p>
-        <a href="#lead-form" rel="nofollow">Check your options →</a>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Check your options →</a>
       </div>
       <div class="partner">
         <h3>International tax &amp; FBAR/FATCA help</h3>
         <p>Cross-border CPAs who model the US (or your home-country) tax before you sign.</p>
-        <a href="#lead-form" rel="nofollow">Find an adviser →</a>
+        <a href="#" rel="sponsored nofollow noopener" target="_blank">Find an adviser →</a>
       </div>
     </div>
   </div>
