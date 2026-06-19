@@ -186,7 +186,7 @@ tr:last-child td{border-bottom:none}
 }
 
 /* Country tiles */
-.country-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:48px}
+.country-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:16px;margin-bottom:48px}
 .ctile{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;transition:.22s;background:#fff}
 .ctile:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
 .ctile-name{flex:0 0 33.33%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:var(--navy);border-bottom:1px solid var(--line);padding:0 8px;text-align:center;min-height:52px}
