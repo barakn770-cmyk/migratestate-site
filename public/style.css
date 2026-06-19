@@ -184,3 +184,21 @@ tr:last-child td{border-bottom:none}
 
   .answer-box{animation:msFadeUp .6s .1s both}
 }
+
+/* Country tiles */
+.country-tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:48px}
+.ctile{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;transition:.22s;background:#fff}
+.ctile:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.ctile-name{flex:0 0 33.33%;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:600;font-size:15px;color:var(--navy);border-bottom:1px solid var(--line);padding:0 8px;text-align:center;min-height:52px}
+.ctile-flag{flex:0 0 66.66%;display:flex;align-items:center;justify-content:center;font-size:54px;background:var(--cream);min-height:104px;line-height:1}
+@media(max-width:880px){.country-tiles{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.country-tiles{grid-template-columns:repeat(2,1fr)}}
+
+/* Country landing page */
+.country-hero{background:linear-gradient(160deg,#0f2a43,#163a5c);color:#fff;padding:56px 0 64px;text-align:center}
+.country-hero .flag-lg{font-size:80px;line-height:1;display:block;margin-bottom:14px}
+.country-hero h1{color:#fff;font-size:clamp(30px,4vw,46px);margin:0 0 8px}
+.country-hero p{color:#d7e1ec;font-size:18px;margin:0}
+.country-guides{padding:60px 0}
+.country-guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:880px){.country-guide-grid{grid-template-columns:1fr}}
