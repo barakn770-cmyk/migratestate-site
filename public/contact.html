@@ -32,12 +32,22 @@
   .contact-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);margin-top:14px}
   .trust-row{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin:14px 0 0}
   .trust-row span{display:flex;align-items:center;gap:7px}
-  .direct-email{background:var(--cream);border-radius:14px;padding:20px 22px;margin:22px 0 0}
-  .direct-email h2{font-size:19px;margin:0 0 6px}
-  .direct-email p{color:var(--muted);margin:0;font-size:15.5px}
-  .direct-email a{font-weight:600;color:var(--gold-dark)}
+  .c-form .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .c-form .c-row{margin:0 0 18px}
+  .c-form label{display:block;font-weight:600;color:var(--navy);font-size:15px;margin:0 0 7px}
+  .c-form input[type=text],.c-form input[type=email],.c-form input[type=tel],.c-form textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff;box-sizing:border-box}
+  .c-form textarea{resize:vertical;min-height:120px}
+  .c-form input:focus,.c-form textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,162,74,.15)}
+  .c-consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);margin:6px 0 20px;line-height:1.5}
+  .c-consent input{margin-top:3px;width:18px;height:18px;flex:none}
+  .c-form button{width:100%;font-size:17px;padding:15px}
+  .c-note{font-size:12.5px;color:var(--muted);margin:12px 0 0}
+  .c-success{color:var(--green);font-weight:600;font-size:17px;margin:8px 0 0}
+  .c-error{color:#b3261e;font-weight:500;font-size:15px;margin:10px 0 0}
+  .c-hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
   .alt-cta{margin:26px 0 0;font-size:15.5px;color:var(--muted)}
-  #hs-form-fallback{display:none;color:var(--muted);font-size:15.5px;line-height:1.6}
+  @media(max-width:680px){.c-form .c-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -69,13 +79,47 @@
   </div>
 
   <div class="contact-card">
-    <!-- Native HubSpot form renders here once the form GUID is set below -->
-    <div id="hs-contact-form"></div>
-    <div id="hs-form-fallback">
-      The contact form is being finalized. In the meantime, please email us directly at
-      <a href="mailto:barakn770@gmail.com?subject=Enquiry%20via%20MigrateState">barakn770@gmail.com</a>
-      and we'll reply within two business days.
-    </div>
+    <form id="contact-form" class="c-form" novalidate>
+      <div class="c-grid">
+        <div class="c-row">
+          <label for="cf-first">First name</label>
+          <input id="cf-first" name="firstname" type="text" autocomplete="given-name" required>
+        </div>
+        <div class="c-row">
+          <label for="cf-last">Last name</label>
+          <input id="cf-last" name="lastname" type="text" autocomplete="family-name">
+        </div>
+      </div>
+      <div class="c-grid">
+        <div class="c-row">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="c-row">
+          <label for="cf-phone">Phone (optional)</label>
+          <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 ...">
+        </div>
+      </div>
+      <div class="c-row">
+        <label for="cf-msg">Message</label>
+        <textarea id="cf-msg" name="message" rows="5" required></textarea>
+      </div>
+
+      <div class="c-hp" aria-hidden="true">
+        <label for="cf-website">Leave this field empty</label>
+        <input id="cf-website" type="text" name="company_website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <label class="c-consent">
+        <input type="checkbox" id="cf-consent" required>
+        <span>I agree that MigrateState may contact me about my enquiry, as described in the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. I can withdraw consent at any time.</span>
+      </label>
+
+      <button class="btn" type="submit">Send message &rarr;</button>
+      <p class="c-note">We usually reply within two business days. No spam — your details are used only to respond to your enquiry.</p>
+      <p class="c-success" hidden>&#10003; Thank you — your message is on its way. We'll reply within two business days.</p>
+      <p class="c-error" hidden>Sorry — something went wrong sending the form. Please email us directly at <a href="mailto:barakn770@gmail.com?subject=Enquiry%20via%20MigrateState">barakn770@gmail.com</a>.</p>
+    </form>
   </div>
 
   <p class="alt-cta">Ready to move forward? You can also <a href="get-started.html" style="font-weight:600;color:var(--gold-dark)">get matched with a vetted expert &rarr;</a> for your target country.</p>
@@ -83,27 +127,55 @@
 
 <script>
 (function(){
-  // === To activate the embedded HubSpot contact form: paste the form GUID below ===
-  var FORM_ID = "257410c6-8798-4a99-82a2-21f52b77faa9";
-  if (FORM_ID && FORM_ID.indexOf("REPLACE_") === -1) {
-    var s = document.createElement("script");
-    s.src = "https://js-eu1.hsforms.net/forms/embed/v2.js";
-    s.async = true;
-    s.onload = function () {
-      if (window.hbspt && window.hbspt.forms) {
-        window.hbspt.forms.create({
-          region: "eu1",
-          portalId: "148691139",
-          formId: FORM_ID,
-          target: "#hs-contact-form"
-        });
-        if (window.gtag) { gtag("event", "view_contact_form"); }
-      }
-    };
-    document.head.appendChild(s);
-  } else {
-    document.getElementById("hs-form-fallback").style.display = "block";
+  var form = document.getElementById("contact-form");
+  if (!form) return;
+  var PORTAL = "148691139";
+  var GUID = "257410c6-8798-4a99-82a2-21f52b77faa9";
+  var ENDPOINT = "https://api-eu1.hsforms.com/submissions/v3/integration/submit/" + PORTAL + "/" + GUID;
+
+  function val(n){ var el = form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ""; }
+  function showSuccess(){
+    Array.prototype.forEach.call(form.querySelectorAll(".c-grid,.c-row,.c-consent,button,.c-note"), function(el){ el.style.display = "none"; });
+    var s = form.querySelector(".c-success"); if (s) s.hidden = false;
+    if (window.gtag) gtag("event", "generate_lead", { form: "contact" });
   }
+  function showError(){
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn){ btn.textContent = "Send message →"; btn.disabled = false; }
+    var er = form.querySelector(".c-error"); if (er) er.hidden = false;
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!document.getElementById("cf-consent").checked) return;
+    // Honeypot: silently accept (don't notify) if a bot filled the hidden field
+    if (val("company_website")) { showSuccess(); return; }
+    if (!val("firstname") || !val("email") || !val("message")) return;
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.textContent = "Sending…"; btn.disabled = true;
+
+    var fields = [
+      { name: "firstname", value: val("firstname") },
+      { name: "lastname",  value: val("lastname")  },
+      { name: "email",     value: val("email")     },
+      { name: "phone",     value: val("phone")     },
+      { name: "message",   value: val("message")   }
+    ].filter(function(f){ return f.value; });
+
+    var payload = {
+      fields: fields,
+      context: { pageUri: location.href, pageName: document.title }
+    };
+
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){ if (r.ok) { showSuccess(); } else { showError(); } })
+    .catch(showError);
+  });
 })();
 </script>
 
