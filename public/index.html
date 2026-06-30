@@ -395,6 +395,7 @@
   if(toggle && menu && close){
     toggle.addEventListener('click', () => menu.classList.add('open'));
     close.addEventListener('click', () => menu.classList.remove('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
   }
 </script>
 <script src="anim.js" defer></script>
