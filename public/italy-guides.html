@@ -101,6 +101,18 @@
       <a class="btn nav-cta" href="get-started.html">Get Matched</a>
   </nav>
 </div>
+<script>
+  (function(){
+    var toggle=document.querySelector('.menu-toggle');
+    var menu=document.getElementById('mobileMenu');
+    var close=document.getElementById('menuClose');
+    if(toggle&&menu){
+      toggle.addEventListener('click',function(){menu.classList.add('open');});
+      if(close)close.addEventListener('click',function(){menu.classList.remove('open');});
+      menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+    }
+  })();
+</script>
 <script src="anim.js"></script>
 </body>
 </html>
