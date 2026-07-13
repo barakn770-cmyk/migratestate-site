@@ -231,3 +231,11 @@ tr:last-child td{border-bottom:none}
 .mobile-menu a:hover{color:var(--gold-dark)}
 .mobile-menu .btn{align-self:flex-start}
 .menu-close{position:absolute;top:22px;right:26px;background:none;border:none;font-size:30px;line-height:1;color:var(--navy);cursor:pointer}
+
+/* Footer country-hub index */
+.footer-hubs{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:22px}
+.footer-hubs h4{margin:0 0 10px;font-size:14px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}
+.footer-hubs nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+.footer-hubs nav a{font-size:14px;opacity:.8;text-decoration:none}
+.footer-hubs nav a:hover{opacity:1;text-decoration:underline}
+@media(max-width:640px){.footer-hubs nav{gap:8px 14px}.footer-hubs nav a{font-size:13px}}

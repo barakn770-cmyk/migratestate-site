@@ -19,33 +19,111 @@
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type":"Article",
-      "headline":"Capital Gains Tax on Property Abroad (2026)",
-      "description":"A 2026 guide to US capital gains tax when a US citizen sells property abroad — the 0/15/20% long-term rates plus 3.8% NIIT, the Section 121 home-sale exclusion, depreciation recapture, the foreign tax credit and its rate-differential shortfall, and the Section 988 currency gain computed in US dollars.",
-      "datePublished":"2026-06-14",
-      "dateModified":"2026-06-14",
-      "author":{"@type":"Organization","name":"MigrateState Editorial Team"},
-      "publisher":{"@type":"Organization","name":"MigrateState"},
-      "inLanguage":"en-US",
-      "mainEntityOfPage":"https://migratestate.com/capital-gains-property-abroad"
+      "@type": "Article",
+      "headline": "Capital Gains Tax on Property Abroad (2026)",
+      "description": "A 2026 guide to US capital gains tax when a US citizen sells property abroad — the 0/15/20% long-term rates plus 3.8% NIIT, the Section 121 home-sale exclusion, depreciation recapture, the foreign tax credit and its rate-differential shortfall, and the Section 988 currency gain computed in US dollars.",
+      "datePublished": "2026-06-14",
+      "dateModified": "2026-06-14",
+      "author": {
+        "@type": "Organization",
+        "name": "MigrateState Editorial Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MigrateState"
+      },
+      "inLanguage": "en-US",
+      "mainEntityOfPage": "https://migratestate.com/capital-gains-property-abroad",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://migratestate.com/og/capital-gains-property-abroad.png",
+        "width": 1200,
+        "height": 630
+      }
     },
     {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"Do US citizens pay capital gains tax when they sell property abroad?","acceptedAnswer":{"@type":"Answer","text":"Yes. The US taxes citizens and green-card holders on worldwide income, so a gain on foreign real estate is reported on Schedule D and Form 8949 just like a US sale, even if the property was also taxed in the country where it sits. A long-term gain (held over one year) is taxed at 0%, 15% or 20%, plus the 3.8% Net Investment Income Tax for higher earners. A foreign tax credit usually softens, but does not always erase, the US bill."}},
-        {"@type":"Question","name":"Does the Section 121 home-sale exclusion apply to a foreign home?","acceptedAnswer":{"@type":"Answer","text":"Yes. The IRS applies Section 121 to a foreign principal residence the same way it does to a US one. If you owned and used the property as your main home for at least 730 days within the five years ending on the sale, you can exclude up to $250,000 of gain (single) or $500,000 (married filing jointly). Time the property spent as a rental after 2008 is non-qualified use and can reduce the exclusion, and depreciation you claimed is recaptured separately."}},
-        {"@type":"Question","name":"How is the gain on foreign property calculated for US tax?","acceptedAnswer":{"@type":"Answer","text":"The gain is computed entirely in US dollars. You translate your purchase price (and capital improvements) into dollars at the exchange rate on the purchase date, and the sale proceeds into dollars at the rate on the sale date. Because of this, currency movement alone can create or enlarge a taxable gain even when the property barely rose in local-currency terms — a trap that surprises sellers in years when the dollar weakened against the local currency."}},
-        {"@type":"Question","name":"Will the foreign tax credit cancel my US capital gains tax?","acceptedAnswer":{"@type":"Answer","text":"Not always. Three things commonly leave a US bill standing: the foreign country may exempt a long-held or primary residence (so there is no foreign tax to credit), the credit on a preferentially taxed long-term gain is shrunk by the Form 1116 rate-differential adjustment, and the credit sits in the passive basket, so any excess cannot offset wage income and may simply expire. When the local rate is low or zero, expect to write a US check."}},
-        {"@type":"Question","name":"Do I have to report the sale if I owe no US tax?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. The sale is reportable even if a credit or the Section 121 exclusion reduces your US tax to zero. The one common exception is a principal residence whose entire gain is excluded under Section 121 where you did not receive a Form 1099-S. Beyond the income tax, remember the related reporting — FBAR and Form 8938 on the accounts that receive the proceeds — which exists regardless of whether any tax is due."}}
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do US citizens pay capital gains tax when they sell property abroad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The US taxes citizens and green-card holders on worldwide income, so a gain on foreign real estate is reported on Schedule D and Form 8949 just like a US sale, even if the property was also taxed in the country where it sits. A long-term gain (held over one year) is taxed at 0%, 15% or 20%, plus the 3.8% Net Investment Income Tax for higher earners. A foreign tax credit usually softens, but does not always erase, the US bill."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Section 121 home-sale exclusion apply to a foreign home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The IRS applies Section 121 to a foreign principal residence the same way it does to a US one. If you owned and used the property as your main home for at least 730 days within the five years ending on the sale, you can exclude up to $250,000 of gain (single) or $500,000 (married filing jointly). Time the property spent as a rental after 2008 is non-qualified use and can reduce the exclusion, and depreciation you claimed is recaptured separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the gain on foreign property calculated for US tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The gain is computed entirely in US dollars. You translate your purchase price (and capital improvements) into dollars at the exchange rate on the purchase date, and the sale proceeds into dollars at the rate on the sale date. Because of this, currency movement alone can create or enlarge a taxable gain even when the property barely rose in local-currency terms — a trap that surprises sellers in years when the dollar weakened against the local currency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will the foreign tax credit cancel my US capital gains tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always. Three things commonly leave a US bill standing: the foreign country may exempt a long-held or primary residence (so there is no foreign tax to credit), the credit on a preferentially taxed long-term gain is shrunk by the Form 1116 rate-differential adjustment, and the credit sits in the passive basket, so any excess cannot offset wage income and may simply expire. When the local rate is low or zero, expect to write a US check."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to report the sale if I owe no US tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually yes. The sale is reportable even if a credit or the Section 121 exclusion reduces your US tax to zero. The one common exception is a principal residence whose entire gain is excluded under Section 121 where you did not receive a Form 1099-S. Beyond the income tax, remember the related reporting — FBAR and Form 8938 on the accounts that receive the proceeds — which exists regardless of whether any tax is due."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://migratestate.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "General Guides: Buying Property & Residency Abroad",
+          "item": "https://migratestate.com/general-guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Capital Gains Tax on Property Abroad 2026",
+          "item": "https://migratestate.com/capital-gains-property-abroad"
+        }
       ]
     }
   ]
 }
 </script>
-</head>
+
+<meta property="og:image" content="https://migratestate.com/og/capital-gains-property-abroad.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Capital Gains Tax on Property Abroad 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capital Gains Tax on Property Abroad (2026)">
+<meta name="twitter:description" content="A lawyer-reviewed 2026 guide to US capital gains tax when you sell property abroad — the rates, the Section 121 exclusion, the foreign tax credit's hidden shortfall, and the currency-gain trap most sellers miss.">
+<meta name="twitter:image" content="https://migratestate.com/og/capital-gains-property-abroad.png"></head>
 <body>
 
 <header class="site-header">
@@ -63,7 +141,7 @@
 </header>
 
 <article class="article-wrap">
-  <div class="breadcrumb"><a href="/">Home</a> › <a href="/#guides">Money &amp; Tax</a> › Capital Gains on Property Abroad</div>
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="general-guides">Guides</a> › Capital Gains on Property Abroad</div>
 
   <span class="eyebrow">Money &amp; Tax · United States</span>
   <h1>Capital Gains Tax on Property Abroad (2026)</h1>
@@ -171,6 +249,11 @@
       <p>Usually yes — the sale is reportable even if a credit or Section 121 drops your tax to zero. The common exception is a principal residence fully excluded under Section 121 where you got no Form 1099-S. Separately, remember FBAR and Form 8938 on the accounts receiving the proceeds, which apply regardless of tax due.</p>
     </div>
   </div>
+  <div class="related-guides" style="margin:40px 0 8px;padding:22px 26px;background:#f7f9fc;border:1px solid #e7ecf3;border-radius:14px">
+      <strong style="display:block;margin-bottom:8px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#8a6d2f">Related guides</strong>
+      <a style="display:block;padding:6px 0;font-weight:600;color:#16324f;text-decoration:none" href="holding-property-abroad-llc-vs-personal">How your ownership structure changes the tax &rarr;</a>
+      <a style="display:block;padding:6px 0;font-weight:600;color:#16324f;text-decoration:none" href="foreign-rental-income-us-tax">Foreign rental income: US reporting rules &rarr;</a>
+  </div>
 </article>
 
 <footer class="site-footer">
@@ -183,6 +266,10 @@
       <div><h4>Buy Property</h4><a href="buying-property-greece">Greece</a><a href="buying-property-italy">Italy</a><a href="buying-property-spain">Spain</a><a href="buying-property-portugal">Portugal</a><a href="mexico">Mexico</a></div>
       <div><h4>Money &amp; Tax</h4><a href="capital-gains-property-abroad">Capital Gains Abroad</a><a href="owning-property-abroad-tax-reporting">Tax Reporting Abroad</a><a href="us-taxes-property-mexico">US Taxes on Mexican Property</a><a href="foreign-mortgages-us-citizens">Foreign Mortgages</a></div>
       <div><h4>Legal</h4><a href="privacy">Privacy Policy</a><a href="terms">Terms of Use</a><a href="contact">Contact</a><a href="/#about">About</a></div>
+    </div>
+    <div class="footer-hubs">
+      <h4>Guides by country</h4>
+      <nav><a href="brazil-guides">Brazil</a><a href="colombia-guides">Colombia</a><a href="costa-rica-guides">Costa Rica</a><a href="croatia-guides">Croatia</a><a href="cyprus-guides">Cyprus</a><a href="dominican-republic-guides">Dominican Republic</a><a href="dubai-guides">Dubai</a><a href="france-guides">France</a><a href="general-guides">General</a><a href="greece-guides">Greece</a><a href="indonesia-guides">Bali &amp; Indonesia</a><a href="italy-guides">Italy</a><a href="japan-guides">Japan</a><a href="mexico-guides">Mexico</a><a href="panama-guides">Panama</a><a href="philippines-guides">Philippines</a><a href="portugal-guides">Portugal</a><a href="spain-guides">Spain</a><a href="thailand-guides">Thailand</a><a href="turkey-guides">Turkey</a><a href="uruguay-guides">Uruguay</a></nav>
     </div>
     <div class="disclaimer">
       © 2026 MigrateState. All rights reserved.<br>

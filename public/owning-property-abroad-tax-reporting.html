@@ -19,33 +19,111 @@
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@type":"Article",
-      "headline":"Owning Property Abroad: US Tax Reporting (2026)",
-      "description":"A 2026 guide to the US tax reporting that comes with owning property abroad — FBAR (FinCEN 114), Form 8938 under FATCA, Schedule E for rental income, the foreign tax credit on Form 1116, and the Section 988 currency-gain trap on a foreign mortgage.",
-      "datePublished":"2026-06-14",
-      "dateModified":"2026-06-14",
-      "author":{"@type":"Organization","name":"MigrateState Editorial Team"},
-      "publisher":{"@type":"Organization","name":"MigrateState"},
-      "inLanguage":"en-US",
-      "mainEntityOfPage":"https://migratestate.com/owning-property-abroad-tax-reporting"
+      "@type": "Article",
+      "headline": "Owning Property Abroad: US Tax Reporting (2026)",
+      "description": "A 2026 guide to the US tax reporting that comes with owning property abroad — FBAR (FinCEN 114), Form 8938 under FATCA, Schedule E for rental income, the foreign tax credit on Form 1116, and the Section 988 currency-gain trap on a foreign mortgage.",
+      "datePublished": "2026-06-14",
+      "dateModified": "2026-06-14",
+      "author": {
+        "@type": "Organization",
+        "name": "MigrateState Editorial Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MigrateState"
+      },
+      "inLanguage": "en-US",
+      "mainEntityOfPage": "https://migratestate.com/owning-property-abroad-tax-reporting",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://migratestate.com/og/owning-property-abroad-tax-reporting.png",
+        "width": 1200,
+        "height": 630
+      }
     },
     {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"Do I have to report property I own abroad on my US taxes?","acceptedAnswer":{"@type":"Answer","text":"Foreign real estate held in your own name is not itself a reportable asset — there is no IRS form for the house alone, and owning it doesn't create US tax until it earns income or is sold. What is reportable are the financial accounts and income around it: an FBAR if your foreign accounts exceed $10,000, Form 8938 if you pass the FATCA threshold, and Schedule E for any rental income. Property held through a foreign entity or certain trusts can trigger additional forms."}},
-        {"@type":"Question","name":"What is the FBAR threshold for 2026?","acceptedAnswer":{"@type":"Answer","text":"The FBAR (FinCEN Form 114) is required when the combined value of all your foreign financial accounts exceeds $10,000 at any single point during the year. That $10,000 figure is fixed and does not change with where you live. The real estate itself is not an account, but a foreign bank account you open to pay property taxes, utilities or an HOA counts toward the $10,000 aggregate."}},
-        {"@type":"Question","name":"Is foreign rental income taxable in the United States?","acceptedAnswer":{"@type":"Answer","text":"Yes. US citizens and green-card holders are taxed on worldwide income, so rent from a property abroad is reported on Schedule E in US dollars, even if the country where the property sits also taxes it. You generally avoid double taxation by claiming a foreign tax credit on Form 1116 for the foreign income tax you paid. Foreign residential rental property is depreciated over 30 years, not the 27.5 used for US homes."}},
-        {"@type":"Question","name":"What is the Section 988 trap on a foreign mortgage?","acceptedAnswer":{"@type":"Answer","text":"If you finance foreign property with a loan in the local currency and later pay it off or refinance, the dollar value of the debt at payoff versus at origination creates a separate foreign-currency gain or loss under Section 988 — taxed as ordinary income. It is computed apart from the property, so the Section 121 home-sale exclusion does not shelter it, and the rules are asymmetric: a currency gain is taxable but a currency loss on a personal residence mortgage is generally not deductible."}},
-        {"@type":"Question","name":"What happens if I do not file FBAR or Form 8938?","acceptedAnswer":{"@type":"Answer","text":"The penalties are tied to the forms, not the tax. A non-willful FBAR violation can carry a penalty of up to $16,536 per annual report (per the Supreme Court's Bittner decision — not per account), and willful failures can reach the greater of about $165,353 or half the account balance. Form 8938 carries a $10,000 penalty rising to $50,000 for continued failure. Because the property usually generates little or no actual US tax after the foreign tax credit, the missed information forms — not the tax — are where the real exposure lies. The IRS offers streamlined procedures for non-willful past non-filers."}}
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I have to report property I own abroad on my US taxes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Foreign real estate held in your own name is not itself a reportable asset — there is no IRS form for the house alone, and owning it doesn't create US tax until it earns income or is sold. What is reportable are the financial accounts and income around it: an FBAR if your foreign accounts exceed $10,000, Form 8938 if you pass the FATCA threshold, and Schedule E for any rental income. Property held through a foreign entity or certain trusts can trigger additional forms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the FBAR threshold for 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The FBAR (FinCEN Form 114) is required when the combined value of all your foreign financial accounts exceeds $10,000 at any single point during the year. That $10,000 figure is fixed and does not change with where you live. The real estate itself is not an account, but a foreign bank account you open to pay property taxes, utilities or an HOA counts toward the $10,000 aggregate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is foreign rental income taxable in the United States?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. US citizens and green-card holders are taxed on worldwide income, so rent from a property abroad is reported on Schedule E in US dollars, even if the country where the property sits also taxes it. You generally avoid double taxation by claiming a foreign tax credit on Form 1116 for the foreign income tax you paid. Foreign residential rental property is depreciated over 30 years, not the 27.5 used for US homes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Section 988 trap on a foreign mortgage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you finance foreign property with a loan in the local currency and later pay it off or refinance, the dollar value of the debt at payoff versus at origination creates a separate foreign-currency gain or loss under Section 988 — taxed as ordinary income. It is computed apart from the property, so the Section 121 home-sale exclusion does not shelter it, and the rules are asymmetric: a currency gain is taxable but a currency loss on a personal residence mortgage is generally not deductible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I do not file FBAR or Form 8938?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The penalties are tied to the forms, not the tax. A non-willful FBAR violation can carry a penalty of up to $16,536 per annual report (per the Supreme Court's Bittner decision — not per account), and willful failures can reach the greater of about $165,353 or half the account balance. Form 8938 carries a $10,000 penalty rising to $50,000 for continued failure. Because the property usually generates little or no actual US tax after the foreign tax credit, the missed information forms — not the tax — are where the real exposure lies. The IRS offers streamlined procedures for non-willful past non-filers."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://migratestate.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dubai Real Estate & Residency Guides",
+          "item": "https://migratestate.com/dubai-guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Owning Property Abroad: Tax Reporting 2026",
+          "item": "https://migratestate.com/owning-property-abroad-tax-reporting"
+        }
       ]
     }
   ]
 }
 </script>
-</head>
+
+<meta property="og:image" content="https://migratestate.com/og/owning-property-abroad-tax-reporting.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Owning Property Abroad: Tax Reporting 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Owning Property Abroad: US Tax Reporting (2026)">
+<meta name="twitter:description" content="A lawyer-reviewed 2026 guide to the US reporting that comes with foreign property — FBAR, Form 8938, Schedule E, the foreign tax credit, and the Section 988 mortgage trap most owners miss.">
+<meta name="twitter:image" content="https://migratestate.com/og/owning-property-abroad-tax-reporting.png"></head>
 <body>
 
 <header class="site-header">
@@ -63,7 +141,7 @@
 </header>
 
 <article class="article-wrap">
-  <div class="breadcrumb"><a href="/">Home</a> › <a href="/#guides">Money &amp; Tax</a> › Owning Property Abroad: Tax Reporting</div>
+  <div class="breadcrumb"><a href="/">Home</a> › <a href="dubai-guides">Dubai</a> › Owning Property Abroad: Tax Reporting</div>
 
   <span class="eyebrow">Money &amp; Tax · United States</span>
   <h1>Owning Property Abroad: US Tax Reporting (2026)</h1>
@@ -180,6 +258,11 @@
       <p>Penalties attach to the forms, not the tax. A non-willful FBAR miss can cost up to $16,536 per annual report (post-Bittner, not per account); willful failures far more. Form 8938 starts at $10,000, rising to $50,000. Since the foreign tax credit usually erases the actual tax, the missed forms are the real exposure. Streamlined procedures exist for non-willful past non-filers.</p>
     </div>
   </div>
+  <div class="related-guides" style="margin:40px 0 8px;padding:22px 26px;background:#f7f9fc;border:1px solid #e7ecf3;border-radius:14px">
+      <strong style="display:block;margin-bottom:8px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#8a6d2f">Related guides</strong>
+      <a style="display:block;padding:6px 0;font-weight:600;color:#16324f;text-decoration:none" href="foreign-rental-income-us-tax">Foreign rental income: the US tax rules &rarr;</a>
+      <a style="display:block;padding:6px 0;font-weight:600;color:#16324f;text-decoration:none" href="holding-property-abroad-llc-vs-personal">Should you hold foreign property in an LLC? &rarr;</a>
+  </div>
 </article>
 
 <footer class="site-footer">
@@ -192,6 +275,10 @@
       <div><h4>Buy Property</h4><a href="buying-property-greece">Greece</a><a href="buying-property-italy">Italy</a><a href="buying-property-spain">Spain</a><a href="buying-property-portugal">Portugal</a><a href="mexico">Mexico</a></div>
       <div><h4>Money &amp; Tax</h4><a href="owning-property-abroad-tax-reporting">Tax Reporting Abroad</a><a href="us-taxes-property-mexico">US Taxes on Mexican Property</a><a href="foreign-mortgages-us-citizens">Foreign Mortgages</a><a href="best-countries-buy-property-abroad">Best Countries</a></div>
       <div><h4>Legal</h4><a href="privacy">Privacy Policy</a><a href="terms">Terms of Use</a><a href="contact">Contact</a><a href="/#about">About</a></div>
+    </div>
+    <div class="footer-hubs">
+      <h4>Guides by country</h4>
+      <nav><a href="brazil-guides">Brazil</a><a href="colombia-guides">Colombia</a><a href="costa-rica-guides">Costa Rica</a><a href="croatia-guides">Croatia</a><a href="cyprus-guides">Cyprus</a><a href="dominican-republic-guides">Dominican Republic</a><a href="dubai-guides">Dubai</a><a href="france-guides">France</a><a href="general-guides">General</a><a href="greece-guides">Greece</a><a href="indonesia-guides">Bali &amp; Indonesia</a><a href="italy-guides">Italy</a><a href="japan-guides">Japan</a><a href="mexico-guides">Mexico</a><a href="panama-guides">Panama</a><a href="philippines-guides">Philippines</a><a href="portugal-guides">Portugal</a><a href="spain-guides">Spain</a><a href="thailand-guides">Thailand</a><a href="turkey-guides">Turkey</a><a href="uruguay-guides">Uruguay</a></nav>
     </div>
     <div class="disclaimer">
       © 2026 MigrateState. All rights reserved.<br>

@@ -20,11 +20,37 @@
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"ContactPage",
-  "name":"Contact MigrateState",
-  "url":"https://migratestate.com/contact",
-  "publisher":{"@type":"Organization","name":"MigrateState","email":"barakn770@gmail.com"}
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact MigrateState",
+      "url": "https://migratestate.com/contact",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MigrateState",
+        "email": "barakn770@gmail.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://migratestate.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact MigrateState | Ask a Question",
+          "item": "https://migratestate.com/contact"
+        }
+      ]
+    }
+  ]
 }
 </script>
 <style>
@@ -49,7 +75,15 @@
   .alt-cta{margin:26px 0 0;font-size:15.5px;color:var(--muted)}
   @media(max-width:680px){.c-form .c-grid{grid-template-columns:1fr}}
 </style>
-</head>
+
+<meta property="og:image" content="https://migratestate.com/og/contact.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Contact MigrateState | Ask a Question">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact MigrateState">
+<meta name="twitter:description" content="Ask a question about buying property or residency abroad — we usually reply within two business days.">
+<meta name="twitter:image" content="https://migratestate.com/og/contact.png"></head>
 <body>
 
 <header class="site-header">
@@ -189,6 +223,10 @@
       <div><h4>Buy Property</h4><a href="buying-property-colombia">Colombia</a><a href="buying-property-france">France</a><a href="buying-property-spain">Spain</a><a href="buying-property-portugal">Portugal</a><a href="mexico">Mexico</a><a href="buying-property-dubai">Dubai (UAE)</a></div>
       <div><h4>Residency</h4><a href="portugal-golden-visa">Portugal Golden Visa</a><a href="greece-golden-visa">Greece Golden Visa</a><a href="best-golden-visa-for-americans">Best Golden Visas</a></div>
       <div><h4>Legal</h4><a href="privacy">Privacy Policy</a><a href="terms">Terms of Use</a><a href="contact">Contact</a><a href="/#about">About</a></div>
+    </div>
+    <div class="footer-hubs">
+      <h4>Guides by country</h4>
+      <nav><a href="brazil-guides">Brazil</a><a href="colombia-guides">Colombia</a><a href="costa-rica-guides">Costa Rica</a><a href="croatia-guides">Croatia</a><a href="cyprus-guides">Cyprus</a><a href="dominican-republic-guides">Dominican Republic</a><a href="dubai-guides">Dubai</a><a href="france-guides">France</a><a href="general-guides">General</a><a href="greece-guides">Greece</a><a href="indonesia-guides">Bali &amp; Indonesia</a><a href="italy-guides">Italy</a><a href="japan-guides">Japan</a><a href="mexico-guides">Mexico</a><a href="panama-guides">Panama</a><a href="philippines-guides">Philippines</a><a href="portugal-guides">Portugal</a><a href="spain-guides">Spain</a><a href="thailand-guides">Thailand</a><a href="turkey-guides">Turkey</a><a href="uruguay-guides">Uruguay</a></nav>
     </div>
     <div class="disclaimer">
       &copy; 2026 MigrateState. All rights reserved.<br>
