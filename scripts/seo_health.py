@@ -242,14 +242,27 @@ class Site:
 # ----------------------------------------------------------------- fixers
 
 
-def fix_og_images(site: Site, log: list) -> None:
+def fix_og_images(site: Site, log: list, warnings: list) -> None:
+    """Render any missing OG card. Never fatal — this runs inside a deploy."""
     os.makedirs(site.og_dir, exist_ok=True)
-    for slug in sorted(site.slugs):
-        path = os.path.join(site.og_dir, f"{slug}.png")
-        if os.path.exists(path):
-            continue
-        render_og_card(slug, og_title_of(site.docs[slug], slug), site.og_dir)
-        log.append(f"generated OG card: og/{slug}.png")
+    missing = [s for s in sorted(site.slugs)
+               if not os.path.exists(os.path.join(site.og_dir, f"{s}.png"))]
+    if not missing:
+        return
+    try:
+        import PIL  # noqa: F401
+    except ImportError:
+        warnings.append(
+            f"Pillow not installed — {len(missing)} OG card(s) not rendered "
+            f"({', '.join(missing[:5])}{'...' if len(missing) > 5 else ''}). "
+            f"Install with: pip install Pillow --break-system-packages")
+        return
+    for slug in missing:
+        try:
+            render_og_card(slug, og_title_of(site.docs[slug], slug), site.og_dir)
+            log.append(f"generated OG card: og/{slug}.png")
+        except Exception as exc:  # a bad font/title must not break the deploy
+            warnings.append(f"could not render og/{slug}.png: {exc}")
 
 
 def fix_head_tags(site: Site, log: list) -> None:
@@ -595,7 +608,8 @@ def main() -> int:
 
     if args.fix:
         log: list[str] = []
-        fix_og_images(site, log)
+        warnings: list[str] = []
+        fix_og_images(site, log, warnings)
         fix_head_tags(site, log)
         fix_schema(site, log)
         fix_footer_hubs(site, log)
@@ -607,6 +621,11 @@ def main() -> int:
                 print(f"  + {line}")
         else:
             print("  (nothing needed — site already consistent)")
+
+        if warnings:
+            print(f"\nWARNINGS ({len(warnings)}):")
+            for line in warnings:
+                print(f"  ! {line}")
 
         site = Site(public_dir, repo_root)  # reload after edits
 
