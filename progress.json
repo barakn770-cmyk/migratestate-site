@@ -36,8 +36,9 @@
     "selling-property-greece-us-citizen",
     "foreign-tax-credit-property-abroad",
     "1031-exchange-foreign-property",
-    "selling-property-mexico-us-citizen"
+    "selling-property-mexico-us-citizen",
+    "fbar-foreign-property-owners"
   ],
-  "lastRun": "2026-07-27",
-  "lastSlug": "selling-property-mexico-us-citizen"
+  "lastRun": "2026-09-03",
+  "lastSlug": "fbar-foreign-property-owners"
 }
