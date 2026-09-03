@@ -1,0 +1,73 @@
+name: Daily Content Pipeline
+
+# Runs every day at 05:30 UTC = 08:30 Israel (summer) / 07:30 (winter).
+# Can also be triggered manually from the Actions tab.
+on:
+  schedule:
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      MODEL: claude-sonnet-4-6
+      SITE_HOST: migratestate.com
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install anthropic requests pillow
+
+      - name: Daily fact-check (5-page rotation, official sources only)
+        continue-on-error: true
+        run: python3 scripts/fact_check.py
+
+      - name: Generate today's article from queue
+        continue-on-error: true
+        run: python3 scripts/content_engine.py
+
+      - name: SEO health auto-repair + sitemap rebuild
+        run: python3 scripts/seo_health.py --fix || true
+
+      - name: Open daily PR for approval
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          git config user.name  "MigrateState Pipeline"
+          git config user.email "pipeline@migratestate.com"
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "No changes today."; exit 0
+          fi
+          DATE=$(date -u +%F)
+          BRANCH="daily/$DATE"
+          git checkout -B "$BRANCH"
+          git add -A
+          git commit -m "Daily pipeline $DATE: fact-check + new article + SEO health"
+          git push -f origin "$BRANCH"
+          BODY_FILE=".pipeline_summary.md"
+          [ -f "$BODY_FILE" ] || echo "Daily pipeline run $DATE" > "$BODY_FILE"
+          gh pr create \
+            --title "Daily pipeline $DATE" \
+            --body-file "$BODY_FILE" \
+            --base main --head "$BRANCH" \
+            || gh pr edit "$BRANCH" --body-file "$BODY_FILE"

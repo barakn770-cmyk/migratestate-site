@@ -1,0 +1,40 @@
+name: Search Engine Indexing (IndexNow)
+
+# Fires when approved content lands on main (i.e. after PR merge → Cloudflare deploy).
+# Submits every changed page URL to IndexNow (Bing, Yandex, Seznam, Naver and partners).
+# Google is covered by sitemap.xml lastmod, which seo_health rebuilds on every run.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/**.html"
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SITE_HOST: migratestate.com
+      INDEXNOW_KEY: 02f9e5ed1f82c9d41cd28ce3cc4893e4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Submit changed URLs to IndexNow
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: python3 scripts/indexnow_submit.py
