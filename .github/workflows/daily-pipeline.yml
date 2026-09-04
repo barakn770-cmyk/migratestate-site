@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: daily-pipeline
@@ -48,26 +47,40 @@ jobs:
       - name: SEO health auto-repair + sitemap rebuild
         run: python3 scripts/seo_health.py --fix || true
 
-      - name: Open daily PR for approval
+      - name: Commit and push straight to main (fully automatic — no PR gate)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
-          git config user.name  "MigrateState Pipeline"
-          git config user.email "pipeline@migratestate.com"
+          git config user.name  "MigrateState Content Engine"
+          git config user.email "content-engine@migratestate.com"
           if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
             echo "No changes today."; exit 0
           fi
-          DATE=$(date -u +%F)
-          BRANCH="daily/$DATE"
-          git checkout -B "$BRANCH"
           git add -A
-          git commit -m "Daily pipeline $DATE: fact-check + new article + SEO health"
-          git push -f origin "$BRANCH"
-          BODY_FILE=".pipeline_summary.md"
-          [ -f "$BODY_FILE" ] || echo "Daily pipeline run $DATE" > "$BODY_FILE"
-          gh pr create \
-            --title "Daily pipeline $DATE" \
-            --body-file "$BODY_FILE" \
-            --base main --head "$BRANCH" \
-            || gh pr edit "$BRANCH" --body-file "$BODY_FILE"
+          git commit -m "MigrateState Content Engine — $(date -u +%F)"
+          git push origin HEAD:main
+
+      # continue-on-error above means a broken fact-check or article step does
+      # NOT fail this job by itself (one script's outage shouldn't block the
+      # other, and shouldn't block pushing whatever partial work did succeed).
+      # This step is the safety net: it checks whether each step actually
+      # produced real output today, and — with no continue-on-error — fails
+      # the JOB (triggering GitHub's automatic "workflow run failed" email to
+      # the repo owner) if something silently broke. This is the only signal
+      # you get without watching the Actions tab yourself, so don't remove it.
+      - name: Verify the run actually produced output (fails loudly on silent breakage)
+        run: |
+          TODAY=$(date -u +%F)
+          FAIL=""
+          if ! grep -q "\"$TODAY\"" factcheck_state.json 2>/dev/null; then
+            FAIL="fact-check produced nothing today (all 5 API calls likely errored — see the 'Daily fact-check' step log above for the real Python traceback)"
+          fi
+          if ! grep -q "^### New article" .pipeline_summary.md 2>/dev/null; then
+            FAIL="${FAIL:+$FAIL; }content-engine produced no article and no 'queue empty' notice (it likely crashed — see the 'Generate today's article' step log above for the real Python traceback)"
+          fi
+          if [ -n "$FAIL" ]; then
+            echo "::error::$FAIL"
+            exit 1
+          fi
+          echo "Verified: both fact-check and the article step produced real output today."
