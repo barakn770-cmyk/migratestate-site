@@ -4,6 +4,16 @@ Automated daily content + accuracy + indexing pipeline. Approved by Barak, Sept 
 Switched to fully-automatic (no PR review gate) on 2026-09-04, at Barak's request —
 see "Why the PR gate was removed" below before reinstating it.
 
+## Where it runs (2026-09-04 onward)
+
+The daily run is a **device-bound Claude scheduled task** on Barak's Windows PC
+(Claude desktop app, folder `Claude\Projects\migratestate.com\migratestate-site`,
+05:30 UTC). Claude itself does the fact-check and writes the article (web research
+against official sources), runs `scripts/seo_health.py --fix`, commits and pushes to
+`main` with a repo-scoped token stored only in that clone's `.git/config`.
+The GitHub Actions workflow below is kept as a **dormant manual backup** (its cron is
+disabled; it needs `ANTHROPIC_API_KEY`). `indexnow.yml` still fires on every push.
+
 ## What runs, when
 
 **`daily-pipeline.yml`** — every day 05:30 UTC (08:30 Israel summer / 07:30 winter), or manually from the Actions tab:
