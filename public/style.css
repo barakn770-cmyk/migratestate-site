@@ -242,3 +242,16 @@ tr:last-child td{border-bottom:none}
 .fig{margin:28px 0;padding:18px 18px 12px;background:#fff;border:1px solid #e7ecf3;border-radius:14px}
 .fig svg{display:block;width:100%;height:auto}
 .fig figcaption{margin-top:10px;font-size:13px;color:#5b6b7b;line-height:1.5}
+
+/* Sept 2026 SEO audit: sources + related guides (rendered by scripts/seo_health.py) */
+.sources{margin:40px 0 8px;padding:22px 26px;background:#fbf9f4;border:1px solid #eadfc7;border-radius:14px}
+.sources>strong{display:block;margin-bottom:10px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#8a6d2f}
+.sources ul{margin:0;padding-left:20px}
+.sources li{margin:6px 0;font-size:15px;line-height:1.5}
+.sources li a{color:#16324f;font-weight:600;text-decoration:underline;text-decoration-color:#c8a24a;text-underline-offset:3px}
+.sources li a:hover{color:#8a6d2f}
+.sources-note{margin:12px 0 0;font-size:13px;color:#5b6b7b}
+.related-guides{margin:24px 0 8px;padding:22px 26px;background:#f7f9fc;border:1px solid #e7ecf3;border-radius:14px}
+.related-guides>strong{display:block;margin-bottom:8px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#8a6d2f}
+.related-guides a{display:block;padding:6px 0;font-weight:600;color:#16324f;text-decoration:none}
+.related-guides a:hover{text-decoration:underline}
