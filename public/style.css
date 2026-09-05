@@ -239,3 +239,6 @@ tr:last-child td{border-bottom:none}
 .footer-hubs nav a{font-size:14px;opacity:.8;text-decoration:none}
 .footer-hubs nav a:hover{opacity:1;text-decoration:underline}
 @media(max-width:640px){.footer-hubs nav{gap:8px 14px}.footer-hubs nav a{font-size:13px}}
+.fig{margin:28px 0;padding:18px 18px 12px;background:#fff;border:1px solid #e7ecf3;border-radius:14px}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{margin-top:10px;font-size:13px;color:#5b6b7b;line-height:1.5}

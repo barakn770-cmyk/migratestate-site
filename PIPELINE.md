@@ -14,6 +14,54 @@ against official sources), runs `scripts/seo_health.py --fix`, commits and pushe
 The GitHub Actions workflow below is kept as a **dormant manual backup** (its cron is
 disabled; it needs `ANTHROPIC_API_KEY`). `indexnow.yml` still fires on every push.
 
+
+## Additional steps since the Sept 2026 SEO audit (MANDATORY — read before step 2)
+
+The scheduled task's stored prompt predates these; this section adds detail to
+its steps 2–4 and MUST be followed on every run. The full updated prompt is
+mirrored at `.pipeline/task-prompt.md` in the connected folder.
+
+**Sources block (`scripts/sources.json`).** `seo_health.py --fix` renders a
+"Sources & official references" block on every article from
+`scripts/sources.json` → `"pages"["<slug>"]` = list of `{"n": "<Authority —
+document>", "u": "<url>"}`, plus `"rules"` matched by slug pattern. This is the
+site's E-E-A-T signal. Rules:
+- Fact-check (step 2): every official URL actually used to verify a page is
+  added to that page's list (no duplicates, max 6, drop generic portal
+  homepages first). A page must never end a fact-check with fewer sources.
+- New article (step 3): register 3–6 official sources for the new slug BEFORE
+  running seo_health. Never hand-write the Sources or Related-guides blocks —
+  both are generated (markers `<!-- sources:start -->` / `<!-- related:start -->`).
+
+**Figures.** Every article should carry at least one inline-SVG figure:
+`<figure class="fig"><svg viewBox="0 0 720 300" role="img" aria-labelledby="…">
+<title>…</title>…</svg><figcaption>…</figcaption></figure>` placed after the
+section it illustrates (cost-breakdown bars from the page's own cost table, or a
+step timeline from its step-by-step section). Palette: navy #0f2a43, gold
+#c8a24a, cream #f7f4ee, muted #96a8ba; system font; no external assets; only
+numbers already on the page — skip rather than invent.
+- Fact-check: if a checked page has no `<figure>`, add one.
+- New article: at least TWO data tables and ONE figure. If the queue entry asks
+  for an interactive calculator, implement it as inline JS (no external
+  scripts, no network calls, labelled defaults).
+
+**Step 3b — flagship expansion (`expansions.json`), one per run, BEFORE the new
+article.** Pick the first item with `"status": "open"`. Rewrite the page in place
+to the brief's `target_words` (±10%): keep URL, `<head>`, H1, schema types,
+answer box, byline (refresh "Updated <Month Year>"), CTA boxes, disclaimer,
+nav/footer and the FAQ (update, extend to 8 items, mirror in FAQPage JSON-LD).
+Add the tables and figure the brief asks for; cite every threshold to an
+official source and add those URLs to `sources.json`. Quality gate: file grows
+by ≥ 8 KB, `<div>` balanced, JSON-LD parses — otherwise discard and report the
+step FAILED (old page stays live). On success set `"status": "done <TODAY>"` and
+write `### Expansion` to the summary. If the run is short on time the new
+article may be skipped (WARNING), the expansion may not. Status line gains
+`expansion: /<slug>|none`.
+
+**Queue.** `queue.json` was re-prioritised on 2026-09-05: 25 audit-driven topics
+first (fideicomiso + calculator, retirement/income-visa cluster, Golden Visa
+Index, comparisons, city guides), then the original topics.
+
 ## What runs, when
 
 **`daily-pipeline.yml`** — every day 05:30 UTC (08:30 Israel summer / 07:30 winter), or manually from the Actions tab:

@@ -1,47 +1,514 @@
 [
-  {"slug": "fbar-foreign-property-owners", "title": "FBAR for Foreign Property Owners: When FinCEN Form 114 Applies", "hub": "general-guides.html", "template": "foreign-tax-credit-property-abroad.html", "keywords": "FBAR foreign property, FinCEN 114 real estate, foreign bank account property purchase", "angle": "Property itself is not reportable, but the foreign accounts used to buy/manage it usually are. $10,000 aggregate threshold, penalties, examples."},
-  {"slug": "form-8938-fatca-foreign-assets", "title": "Form 8938 (FATCA) and Foreign Real Estate: What US Owners Must Report", "hub": "general-guides.html", "template": "foreign-tax-credit-property-abroad.html", "keywords": "form 8938 foreign real estate, FATCA property reporting", "angle": "Directly held real estate vs. property through entities/fideicomisos, thresholds by filing status and residence, 8938 vs FBAR table."},
-  {"slug": "depreciation-foreign-rental-property", "title": "Depreciating Foreign Rental Property: The 30-Year ADS Rule", "hub": "general-guides.html", "template": "foreign-rental-income-us-tax.html", "keywords": "foreign rental property depreciation, ADS 30 year foreign property", "angle": "Foreign residential rentals use ADS (30-yr, 40-yr pre-2018) not 27.5-yr GDS — the #1 CPA-level mistake DIY filers make."},
-  {"slug": "selling-property-spain-us-citizen", "title": "Selling Property in Spain as a US Citizen: Taxes on Both Sides", "hub": "spain-guides.html", "template": "selling-property-portugal-us-citizen.html", "keywords": "selling property spain us citizen, spain capital gains non-resident", "angle": "19% non-resident CGT, 3% retention on sale price, plusvalía municipal, US foreign tax credit interplay."},
-  {"slug": "portugal-digital-nomad-visa", "title": "Portugal Digital Nomad Visa (D8) for Americans: Full Guide", "hub": "portugal-guides.html", "template": "portugal-d7-visa.html", "keywords": "portugal digital nomad visa, D8 visa requirements americans", "angle": "Income thresholds, remote-work proof, D8 vs D7, path to residency and the new 10-year citizenship timeline."},
-  {"slug": "spain-digital-nomad-visa", "title": "Spain Digital Nomad Visa for Americans: Requirements and Taxes", "hub": "spain-guides.html", "template": "portugal-d7-visa.html", "keywords": "spain digital nomad visa americans", "angle": "Startup Law visa, income thresholds, Beckham-regime eligibility, now the main route after the Golden Visa ended April 2025."},
-  {"slug": "self-directed-ira-foreign-real-estate", "title": "Buying Foreign Real Estate with a Self-Directed IRA", "hub": "general-guides.html", "template": "holding-property-abroad-llc-vs-personal.html", "keywords": "self directed IRA foreign real estate", "angle": "Custodians, prohibited transactions, UBIT/UDFI on financed property, personal-use ban, practical country issues."},
-  {"slug": "selling-property-italy-us-citizen", "title": "Selling Property in Italy as a US Citizen", "hub": "italy-guides.html", "template": "selling-property-portugal-us-citizen.html", "keywords": "selling property italy us citizen, italy capital gains tax property", "angle": "5-year exemption rule, 26% substitute tax option, notary process, US side."},
-  {"slug": "costa-rica-pensionado-visa", "title": "Costa Rica Pensionado Visa: Retire on $1,000/Month Pension", "hub": "costa-rica-guides.html", "template": "panama-friendly-nations-visa.html", "keywords": "costa rica pensionado visa requirements", "angle": "Pension proof, rentista alternative, Law 9996 benefits expiry, healthcare enrollment (Caja)."},
-  {"slug": "mexico-temporary-resident-visa", "title": "Mexico Temporary Resident Visa for Americans: Income Requirements", "hub": "mexico-guides.html", "template": "panama-friendly-nations-visa.html", "keywords": "mexico temporary resident visa requirements americans", "angle": "Economic-solvency thresholds (UMA-based, consulate variance), temporary vs permanent, path for property owners."},
-  {"slug": "us-estate-tax-foreign-property", "title": "US Estate Tax on Foreign Property: What Heirs Need to Know", "hub": "general-guides.html", "template": "inheritance-tax-property-abroad.html", "keywords": "us estate tax foreign property, estate planning property abroad", "angle": "Worldwide-estate inclusion, situs rules, treaty relief, foreign death tax credit (Form 706-CE), step-up basis abroad."},
-  {"slug": "property-scams-buying-abroad", "title": "Property Scams Abroad: 12 Red Flags Before You Wire Money", "hub": "general-guides.html", "template": "power-of-attorney-buying-property-abroad.html", "keywords": "overseas property scams, buying property abroad scams red flags", "angle": "Ejido land, off-plan developer failures, fake escrow, POA abuse, title fraud — with country examples and verification steps."},
-  {"slug": "greece-digital-nomad-visa", "title": "Greece Digital Nomad Visa for Americans", "hub": "greece-guides.html", "template": "portugal-d7-visa.html", "keywords": "greece digital nomad visa americans", "angle": "€3,500/month threshold, 50% income-tax break, visa vs residence permit conversion."},
-  {"slug": "selling-property-france-us-citizen", "title": "Selling Property in France as a US Citizen", "hub": "france-guides.html", "template": "selling-property-portugal-us-citizen.html", "keywords": "selling property france us citizen, france capital gains non-resident", "angle": "Taper relief by holding period, social charges and the US treaty, fiscal representative requirement."},
-  {"slug": "currency-exchange-buying-property-abroad", "title": "Currency Strategy When Buying Property Abroad: Timing, Hedging, Transfers", "hub": "general-guides.html", "template": "transfer-money-abroad-property.html", "keywords": "currency exchange buying property abroad, forward contract property purchase", "angle": "Forward contracts, layered transfers, spread math vs banks, Section 988 basics on repayment of foreign mortgages."},
-  {"slug": "malaysia-mm2h-visa", "title": "Malaysia MM2H Visa: 2026 Requirements for Americans", "hub": "malaysia-guides.html", "template": "panama-friendly-nations-visa.html", "keywords": "malaysia mm2h requirements", "angle": "New tier structure, fixed-deposit amounts, property-purchase conditions per tier."},
-  {"slug": "italy-elective-residence-visa", "title": "Italy Elective Residence Visa: Retire in Italy Without Working", "hub": "italy-guides.html", "template": "portugal-d7-visa.html", "keywords": "italy elective residence visa requirements", "angle": "€31k+ passive-income proof, consulate variance, no-work rule, healthcare, flat-tax interplay."},
-  {"slug": "airbnb-income-abroad-us-tax", "title": "Airbnb Income Abroad: How the IRS Taxes Your Foreign Short-Term Rental", "hub": "general-guides.html", "template": "foreign-rental-income-us-tax.html", "keywords": "airbnb abroad us taxes, foreign short term rental tax", "angle": "Schedule E vs C (services), 7-day rule, local platform withholding, VAT/tourist registration duties, FTC stacking."},
-  {"slug": "panama-pensionado-visa", "title": "Panama Pensionado Visa: Benefits and Requirements", "hub": "panama-guides.html", "template": "panama-friendly-nations-visa.html", "keywords": "panama pensionado visa requirements benefits", "angle": "$1,000 pension threshold, famous discount list, property-purchase reduction, vs Friendly Nations."},
-  {"slug": "buying-property-ecuador", "title": "Buying Property in Ecuador as a Foreigner", "hub": "general-guides.html", "template": "buying-property-colombia.html", "keywords": "buying property ecuador foreigner", "angle": "Full foreign ownership, $45k investor-visa threshold, escritura process, Cuenca/coast markets, USD economy."},
-  {"slug": "tax-residency-183-day-rule", "title": "The 183-Day Rule: How Countries Decide You Owe Them Taxes", "hub": "general-guides.html", "template": "owning-property-abroad-tax-reporting.html", "keywords": "183 day rule tax residency, tax residency property abroad", "angle": "Day-counting traps, center-of-vital-interests tiebreakers, how owning a home shifts the analysis, treaty tiebreakers for Americans."},
-  {"slug": "spain-beckham-law-us-citizens", "title": "Spain's Beckham Law for US Citizens: 24% Flat Tax Explained", "hub": "spain-guides.html", "template": "portugal-nif.html", "keywords": "beckham law spain americans, spain impatriate regime", "angle": "24% on Spanish-source income to €600k, 6-year window, who qualifies post-2023 reform, why US citizens still file 1040."},
-  {"slug": "selling-property-costa-rica-us-citizen", "title": "Selling Property in Costa Rica as a US Citizen", "hub": "costa-rica-guides.html", "template": "selling-property-greece-us-citizen.html", "keywords": "selling property costa rica capital gains", "angle": "15% CGT or 2.25% gross option, corporation-owned transfers, US reporting."},
-  {"slug": "buying-property-vietnam", "title": "Buying Property in Vietnam as a Foreigner: What You Can (and Can't) Own", "hub": "general-guides.html", "template": "buying-property-thailand.html", "keywords": "buying property vietnam foreigner", "angle": "50-year leasehold reality, 30% condo quota, no land ownership, repatriation of proceeds."},
-  {"slug": "portugal-ifici-nhr-2", "title": "Portugal's IFICI (NHR 2.0): The New 20% Tax Regime", "hub": "portugal-guides.html", "template": "portugal-nif.html", "keywords": "portugal IFICI, NHR 2.0 requirements", "angle": "Eligible professions/employers, 20% rate, what replaced NHR, application deadlines, US-citizen interplay."},
-  {"slug": "buying-property-montenegro", "title": "Buying Property in Montenegro as a Foreigner", "hub": "general-guides.html", "template": "buying-property-croatia.html", "keywords": "buying property montenegro foreigner", "angle": "Near-equal ownership rights, residency-by-property route, coastal market, EU-accession angle."},
-  {"slug": "thailand-ltr-visa", "title": "Thailand LTR Visa: 10-Year Residency for Wealthy Americans", "hub": "thailand-guides.html", "template": "panama-friendly-nations-visa.html", "keywords": "thailand ltr visa requirements", "angle": "Four categories, $80k income tracks, 17% flat tax for professionals, vs Elite visa."},
-  {"slug": "notary-vs-attorney-buying-abroad", "title": "Notary vs. Attorney Abroad: Who Actually Protects You", "hub": "general-guides.html", "template": "power-of-attorney-buying-property-abroad.html", "keywords": "notary buying property abroad, do I need a lawyer to buy property abroad", "angle": "Civil-law notary's neutral role vs US expectations, when the notary is NOT your advocate, fee structures by country."},
-  {"slug": "gifting-foreign-property-us-tax", "title": "Gifting Foreign Property: US Gift Tax Rules for Overseas Real Estate", "hub": "general-guides.html", "template": "inheritance-tax-property-abroad.html", "keywords": "gift tax foreign property, gifting overseas real estate", "angle": "Annual/lifetime exclusions, Form 709, receiving gifts from foreign persons (Form 3520 $100k trigger), basis carryover."},
-  {"slug": "buying-property-argentina", "title": "Buying Property in Argentina as a Foreigner", "hub": "general-guides.html", "template": "buying-property-uruguay.html", "keywords": "buying property argentina foreigner", "angle": "Cash-dollar market reality, escritura process, rural-land limits, currency risk and blue-dollar dynamics."},
-  {"slug": "due-diligence-checklist-buying-abroad", "title": "Due Diligence Checklist for Buying Property Abroad", "hub": "general-guides.html", "template": "closing-costs-property-abroad.html", "keywords": "due diligence buying property overseas checklist", "angle": "Title search, liens/encumbrances, zoning, utilities debts, seller verification — printable checklist format."},
-  {"slug": "selling-property-dubai-us-citizen", "title": "Selling Property in Dubai as a US Citizen", "hub": "dubai-guides.html", "template": "selling-property-greece-us-citizen.html", "keywords": "selling property dubai capital gains us citizen", "angle": "No UAE CGT but full US capital gains, DLD transfer mechanics, currency and wiring proceeds home."},
-  {"slug": "uruguay-residency-us-citizens", "title": "Uruguay Residency for US Citizens: The Underrated Plan B", "hub": "uruguay-guides.html", "template": "panama-friendly-nations-visa.html", "keywords": "uruguay residency americans", "angle": "No income threshold, tax holiday for new residents, path to citizenship 3-5 years, property purchase synergy."},
-  {"slug": "italy-flat-tax-regime-us-citizens", "title": "Italy's €300K Flat Tax for New Residents: Is It Worth It for Americans?", "hub": "italy-guides.html", "template": "portugal-nif.html", "keywords": "italy flat tax new residents americans", "angle": "2026 €300k rate, 15-year window, what income it covers, why US citizenship-based taxation changes the math."},
-  {"slug": "financing-vs-cash-buying-abroad", "title": "Cash vs. Financing When Buying Property Abroad", "hub": "general-guides.html", "template": "foreign-mortgages-us-citizens.html", "keywords": "cash vs mortgage buying property abroad", "angle": "Negotiation power, developer terms, cross-collateral/HELOC on US home, Section 988 currency-gain trap on foreign mortgages."},
-  {"slug": "buying-property-morocco", "title": "Buying Property in Morocco as a Foreigner", "hub": "general-guides.html", "template": "buying-property-turkey.html", "keywords": "buying property morocco foreigner", "angle": "Full ownership (non-agricultural), melkia vs titled land, notary process, repatriation guarantee via convertible dirham account."},
-  {"slug": "schedule-e-foreign-rental-income", "title": "Schedule E for Foreign Rental Income: Line-by-Line Guide", "hub": "general-guides.html", "template": "foreign-rental-income-us-tax.html", "keywords": "schedule e foreign rental property", "angle": "Income conversion rates, deductible foreign costs, ADS depreciation entry, passive-loss limits, pairing with Form 1116."},
-  {"slug": "inheritance-forced-heirship-europe", "title": "Forced Heirship in Europe: Why Your US Will May Not Control Your Property", "hub": "general-guides.html", "template": "inheritance-tax-property-abroad.html", "keywords": "forced heirship europe property, eu succession regulation american", "angle": "Reserved shares in France/Spain/Portugal/Italy, EU Succession Regulation 650/2012 choice-of-law election for Americans."},
-  {"slug": "buying-new-construction-abroad", "title": "Buying Off-Plan and New Construction Abroad: Protections That Matter", "hub": "general-guides.html", "template": "property-scams-buying-abroad.html", "keywords": "buying off plan property abroad risks", "angle": "Bank-guarantee regimes, escrow/stage payments, completion-risk red flags, snagging and delivery disputes by country."},
-  {"slug": "greece-non-dom-regime", "title": "Greece's Non-Dom and 7% Pensioner Tax Regimes", "hub": "greece-guides.html", "template": "portugal-nif.html", "keywords": "greece non dom tax regime, greece 7 percent pension tax", "angle": "€100k flat option, 7% foreign-pension regime, investment requirement link to Golden Visa, US-citizen caveats."},
-  {"slug": "property-management-abroad-us-owners", "title": "Managing a Rental Property from 5,000 Miles Away", "hub": "general-guides.html", "template": "short-term-rental-rules-abroad.html", "keywords": "property management abroad absentee owner", "angle": "Manager vetting, contract clauses, fee benchmarks, POA scope, banking and tax-agent setup per country."},
-  {"slug": "paraguay-residency-us-citizens", "title": "Paraguay Residency: The Cheapest Permanent Residency in the Americas", "hub": "general-guides.html", "template": "panama-friendly-nations-visa.html", "keywords": "paraguay residency americans", "angle": "Post-2022 temporary-then-permanent structure, minimal presence rule, territorial tax, honest cons."},
-  {"slug": "streamlined-filing-foreign-property", "title": "Behind on FBARs? The IRS Streamlined Procedures for Property Owners Abroad", "hub": "general-guides.html", "template": "owning-property-abroad-tax-reporting.html", "keywords": "streamlined filing compliance procedures foreign property", "angle": "Non-willful certification, 3+6 lookback, 5% offshore penalty (domestic) vs 0% (foreign), when to lawyer up."},
-  {"slug": "retiring-abroad-property-checklist", "title": "Retiring Abroad: The Property Owner's 24-Month Checklist", "hub": "general-guides.html", "template": "best-countries-buy-property-abroad.html", "keywords": "retiring abroad checklist property", "angle": "Timeline from scouting to closing: visas, healthcare, Medicare gap, banking, estate docs, shipping, pets."},
-  {"slug": "buying-property-albania", "title": "Buying Property in Albania as a Foreigner", "hub": "general-guides.html", "template": "buying-property-montenegro.html", "keywords": "buying property albania foreigner", "angle": "Apartment ownership open, land restrictions/workarounds, Riviera boom, title-verification caution (post-communist restitution)."}
+ {
+  "slug": "fideicomiso",
+  "title": "Fideicomiso Explained: Cost, Setup and US Tax for Americans Buying in Mexico (2026)",
+  "hub": "mexico-guides.html",
+  "template": "mexico.html",
+  "keywords": "fideicomiso cost, fideicomiso explained, fideicomiso bank trust Mexico, fideicomiso annual fee, fideicomiso vs Mexican corporation",
+  "angle": "Standalone deep-dive split out of /mexico (which already ranks page-one for this query). Constitution Art. 27 restricted zone (50 km coast / 100 km border), SRE permit, the bank-trustee model, 50-year renewable term, beneficiary/substitute-beneficiary rules, what it costs (SRE permit fee, bank setup fee, annual trustee fee — cite the SRE tariff and typical bank fee ranges only where an official or bank-published figure exists), transfer of rights on resale, fideicomiso vs Mexican corporation for rental portfolios, and the US side: Rev. Rul. 2013-14 (not a foreign trust; no 3520/3520-A for a standard fideicomiso), FBAR/8938 on the accounts around it. INCLUDE an interactive 'Fideicomiso cost calculator' (inline JS, no external scripts): inputs = purchase price, bank annual fee, years held; outputs = setup cost, lifetime trustee fees, cost per year. Label all defaults as editable estimates."
+ },
+ {
+  "slug": "mexico-temporary-resident-visa",
+  "title": "Mexico Temporary Resident Visa for Americans (2026): Income & Savings Thresholds, Process, Property Route",
+  "hub": "mexico-guides.html",
+  "template": "portugal-d7-visa.html",
+  "keywords": "mexico temporary residency requirements 2026, mexico temporary resident visa income requirement, residente temporal americans",
+  "angle": "The single most-searched residency route for Americans. Economic-solvency thresholds are set as multiples of the UMA / minimum wage by consulate — cite the SRE/consulate pages and the current UMA (INEGI) rather than a hard dollar figure; the real-estate route (property value threshold); consular appointment → canje at INM within 30 days; 1-year card then 3-year renewal; path to permanent residency after 4 years; work permission; how it interacts with the fideicomiso and with US tax residency (no effect on US worldwide taxation; 183-day Mexican tax residency)."
+ },
+ {
+  "slug": "costa-rica-pensionado-visa",
+  "title": "Costa Rica Pensionado, Rentista and Inversionista Residency for Americans (2026)",
+  "hub": "costa-rica-guides.html",
+  "template": "panama-friendly-nations-visa.html",
+  "keywords": "costa rica pensionado visa, costa rica rentista visa requirements, costa rica inversionista residency 2026",
+  "angle": "The three temporary-residency categories under Ley 8764 and Ley 9996 (whose investor-threshold window expired July 2026 — verify at pgrweb.go.cr/SCIJ and DGME): Pensionado US$1,000/month lifetime pension, Rentista US$2,500/month for 2 years or US$60,000 deposit, Inversionista US$200,000 (confirm current figure). CCSS (Caja) enrolment, DGME process and timelines, 3-year path to permanent residency, work restrictions, and US tax: Social Security and pensions remain US-taxable, FBAR on the deposit account. Second child page for the costa-rica hub."
+ },
+ {
+  "slug": "panama-pensionado-visa",
+  "title": "Panama Pensionado Visa for Americans (2026): Requirements, Discounts and the Property Alternative",
+  "hub": "panama-guides.html",
+  "template": "panama-friendly-nations-visa.html",
+  "keywords": "panama pensionado visa requirements, panama retirement visa americans 2026, pensionado discounts panama",
+  "angle": "US$1,000/month lifetime pension (US$750 with a US$100,000 property purchase — verify current Servicio Nacional de Migración rules), the statutory discounts list, permanent status from day one, no path to citizenship via pensionado alone, Friendly Nations Visa as the alternative for non-retirees, apostille chain for US documents, and US tax (Panama's territorial system means no Panamanian tax on US pension; still fully US-taxable)."
+ },
+ {
+  "slug": "italy-elective-residence-visa",
+  "title": "Italy Elective Residence Visa for Americans (2026): Passive-Income Requirements, Process and Tax",
+  "hub": "italy-guides.html",
+  "template": "spain-non-lucrative-visa.html",
+  "keywords": "italy elective residence visa requirements, italy elective residency visa income, ERV italy americans 2026",
+  "angle": "Visto per residenza elettiva: passive income only (no work), the consulate-set minimum (commonly cited ~€31,000/yr single, ~€38,000 couple — cite the consulate/Esteri source used and flag consulate discretion), proof of accommodation (deed or registered lease), health insurance, the questura permesso di soggiorno within 8 days, renewal, 5-year path to EU long-term residence, 10 years to citizenship, and the tax side: Italian tax residency after 183 days, the 7% pensioner flat tax in southern municipalities (Art. 24-ter TUIR) and the €200K/€300K flat tax for HNW (link italy-golden-visa), US pension taxation under the US-Italy treaty."
+ },
+ {
+  "slug": "greece-fip-visa",
+  "title": "Greece Financially Independent Person (FIP) Visa for Americans (2026): Income Rule, Process, Property",
+  "hub": "greece-guides.html",
+  "template": "spain-non-lucrative-visa.html",
+  "keywords": "greece financially independent person visa, greece FIP visa requirements 2026, greece retirement visa americans",
+  "angle": "The non-working residence permit under Law 5038/2023 (Code of Immigration): the €3,500/month income threshold (+20% spouse, +15% per child — verify at migration.gov.gr), 2-year permit renewable for 3 years, no employment, 183-day tax-residency consequence and the 7% flat tax for foreign pensioners (Art. 5B ITC) as the pairing, buying a home with it (link buying-property-greece) vs the Golden Visa (no stay requirement) — a decision table. Second child for the greece hub beyond golden visa."
+ },
+ {
+  "slug": "malaysia-mm2h-visa",
+  "title": "Malaysia My Second Home (MM2H) 2026 for Americans: Tiers, Fixed Deposits, Property Rules",
+  "hub": "malaysia-guides.html",
+  "template": "panama-friendly-nations-visa.html",
+  "keywords": "mm2h requirements 2026, malaysia my second home americans, mm2h fixed deposit tiers",
+  "angle": "The 2024 relaunch tiers (Silver / Gold / Platinum fixed deposits US$150K / $500K / $1M, property-purchase minimums, 90-day stay rule, SEZ/Sarawak variants — cite mm2h.gov.my), age rules, dependants, the 50% deposit withdrawal for property, foreign-buyer state minimum prices and the 2026 8% foreign stamp duty (link buying-property-malaysia), US tax: Malaysia's territorial regime vs US worldwide tax. Second child for the malaysia hub."
+ },
+ {
+  "slug": "thailand-ltr-visa",
+  "title": "Thailand LTR Visa for Americans (2026): Wealthy Pensioner, Work-from-Thailand and the 17% Flat Tax",
+  "hub": "thailand-guides.html",
+  "template": "panama-friendly-nations-visa.html",
+  "keywords": "thailand ltr visa requirements 2026, thailand long term resident visa americans, ltr visa wealthy pensioner",
+  "angle": "The four LTR categories (Wealthy Global Citizen, Wealthy Pensioner, Work-from-Thailand Professional, Highly-Skilled) with the 2025 relaxed thresholds (cite ltr.boi.go.th), 10-year validity, 90-day report replaced by annual, the 17% flat income tax for highly-skilled, tax exemption on foreign-sourced income for LTR holders vs the 2024 remittance rule change for everyone else, condo-ownership (49% quota) and leasehold land (link buying-property-thailand), US tax interplay. Second child for the thailand hub."
+ },
+ {
+  "slug": "philippines-srrv-visa",
+  "title": "Philippines SRRV Retirement Visa for Americans (2026): Deposit Options, Property Conversion, Tax",
+  "hub": "philippines-guides.html",
+  "template": "panama-friendly-nations-visa.html",
+  "keywords": "srrv philippines requirements, philippines retirement visa americans 2026, srrv deposit amount",
+  "angle": "PRA SRRV options (Classic, Smile, Courtesy, Human Touch) with deposit amounts by age and pension status (cite pra.gov.ph), converting the deposit into a condo purchase or long-term lease, the foreign land-ownership ban and 40% condo cap (link buying-property-philippines), multiple-entry indefinite stay, dependants, exit/withdrawal rules, and US tax: Philippine tax on foreign-sourced pension (non-resident aliens taxed only on Philippine-source income), FBAR on the deposit. Second child for the philippines hub."
+ },
+ {
+  "slug": "golden-visa-index-americans",
+  "title": "The Golden Visa Index for Americans 2026: 12 Programs Scored on Cost, Stay Rules, Citizenship and US-Tax Friction",
+  "hub": "general-guides.html",
+  "template": "best-golden-visa-for-americans.html",
+  "keywords": "golden visa index 2026, best golden visa ranking americans, golden visa comparison scored",
+  "angle": "A scored, methodology-first ranking (the only index scored on US-tax friction). Score each program 0–10 on five weighted criteria: minimum investment (20%), physical-presence requirement (20%), time and certainty to citizenship (20%), US-tax friction — PFIC exposure of fund routes, wealth/exit taxes, treaty (25%), program stability/political risk (15%). Programs: Portugal (fund), Greece (RE tiers), Italy (investor visa), Malta (MPRP), Hungary (guest investor), Cyprus (PR by investment), UAE (property golden visa), Latvia, Turkey (CBI), Panama (qualified investor), Caribbean CBI (Antigua/Dominica/St Kitts as one row), Spain (closed — score 0 as a control). Show the scoring table, per-program one-paragraph rationale, a 'who this is for' line, and an explicit 'how we scored' section with the weights. Cite official program sources for every threshold. Refresh annually (say so). Link every program to its MigrateState guide."
+ },
+ {
+  "slug": "portugal-vs-spain-property-residency",
+  "title": "Portugal vs Spain for Americans (2026): Buying Property, Residency Visas and Tax Compared",
+  "hub": "portugal-guides.html",
+  "template": "greece-vs-portugal-golden-visa.html",
+  "keywords": "portugal vs spain buying property, portugal or spain for americans, portugal vs spain residency visa",
+  "angle": "Side-by-side decision guide: purchase costs (IMT/IMI vs ITP/IBI and regional variation), non-resident mortgages, residency options (D7 vs NLV, D8 vs Spain DNV, Portugal GV vs Spain GV closed), income tax on non-residents and after 183 days (IFICI/NHR 2.0 vs Beckham law), capital gains on exit, inheritance (Portugal no inheritance tax between direct family vs Spain regional ISD), short-let regulation, healthcare access, and a 'choose Portugal if / choose Spain if' table. Cite official sources for every figure."
+ },
+ {
+  "slug": "mexico-vs-costa-rica-vs-panama-property",
+  "title": "Mexico vs Costa Rica vs Panama for Americans (2026): Property Ownership, Residency and Tax Compared",
+  "hub": "general-guides.html",
+  "template": "greece-vs-portugal-golden-visa.html",
+  "keywords": "mexico vs costa rica vs panama retire, costa rica vs panama buying property, mexico or costa rica for americans",
+  "angle": "Three-column comparison: foreign ownership (fideicomiso / Maritime Zone concessions / Panama's border and island restrictions), closing costs, residency routes (Mexico temporary via solvency, Costa Rica Pensionado/Rentista/Inversionista, Panama Pensionado/Friendly Nations), income tax regimes (worldwide vs territorial), healthcare, currency (peso vs colón vs USD), title security, and a decision table. Link the six existing country guides."
+ },
+ {
+  "slug": "dubai-vs-cyprus-property-residency",
+  "title": "Dubai vs Cyprus for Americans (2026): Zero-Tax Property vs EU Residency Compared",
+  "hub": "dubai-guides.html",
+  "template": "greece-vs-portugal-golden-visa.html",
+  "keywords": "dubai vs cyprus property investment, cyprus permanent residency vs uae golden visa, dubai or cyprus for americans",
+  "angle": "UAE AED 2M golden visa vs Cyprus €300K permanent residency; no local tax vs Cyprus non-dom regime; freehold zones vs EU property rights; rental yields and service charges; inheritance (DIFC Wills vs EU succession); US tax outcome in each (no credit available in Dubai — full US tax; credit in Cyprus). Decision table."
+ },
+ {
+  "slug": "healthcare-abroad-american-property-owners",
+  "title": "Healthcare Abroad for American Property Owners (2026): Medicare Doesn't Travel — What Does",
+  "hub": "general-guides.html",
+  "template": "best-countries-buy-property-abroad.html",
+  "keywords": "medicare abroad, healthcare for americans living abroad, expat health insurance property owners, public healthcare access residency visa",
+  "angle": "Medicare generally does not pay outside the US (cite medicare.gov); which residency visas unlock public healthcare (Portugal SNS via residency, Spain public system via NLV needs private cover first, Greece EFKA, Costa Rica CCSS mandatory, Mexico IMSS voluntary, Panama private), private international insurance basics, the visa-required insurance minimums, Medicare Part B decision if you keep US ties, and the tax angle (foreign health insurance premiums and the ACA). Country table linking to each guide."
+ },
+ {
+  "slug": "italian-citizenship-by-descent-2025-changes",
+  "title": "Italian Citizenship by Descent After Decree-Law 36/2025: What Americans Can Still Claim (2026)",
+  "hub": "italy-guides.html",
+  "template": "golden-visa-vs-second-passport.html",
+  "keywords": "italian citizenship by descent 2025 changes, jure sanguinis new law, decree 36/2025 italian citizenship americans",
+  "angle": "Decree-Law 36/2025 converted by Law 74/2025: the new two-generation limit (parent or grandparent born in Italy, or parent resident 2 years), who is grandfathered (applications/appointments before 27 March 2025), consular vs court route, documents and apostilles, timelines, and what a passport does and doesn't change for US tax (nothing — still worldwide taxation; exit tax only on renunciation). Cite Gazzetta Ufficiale and Esteri."
+ },
+ {
+  "slug": "is-portugal-golden-visa-worth-it",
+  "title": "Is the Portugal Golden Visa Still Worth It in 2026? An Attorney's Honest Assessment",
+  "hub": "portugal-guides.html",
+  "template": "golden-visa-vs-second-passport.html",
+  "keywords": "is portugal golden visa worth it 2026, portugal golden visa pros and cons, portugal golden visa 10 years citizenship",
+  "angle": "Opinion-led but sourced: the 10-year citizenship timeline (Lei Orgânica 1/2026), fund-route PFIC exposure and Form 8621 for US investors, fund fees and lock-ups, AIMA processing backlog, the 7-day rule's real value, family inclusion, versus D7/D8 alternatives that cost nothing. Verdict matrix by profile (Plan-B holder, retiree, remote worker, HNW). Link portugal-golden-visa, greece-vs-portugal, best-golden-visa-for-americans."
+ },
+ {
+  "slug": "buying-property-lisbon",
+  "title": "Buying Property in Lisbon as an American (2026): Neighbourhoods, Prices, Taxes and Traps",
+  "hub": "portugal-guides.html",
+  "template": "buying-property-portugal.html",
+  "keywords": "buying property in lisbon as an american, lisbon real estate prices 2026, lisbon apartment purchase foreigner",
+  "angle": "City-level guide: neighbourhood map (Chiado, Príncipe Real, Alfama, Campo de Ourique, Parque das Nações, Alvalade), price-per-m² ranges citing INE/Confidencial Imobiliário, IMT/IMI/stamp duty worked example on a €600K flat, condominium (condomínio) rules, licensing of AL short-lets under the 2024–26 rules, earthquake/older-building diligence, non-resident mortgages, and the residency angle (D7/D8 — GV property route gone). Link buying-property-portugal, portugal-nif, portugal-d7-visa."
+ },
+ {
+  "slug": "buying-property-algarve",
+  "title": "Buying Property in the Algarve as an American (2026): Towns, Prices, Golf-Resort Rules and Tax",
+  "hub": "portugal-guides.html",
+  "template": "buying-property-portugal.html",
+  "keywords": "buying property in algarve as an american, algarve real estate 2026, algarve villa purchase taxes",
+  "angle": "Lagos, Vilamoura, Tavira, Carvoeiro, Quinta do Lago; resort/touristic-complex ownership and rental-pool contracts; AL licensing; water and wildfire diligence; price ranges citing INE; IMT worked example; the retiree tax angle (NHR successor / IFICI eligibility) and US tax. Link buying-property-portugal, portugal-d7-visa, selling-property-portugal-us-citizen."
+ },
+ {
+  "slug": "buying-property-porto",
+  "title": "Buying Property in Porto as an American (2026): Districts, Rehab Rules, Prices and Tax",
+  "hub": "portugal-guides.html",
+  "template": "buying-property-portugal.html",
+  "keywords": "buying property in porto as an american, porto real estate prices 2026, porto apartment foreigner",
+  "angle": "Ribeira/Cedofeita/Foz/Boavista/Gaia; rehabilitation of historic buildings (ARU zones, IMI exemptions and 6% VAT on works — verify at Portal das Finanças), AL licensing status in Porto, price ranges (INE), IMT worked example, non-resident mortgages, US tax. Link buying-property-portugal, portugal-nif."
+ },
+ {
+  "slug": "buying-property-costa-del-sol",
+  "title": "Buying Property on the Costa del Sol as an American (2026): Marbella to Estepona, Taxes and Rules",
+  "hub": "spain-guides.html",
+  "template": "buying-property-spain.html",
+  "keywords": "buying property costa del sol american, marbella property purchase foreigner 2026, andalusia property transfer tax",
+  "angle": "Andalusia's 7% ITP flat rate and 1.2% AJD (verify Junta de Andalucía), off-plan bank guarantees (Ley 20/2015), urbanisation/community fees, tourist-licence (VUT) rules in Andalusia and the 2025 national registry, NIE and the non-resident mortgage market, the NLV/DNV residency pairing, IRNR non-resident tax, and US tax. Link buying-property-spain, spain-non-lucrative-visa."
+ },
+ {
+  "slug": "buying-property-valencia",
+  "title": "Buying Property in Valencia as an American (2026): Neighbourhoods, ITP, Tourist-Let Rules and Tax",
+  "hub": "spain-guides.html",
+  "template": "buying-property-spain.html",
+  "keywords": "buying property in valencia as an american, valencia real estate 2026 foreigner, valencia region property tax",
+  "angle": "Ruzafa, El Carmen, Cabanyal, Benimaclet, and the coast (Dénia/Jávea); Comunitat Valenciana ITP 10% (verify GVA), the 2024–26 tourist-rental restrictions, 'okupa' and squatting risk diligence, community fees, NIE, non-resident mortgages, NLV pairing, IRNR and US tax. Link buying-property-spain, spain-non-lucrative-visa."
+ },
+ {
+  "slug": "buying-property-puerto-vallarta",
+  "title": "Buying Property in Puerto Vallarta as an American (2026): Fideicomiso, Zones, Condo Rules and Tax",
+  "hub": "mexico-guides.html",
+  "template": "mexico.html",
+  "keywords": "buying property in puerto vallarta as an american, puerto vallarta real estate 2026, vallarta condo purchase fideicomiso",
+  "angle": "Restricted-zone fideicomiso mandatory, Jalisco vs Nayarit (Nuevo Vallarta/Bucerías) closing-cost and ISAI differences (cite state law), condo regime and HOA rules, pre-construction escrow risk, hurricane/flood insurance, short-let rules and 3% Jalisco lodging tax, notario selection, and US tax. Link mexico, fideicomiso, mortgage-in-mexico, selling-property-mexico-us-citizen."
+ },
+ {
+  "slug": "buying-property-tulum",
+  "title": "Buying Property in Tulum as an American (2026): Ejido Land, Pre-Construction Risk and Tax",
+  "hub": "mexico-guides.html",
+  "template": "mexico.html",
+  "keywords": "buying property in tulum as an american, tulum real estate risks, tulum pre construction condo 2026",
+  "angle": "The ejido-land trap (why title insurance and a certificado de libertad de gravamen matter), Quintana Roo ISAI and closing costs, the 2024–26 oversupply and pre-construction escrow (or lack of it), fideicomiso, environmental/cenote and SEMARNAT permits, Airbnb saturation data, notario diligence, and US tax. Link mexico, fideicomiso, us-taxes-property-mexico."
+ },
+ {
+  "slug": "buying-property-los-cabos",
+  "title": "Buying Property in Los Cabos as an American (2026): Fideicomiso, Resort Communities, Costs and Tax",
+  "hub": "mexico-guides.html",
+  "template": "mexico.html",
+  "keywords": "buying property in los cabos as an american, cabo san lucas real estate 2026, los cabos condo purchase fideicomiso",
+  "angle": "Baja California Sur ISAI and closing costs, master-planned/resort community rules and HOA regimes, fideicomiso, USD-denominated developer financing, water/desalination diligence, hurricane insurance, short-let rules, and US tax. Link mexico, fideicomiso, mortgage-in-mexico."
+ },
+ {
+  "slug": "buying-property-san-miguel-de-allende",
+  "title": "Buying Property in San Miguel de Allende as an American (2026): Colonial Homes, INAH Rules, Costs and Tax",
+  "hub": "mexico-guides.html",
+  "template": "mexico.html",
+  "keywords": "buying property in san miguel de allende as an american, san miguel de allende real estate 2026, san miguel expat home purchase",
+  "angle": "Outside the restricted zone — direct ownership (no fideicomiso) — and why that changes the closing; Guanajuato ISAI, INAH/heritage-zone renovation permits in the centro histórico, water scarcity diligence, the large US-retiree market and pricing (USD-listed), temporary residency pairing, and US tax. Link mexico, mexico-temporary-resident-visa, us-taxes-property-mexico."
+ },
+ {
+  "slug": "fbar-foreign-property-owners",
+  "title": "FBAR for Foreign Property Owners: When FinCEN Form 114 Applies",
+  "hub": "general-guides.html",
+  "template": "foreign-tax-credit-property-abroad.html",
+  "keywords": "FBAR foreign property, FinCEN 114 real estate, foreign bank account property purchase",
+  "angle": "Property itself is not reportable, but the foreign accounts used to buy/manage it usually are. $10,000 aggregate threshold, penalties, examples."
+ },
+ {
+  "slug": "form-8938-fatca-foreign-assets",
+  "title": "Form 8938 (FATCA) and Foreign Real Estate: What US Owners Must Report",
+  "hub": "general-guides.html",
+  "template": "foreign-tax-credit-property-abroad.html",
+  "keywords": "form 8938 foreign real estate, FATCA property reporting",
+  "angle": "Directly held real estate vs. property through entities/fideicomisos, thresholds by filing status and residence, 8938 vs FBAR table."
+ },
+ {
+  "slug": "depreciation-foreign-rental-property",
+  "title": "Depreciating Foreign Rental Property: The 30-Year ADS Rule",
+  "hub": "general-guides.html",
+  "template": "foreign-rental-income-us-tax.html",
+  "keywords": "foreign rental property depreciation, ADS 30 year foreign property",
+  "angle": "Foreign residential rentals use ADS (30-yr, 40-yr pre-2018) not 27.5-yr GDS — the #1 CPA-level mistake DIY filers make."
+ },
+ {
+  "slug": "selling-property-spain-us-citizen",
+  "title": "Selling Property in Spain as a US Citizen: Taxes on Both Sides",
+  "hub": "spain-guides.html",
+  "template": "selling-property-portugal-us-citizen.html",
+  "keywords": "selling property spain us citizen, spain capital gains non-resident",
+  "angle": "19% non-resident CGT, 3% retention on sale price, plusvalía municipal, US foreign tax credit interplay."
+ },
+ {
+  "slug": "portugal-digital-nomad-visa",
+  "title": "Portugal Digital Nomad Visa (D8) for Americans: Full Guide",
+  "hub": "portugal-guides.html",
+  "template": "portugal-d7-visa.html",
+  "keywords": "portugal digital nomad visa, D8 visa requirements americans",
+  "angle": "Income thresholds, remote-work proof, D8 vs D7, path to residency and the new 10-year citizenship timeline."
+ },
+ {
+  "slug": "spain-digital-nomad-visa",
+  "title": "Spain Digital Nomad Visa for Americans: Requirements and Taxes",
+  "hub": "spain-guides.html",
+  "template": "portugal-d7-visa.html",
+  "keywords": "spain digital nomad visa americans",
+  "angle": "Startup Law visa, income thresholds, Beckham-regime eligibility, now the main route after the Golden Visa ended April 2025."
+ },
+ {
+  "slug": "self-directed-ira-foreign-real-estate",
+  "title": "Buying Foreign Real Estate with a Self-Directed IRA",
+  "hub": "general-guides.html",
+  "template": "holding-property-abroad-llc-vs-personal.html",
+  "keywords": "self directed IRA foreign real estate",
+  "angle": "Custodians, prohibited transactions, UBIT/UDFI on financed property, personal-use ban, practical country issues."
+ },
+ {
+  "slug": "selling-property-italy-us-citizen",
+  "title": "Selling Property in Italy as a US Citizen",
+  "hub": "italy-guides.html",
+  "template": "selling-property-portugal-us-citizen.html",
+  "keywords": "selling property italy us citizen, italy capital gains tax property",
+  "angle": "5-year exemption rule, 26% substitute tax option, notary process, US side."
+ },
+ {
+  "slug": "us-estate-tax-foreign-property",
+  "title": "US Estate Tax on Foreign Property: What Heirs Need to Know",
+  "hub": "general-guides.html",
+  "template": "inheritance-tax-property-abroad.html",
+  "keywords": "us estate tax foreign property, estate planning property abroad",
+  "angle": "Worldwide-estate inclusion, situs rules, treaty relief, foreign death tax credit (Form 706-CE), step-up basis abroad."
+ },
+ {
+  "slug": "property-scams-buying-abroad",
+  "title": "Property Scams Abroad: 12 Red Flags Before You Wire Money",
+  "hub": "general-guides.html",
+  "template": "power-of-attorney-buying-property-abroad.html",
+  "keywords": "overseas property scams, buying property abroad scams red flags",
+  "angle": "Ejido land, off-plan developer failures, fake escrow, POA abuse, title fraud — with country examples and verification steps."
+ },
+ {
+  "slug": "greece-digital-nomad-visa",
+  "title": "Greece Digital Nomad Visa for Americans",
+  "hub": "greece-guides.html",
+  "template": "portugal-d7-visa.html",
+  "keywords": "greece digital nomad visa americans",
+  "angle": "€3,500/month threshold, 50% income-tax break, visa vs residence permit conversion."
+ },
+ {
+  "slug": "selling-property-france-us-citizen",
+  "title": "Selling Property in France as a US Citizen",
+  "hub": "france-guides.html",
+  "template": "selling-property-portugal-us-citizen.html",
+  "keywords": "selling property france us citizen, france capital gains non-resident",
+  "angle": "Taper relief by holding period, social charges and the US treaty, fiscal representative requirement."
+ },
+ {
+  "slug": "currency-exchange-buying-property-abroad",
+  "title": "Currency Strategy When Buying Property Abroad: Timing, Hedging, Transfers",
+  "hub": "general-guides.html",
+  "template": "transfer-money-abroad-property.html",
+  "keywords": "currency exchange buying property abroad, forward contract property purchase",
+  "angle": "Forward contracts, layered transfers, spread math vs banks, Section 988 basics on repayment of foreign mortgages."
+ },
+ {
+  "slug": "airbnb-income-abroad-us-tax",
+  "title": "Airbnb Income Abroad: How the IRS Taxes Your Foreign Short-Term Rental",
+  "hub": "general-guides.html",
+  "template": "foreign-rental-income-us-tax.html",
+  "keywords": "airbnb abroad us taxes, foreign short term rental tax",
+  "angle": "Schedule E vs C (services), 7-day rule, local platform withholding, VAT/tourist registration duties, FTC stacking."
+ },
+ {
+  "slug": "buying-property-ecuador",
+  "title": "Buying Property in Ecuador as a Foreigner",
+  "hub": "general-guides.html",
+  "template": "buying-property-colombia.html",
+  "keywords": "buying property ecuador foreigner",
+  "angle": "Full foreign ownership, $45k investor-visa threshold, escritura process, Cuenca/coast markets, USD economy."
+ },
+ {
+  "slug": "tax-residency-183-day-rule",
+  "title": "The 183-Day Rule: How Countries Decide You Owe Them Taxes",
+  "hub": "general-guides.html",
+  "template": "owning-property-abroad-tax-reporting.html",
+  "keywords": "183 day rule tax residency, tax residency property abroad",
+  "angle": "Day-counting traps, center-of-vital-interests tiebreakers, how owning a home shifts the analysis, treaty tiebreakers for Americans."
+ },
+ {
+  "slug": "spain-beckham-law-us-citizens",
+  "title": "Spain's Beckham Law for US Citizens: 24% Flat Tax Explained",
+  "hub": "spain-guides.html",
+  "template": "portugal-nif.html",
+  "keywords": "beckham law spain americans, spain impatriate regime",
+  "angle": "24% on Spanish-source income to €600k, 6-year window, who qualifies post-2023 reform, why US citizens still file 1040."
+ },
+ {
+  "slug": "selling-property-costa-rica-us-citizen",
+  "title": "Selling Property in Costa Rica as a US Citizen",
+  "hub": "costa-rica-guides.html",
+  "template": "selling-property-greece-us-citizen.html",
+  "keywords": "selling property costa rica capital gains",
+  "angle": "15% CGT or 2.25% gross option, corporation-owned transfers, US reporting."
+ },
+ {
+  "slug": "buying-property-vietnam",
+  "title": "Buying Property in Vietnam as a Foreigner: What You Can (and Can't) Own",
+  "hub": "general-guides.html",
+  "template": "buying-property-thailand.html",
+  "keywords": "buying property vietnam foreigner",
+  "angle": "50-year leasehold reality, 30% condo quota, no land ownership, repatriation of proceeds."
+ },
+ {
+  "slug": "portugal-ifici-nhr-2",
+  "title": "Portugal's IFICI (NHR 2.0): The New 20% Tax Regime",
+  "hub": "portugal-guides.html",
+  "template": "portugal-nif.html",
+  "keywords": "portugal IFICI, NHR 2.0 requirements",
+  "angle": "Eligible professions/employers, 20% rate, what replaced NHR, application deadlines, US-citizen interplay."
+ },
+ {
+  "slug": "buying-property-montenegro",
+  "title": "Buying Property in Montenegro as a Foreigner",
+  "hub": "general-guides.html",
+  "template": "buying-property-croatia.html",
+  "keywords": "buying property montenegro foreigner",
+  "angle": "Near-equal ownership rights, residency-by-property route, coastal market, EU-accession angle."
+ },
+ {
+  "slug": "notary-vs-attorney-buying-abroad",
+  "title": "Notary vs. Attorney Abroad: Who Actually Protects You",
+  "hub": "general-guides.html",
+  "template": "power-of-attorney-buying-property-abroad.html",
+  "keywords": "notary buying property abroad, do I need a lawyer to buy property abroad",
+  "angle": "Civil-law notary's neutral role vs US expectations, when the notary is NOT your advocate, fee structures by country."
+ },
+ {
+  "slug": "gifting-foreign-property-us-tax",
+  "title": "Gifting Foreign Property: US Gift Tax Rules for Overseas Real Estate",
+  "hub": "general-guides.html",
+  "template": "inheritance-tax-property-abroad.html",
+  "keywords": "gift tax foreign property, gifting overseas real estate",
+  "angle": "Annual/lifetime exclusions, Form 709, receiving gifts from foreign persons (Form 3520 $100k trigger), basis carryover."
+ },
+ {
+  "slug": "buying-property-argentina",
+  "title": "Buying Property in Argentina as a Foreigner",
+  "hub": "general-guides.html",
+  "template": "buying-property-uruguay.html",
+  "keywords": "buying property argentina foreigner",
+  "angle": "Cash-dollar market reality, escritura process, rural-land limits, currency risk and blue-dollar dynamics."
+ },
+ {
+  "slug": "due-diligence-checklist-buying-abroad",
+  "title": "Due Diligence Checklist for Buying Property Abroad",
+  "hub": "general-guides.html",
+  "template": "closing-costs-property-abroad.html",
+  "keywords": "due diligence buying property overseas checklist",
+  "angle": "Title search, liens/encumbrances, zoning, utilities debts, seller verification — printable checklist format."
+ },
+ {
+  "slug": "selling-property-dubai-us-citizen",
+  "title": "Selling Property in Dubai as a US Citizen",
+  "hub": "dubai-guides.html",
+  "template": "selling-property-greece-us-citizen.html",
+  "keywords": "selling property dubai capital gains us citizen",
+  "angle": "No UAE CGT but full US capital gains, DLD transfer mechanics, currency and wiring proceeds home."
+ },
+ {
+  "slug": "uruguay-residency-us-citizens",
+  "title": "Uruguay Residency for US Citizens: The Underrated Plan B",
+  "hub": "uruguay-guides.html",
+  "template": "panama-friendly-nations-visa.html",
+  "keywords": "uruguay residency americans",
+  "angle": "No income threshold, tax holiday for new residents, path to citizenship 3-5 years, property purchase synergy."
+ },
+ {
+  "slug": "italy-flat-tax-regime-us-citizens",
+  "title": "Italy's €300K Flat Tax for New Residents: Is It Worth It for Americans?",
+  "hub": "italy-guides.html",
+  "template": "portugal-nif.html",
+  "keywords": "italy flat tax new residents americans",
+  "angle": "2026 €300k rate, 15-year window, what income it covers, why US citizenship-based taxation changes the math."
+ },
+ {
+  "slug": "financing-vs-cash-buying-abroad",
+  "title": "Cash vs. Financing When Buying Property Abroad",
+  "hub": "general-guides.html",
+  "template": "foreign-mortgages-us-citizens.html",
+  "keywords": "cash vs mortgage buying property abroad",
+  "angle": "Negotiation power, developer terms, cross-collateral/HELOC on US home, Section 988 currency-gain trap on foreign mortgages."
+ },
+ {
+  "slug": "buying-property-morocco",
+  "title": "Buying Property in Morocco as a Foreigner",
+  "hub": "general-guides.html",
+  "template": "buying-property-turkey.html",
+  "keywords": "buying property morocco foreigner",
+  "angle": "Full ownership (non-agricultural), melkia vs titled land, notary process, repatriation guarantee via convertible dirham account."
+ },
+ {
+  "slug": "schedule-e-foreign-rental-income",
+  "title": "Schedule E for Foreign Rental Income: Line-by-Line Guide",
+  "hub": "general-guides.html",
+  "template": "foreign-rental-income-us-tax.html",
+  "keywords": "schedule e foreign rental property",
+  "angle": "Income conversion rates, deductible foreign costs, ADS depreciation entry, passive-loss limits, pairing with Form 1116."
+ },
+ {
+  "slug": "inheritance-forced-heirship-europe",
+  "title": "Forced Heirship in Europe: Why Your US Will May Not Control Your Property",
+  "hub": "general-guides.html",
+  "template": "inheritance-tax-property-abroad.html",
+  "keywords": "forced heirship europe property, eu succession regulation american",
+  "angle": "Reserved shares in France/Spain/Portugal/Italy, EU Succession Regulation 650/2012 choice-of-law election for Americans."
+ },
+ {
+  "slug": "buying-new-construction-abroad",
+  "title": "Buying Off-Plan and New Construction Abroad: Protections That Matter",
+  "hub": "general-guides.html",
+  "template": "property-scams-buying-abroad.html",
+  "keywords": "buying off plan property abroad risks",
+  "angle": "Bank-guarantee regimes, escrow/stage payments, completion-risk red flags, snagging and delivery disputes by country."
+ },
+ {
+  "slug": "greece-non-dom-regime",
+  "title": "Greece's Non-Dom and 7% Pensioner Tax Regimes",
+  "hub": "greece-guides.html",
+  "template": "portugal-nif.html",
+  "keywords": "greece non dom tax regime, greece 7 percent pension tax",
+  "angle": "€100k flat option, 7% foreign-pension regime, investment requirement link to Golden Visa, US-citizen caveats."
+ },
+ {
+  "slug": "property-management-abroad-us-owners",
+  "title": "Managing a Rental Property from 5,000 Miles Away",
+  "hub": "general-guides.html",
+  "template": "short-term-rental-rules-abroad.html",
+  "keywords": "property management abroad absentee owner",
+  "angle": "Manager vetting, contract clauses, fee benchmarks, POA scope, banking and tax-agent setup per country."
+ },
+ {
+  "slug": "paraguay-residency-us-citizens",
+  "title": "Paraguay Residency: The Cheapest Permanent Residency in the Americas",
+  "hub": "general-guides.html",
+  "template": "panama-friendly-nations-visa.html",
+  "keywords": "paraguay residency americans",
+  "angle": "Post-2022 temporary-then-permanent structure, minimal presence rule, territorial tax, honest cons."
+ },
+ {
+  "slug": "streamlined-filing-foreign-property",
+  "title": "Behind on FBARs? The IRS Streamlined Procedures for Property Owners Abroad",
+  "hub": "general-guides.html",
+  "template": "owning-property-abroad-tax-reporting.html",
+  "keywords": "streamlined filing compliance procedures foreign property",
+  "angle": "Non-willful certification, 3+6 lookback, 5% offshore penalty (domestic) vs 0% (foreign), when to lawyer up."
+ },
+ {
+  "slug": "retiring-abroad-property-checklist",
+  "title": "Retiring Abroad: The Property Owner's 24-Month Checklist",
+  "hub": "general-guides.html",
+  "template": "best-countries-buy-property-abroad.html",
+  "keywords": "retiring abroad checklist property",
+  "angle": "Timeline from scouting to closing: visas, healthcare, Medicare gap, banking, estate docs, shipping, pets."
+ },
+ {
+  "slug": "buying-property-albania",
+  "title": "Buying Property in Albania as a Foreigner",
+  "hub": "general-guides.html",
+  "template": "buying-property-montenegro.html",
+  "keywords": "buying property albania foreigner",
+  "angle": "Apartment ownership open, land restrictions/workarounds, Riviera boom, title-verification caution (post-communist restitution)."
+ }
 ]
