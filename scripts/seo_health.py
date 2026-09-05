@@ -22,6 +22,9 @@ WHAT IT AUTO-FIXES (--fix)
   4. Stale footer hub index      -> re-rendered with every current *-guides page
   5. sitemap.xml                 -> rebuilt from the filesystem, lastmod from git
   6. CollectionPage ItemList     -> regenerated from the hub's real guide cards
+  7. Sources block               -> official references from scripts/sources.json on every article
+  8. Related guides              -> 6 scored internal links per article (boosts under-linked pages)
+  9. AdSense                     -> stripped from lead pages listed in NO_ADS
 
 WHAT IT ONLY REPORTS (needs a human)
   - broken internal links, unbalanced <div>, invalid JSON-LD, truncated files
@@ -93,15 +96,20 @@ def head_of(doc: str) -> str:
     return doc[:i] if i != -1 else doc
 
 
+def _today() -> str:
+    import datetime as _dt
+    return _dt.date.today().isoformat()
+
+
 def git_lastmod(path: str, repo_root: str) -> str:
     try:
         out = subprocess.run(
             ["git", "log", "-1", "--format=%cs", "--", path],
             cwd=repo_root, capture_output=True, text=True, timeout=15,
         ).stdout.strip()
-        return out or "1970-01-01"
+        return out or _today()
     except Exception:
-        return "1970-01-01"
+        return _today()
 
 
 def og_title_of(doc: str, slug: str) -> str:
@@ -373,7 +381,7 @@ def fix_schema(site: Site, log: list) -> None:
                             node["mainEntity"] = want
                             changed = True
 
-            if not has_breadcrumb:
+            if not has_breadcrumb and slug != "index":
                 graph.append(site.breadcrumb(slug))
                 changed = True
 
@@ -469,6 +477,289 @@ def fix_sitemap(site: Site, log: list) -> None:
         log.append(f"sitemap rebuilt: {len(rows)} URLs")
 
 
+
+# ------------------------------------------------ sources / related / ads
+
+NON_ARTICLES = {"index", "contact", "get-started", "privacy", "terms"}
+
+# Lead pages: no AdSense (they exist to convert to "Get matched", not to sell clicks).
+NO_ADS = {
+    "index", "contact", "get-started",
+    "portugal-golden-visa", "greece-golden-visa", "spain-golden-visa", "italy-golden-visa",
+    "malta-golden-visa", "hungary-golden-visa", "dubai-golden-visa",
+    "best-golden-visa-for-americans", "ultimate-guide-golden-visa", "greece-vs-portugal-golden-visa",
+    "portugal-d7-visa", "spain-non-lucrative-visa", "panama-friendly-nations-visa",
+    "mexico", "buying-property-portugal", "buying-property-spain", "buying-property-greece",
+    "buying-property-italy", "buying-property-dubai", "us-tax-foreign-property",
+}
+
+COUNTRY_TOKENS = {
+    "portugal", "spain", "greece", "italy", "malta", "hungary", "cyprus", "croatia", "france",
+    "germany", "turkey", "dubai", "mexico", "costa-rica", "panama", "colombia", "dominican-republic",
+    "belize", "uruguay", "brazil", "japan", "thailand", "philippines", "malaysia", "bali", "indonesia",
+    "ecuador", "vietnam", "montenegro", "argentina", "morocco", "albania", "paraguay",
+}
+COUNTRY_ALIAS = {"bali": "indonesia", "dubai": "dubai"}
+
+TAX_WORDS = ("tax", "fbar", "fatca", "8938", "8949", "1031", "section-121", "capital-gains", "rental",
+             "depreciation", "inheritance", "estate", "foreign-bank", "llc", "currency-gain",
+             "schedule-e", "streamlined", "gifting")
+MONEY_WORDS = ("mortgage", "transfer-money", "closing-costs", "annual-property-taxes",
+               "currency-exchange", "financing")
+VISA_WORDS = ("visa", "residency", "residence", "nif", "citizenship", "passport", "nomad", "pensionado",
+              "mm2h", "ltr", "srrv", "beckham", "flat-tax", "non-dom", "nhr")
+
+
+def is_article(site: "Site", slug: str) -> bool:
+    return slug not in NON_ARTICLES and slug not in BARE_PAGES and slug not in site.hubs
+
+
+def slug_countries(slug: str) -> set:
+    found = set()
+    for tok in COUNTRY_TOKENS:
+        if re.search(rf"(^|-){re.escape(tok)}(-|$)", slug):
+            found.add(COUNTRY_ALIAS.get(tok, tok))
+    return found
+
+
+def slug_category(slug: str) -> str:
+    if slug == "mexico" or slug.startswith("buying-property-"):
+        return "buy"
+    if slug.startswith("selling-property-"):
+        return "sell"
+    if any(w in slug for w in TAX_WORDS):
+        return "tax"
+    if any(w in slug for w in MONEY_WORDS):
+        return "money"
+    if any(w in slug for w in VISA_WORDS):
+        return "visa"
+    return "general"
+
+
+JOURNEY = {  # complementary next-step categories from the reader's point of view
+    "buy": {"visa": 2, "sell": 2, "tax": 2, "money": 2, "buy": 2.5},
+    "visa": {"visa": 2.5, "buy": 2, "tax": 1},
+    "sell": {"tax": 2, "buy": 1},
+    "tax": {"tax": 1, "sell": 1, "buy": 1},
+    "money": {"buy": 2, "tax": 1},
+    "general": {"buy": 2, "visa": 1, "tax": 1},
+}
+
+
+def inbound_counts(site: "Site") -> Counter:
+    inbound: Counter = Counter()
+    for slug in site.slugs:
+        seen = set()
+        # count editorial links only (body, hub cards, nav) — not the generated related block,
+        # so recommendations stay deterministic run-to-run
+        body = re.sub(r"<!-- related:start -->.*?<!-- related:end -->", "", site.docs[slug], flags=re.S)
+        body = re.sub(r'<div class="related-guides".*?</div>', "", body, flags=re.S)
+        for m in re.finditer(r'href="(?!https?:|mailto:|tel:|#|/)([^"#?]+)"', body):
+            t = m.group(1).rstrip("/")
+            if t in site.slugs and t != slug and t not in seen:
+                seen.add(t)
+                inbound[t] += 1
+    return inbound
+
+
+def load_sources(repo_root: str) -> dict:
+    p = os.path.join(repo_root, "scripts", "sources.json")
+    if not os.path.exists(p):
+        return {"pages": {}, "rules": []}
+    with open(p, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def sources_for(slug: str, cfg: dict, limit: int = 6) -> list:
+    out, seen = [], set()
+    for s in cfg.get("pages", {}).get(slug, []):
+        if s["u"] not in seen:
+            seen.add(s["u"]); out.append(s)
+    for rule in cfg.get("rules", []):
+        if re.search(rule["match"], slug):
+            for s in rule["sources"]:
+                if s["u"] not in seen and len(out) < limit:
+                    seen.add(s["u"]); out.append(s)
+    return out[:limit]
+
+
+def last_verified(repo_root: str, slug: str) -> str:
+    p = os.path.join(repo_root, "factcheck_state.json")
+    try:
+        with open(p, encoding="utf-8") as fh:
+            return json.load(fh).get(f"{slug}.html", "")
+    except Exception:
+        return ""
+
+
+def render_sources(slug: str, items: list, verified: str) -> str:
+    lis = "\n".join(
+        f'      <li><a href="{html.escape(s["u"], quote=True)}" target="_blank" rel="noopener">'
+        f'{html.escape(s["n"])}</a></li>' for s in items)
+    note = (f'    <p class="sources-note">Claims on this page are re-verified against primary sources '
+            f'by the MigrateState fact-check rotation'
+            + (f' &middot; last verified <time datetime="{verified}">{verified}</time>' if verified else '')
+            + '.</p>\n')
+    return ('<!-- sources:start -->\n'
+            '  <section class="sources" id="sources" aria-label="Sources and official references">\n'
+            '    <strong>Sources &amp; official references</strong>\n'
+            f'    <ul>\n{lis}\n    </ul>\n{note}'
+            '  </section>\n<!-- sources:end -->')
+
+
+def fix_sources(site: "Site", log: list) -> None:
+    cfg = load_sources(site.repo_root)
+    for slug in sorted(site.slugs):
+        if not is_article(site, slug):
+            continue
+        items = sources_for(slug, cfg)
+        if not items:
+            continue
+        doc = site.docs[slug]
+        block = render_sources(slug, items, last_verified(site.repo_root, slug))
+        if "<!-- sources:start -->" in doc:
+            new = re.sub(r"<!-- sources:start -->.*?<!-- sources:end -->", lambda m: block, doc, flags=re.S)
+        else:
+            anchor = (re.search(r'\n\s*<div class="related-guides"', doc)
+                      or re.search(r"\n\s*</article>", doc) or re.search(r"\n\s*</main>", doc))
+            if not anchor:
+                continue
+            new = doc[:anchor.start()] + "\n\n" + block + doc[anchor.start():]
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"sources block {'updated' if '<!-- sources:start -->' in doc else 'added'}: {slug} ({len(items)})")
+
+
+def related_candidates(site: "Site", slug: str, inbound: Counter, exclude: set, n: int) -> list:
+    my_c, my_cat, my_hub = slug_countries(slug), slug_category(slug), site.hub_of.get(slug)
+    body = re.sub(r"<!-- related:start -->.*?<!-- related:end -->", "", site.docs[slug], flags=re.S)
+    body = re.sub(r'<div class="related-guides".*?</div>', "", body, flags=re.S)
+    scored = []
+    for other in site.slugs:
+        if other == slug or other in exclude or not is_article(site, other):
+            continue
+        s = 0.0
+        oc, ocat = slug_countries(other), slug_category(other)
+        if my_c and oc & my_c:
+            s += 4
+        if my_hub and site.hub_of.get(other) == my_hub:
+            s += 2
+        s += JOURNEY.get(my_cat, {}).get(ocat, 0)
+        if not my_c and not oc:      # general <-> general
+            s += 1
+        if my_c and not oc and ocat in ("tax", "money", "general"):
+            s += 1                   # country page -> cross-country money/tax guide
+        if not my_c and oc and ocat == "buy":
+            s += 1                   # cross-country guide -> country example
+        ib = inbound.get(other, 0)
+        if s >= 2.5:                 # only boost pages that are actually related
+            if ib < 6:
+                s += 2.5
+            elif ib < 12:
+                s += 1
+        if re.search(rf'href="{re.escape(other)}"', body):
+            s -= 3                   # already linked in the body; prefer new paths
+        scored.append((s, ib, other))
+    scored.sort(key=lambda t: (-t[0], t[1], t[2]))
+    return [o for _, _, o in scored[:n]]
+
+
+def link_label(site: "Site", slug: str) -> str:
+    t = clean_title(page_title(site.docs[slug]))
+    return html.escape(re.sub(r"\s*\(2026\)\s*$", "", t))
+
+
+def render_related(site: "Site", slugs: list) -> str:
+    links = "\n".join(
+        f'    <a href="{s}">{link_label(site, s)} &rarr;</a>' for s in slugs)
+    return ('<!-- related:start -->\n'
+            '  <nav class="related-guides" aria-label="Related guides">\n'
+            '    <strong>Related guides</strong>\n'
+            f'{links}\n'
+            '  </nav>\n<!-- related:end -->')
+
+
+def relevance(site: "Site", a: str, b: str) -> float:
+    """Editorial relatedness of b to a (no popularity terms)."""
+    s = 0.0
+    ca, cb = slug_countries(a), slug_countries(b)
+    if ca and ca & cb:
+        s += 4
+    if site.hub_of.get(a) and site.hub_of.get(a) == site.hub_of.get(b):
+        s += 2
+    s += JOURNEY.get(slug_category(a), {}).get(slug_category(b), 0)
+    if not ca and not cb:
+        s += 1
+    if ca and not cb and slug_category(b) in ("tax", "money", "general"):
+        s += 1
+    if not ca and cb and slug_category(b) == "buy":
+        s += 1
+    return s
+
+
+def fix_related_guides(site: "Site", log: list, per_page: int = 6, max_links: int = 8) -> None:
+    inbound = inbound_counts(site)
+    articles = [s for s in sorted(site.slugs) if is_article(site, s)]
+    picks_of: dict[str, list] = {}
+    found: dict[str, object] = {}
+    for slug in articles:
+        doc = site.docs[slug]
+        existing: list = []
+        m = re.search(r"<!-- related:start -->.*?<!-- related:end -->", doc, re.S)
+        if not m:
+            m = re.search(r'<div class="related-guides".*?</div>', doc, re.S)
+        found[slug] = m
+        if m:
+            for h in re.findall(r'href="([^"#?]+)"', m.group(0)):
+                h = h.rstrip("/")
+                if h in site.slugs and h != slug and h not in existing and is_article(site, h):
+                    existing.append(h)
+        keep = existing[:3]  # hand-picked links survive; the rest is recomputed
+        picks_of[slug] = keep + related_candidates(site, slug, inbound, set(keep), per_page - len(keep))
+
+    # coverage pass: every article should end up with >= 6 inbound links site-wide.
+    # Editorial inbound + related-block inbound, then top-up from the most related hosts.
+    def total_inbound(target: str) -> int:
+        return inbound.get(target, 0) + sum(1 for s, p in picks_of.items() if target in p)
+    for target in sorted(articles, key=lambda t: (total_inbound(t), t)):
+        need = 6 - total_inbound(target)
+        if need <= 0:
+            continue
+        hosts = sorted((h for h in articles if h != target and target not in picks_of[h]
+                        and len(picks_of[h]) < max_links and relevance(site, h, target) >= 2.5),
+                       key=lambda h: (-relevance(site, h, target), len(picks_of[h]), h))
+        for h in hosts[:need]:
+            picks_of[h].append(target)
+
+    for slug in articles:
+        doc, m = site.docs[slug], found[slug]
+        block = render_related(site, picks_of[slug])
+        if m:
+            new = doc[:m.start()] + block + doc[m.end():]
+        else:
+            anchor = re.search(r"\n\s*</article>", doc) or re.search(r"\n\s*</main>", doc)
+            if not anchor:
+                continue
+            new = doc[:anchor.start()] + "\n\n" + block + doc[anchor.start():]
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"related guides {'refreshed' if m else 'added'}: {slug}")
+
+
+ADSENSE_RE = re.compile(r'\s*<script async src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js[^"]*"[^>]*></script>')
+
+
+def fix_adsense(site: "Site", log: list) -> None:
+    for slug in sorted(site.slugs):
+        if slug not in NO_ADS:
+            continue
+        doc = site.docs[slug]
+        new = ADSENSE_RE.sub("", doc)
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"AdSense removed from lead page: {slug}")
+
+
 # ---------------------------------------------------------------- checkers
 
 
@@ -529,6 +820,17 @@ def run_checks(site: Site) -> dict:
             if "footer-hubs" not in doc:
                 problems["missing_footer_hub_index"].append(slug)
 
+        # audit blocks (Sept 2026 SEO audit)
+        if is_article(site, slug):
+            if "<!-- sources:start -->" not in doc:
+                problems["missing_sources_block"].append(slug)
+            if "<!-- related:start -->" not in doc:
+                problems["missing_related_guides"].append(slug)
+        if slug in NO_ADS and "adsbygoogle.js" in doc:
+            problems["adsense_on_lead_page"].append(slug)
+        if desc_m and len(html.unescape(desc_m.group(1))) < 110:
+            problems["description_too_short"].append(f"{slug} ({len(html.unescape(desc_m.group(1)))})")
+
         # schema — aggregate every JSON-LD block, since a page may legitimately
         # split Article/BreadcrumbList and FAQPage across separate <script> tags.
         blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', doc, re.S)
@@ -544,7 +846,7 @@ def run_checks(site: Site) -> dict:
             graph = data.get("@graph", [data]) if isinstance(data, dict) else data
             nodes += [n for n in graph if isinstance(n, dict)]
 
-        if blocks and slug not in BARE_PAGES and not any(
+        if blocks and slug not in BARE_PAGES and slug != "index" and not any(
             n.get("@type") == "BreadcrumbList" for n in nodes
         ):
             problems["missing_breadcrumb"].append(slug)
@@ -613,6 +915,9 @@ def main() -> int:
         fix_head_tags(site, log)
         fix_schema(site, log)
         fix_footer_hubs(site, log)
+        fix_adsense(site, log)
+        fix_sources(site, log)
+        fix_related_guides(site, log)
         fix_sitemap(site, log)
 
         print(f"\nREPAIRS ({len(log)}):")
