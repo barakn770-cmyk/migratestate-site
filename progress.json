@@ -38,8 +38,9 @@
     "1031-exchange-foreign-property",
     "selling-property-mexico-us-citizen",
     "fbar-foreign-property-owners",
-    "form-8938-fatca-foreign-assets"
+    "form-8938-fatca-foreign-assets",
+    "depreciation-foreign-rental-property"
   ],
-  "lastRun": "2026-09-04",
-  "lastSlug": "form-8938-fatca-foreign-assets"
+  "lastRun": "2026-09-05",
+  "lastSlug": "depreciation-foreign-rental-property"
 }
