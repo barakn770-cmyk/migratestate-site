@@ -1,1024 +1,1050 @@
 {
-  "_readme": "Official-source references rendered by scripts/seo_health.py (fix_sources) into a 'Sources & official references' block on every article. Only government portals, official gazettes, IRS/FinCEN/Treasury and statutory texts belong here. 'pages' = slug-specific links (listed first); 'rules' = pattern-matched sets merged after them; max 6 links per page. The daily pipeline appends the official URLs it verifies against.",
-  "pages": {
-    "portugal-golden-visa": [
-      {
-        "n": "AIMA — Portal ARI (Residence Permit for Investment, Art. 90.º-A)",
-        "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
-      },
-      {
-        "n": "AIMA — ARI / Golden Visa FAQ",
-        "u": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari/faq-residence-permit-for-investment-activity-ari"
-      },
-      {
-        "n": "Lei Orgânica n.º 1/2026 (Nationality Law amendment) — Diário da República, Série I n.º 95, 18 May 2026",
-        "u": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
-      },
-      {
-        "n": "Lei n.º 23/2007 (Foreigners' Law) — consolidated text, Diário da República",
-        "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-34509975"
-      }
-    ],
-    "portugal-d7-visa": [
-      {
-        "n": "Portal das Comunidades / MNE — National (residence) visas",
-        "u": "https://vistos.mne.gov.pt/en/"
-      },
-      {
-        "n": "AIMA — Agency for Integration, Migration and Asylum",
-        "u": "https://aima.gov.pt/"
-      },
-      {
-        "n": "Lei n.º 23/2007 (Foreigners' Law) — consolidated text",
-        "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-34509975"
-      }
-    ],
-    "portugal-nif": [
-      {
-        "n": "ePortugal — Applying for a taxpayer identification number (NIF) for a natural person",
-        "u": "https://eportugal.gov.pt/en/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular"
-      },
-      {
-        "n": "Portal das Finanças (Autoridade Tributária e Aduaneira)",
-        "u": "https://www.portaldasfinancas.gov.pt/"
-      }
-    ],
-    "buying-property-portugal": [
-      {
-        "n": "Portal das Finanças — IMT / IMI (property taxes)",
-        "u": "https://www.portaldasfinancas.gov.pt/"
-      },
-      {
-        "n": "IRN — Registo Predial (land registry)",
-        "u": "https://irn.justica.gov.pt/"
-      },
-      {
-        "n": "ePortugal — NIF for a natural person",
-        "u": "https://eportugal.gov.pt/en/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular"
-      }
-    ],
-    "selling-property-portugal-us-citizen": [
-      {
-        "n": "Portal das Finanças — IRS (Portuguese income tax) on capital gains",
-        "u": "https://www.portaldasfinancas.gov.pt/"
-      },
-      {
-        "n": "IRS — United States income tax treaties A to Z (US–Portugal treaty)",
-        "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
-      }
-    ],
-    "spain-golden-visa": [
-      {
-        "n": "BOE — Ley 14/2013 de apoyo a los emprendedores (investor-residence provisions, as amended)",
-        "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074"
-      },
-      {
-        "n": "Ministerio de Inclusión, Seguridad Social y Migraciones — Migraciones",
-        "u": "https://www.inclusion.gob.es/en/web/migraciones"
-      }
-    ],
-    "spain-non-lucrative-visa": [
-      {
-        "n": "Ministerio de Inclusión — Residir sin trabajar (non-lucrative residence)",
-        "u": "https://www.inclusion.gob.es/en/web/migraciones/residir-sin-trabajar"
-      },
-      {
-        "n": "Ministerio de Inclusión — Renewal of non-lucrative temporary residence (Hoja 7)",
-        "u": "https://www.inclusion.gob.es/en/web/migraciones/w/renovacion-de-la-autorizacion-de-residencia-temporal-no-lucrativa"
-      },
-      {
-        "n": "Ministerio de Asuntos Exteriores — visas (consular portal)",
-        "u": "https://www.exteriores.gob.es/"
-      }
-    ],
-    "buying-property-spain": [
-      {
-        "n": "Agencia Tributaria (Spanish tax authority)",
-        "u": "https://sede.agenciatributaria.gob.es/"
-      },
-      {
-        "n": "Colegio de Registradores — Registro de la Propiedad",
-        "u": "https://www.registradores.org/"
-      },
-      {
-        "n": "Ministerio del Interior — NIE / extranjería",
-        "u": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/"
-      }
-    ],
-    "greece-golden-visa": [
-      {
-        "n": "Ministry of Migration and Asylum (Hellenic Republic)",
-        "u": "https://migration.gov.gr/en/"
-      },
-      {
-        "n": "mitos.gov.gr — Golden visa programme (investment in real property), initial issuance",
-        "u": "https://en.mitos.gov.gr/index.php/%CE%94%CE%94:Golden_visa_programme_(investment_in_a_listed_real_property)_%E2%80%93_Initial_issuance"
-      },
-      {
-        "n": "AADE — Independent Authority for Public Revenue (Greek tax)",
-        "u": "https://www.aade.gr/"
-      }
-    ],
-    "buying-property-greece": [
-      {
-        "n": "Hellenic Cadastre (Ktimatologio)",
-        "u": "https://www.ktimatologio.gr/"
-      },
-      {
-        "n": "AADE — Independent Authority for Public Revenue",
-        "u": "https://www.aade.gr/"
-      },
-      {
-        "n": "Ministry of Migration and Asylum",
-        "u": "https://migration.gov.gr/en/"
-      }
-    ],
-    "selling-property-greece-us-citizen": [
-      {
-        "n": "AADE — Independent Authority for Public Revenue",
-        "u": "https://www.aade.gr/"
-      },
-      {
-        "n": "IRS — US income tax treaties A to Z (US–Greece treaty)",
-        "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
-      }
-    ],
-    "greece-vs-portugal-golden-visa": [
-      {
-        "n": "Ministry of Migration and Asylum (Greece)",
-        "u": "https://migration.gov.gr/en/"
-      },
-      {
-        "n": "AIMA — Portal ARI (Portugal)",
-        "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
-      },
-      {
-        "n": "Lei Orgânica n.º 1/2026 — Diário da República (Portuguese nationality timeline)",
-        "u": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
-      }
-    ],
-    "italy-golden-visa": [
-      {
-        "n": "Investor Visa for Italy — official programme site (MIMIT)",
-        "u": "https://investorvisa.mise.gov.it/index.php/en/"
-      },
-      {
-        "n": "Investor Visa for Italy — how it works",
-        "u": "https://investorvisa.mise.gov.it/index.php/en/investor-visa-how-it-works"
-      },
-      {
-        "n": "Agenzia delle Entrate (Italian Revenue Agency)",
-        "u": "https://www.agenziaentrate.gov.it/"
-      }
-    ],
-    "buying-property-italy": [
-      {
-        "n": "Agenzia delle Entrate — property taxes and cadastre",
-        "u": "https://www.agenziaentrate.gov.it/"
-      },
-      {
-        "n": "Visto per l'Italia — official visa portal (Ministry of Foreign Affairs)",
-        "u": "https://vistoperitalia.esteri.it/"
-      }
-    ],
-    "malta-golden-visa": [
-      {
-        "n": "Residency Malta Agency — MPRP legal framework",
-        "u": "https://residencymalta.gov.mt/legal-framework-mprp-2/"
-      },
-      {
-        "n": "Residency Malta Agency",
-        "u": "https://residencymalta.gov.mt/"
-      },
-      {
-        "n": "Malta Commissioner for Revenue",
-        "u": "https://cfr.gov.mt/"
-      }
-    ],
-    "hungary-golden-visa": [
-      {
-        "n": "Enter Hungary — official electronic application portal (National Directorate-General for Aliens Policing)",
-        "u": "https://enterhungary.gov.hu/"
-      },
-      {
-        "n": "National Directorate-General for Aliens Policing (OIF)",
-        "u": "https://oif.gov.hu/"
-      },
-      {
-        "n": "Magyar Közlöny (Hungarian official gazette)",
-        "u": "https://magyarkozlony.hu/"
-      }
-    ],
-    "buying-property-cyprus": [
-      {
-        "n": "Civil Registry and Migration Department (Cyprus)",
-        "u": "http://www.moi.gov.cy/moi/crmd/crmd.nsf/"
-      },
-      {
-        "n": "Cyprus Tax Department",
-        "u": "https://www.mof.gov.cy/mof/tax/taxdep.nsf/"
-      },
-      {
-        "n": "Department of Lands and Surveys (Cyprus)",
-        "u": "https://portal.dls.moi.gov.cy/"
-      }
-    ],
-    "dubai-golden-visa": [
-      {
-        "n": "u.ae — Golden visa (official UAE Government portal)",
-        "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
-      },
-      {
-        "n": "ICP — Federal Authority for Identity, Citizenship, Customs & Port Security",
-        "u": "https://icp.gov.ae/"
-      },
-      {
-        "n": "GDRFA Dubai",
-        "u": "https://gdrfad.gov.ae/"
-      },
-      {
-        "n": "Dubai Land Department",
-        "u": "https://dubailand.gov.ae/"
-      }
-    ],
-    "buying-property-dubai": [
-      {
-        "n": "Dubai Land Department",
-        "u": "https://dubailand.gov.ae/"
-      },
-      {
-        "n": "u.ae — Golden visa (official UAE Government portal)",
-        "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
-      },
-      {
-        "n": "UAE Federal Tax Authority",
-        "u": "https://tax.gov.ae/"
-      }
-    ],
-    "mexico": [
-      {
-        "n": "Ley de Inversión Extranjera (Foreign Investment Law) — Cámara de Diputados",
-        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIE.pdf"
-      },
-      {
-        "n": "Constitución Política — Artículo 27 (restricted zone) — Cámara de Diputados",
-        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
-      },
-      {
-        "n": "IRS — Revenue Ruling 2013-14 (Mexican fideicomiso not a trust for US tax purposes)",
-        "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
-      },
-      {
-        "n": "SAT — Servicio de Administración Tributaria",
-        "u": "https://www.sat.gob.mx/"
-      },
-      {
-        "n": "Instituto Nacional de Migración (INM)",
-        "u": "https://www.gob.mx/inm"
-      }
-    ],
-    "mortgage-in-mexico": [
-      {
-        "n": "Banco de México (reference rates)",
-        "u": "https://www.banxico.org.mx/"
-      },
-      {
-        "n": "CONDUSEF — financial-consumer protection (mortgage comparison)",
-        "u": "https://www.condusef.gob.mx/"
-      },
-      {
-        "n": "IRS — Publication 936, Home Mortgage Interest Deduction",
-        "u": "https://www.irs.gov/publications/p936"
-      }
-    ],
-    "us-taxes-property-mexico": [
-      {
-        "n": "IRS — Revenue Ruling 2013-14 (fideicomiso)",
-        "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
-      },
-      {
-        "n": "IRS — About Form 3520 (foreign trusts)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-3520"
-      },
-      {
-        "n": "SAT — Servicio de Administración Tributaria",
-        "u": "https://www.sat.gob.mx/"
-      },
-      {
-        "n": "IRS — US–Mexico income tax treaty (treaties A to Z)",
-        "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
-      }
-    ],
-    "selling-property-mexico-us-citizen": [
-      {
-        "n": "SAT — Servicio de Administración Tributaria (ISR on property sales)",
-        "u": "https://www.sat.gob.mx/"
-      },
-      {
-        "n": "IRS — Publication 523, Selling Your Home",
-        "u": "https://www.irs.gov/publications/p523"
-      },
-      {
-        "n": "IRS — Revenue Ruling 2013-14 (fideicomiso)",
-        "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
-      }
-    ],
-    "buying-property-costa-rica": [
-      {
-        "n": "Dirección General de Migración y Extranjería (Costa Rica)",
-        "u": "https://www.migracion.go.cr/"
-      },
-      {
-        "n": "Ministerio de Hacienda (Costa Rica)",
-        "u": "https://www.hacienda.go.cr/"
-      },
-      {
-        "n": "Registro Nacional (Costa Rica property registry)",
-        "u": "https://www.rnpdigital.com/"
-      },
-      {
-        "n": "SCIJ — Sistema Costarricense de Información Jurídica (statutes)",
-        "u": "https://www.pgrweb.go.cr/scij/"
-      }
-    ],
-    "buying-property-panama": [
-      {
-        "n": "Servicio Nacional de Migración (Panama)",
-        "u": "https://www.migracion.gob.pa/"
-      },
-      {
-        "n": "Dirección General de Ingresos (Panama tax)",
-        "u": "https://dgi.mef.gob.pa/"
-      },
-      {
-        "n": "Registro Público de Panamá",
-        "u": "https://www.registro-publico.gob.pa/"
-      }
-    ],
-    "panama-friendly-nations-visa": [
-      {
-        "n": "Servicio Nacional de Migración (Panama) — visas",
-        "u": "https://www.migracion.gob.pa/"
-      },
-      {
-        "n": "Gaceta Oficial de Panamá",
-        "u": "https://www.gacetaoficial.gob.pa/"
-      }
-    ],
-    "buying-property-colombia": [
-      {
-        "n": "Cancillería de Colombia — Visas",
-        "u": "https://www.cancilleria.gov.co/tramites_servicios/visa"
-      },
-      {
-        "n": "Banco de la República — foreign-investment registration",
-        "u": "https://www.banrep.gov.co/"
-      },
-      {
-        "n": "DIAN — Dirección de Impuestos y Aduanas Nacionales",
-        "u": "https://www.dian.gov.co/"
-      }
-    ],
-    "buying-property-dominican-republic": [
-      {
-        "n": "DGII — Dirección General de Impuestos Internos",
-        "u": "https://dgii.gov.do/"
-      },
-      {
-        "n": "Dirección General de Migración (Dominican Republic)",
-        "u": "https://www.migracion.gob.do/"
-      }
-    ],
-    "buying-property-belize": [
-      {
-        "n": "Belize Immigration and Nationality Department",
-        "u": "https://immigration.gov.bz/"
-      },
-      {
-        "n": "Belize Tax Service Department",
-        "u": "https://bts.gov.bz/"
-      }
-    ],
-    "buying-property-uruguay": [
-      {
-        "n": "Dirección Nacional de Migración (Uruguay)",
-        "u": "https://www.gub.uy/ministerio-interior/direccion-nacional-migracion"
-      },
-      {
-        "n": "DGI — Dirección General Impositiva (Uruguay)",
-        "u": "https://www.dgi.gub.uy/"
-      }
-    ],
-    "buying-property-brazil": [
-      {
-        "n": "Receita Federal do Brasil (CPF, taxes)",
-        "u": "https://www.gov.br/receitafederal/"
-      },
-      {
-        "n": "Polícia Federal — immigration",
-        "u": "https://www.gov.br/pf/"
-      }
-    ],
-    "buying-property-france": [
-      {
-        "n": "France-Visas — official visa portal",
-        "u": "https://france-visas.gouv.fr/"
-      },
-      {
-        "n": "impots.gouv.fr — French tax administration",
-        "u": "https://www.impots.gouv.fr/"
-      },
-      {
-        "n": "service-public.fr — Logement (housing: buying, taxes, notaire)",
-        "u": "https://www.service-public.fr/particuliers/vosdroits/N10"
-      }
-    ],
-    "buying-property-germany": [
-      {
-        "n": "Make it in Germany — official portal (visas & residence)",
-        "u": "https://www.make-it-in-germany.com/en/"
-      },
-      {
-        "n": "Bundeszentralamt für Steuern (Federal Central Tax Office)",
-        "u": "https://www.bzst.de/"
-      }
-    ],
-    "buying-property-croatia": [
-      {
-        "n": "Ministry of the Interior (MUP) — foreigners' stay",
-        "u": "https://mup.gov.hr/"
-      },
-      {
-        "n": "Porezna uprava — Croatian Tax Administration",
-        "u": "https://www.porezna-uprava.hr/"
-      },
-      {
-        "n": "Ministry of Justice — reciprocity for property acquisition by foreigners",
-        "u": "https://mpu.gov.hr/"
-      }
-    ],
-    "buying-property-turkey": [
-      {
-        "n": "Presidency of Migration Management (Göç İdaresi)",
-        "u": "https://www.goc.gov.tr/"
-      },
-      {
-        "n": "General Directorate of Land Registry and Cadastre (TKGM)",
-        "u": "https://www.tkgm.gov.tr/"
-      },
-      {
-        "n": "Resmî Gazete (official gazette)",
-        "u": "https://www.resmigazete.gov.tr/"
-      }
-    ],
-    "buying-property-japan": [
-      {
-        "n": "Immigration Services Agency of Japan",
-        "u": "https://www.moj.go.jp/isa/"
-      },
-      {
-        "n": "National Tax Agency (English)",
-        "u": "https://www.nta.go.jp/english/"
-      },
-      {
-        "n": "Ministry of Land, Infrastructure, Transport and Tourism (MLIT)",
-        "u": "https://www.mlit.go.jp/en/"
-      }
-    ],
-    "buying-property-thailand": [
-      {
-        "n": "Department of Lands (Thailand)",
-        "u": "https://www.dol.go.th/"
-      },
-      {
-        "n": "Thailand LTR Visa — Board of Investment",
-        "u": "https://ltr.boi.go.th/"
-      },
-      {
-        "n": "Revenue Department (Thailand)",
-        "u": "https://www.rd.go.th/english/"
-      }
-    ],
-    "buying-property-philippines": [
-      {
-        "n": "Philippine Retirement Authority (SRRV)",
-        "u": "https://pra.gov.ph/"
-      },
-      {
-        "n": "Bureau of Internal Revenue",
-        "u": "https://www.bir.gov.ph/"
-      },
-      {
-        "n": "Bureau of Immigration (Philippines)",
-        "u": "https://immigration.gov.ph/"
-      }
-    ],
-    "buying-property-malaysia": [
-      {
-        "n": "Malaysia My Second Home (MM2H) — official portal",
-        "u": "https://www.mm2h.gov.my/"
-      },
-      {
-        "n": "LHDN — Inland Revenue Board of Malaysia",
-        "u": "https://www.hasil.gov.my/"
-      }
-    ],
-    "buying-property-bali": [
-      {
-        "n": "Kementerian ATR/BPN — land agency (Indonesia)",
-        "u": "https://www.atrbpn.go.id/"
-      },
-      {
-        "n": "Direktorat Jenderal Imigrasi (Indonesia)",
-        "u": "https://www.imigrasi.go.id/"
-      },
-      {
-        "n": "Direktorat Jenderal Pajak (Indonesian tax)",
-        "u": "https://pajak.go.id/"
-      }
-    ],
-    "foreign-bank-account-americans": [
-      {
-        "n": "IRS — Report of Foreign Bank and Financial Accounts (FBAR)",
-        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
-      },
-      {
-        "n": "FinCEN — BSA E-Filing System (FinCEN Form 114)",
-        "u": "https://bsaefiling.fincen.treas.gov/"
-      },
-      {
-        "n": "IRS — About Form 8938, Statement of Specified Foreign Financial Assets",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8938"
-      }
-    ],
-    "fbar-foreign-property-owners": [
-      {
-        "n": "IRS — FBAR overview and filing requirements",
-        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
-      },
-      {
-        "n": "FinCEN — BSA E-Filing System",
-        "u": "https://bsaefiling.fincen.treas.gov/"
-      },
-      {
-        "n": "IRS — Comparison of Form 8938 and FBAR requirements",
-        "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
-      }
-    ],
-    "owning-property-abroad-tax-reporting": [
-      {
-        "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
-        "u": "https://www.irs.gov/publications/p54"
-      },
-      {
-        "n": "IRS — Comparison of Form 8938 and FBAR requirements",
-        "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
-      },
-      {
-        "n": "IRS — About Form 3520 (foreign trusts and gifts)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-3520"
-      },
-      {
-        "n": "IRS — Publication 527, Residential Rental Property",
-        "u": "https://www.irs.gov/publications/p527"
-      }
-    ],
-    "foreign-rental-income-us-tax": [
-      {
-        "n": "IRS — Publication 527, Residential Rental Property",
-        "u": "https://www.irs.gov/publications/p527"
-      },
-      {
-        "n": "IRS — About Schedule E (Form 1040)",
-        "u": "https://www.irs.gov/forms-pubs/about-schedule-e-form-1040"
-      },
-      {
-        "n": "IRS — Publication 946, How to Depreciate Property (ADS for foreign property)",
-        "u": "https://www.irs.gov/publications/p946"
-      },
-      {
-        "n": "IRS — About Form 1116, Foreign Tax Credit",
-        "u": "https://www.irs.gov/forms-pubs/about-form-1116"
-      }
-    ],
-    "depreciation-foreign-rental-property": [
-      {
-        "n": "IRS — Publication 946, How to Depreciate Property",
-        "u": "https://www.irs.gov/publications/p946"
-      },
-      {
-        "n": "IRS — Publication 527, Residential Rental Property",
-        "u": "https://www.irs.gov/publications/p527"
-      },
-      {
-        "n": "26 U.S.C. § 168(g) — Alternative depreciation system (property used predominantly outside the US)",
-        "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section168&num=0&edition=prelim"
-      }
-    ],
-    "foreign-tax-credit-property-abroad": [
-      {
-        "n": "IRS — Publication 514, Foreign Tax Credit for Individuals",
-        "u": "https://www.irs.gov/publications/p514"
-      },
-      {
-        "n": "IRS — About Form 1116, Foreign Tax Credit",
-        "u": "https://www.irs.gov/forms-pubs/about-form-1116"
-      },
-      {
-        "n": "IRS — US income tax treaties A to Z",
-        "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
-      }
-    ],
-    "capital-gains-property-abroad": [
-      {
-        "n": "IRS — Publication 544, Sales and Other Dispositions of Assets",
-        "u": "https://www.irs.gov/publications/p544"
-      },
-      {
-        "n": "IRS — About Form 8949, Sales and Other Dispositions of Capital Assets",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8949"
-      },
-      {
-        "n": "IRS — Publication 514, Foreign Tax Credit for Individuals",
-        "u": "https://www.irs.gov/publications/p514"
-      },
-      {
-        "n": "IRS — Topic 559, Net Investment Income Tax",
-        "u": "https://www.irs.gov/taxtopics/tc559"
-      }
-    ],
-    "form-8949-foreign-property-sale": [
-      {
-        "n": "IRS — About Form 8949",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8949"
-      },
-      {
-        "n": "IRS — Instructions for Form 8949",
-        "u": "https://www.irs.gov/instructions/i8949"
-      },
-      {
-        "n": "IRS — About Schedule D (Form 1040)",
-        "u": "https://www.irs.gov/forms-pubs/about-schedule-d-form-1040"
-      }
-    ],
-    "section-121-exclusion-foreign-home-sale": [
-      {
-        "n": "IRS — Publication 523, Selling Your Home",
-        "u": "https://www.irs.gov/publications/p523"
-      },
-      {
-        "n": "26 U.S.C. § 121 — Exclusion of gain from sale of principal residence",
-        "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section121&num=0&edition=prelim"
-      },
-      {
-        "n": "IRS — Topic 701, Sale of Your Home",
-        "u": "https://www.irs.gov/taxtopics/tc701"
-      }
-    ],
-    "1031-exchange-foreign-property": [
-      {
-        "n": "IRS — Like-kind exchanges: real estate tax tips",
-        "u": "https://www.irs.gov/newsroom/like-kind-exchanges-real-estate-tax-tips"
-      },
-      {
-        "n": "IRS — About Form 8824, Like-Kind Exchanges",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8824"
-      },
-      {
-        "n": "26 U.S.C. § 1031(h) — foreign real property not like-kind to US real property",
-        "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section1031&num=0&edition=prelim"
-      }
-    ],
-    "foreign-mortgage-currency-gain-tax": [
-      {
-        "n": "26 U.S.C. § 988 — Treatment of certain foreign currency transactions",
-        "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section988&num=0&edition=prelim"
-      },
-      {
-        "n": "IRS — Foreign currency and currency exchange rates",
-        "u": "https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates"
-      },
-      {
-        "n": "IRS — Yearly average currency exchange rates",
-        "u": "https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates"
-      }
-    ],
-    "foreign-mortgages-us-citizens": [
-      {
-        "n": "IRS — Publication 936, Home Mortgage Interest Deduction",
-        "u": "https://www.irs.gov/publications/p936"
-      },
-      {
-        "n": "26 U.S.C. § 988 — foreign currency transactions (mortgage payoff gains)",
-        "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section988&num=0&edition=prelim"
-      },
-      {
-        "n": "CFPB — mortgage basics (US consumer reference)",
-        "u": "https://www.consumerfinance.gov/owning-a-home/"
-      }
-    ],
-    "transfer-money-abroad-property": [
-      {
-        "n": "FinCEN — Bank Secrecy Act requirements (currency transaction reporting)",
-        "u": "https://www.fincen.gov/"
-      },
-      {
-        "n": "IRS — About Form 3520 (reporting large foreign gifts)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-3520"
-      },
-      {
-        "n": "IRS — FBAR requirements for accounts used in the purchase",
-        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
-      },
-      {
-        "n": "OFAC — Sanctions programs and country information",
-        "u": "https://ofac.treasury.gov/sanctions-programs-and-country-information"
-      }
-    ],
-    "inheritance-tax-property-abroad": [
-      {
-        "n": "IRS — About Form 706, United States Estate (and Generation-Skipping Transfer) Tax Return",
-        "u": "https://www.irs.gov/forms-pubs/about-form-706"
-      },
-      {
-        "n": "IRS — Estate tax",
-        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax"
-      },
-      {
-        "n": "IRS — Estate and gift tax treaties (international)",
-        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-gift-tax-treaties-international"
-      },
-      {
-        "n": "IRS — About Form 3520 (bequests from foreign persons)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-3520"
-      }
-    ],
-    "holding-property-abroad-llc-vs-personal": [
-      {
-        "n": "IRS — About Form 5471 (foreign corporations)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-5471"
-      },
-      {
-        "n": "IRS — About Form 8858 (foreign disregarded entities and branches)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8858"
-      },
-      {
-        "n": "IRS — About Form 8865 (foreign partnerships)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8865"
-      },
-      {
-        "n": "FinCEN — Beneficial Ownership Information reporting",
-        "u": "https://www.fincen.gov/boi"
-      }
-    ],
-    "annual-property-taxes-abroad": [
-      {
-        "n": "IRS — Topic 503, Deductible Taxes (foreign real property taxes not deductible under §164(b)(6))",
-        "u": "https://www.irs.gov/taxtopics/tc503"
-      },
-      {
-        "n": "IRS — Publication 527, Residential Rental Property",
-        "u": "https://www.irs.gov/publications/p527"
-      }
-    ],
-    "closing-costs-property-abroad": [
-      {
-        "n": "IRS — Publication 551, Basis of Assets (capitalising closing costs)",
-        "u": "https://www.irs.gov/publications/p551"
-      },
-      {
-        "n": "IRS — Publication 527, Residential Rental Property",
-        "u": "https://www.irs.gov/publications/p527"
-      }
-    ],
-    "short-term-rental-rules-abroad": [
-      {
-        "n": "IRS — Publication 527, Residential Rental Property (incl. personal-use days)",
-        "u": "https://www.irs.gov/publications/p527"
-      },
-      {
-        "n": "IRS — Topic 415, Renting Residential and Vacation Property",
-        "u": "https://www.irs.gov/taxtopics/tc415"
-      },
-      {
-        "n": "IRS — About Schedule E (Form 1040)",
-        "u": "https://www.irs.gov/forms-pubs/about-schedule-e-form-1040"
-      }
-    ],
-    "power-of-attorney-buying-property-abroad": [
-      {
-        "n": "HCCH — Apostille Convention (status table of contracting parties)",
-        "u": "https://www.hcch.net/en/instruments/conventions/status-table/?cid=41"
-      },
-      {
-        "n": "U.S. Department of State — Apostille requirements",
-        "u": "https://travel.state.gov/content/travel/en/records-and-authentications/authenticate-your-document/apostille-requirements.html"
-      },
-      {
-        "n": "U.S. Department of State — Notarial services abroad",
-        "u": "https://travel.state.gov/content/travel/en/international-travel/while-abroad/notarial-and-documentary-services.html"
-      }
-    ],
-    "golden-visa-vs-second-passport": [
-      {
-        "n": "IRS — Expatriation tax (Section 877A)",
-        "u": "https://www.irs.gov/individuals/international-taxpayers/expatriation-tax"
-      },
-      {
-        "n": "U.S. Department of State — Dual nationality",
-        "u": "https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Dual-Nationality.html"
-      },
-      {
-        "n": "IRS — Publication 54, US citizens and resident aliens abroad",
-        "u": "https://www.irs.gov/publications/p54"
-      }
-    ],
-    "best-golden-visa-for-americans": [
-      {
-        "n": "AIMA — Portal ARI (Portugal)",
-        "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
-      },
-      {
-        "n": "Ministry of Migration and Asylum (Greece)",
-        "u": "https://migration.gov.gr/en/"
-      },
-      {
-        "n": "Investor Visa for Italy — official programme site",
-        "u": "https://investorvisa.mise.gov.it/index.php/en/"
-      },
-      {
-        "n": "Residency Malta Agency — MPRP legal framework",
-        "u": "https://residencymalta.gov.mt/legal-framework-mprp-2/"
-      },
-      {
-        "n": "BOE — Ley 14/2013 (Spain, investor residence provisions)",
-        "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074"
-      },
-      {
-        "n": "IRS — Publication 54, US citizens and resident aliens abroad",
-        "u": "https://www.irs.gov/publications/p54"
-      }
-    ],
-    "ultimate-guide-golden-visa": [
-      {
-        "n": "AIMA — Portal ARI (Portugal)",
-        "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
-      },
-      {
-        "n": "Ministry of Migration and Asylum (Greece)",
-        "u": "https://migration.gov.gr/en/"
-      },
-      {
-        "n": "u.ae — Golden visa (UAE)",
-        "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
-      },
-      {
-        "n": "IRS — Publication 54, US citizens and resident aliens abroad",
-        "u": "https://www.irs.gov/publications/p54"
-      }
-    ],
-    "buying-property-abroad-experts": [
-      {
-        "n": "AIMA — ARI / Golden Visa FAQ (Portugal: real estate no longer qualifies)",
-        "u": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari/faq-residence-permit-for-investment-activity-ari"
-      },
-      {
-        "n": "BOE — Ley 14/2013 (Spain) as amended",
-        "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074"
-      },
-      {
-        "n": "Ministry of Migration and Asylum (Greece)",
-        "u": "https://migration.gov.gr/en/"
-      }
-    ],
-    "best-countries-buy-property-abroad": [
-      {
-        "n": "U.S. Department of State — country information pages",
-        "u": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages.html"
-      },
-      {
-        "n": "IRS — Publication 54, US citizens and resident aliens abroad",
-        "u": "https://www.irs.gov/publications/p54"
-      },
-      {
-        "n": "IRS — US income tax treaties A to Z",
-        "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
-      }
-    ]
-  },
-  "rules": [
-    {
-      "match": "^(mexico|.*-mexico.*)$",
-      "sources": [
-        {
-          "n": "SAT — Servicio de Administración Tributaria",
-          "u": "https://www.sat.gob.mx/"
-        },
-        {
-          "n": "Instituto Nacional de Migración (INM)",
-          "u": "https://www.gob.mx/inm"
-        }
-      ]
-    },
-    {
-      "match": "portugal",
-      "sources": [
-        {
-          "n": "AIMA — Agency for Integration, Migration and Asylum",
-          "u": "https://aima.gov.pt/"
-        },
-        {
-          "n": "Portal das Finanças",
-          "u": "https://www.portaldasfinancas.gov.pt/"
-        }
-      ]
-    },
-    {
-      "match": "spain",
-      "sources": [
-        {
-          "n": "Ministerio de Inclusión — Migraciones",
-          "u": "https://www.inclusion.gob.es/en/web/migraciones"
-        },
-        {
-          "n": "Agencia Tributaria",
-          "u": "https://sede.agenciatributaria.gob.es/"
-        }
-      ]
-    },
-    {
-      "match": "greece",
-      "sources": [
-        {
-          "n": "Ministry of Migration and Asylum",
-          "u": "https://migration.gov.gr/en/"
-        },
-        {
-          "n": "AADE — Greek tax authority",
-          "u": "https://www.aade.gr/"
-        }
-      ]
-    },
-    {
-      "match": "italy",
-      "sources": [
-        {
-          "n": "Agenzia delle Entrate",
-          "u": "https://www.agenziaentrate.gov.it/"
-        },
-        {
-          "n": "Visto per l'Italia — official visa portal",
-          "u": "https://vistoperitalia.esteri.it/"
-        }
-      ]
-    },
-    {
-      "match": "dubai",
-      "sources": [
-        {
-          "n": "Dubai Land Department",
-          "u": "https://dubailand.gov.ae/"
-        },
-        {
-          "n": "ICP — Federal Authority for Identity, Citizenship, Customs & Port Security",
-          "u": "https://icp.gov.ae/"
-        }
-      ]
-    },
-    {
-      "match": "(tax|fbar|fatca|8938|8949|1031|section-121|capital-gains|rental|depreciation|inheritance|estate|mortgage|llc|closing-costs|transfer-money|foreign-bank)",
-      "sources": [
-        {
-          "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
-          "u": "https://www.irs.gov/publications/p54"
-        },
-        {
-          "n": "IRS — International taxpayers",
-          "u": "https://www.irs.gov/individuals/international-taxpayers"
-        }
-      ]
-    },
-    {
-      "match": "(golden-visa|visa|residency|residence)",
-      "sources": [
-        {
-          "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
-          "u": "https://www.irs.gov/publications/p54"
-        }
-      ]
-    },
-    {
-      "match": "^buying-property-",
-      "sources": [
-        {
-          "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
-          "u": "https://www.irs.gov/publications/p54"
-        },
-        {
-          "n": "IRS — FBAR requirements for foreign accounts used in the purchase",
-          "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
-        }
-      ]
-    }
+ "_readme": "Official-source references rendered by scripts/seo_health.py (fix_sources) into a 'Sources & official references' block on every article. Only government portals, official gazettes, IRS/FinCEN/Treasury and statutory texts belong here. 'pages' = slug-specific links (listed first); 'rules' = pattern-matched sets merged after them; max 6 links per page. The daily pipeline appends the official URLs it verifies against.",
+ "pages": {
+  "portugal-golden-visa": [
+   {
+    "n": "AIMA — Portal ARI (Residence Permit for Investment, Art. 90.º-A)",
+    "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
+   },
+   {
+    "n": "AIMA — ARI / Golden Visa FAQ",
+    "u": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari/faq-residence-permit-for-investment-activity-ari"
+   },
+   {
+    "n": "Lei Orgânica n.º 1/2026 (Nationality Law amendment) — Diário da República, Série I n.º 95, 18 May 2026",
+    "u": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+   },
+   {
+    "n": "Lei n.º 23/2007 (Foreigners' Law) — consolidated text, Diário da República",
+    "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-34509975"
+   }
+  ],
+  "portugal-d7-visa": [
+   {
+    "n": "Portal das Comunidades / MNE — National (residence) visas",
+    "u": "https://vistos.mne.gov.pt/en/"
+   },
+   {
+    "n": "AIMA — Agency for Integration, Migration and Asylum",
+    "u": "https://aima.gov.pt/"
+   },
+   {
+    "n": "Lei n.º 23/2007 (Foreigners' Law) — consolidated text",
+    "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-34509975"
+   }
+  ],
+  "portugal-nif": [
+   {
+    "n": "ePortugal — Applying for a taxpayer identification number (NIF) for a natural person",
+    "u": "https://eportugal.gov.pt/en/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular"
+   },
+   {
+    "n": "Portal das Finanças (Autoridade Tributária e Aduaneira)",
+    "u": "https://www.portaldasfinancas.gov.pt/"
+   }
+  ],
+  "buying-property-portugal": [
+   {
+    "n": "Portal das Finanças — IMT / IMI (property taxes)",
+    "u": "https://www.portaldasfinancas.gov.pt/"
+   },
+   {
+    "n": "IRN — Registo Predial (land registry)",
+    "u": "https://irn.justica.gov.pt/"
+   },
+   {
+    "n": "ePortugal — NIF for a natural person",
+    "u": "https://eportugal.gov.pt/en/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular"
+   }
+  ],
+  "selling-property-portugal-us-citizen": [
+   {
+    "n": "Portal das Finanças — IRS (Portuguese income tax) on capital gains",
+    "u": "https://www.portaldasfinancas.gov.pt/"
+   },
+   {
+    "n": "IRS — United States income tax treaties A to Z (US–Portugal treaty)",
+    "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
+   }
+  ],
+  "spain-golden-visa": [
+   {
+    "n": "BOE — Ley 14/2013 de apoyo a los emprendedores (investor-residence provisions, as amended)",
+    "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074"
+   },
+   {
+    "n": "Ministerio de Inclusión, Seguridad Social y Migraciones — Migraciones",
+    "u": "https://www.inclusion.gob.es/en/web/migraciones"
+   }
+  ],
+  "spain-non-lucrative-visa": [
+   {
+    "n": "Ministerio de Inclusión — Residir sin trabajar (non-lucrative residence)",
+    "u": "https://www.inclusion.gob.es/en/web/migraciones/residir-sin-trabajar"
+   },
+   {
+    "n": "Ministerio de Inclusión — Renewal of non-lucrative temporary residence (Hoja 7)",
+    "u": "https://www.inclusion.gob.es/en/web/migraciones/w/renovacion-de-la-autorizacion-de-residencia-temporal-no-lucrativa"
+   },
+   {
+    "n": "Ministerio de Asuntos Exteriores — visas (consular portal)",
+    "u": "https://www.exteriores.gob.es/"
+   }
+  ],
+  "buying-property-spain": [
+   {
+    "n": "Agencia Tributaria (Spanish tax authority)",
+    "u": "https://sede.agenciatributaria.gob.es/"
+   },
+   {
+    "n": "Colegio de Registradores — Registro de la Propiedad",
+    "u": "https://www.registradores.org/"
+   },
+   {
+    "n": "Ministerio del Interior — NIE / extranjería",
+    "u": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/"
+   }
+  ],
+  "greece-golden-visa": [
+   {
+    "n": "Ministry of Migration and Asylum (Hellenic Republic)",
+    "u": "https://migration.gov.gr/en/"
+   },
+   {
+    "n": "mitos.gov.gr — Golden visa programme (investment in real property), initial issuance",
+    "u": "https://en.mitos.gov.gr/index.php/%CE%94%CE%94:Golden_visa_programme_(investment_in_a_listed_real_property)_%E2%80%93_Initial_issuance"
+   },
+   {
+    "n": "AADE — Independent Authority for Public Revenue (Greek tax)",
+    "u": "https://www.aade.gr/"
+   }
+  ],
+  "buying-property-greece": [
+   {
+    "n": "Hellenic Cadastre (Ktimatologio)",
+    "u": "https://www.ktimatologio.gr/"
+   },
+   {
+    "n": "AADE — Independent Authority for Public Revenue",
+    "u": "https://www.aade.gr/"
+   },
+   {
+    "n": "Ministry of Migration and Asylum",
+    "u": "https://migration.gov.gr/en/"
+   }
+  ],
+  "selling-property-greece-us-citizen": [
+   {
+    "n": "AADE — Independent Authority for Public Revenue",
+    "u": "https://www.aade.gr/"
+   },
+   {
+    "n": "IRS — US income tax treaties A to Z (US–Greece treaty)",
+    "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
+   }
+  ],
+  "greece-vs-portugal-golden-visa": [
+   {
+    "n": "Ministry of Migration and Asylum (Greece)",
+    "u": "https://migration.gov.gr/en/"
+   },
+   {
+    "n": "AIMA — Portal ARI (Portugal)",
+    "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
+   },
+   {
+    "n": "Lei Orgânica n.º 1/2026 — Diário da República (Portuguese nationality timeline)",
+    "u": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+   }
+  ],
+  "italy-golden-visa": [
+   {
+    "n": "Investor Visa for Italy — official programme site (MIMIT)",
+    "u": "https://investorvisa.mise.gov.it/index.php/en/"
+   },
+   {
+    "n": "Investor Visa for Italy — how it works",
+    "u": "https://investorvisa.mise.gov.it/index.php/en/investor-visa-how-it-works"
+   },
+   {
+    "n": "Agenzia delle Entrate (Italian Revenue Agency)",
+    "u": "https://www.agenziaentrate.gov.it/"
+   }
+  ],
+  "buying-property-italy": [
+   {
+    "n": "Agenzia delle Entrate — property taxes and cadastre",
+    "u": "https://www.agenziaentrate.gov.it/"
+   },
+   {
+    "n": "Visto per l'Italia — official visa portal (Ministry of Foreign Affairs)",
+    "u": "https://vistoperitalia.esteri.it/"
+   }
+  ],
+  "malta-golden-visa": [
+   {
+    "n": "Residency Malta Agency — MPRP legal framework",
+    "u": "https://residencymalta.gov.mt/legal-framework-mprp-2/"
+   },
+   {
+    "n": "Residency Malta Agency",
+    "u": "https://residencymalta.gov.mt/"
+   },
+   {
+    "n": "Malta Commissioner for Revenue",
+    "u": "https://cfr.gov.mt/"
+   }
+  ],
+  "hungary-golden-visa": [
+   {
+    "n": "Enter Hungary — official electronic application portal (National Directorate-General for Aliens Policing)",
+    "u": "https://enterhungary.gov.hu/"
+   },
+   {
+    "n": "National Directorate-General for Aliens Policing (OIF)",
+    "u": "https://oif.gov.hu/"
+   },
+   {
+    "n": "Magyar Közlöny (Hungarian official gazette)",
+    "u": "https://magyarkozlony.hu/"
+   }
+  ],
+  "buying-property-cyprus": [
+   {
+    "n": "Civil Registry and Migration Department (Cyprus)",
+    "u": "http://www.moi.gov.cy/moi/crmd/crmd.nsf/"
+   },
+   {
+    "n": "Cyprus Tax Department",
+    "u": "https://www.mof.gov.cy/mof/tax/taxdep.nsf/"
+   },
+   {
+    "n": "Department of Lands and Surveys (Cyprus)",
+    "u": "https://portal.dls.moi.gov.cy/"
+   }
+  ],
+  "dubai-golden-visa": [
+   {
+    "n": "u.ae — Golden visa (official UAE Government portal)",
+    "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
+   },
+   {
+    "n": "ICP — Federal Authority for Identity, Citizenship, Customs & Port Security",
+    "u": "https://icp.gov.ae/"
+   },
+   {
+    "n": "GDRFA Dubai",
+    "u": "https://gdrfad.gov.ae/"
+   },
+   {
+    "n": "Dubai Land Department",
+    "u": "https://dubailand.gov.ae/"
+   }
+  ],
+  "buying-property-dubai": [
+   {
+    "n": "Dubai Land Department",
+    "u": "https://dubailand.gov.ae/"
+   },
+   {
+    "n": "u.ae — Golden visa (official UAE Government portal)",
+    "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
+   },
+   {
+    "n": "UAE Federal Tax Authority",
+    "u": "https://tax.gov.ae/"
+   }
+  ],
+  "mexico": [
+   {
+    "n": "Ley de Inversión Extranjera (Foreign Investment Law) — Cámara de Diputados",
+    "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIE.pdf"
+   },
+   {
+    "n": "Constitución Política — Artículo 27 (restricted zone) — Cámara de Diputados",
+    "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+   },
+   {
+    "n": "IRS — Revenue Ruling 2013-14 (Mexican fideicomiso not a trust for US tax purposes)",
+    "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
+   },
+   {
+    "n": "SAT — Servicio de Administración Tributaria",
+    "u": "https://www.sat.gob.mx/"
+   },
+   {
+    "n": "Instituto Nacional de Migración (INM)",
+    "u": "https://www.gob.mx/inm"
+   }
+  ],
+  "mortgage-in-mexico": [
+   {
+    "n": "Banco de México (reference rates)",
+    "u": "https://www.banxico.org.mx/"
+   },
+   {
+    "n": "CONDUSEF — financial-consumer protection (mortgage comparison)",
+    "u": "https://www.condusef.gob.mx/"
+   },
+   {
+    "n": "IRS — Publication 936, Home Mortgage Interest Deduction",
+    "u": "https://www.irs.gov/publications/p936"
+   }
+  ],
+  "us-taxes-property-mexico": [
+   {
+    "n": "IRS — Revenue Ruling 2013-14 (fideicomiso)",
+    "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
+   },
+   {
+    "n": "IRS — About Form 3520 (foreign trusts)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-3520"
+   },
+   {
+    "n": "SAT — Servicio de Administración Tributaria",
+    "u": "https://www.sat.gob.mx/"
+   },
+   {
+    "n": "IRS — US–Mexico income tax treaty (treaties A to Z)",
+    "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
+   }
+  ],
+  "selling-property-mexico-us-citizen": [
+   {
+    "n": "SAT — Servicio de Administración Tributaria (ISR on property sales)",
+    "u": "https://www.sat.gob.mx/"
+   },
+   {
+    "n": "IRS — Publication 523, Selling Your Home",
+    "u": "https://www.irs.gov/publications/p523"
+   },
+   {
+    "n": "IRS — Revenue Ruling 2013-14 (fideicomiso)",
+    "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
+   }
+  ],
+  "buying-property-costa-rica": [
+   {
+    "n": "Dirección General de Migración y Extranjería (Costa Rica)",
+    "u": "https://www.migracion.go.cr/"
+   },
+   {
+    "n": "Ministerio de Hacienda (Costa Rica)",
+    "u": "https://www.hacienda.go.cr/"
+   },
+   {
+    "n": "Registro Nacional (Costa Rica property registry)",
+    "u": "https://www.rnpdigital.com/"
+   },
+   {
+    "n": "SCIJ — Sistema Costarricense de Información Jurídica (statutes)",
+    "u": "https://www.pgrweb.go.cr/scij/"
+   }
+  ],
+  "buying-property-panama": [
+   {
+    "n": "Servicio Nacional de Migración (Panama)",
+    "u": "https://www.migracion.gob.pa/"
+   },
+   {
+    "n": "Dirección General de Ingresos (Panama tax)",
+    "u": "https://dgi.mef.gob.pa/"
+   },
+   {
+    "n": "Registro Público de Panamá",
+    "u": "https://www.registro-publico.gob.pa/"
+   }
+  ],
+  "panama-friendly-nations-visa": [
+   {
+    "n": "Servicio Nacional de Migración (Panama) — visas",
+    "u": "https://www.migracion.gob.pa/"
+   },
+   {
+    "n": "Gaceta Oficial de Panamá",
+    "u": "https://www.gacetaoficial.gob.pa/"
+   }
+  ],
+  "buying-property-colombia": [
+   {
+    "n": "Cancillería de Colombia — Visas",
+    "u": "https://www.cancilleria.gov.co/tramites_servicios/visa"
+   },
+   {
+    "n": "Banco de la República — foreign-investment registration",
+    "u": "https://www.banrep.gov.co/"
+   },
+   {
+    "n": "DIAN — Dirección de Impuestos y Aduanas Nacionales",
+    "u": "https://www.dian.gov.co/"
+   }
+  ],
+  "buying-property-dominican-republic": [
+   {
+    "n": "DGII — Dirección General de Impuestos Internos",
+    "u": "https://dgii.gov.do/"
+   },
+   {
+    "n": "Dirección General de Migración (Dominican Republic)",
+    "u": "https://www.migracion.gob.do/"
+   }
+  ],
+  "buying-property-belize": [
+   {
+    "n": "Belize Immigration and Nationality Department",
+    "u": "https://immigration.gov.bz/"
+   },
+   {
+    "n": "Belize Tax Service Department",
+    "u": "https://bts.gov.bz/"
+   }
+  ],
+  "buying-property-uruguay": [
+   {
+    "n": "Dirección Nacional de Migración (Uruguay)",
+    "u": "https://www.gub.uy/ministerio-interior/direccion-nacional-migracion"
+   },
+   {
+    "n": "DGI — Dirección General Impositiva (Uruguay)",
+    "u": "https://www.dgi.gub.uy/"
+   }
+  ],
+  "buying-property-brazil": [
+   {
+    "n": "Receita Federal do Brasil (CPF, taxes)",
+    "u": "https://www.gov.br/receitafederal/"
+   },
+   {
+    "n": "Polícia Federal — immigration",
+    "u": "https://www.gov.br/pf/"
+   }
+  ],
+  "buying-property-france": [
+   {
+    "n": "France-Visas — official visa portal",
+    "u": "https://france-visas.gouv.fr/"
+   },
+   {
+    "n": "impots.gouv.fr — French tax administration",
+    "u": "https://www.impots.gouv.fr/"
+   },
+   {
+    "n": "service-public.fr — Logement (housing: buying, taxes, notaire)",
+    "u": "https://www.service-public.fr/particuliers/vosdroits/N10"
+   }
+  ],
+  "buying-property-germany": [
+   {
+    "n": "Make it in Germany — official portal (visas & residence)",
+    "u": "https://www.make-it-in-germany.com/en/"
+   },
+   {
+    "n": "Bundeszentralamt für Steuern (Federal Central Tax Office)",
+    "u": "https://www.bzst.de/"
+   }
+  ],
+  "buying-property-croatia": [
+   {
+    "n": "Ministry of the Interior (MUP) — foreigners' stay",
+    "u": "https://mup.gov.hr/"
+   },
+   {
+    "n": "Porezna uprava — Croatian Tax Administration",
+    "u": "https://www.porezna-uprava.hr/"
+   },
+   {
+    "n": "Ministry of Justice — reciprocity for property acquisition by foreigners",
+    "u": "https://mpu.gov.hr/"
+   }
+  ],
+  "buying-property-turkey": [
+   {
+    "n": "Presidency of Migration Management (Göç İdaresi)",
+    "u": "https://www.goc.gov.tr/"
+   },
+   {
+    "n": "General Directorate of Land Registry and Cadastre (TKGM)",
+    "u": "https://www.tkgm.gov.tr/"
+   },
+   {
+    "n": "Resmî Gazete (official gazette)",
+    "u": "https://www.resmigazete.gov.tr/"
+   }
+  ],
+  "buying-property-japan": [
+   {
+    "n": "Immigration Services Agency of Japan",
+    "u": "https://www.moj.go.jp/isa/"
+   },
+   {
+    "n": "National Tax Agency (English)",
+    "u": "https://www.nta.go.jp/english/"
+   },
+   {
+    "n": "Ministry of Land, Infrastructure, Transport and Tourism (MLIT)",
+    "u": "https://www.mlit.go.jp/en/"
+   }
+  ],
+  "buying-property-thailand": [
+   {
+    "n": "Department of Lands (Thailand)",
+    "u": "https://www.dol.go.th/"
+   },
+   {
+    "n": "Thailand LTR Visa — Board of Investment",
+    "u": "https://ltr.boi.go.th/"
+   },
+   {
+    "n": "Revenue Department (Thailand)",
+    "u": "https://www.rd.go.th/english/"
+   }
+  ],
+  "buying-property-philippines": [
+   {
+    "n": "Philippine Retirement Authority (SRRV)",
+    "u": "https://pra.gov.ph/"
+   },
+   {
+    "n": "Bureau of Internal Revenue",
+    "u": "https://www.bir.gov.ph/"
+   },
+   {
+    "n": "Bureau of Immigration (Philippines)",
+    "u": "https://immigration.gov.ph/"
+   }
+  ],
+  "buying-property-malaysia": [
+   {
+    "n": "Malaysia My Second Home (MM2H) — official portal",
+    "u": "https://www.mm2h.gov.my/"
+   },
+   {
+    "n": "LHDN — Inland Revenue Board of Malaysia",
+    "u": "https://www.hasil.gov.my/"
+   }
+  ],
+  "buying-property-bali": [
+   {
+    "n": "Kementerian ATR/BPN — land agency (Indonesia)",
+    "u": "https://www.atrbpn.go.id/"
+   },
+   {
+    "n": "Direktorat Jenderal Imigrasi (Indonesia)",
+    "u": "https://www.imigrasi.go.id/"
+   },
+   {
+    "n": "Direktorat Jenderal Pajak (Indonesian tax)",
+    "u": "https://pajak.go.id/"
+   }
+  ],
+  "foreign-bank-account-americans": [
+   {
+    "n": "IRS — Report of Foreign Bank and Financial Accounts (FBAR)",
+    "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
+   },
+   {
+    "n": "FinCEN — BSA E-Filing System (FinCEN Form 114)",
+    "u": "https://bsaefiling.fincen.treas.gov/"
+   },
+   {
+    "n": "IRS — About Form 8938, Statement of Specified Foreign Financial Assets",
+    "u": "https://www.irs.gov/forms-pubs/about-form-8938"
+   }
+  ],
+  "fbar-foreign-property-owners": [
+   {
+    "n": "IRS — FBAR overview and filing requirements",
+    "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
+   },
+   {
+    "n": "FinCEN — BSA E-Filing System",
+    "u": "https://bsaefiling.fincen.treas.gov/"
+   },
+   {
+    "n": "IRS — Comparison of Form 8938 and FBAR requirements",
+    "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
+   }
+  ],
+  "owning-property-abroad-tax-reporting": [
+   {
+    "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+    "u": "https://www.irs.gov/publications/p54"
+   },
+   {
+    "n": "IRS — Comparison of Form 8938 and FBAR requirements",
+    "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
+   },
+   {
+    "n": "IRS — About Form 3520 (foreign trusts and gifts)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-3520"
+   },
+   {
+    "n": "IRS — Publication 527, Residential Rental Property",
+    "u": "https://www.irs.gov/publications/p527"
+   }
+  ],
+  "foreign-rental-income-us-tax": [
+   {
+    "n": "IRS — Publication 527, Residential Rental Property",
+    "u": "https://www.irs.gov/publications/p527"
+   },
+   {
+    "n": "IRS — About Schedule E (Form 1040)",
+    "u": "https://www.irs.gov/forms-pubs/about-schedule-e-form-1040"
+   },
+   {
+    "n": "IRS — Publication 946, How to Depreciate Property (ADS for foreign property)",
+    "u": "https://www.irs.gov/publications/p946"
+   },
+   {
+    "n": "IRS — About Form 1116, Foreign Tax Credit",
+    "u": "https://www.irs.gov/forms-pubs/about-form-1116"
+   }
+  ],
+  "depreciation-foreign-rental-property": [
+   {
+    "n": "IRS — Publication 946, How to Depreciate Property",
+    "u": "https://www.irs.gov/publications/p946"
+   },
+   {
+    "n": "IRS — Publication 527, Residential Rental Property",
+    "u": "https://www.irs.gov/publications/p527"
+   },
+   {
+    "n": "26 U.S.C. § 168(g) — Alternative depreciation system (property used predominantly outside the US)",
+    "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section168&num=0&edition=prelim"
+   }
+  ],
+  "foreign-tax-credit-property-abroad": [
+   {
+    "n": "IRS — Publication 514, Foreign Tax Credit for Individuals",
+    "u": "https://www.irs.gov/publications/p514"
+   },
+   {
+    "n": "IRS — About Form 1116, Foreign Tax Credit",
+    "u": "https://www.irs.gov/forms-pubs/about-form-1116"
+   },
+   {
+    "n": "IRS — US income tax treaties A to Z",
+    "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
+   }
+  ],
+  "capital-gains-property-abroad": [
+   {
+    "n": "IRS — Publication 544, Sales and Other Dispositions of Assets",
+    "u": "https://www.irs.gov/publications/p544"
+   },
+   {
+    "n": "IRS — About Form 8949, Sales and Other Dispositions of Capital Assets",
+    "u": "https://www.irs.gov/forms-pubs/about-form-8949"
+   },
+   {
+    "n": "IRS — Publication 514, Foreign Tax Credit for Individuals",
+    "u": "https://www.irs.gov/publications/p514"
+   },
+   {
+    "n": "IRS — Topic 559, Net Investment Income Tax",
+    "u": "https://www.irs.gov/taxtopics/tc559"
+   }
+  ],
+  "form-8949-foreign-property-sale": [
+   {
+    "n": "IRS — About Form 8949",
+    "u": "https://www.irs.gov/forms-pubs/about-form-8949"
+   },
+   {
+    "n": "IRS — Instructions for Form 8949",
+    "u": "https://www.irs.gov/instructions/i8949"
+   },
+   {
+    "n": "IRS — About Schedule D (Form 1040)",
+    "u": "https://www.irs.gov/forms-pubs/about-schedule-d-form-1040"
+   }
+  ],
+  "section-121-exclusion-foreign-home-sale": [
+   {
+    "n": "IRS — Publication 523, Selling Your Home",
+    "u": "https://www.irs.gov/publications/p523"
+   },
+   {
+    "n": "26 U.S.C. § 121 — Exclusion of gain from sale of principal residence",
+    "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section121&num=0&edition=prelim"
+   },
+   {
+    "n": "IRS — Topic 701, Sale of Your Home",
+    "u": "https://www.irs.gov/taxtopics/tc701"
+   }
+  ],
+  "1031-exchange-foreign-property": [
+   {
+    "n": "IRS — Like-kind exchanges: real estate tax tips",
+    "u": "https://www.irs.gov/newsroom/like-kind-exchanges-real-estate-tax-tips"
+   },
+   {
+    "n": "IRS — About Form 8824, Like-Kind Exchanges",
+    "u": "https://www.irs.gov/forms-pubs/about-form-8824"
+   },
+   {
+    "n": "26 U.S.C. § 1031(h) — foreign real property not like-kind to US real property",
+    "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section1031&num=0&edition=prelim"
+   }
+  ],
+  "foreign-mortgage-currency-gain-tax": [
+   {
+    "n": "26 U.S.C. § 988 — Treatment of certain foreign currency transactions",
+    "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section988&num=0&edition=prelim"
+   },
+   {
+    "n": "IRS — Foreign currency and currency exchange rates",
+    "u": "https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates"
+   },
+   {
+    "n": "IRS — Yearly average currency exchange rates",
+    "u": "https://www.irs.gov/individuals/international-taxpayers/yearly-average-currency-exchange-rates"
+   }
+  ],
+  "foreign-mortgages-us-citizens": [
+   {
+    "n": "IRS — Publication 936, Home Mortgage Interest Deduction",
+    "u": "https://www.irs.gov/publications/p936"
+   },
+   {
+    "n": "26 U.S.C. § 988 — foreign currency transactions (mortgage payoff gains)",
+    "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section988&num=0&edition=prelim"
+   },
+   {
+    "n": "CFPB — mortgage basics (US consumer reference)",
+    "u": "https://www.consumerfinance.gov/owning-a-home/"
+   }
+  ],
+  "transfer-money-abroad-property": [
+   {
+    "n": "FinCEN — Bank Secrecy Act requirements (currency transaction reporting)",
+    "u": "https://www.fincen.gov/"
+   },
+   {
+    "n": "IRS — About Form 3520 (reporting large foreign gifts)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-3520"
+   },
+   {
+    "n": "IRS — FBAR requirements for accounts used in the purchase",
+    "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
+   },
+   {
+    "n": "OFAC — Sanctions programs and country information",
+    "u": "https://ofac.treasury.gov/sanctions-programs-and-country-information"
+   }
+  ],
+  "inheritance-tax-property-abroad": [
+   {
+    "n": "IRS — About Form 706, United States Estate (and Generation-Skipping Transfer) Tax Return",
+    "u": "https://www.irs.gov/forms-pubs/about-form-706"
+   },
+   {
+    "n": "IRS — Estate tax",
+    "u": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-tax"
+   },
+   {
+    "n": "IRS — Estate and gift tax treaties (international)",
+    "u": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-gift-tax-treaties-international"
+   },
+   {
+    "n": "IRS — About Form 3520 (bequests from foreign persons)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-3520"
+   }
+  ],
+  "holding-property-abroad-llc-vs-personal": [
+   {
+    "n": "IRS — About Form 5471 (foreign corporations)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-5471"
+   },
+   {
+    "n": "IRS — About Form 8858 (foreign disregarded entities and branches)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-8858"
+   },
+   {
+    "n": "IRS — About Form 8865 (foreign partnerships)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-8865"
+   },
+   {
+    "n": "FinCEN — Beneficial Ownership Information reporting",
+    "u": "https://www.fincen.gov/boi"
+   }
+  ],
+  "annual-property-taxes-abroad": [
+   {
+    "n": "IRS — Topic 503, Deductible Taxes (foreign real property taxes not deductible under §164(b)(6))",
+    "u": "https://www.irs.gov/taxtopics/tc503"
+   },
+   {
+    "n": "IRS — Publication 527, Residential Rental Property",
+    "u": "https://www.irs.gov/publications/p527"
+   }
+  ],
+  "closing-costs-property-abroad": [
+   {
+    "n": "IRS — Publication 551, Basis of Assets (capitalising closing costs)",
+    "u": "https://www.irs.gov/publications/p551"
+   },
+   {
+    "n": "IRS — Publication 527, Residential Rental Property",
+    "u": "https://www.irs.gov/publications/p527"
+   }
+  ],
+  "short-term-rental-rules-abroad": [
+   {
+    "n": "IRS — Publication 527, Residential Rental Property (incl. personal-use days)",
+    "u": "https://www.irs.gov/publications/p527"
+   },
+   {
+    "n": "IRS — Topic 415, Renting Residential and Vacation Property",
+    "u": "https://www.irs.gov/taxtopics/tc415"
+   },
+   {
+    "n": "IRS — About Schedule E (Form 1040)",
+    "u": "https://www.irs.gov/forms-pubs/about-schedule-e-form-1040"
+   }
+  ],
+  "power-of-attorney-buying-property-abroad": [
+   {
+    "n": "HCCH — Apostille Convention (status table of contracting parties)",
+    "u": "https://www.hcch.net/en/instruments/conventions/status-table/?cid=41"
+   },
+   {
+    "n": "U.S. Department of State — Apostille requirements",
+    "u": "https://travel.state.gov/content/travel/en/records-and-authentications/authenticate-your-document/apostille-requirements.html"
+   },
+   {
+    "n": "U.S. Department of State — Notarial services abroad",
+    "u": "https://travel.state.gov/content/travel/en/international-travel/while-abroad/notarial-and-documentary-services.html"
+   }
+  ],
+  "golden-visa-vs-second-passport": [
+   {
+    "n": "IRS — Expatriation tax (Section 877A)",
+    "u": "https://www.irs.gov/individuals/international-taxpayers/expatriation-tax"
+   },
+   {
+    "n": "U.S. Department of State — Dual nationality",
+    "u": "https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Dual-Nationality.html"
+   },
+   {
+    "n": "IRS — Publication 54, US citizens and resident aliens abroad",
+    "u": "https://www.irs.gov/publications/p54"
+   }
+  ],
+  "best-golden-visa-for-americans": [
+   {
+    "n": "AIMA — Portal ARI (Portugal)",
+    "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
+   },
+   {
+    "n": "Ministry of Migration and Asylum (Greece)",
+    "u": "https://migration.gov.gr/en/"
+   },
+   {
+    "n": "Investor Visa for Italy — official programme site",
+    "u": "https://investorvisa.mise.gov.it/index.php/en/"
+   },
+   {
+    "n": "Residency Malta Agency — MPRP legal framework",
+    "u": "https://residencymalta.gov.mt/legal-framework-mprp-2/"
+   },
+   {
+    "n": "BOE — Ley 14/2013 (Spain, investor residence provisions)",
+    "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074"
+   },
+   {
+    "n": "IRS — Publication 54, US citizens and resident aliens abroad",
+    "u": "https://www.irs.gov/publications/p54"
+   }
+  ],
+  "ultimate-guide-golden-visa": [
+   {
+    "n": "AIMA — Portal ARI (Portugal)",
+    "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
+   },
+   {
+    "n": "Ministry of Migration and Asylum (Greece)",
+    "u": "https://migration.gov.gr/en/"
+   },
+   {
+    "n": "u.ae — Golden visa (UAE)",
+    "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
+   },
+   {
+    "n": "IRS — Publication 54, US citizens and resident aliens abroad",
+    "u": "https://www.irs.gov/publications/p54"
+   }
+  ],
+  "buying-property-abroad-experts": [
+   {
+    "n": "AIMA — ARI / Golden Visa FAQ (Portugal: real estate no longer qualifies)",
+    "u": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari/faq-residence-permit-for-investment-activity-ari"
+   },
+   {
+    "n": "BOE — Ley 14/2013 (Spain) as amended",
+    "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074"
+   },
+   {
+    "n": "Ministry of Migration and Asylum (Greece)",
+    "u": "https://migration.gov.gr/en/"
+   }
+  ],
+  "best-countries-buy-property-abroad": [
+   {
+    "n": "U.S. Department of State — country information pages",
+    "u": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages.html"
+   },
+   {
+    "n": "IRS — Publication 54, US citizens and resident aliens abroad",
+    "u": "https://www.irs.gov/publications/p54"
+   },
+   {
+    "n": "IRS — US income tax treaties A to Z",
+    "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
+   }
+  ],
+  "us-tax-foreign-property": [
+   {
+    "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+    "u": "https://www.irs.gov/publications/p54"
+   },
+   {
+    "n": "IRS — Comparison of Form 8938 and FBAR requirements",
+    "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
+   },
+   {
+    "n": "IRS — Publication 527, Residential Rental Property",
+    "u": "https://www.irs.gov/publications/p527"
+   },
+   {
+    "n": "IRS — Publication 514, Foreign Tax Credit for Individuals",
+    "u": "https://www.irs.gov/publications/p514"
+   },
+   {
+    "n": "IRS — Publication 523, Selling Your Home",
+    "u": "https://www.irs.gov/publications/p523"
+   },
+   {
+    "n": "IRS — About Form 3520 (foreign gifts and trusts)",
+    "u": "https://www.irs.gov/forms-pubs/about-form-3520"
+   }
   ]
+ },
+ "rules": [
+  {
+   "match": "^(mexico|.*-mexico.*)$",
+   "sources": [
+    {
+     "n": "SAT — Servicio de Administración Tributaria",
+     "u": "https://www.sat.gob.mx/"
+    },
+    {
+     "n": "Instituto Nacional de Migración (INM)",
+     "u": "https://www.gob.mx/inm"
+    }
+   ]
+  },
+  {
+   "match": "portugal",
+   "sources": [
+    {
+     "n": "AIMA — Agency for Integration, Migration and Asylum",
+     "u": "https://aima.gov.pt/"
+    },
+    {
+     "n": "Portal das Finanças",
+     "u": "https://www.portaldasfinancas.gov.pt/"
+    }
+   ]
+  },
+  {
+   "match": "spain",
+   "sources": [
+    {
+     "n": "Ministerio de Inclusión — Migraciones",
+     "u": "https://www.inclusion.gob.es/en/web/migraciones"
+    },
+    {
+     "n": "Agencia Tributaria",
+     "u": "https://sede.agenciatributaria.gob.es/"
+    }
+   ]
+  },
+  {
+   "match": "greece",
+   "sources": [
+    {
+     "n": "Ministry of Migration and Asylum",
+     "u": "https://migration.gov.gr/en/"
+    },
+    {
+     "n": "AADE — Greek tax authority",
+     "u": "https://www.aade.gr/"
+    }
+   ]
+  },
+  {
+   "match": "italy",
+   "sources": [
+    {
+     "n": "Agenzia delle Entrate",
+     "u": "https://www.agenziaentrate.gov.it/"
+    },
+    {
+     "n": "Visto per l'Italia — official visa portal",
+     "u": "https://vistoperitalia.esteri.it/"
+    }
+   ]
+  },
+  {
+   "match": "dubai",
+   "sources": [
+    {
+     "n": "Dubai Land Department",
+     "u": "https://dubailand.gov.ae/"
+    },
+    {
+     "n": "ICP — Federal Authority for Identity, Citizenship, Customs & Port Security",
+     "u": "https://icp.gov.ae/"
+    }
+   ]
+  },
+  {
+   "match": "(tax|fbar|fatca|8938|8949|1031|section-121|capital-gains|rental|depreciation|inheritance|estate|mortgage|llc|closing-costs|transfer-money|foreign-bank)",
+   "sources": [
+    {
+     "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+     "u": "https://www.irs.gov/publications/p54"
+    },
+    {
+     "n": "IRS — International taxpayers",
+     "u": "https://www.irs.gov/individuals/international-taxpayers"
+    }
+   ]
+  },
+  {
+   "match": "(golden-visa|visa|residency|residence)",
+   "sources": [
+    {
+     "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+     "u": "https://www.irs.gov/publications/p54"
+    }
+   ]
+  },
+  {
+   "match": "^buying-property-",
+   "sources": [
+    {
+     "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+     "u": "https://www.irs.gov/publications/p54"
+    },
+    {
+     "n": "IRS — FBAR requirements for foreign accounts used in the purchase",
+     "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
+    }
+   ]
+  }
+ ]
 }
