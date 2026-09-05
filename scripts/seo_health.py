@@ -620,8 +620,8 @@ def fix_sources(site: "Site", log: list) -> None:
         if "<!-- sources:start -->" in doc:
             new = re.sub(r"<!-- sources:start -->.*?<!-- sources:end -->", lambda m: block, doc, flags=re.S)
         else:
-            anchor = (re.search(r'\n\s*<div class="related-guides"', doc)
-                      or re.search(r"\n\s*</article>", doc) or re.search(r"\n\s*</main>", doc))
+            anchor = (re.search(r"\n\s*</article>", doc) or re.search(r"\n\s*</main>", doc)
+                      or re.search(r'\n\s*<div class="related-guides"', doc))
             if not anchor:
                 continue
             new = doc[:anchor.start()] + "\n\n" + block + doc[anchor.start():]
@@ -734,7 +734,13 @@ def fix_related_guides(site: "Site", log: list, per_page: int = 6, max_links: in
     for slug in articles:
         doc, m = site.docs[slug], found[slug]
         block = render_related(site, picks_of[slug])
-        if m:
+        close = re.search(r"\n\s*</article>", doc) or re.search(r"\n\s*</main>", doc)
+        if m and close and m.start() > close.start():
+            # legacy block sat outside the article wrapper (full-width); move it inside
+            doc = doc[:m.start()] + doc[m.end():]
+            doc = re.sub(r"\n+(\s*)(</article>|</main>)", r"\n\n" + block.replace("\\", "\\\\") + r"\n\1\2", doc, count=1)
+            new = doc
+        elif m:
             new = doc[:m.start()] + block + doc[m.end():]
         else:
             anchor = re.search(r"\n\s*</article>", doc) or re.search(r"\n\s*</main>", doc)
