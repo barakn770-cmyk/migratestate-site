@@ -6,8 +6,9 @@ name: Daily Content Pipeline
 # failure email. Trigger manually from the Actions tab if ever needed.
 # (Original schedule: cron "30 5 * * *" = 05:30 UTC.)
 on:
+schedule:
+    - cron: "30 5 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
 
