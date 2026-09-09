@@ -1,3 +1,4 @@
+
 name: Daily Content Pipeline
 
 # DORMANT BACKUP (since 2026-09-04): the daily run moved to a device-bound
@@ -6,9 +7,10 @@ name: Daily Content Pipeline
 # failure email. Trigger manually from the Actions tab if ever needed.
 # (Original schedule: cron "30 5 * * *" = 05:30 UTC.)
 on:
-schedule:
+  schedule:
     - cron: "30 5 * * *"
   workflow_dispatch:
+
 permissions:
   contents: write
 
@@ -75,7 +77,7 @@ jobs:
         run: |
           TODAY=$(date -u +%F)
           FAIL=""
-          if ! grep -q "\"$TODAY\"" factcheck_state.json 2>/dev/null; then
+          if ! grep -q ""$TODAY"" factcheck_state.json 2>/dev/null; then
             FAIL="fact-check produced nothing today (all 5 API calls likely errored — see the 'Daily fact-check' step log above for the real Python traceback)"
           fi
           if ! grep -q "^### New article" .pipeline_summary.md 2>/dev/null; then
