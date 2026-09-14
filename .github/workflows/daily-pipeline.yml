@@ -24,7 +24,7 @@ jobs:
     timeout-minutes: 45
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      MODEL: claude-sonnet-4-6
+      MODEL: claude-sonnet-5
       SITE_HOST: migratestate.com
     steps:
       - name: Checkout

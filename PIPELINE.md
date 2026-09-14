@@ -11,8 +11,26 @@ The daily run is a **device-bound Claude scheduled task** on Barak's Windows PC
 05:30 UTC). Claude itself does the fact-check and writes the article (web research
 against official sources), runs `scripts/seo_health.py --fix`, commits and pushes to
 `main` with a repo-scoped token stored only in that clone's `.git/config`.
-The GitHub Actions workflow below is kept as a **dormant manual backup** (its cron is
-disabled; it needs `ANTHROPIC_API_KEY`). `indexnow.yml` still fires on every push.
+The GitHub Actions workflow below is the **backup path** (disabled at the GitHub
+level — Actions tab → enable it; the `ANTHROPIC_API_KEY` secret exists but the
+account behind it was out of credits as of 2026-09-14). `indexnow.yml` still fires
+on every push.
+
+### Known outage: Cowork device_bash dead since 2026-09-09 (Windows KB5124008)
+
+Windows 11 update **KB5124008** (8 Sep 2026, build 26200.9445) broke Plan9 host
+folder shares for HCS-managed VMs. The Cowork VM boots, but every share fails with
+`Plan9 mount failed: invalid argument`, so `device_bash` reports "no Plan9 drive
+shares mounted" and the daily task cannot clone, run scripts, commit or push.
+Microsoft has acknowledged it (it also breaks WSL) and, as of 2026-09-14, has not
+shipped a fix; there is no in-app workaround, and restarting the app or the PC does
+not help. The only remedy is to remove the update and pause Windows updates —
+`.pipeline/fix-plan9-kb5124008.ps1` does it (run elevated, then reboot).
+
+**While device_bash is down, publish from Claude Code / a terminal on the PC**
+(plain git works there — it is unaffected), or enable the Actions workflow. Anything
+already written during a failed run is not lost: check the working tree and
+`git stash list` before resetting anything.
 
 
 ## Additional steps since the Sept 2026 SEO audit (MANDATORY — read before step 2)
@@ -65,6 +83,18 @@ Index, comparisons, city guides), then the original topics.
 ## What runs, when
 
 **`daily-pipeline.yml`** — every day 05:30 UTC (08:30 Israel summer / 07:30 winter), or manually from the Actions tab:
+
+> **The Python engines were upgraded on 2026-09-14** so this workflow produces the
+> same shape of work as the Cowork task: `fact_check.py` now appends uncertain items
+> to `FLAGS.md` as `**OPEN**` (they used to reach only `.pipeline_summary.md`, which
+> is overwritten every run — so they were silently lost) and registers the official
+> URLs it used in `scripts/sources.json`; `content_engine.py` registers 3–6 sources
+> for the new slug, asks for two tables and an inline-SVG figure, and runs a quality
+> gate (size, JSON-LD parses, canonical, disclaimer, balanced divs — missing
+> tables/figure are warnings in the summary, not a blocked article). It also streams
+> the completion: the non-streaming call died with "Streaming is required for
+> operations that may take longer than 10 minutes" on 2026-09-09. Default model:
+> `claude-sonnet-5`.
 
 1. **Fact-check** (`scripts/fact_check.py`) — 5 pages per day, oldest-checked first, so every page is re-verified roughly weekly. Claims are checked with live web search against **official sources only** (government portals, official gazettes, IRS/FinCEN). Confirmed corrections are applied with the source URL logged in `CORRECTIONS.md`; anything uncertain is flagged in the commit message for later human review, never guessed.
 2. **New article** (`scripts/content_engine.py`) — one per day from `queue.json`, generated in the site's exact existing template (schema, Key Facts, FAQ, internal links, disclaimer), researched with web search against official sources. Updates the relevant hub page and `progress.json`.

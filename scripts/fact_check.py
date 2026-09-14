@@ -29,9 +29,11 @@ PUB = os.path.join(ROOT, "public")
 STATE_FILE = os.path.join(ROOT, "factcheck_state.json")
 CORRECTIONS = os.path.join(ROOT, "CORRECTIONS.md")
 SUMMARY = os.path.join(ROOT, ".pipeline_summary.md")
+FLAGS = os.path.join(ROOT, "FLAGS.md")
+SOURCES = os.path.join(ROOT, "scripts", "sources.json")
 
 PAGES_PER_RUN = 5
-MODEL = os.environ.get("MODEL", "claude-sonnet-4-6")
+MODEL = os.environ.get("MODEL", "claude-sonnet-5")
 SKIP = {"privacy.html", "terms.html", "contact.html", "get-started.html",
         "index.html", "ads.txt", "robots.txt", "style.css", "sitemap.xml"}
 
@@ -55,14 +57,52 @@ Rules:
   "flags" instead — never guess.
 - If the page is accurate, return empty lists. Most pages should pass.
 
-Return ONLY a JSON object, no markdown fences:
+Return ONLY a JSON object, no markdown fences. "sources_used" lists the
+official documents you actually consulted for this page (up to 6, most
+important first) — they become the page's public "Sources" block:
 {{"corrections": [{{"find": "...", "replace": "...", "source": "official URL",
    "reason": "one line"}}],
-  "flags": [{{"claim": "...", "issue": "...", "where_to_verify": "..."}}]}}"""
+  "flags": [{{"claim": "...", "issue": "...", "where_to_verify": "..."}}],
+  "sources_used": [{{"n": "<Authority — document>", "u": "<official URL>"}}]}}"""
 
 
 def month_year() -> str:
     return datetime.date.today().strftime("%B %Y")
+
+
+def register_sources(slug: str, items: list[dict], max_per_page: int = 6) -> int:
+    """Add the official sources used for a page to scripts/sources.json.
+
+    seo_health renders that file as the page's "Sources & official references"
+    block, so a page must never end a fact-check with fewer sources than it had.
+    The file's existing indentation is preserved so the diff stays small.
+    """
+    if not items or not os.path.exists(SOURCES):
+        return 0
+    original = open(SOURCES, encoding="utf-8").read()
+    data = json.loads(original)
+    lst = data.setdefault("pages", {}).setdefault(slug, [])
+    added = 0
+    for it in items:
+        url, name = (it.get("u") or "").strip(), (it.get("n") or "").strip()
+        if not url or not name or len(lst) >= max_per_page:
+            continue
+        if any(x.get("u") == url for x in lst):
+            continue
+        lst.append({"n": name, "u": url})
+        added += 1
+    body = original.rstrip("\n")
+    for indent in (1, 2, 4, None):
+        for ascii_only in (False, True):
+            if json.dumps(json.loads(original), indent=indent,
+                          ensure_ascii=ascii_only) == body:
+                open(SOURCES, "w", encoding="utf-8").write(
+                    json.dumps(data, indent=indent, ensure_ascii=ascii_only)
+                    + (original[len(body):] or "\n"))
+                return added
+    json.dump(data, open(SOURCES, "w", encoding="utf-8"), indent=1,
+              ensure_ascii=False)
+    return added
 
 
 def pick_pages() -> list[str]:
@@ -81,7 +121,7 @@ def check_page(client: anthropic.Anthropic, fname: str) -> dict:
         model=MODEL,
         max_tokens=8000,
         system=SYSTEM.format(today=datetime.date.today().isoformat()),
-        tools=[{"type": "web_search_20250305", "name": "web_search",
+        tools=[{"type": "web_search_20260209", "name": "web_search",
                 "max_uses": 8}],
         messages=[{"role": "user", "content":
                    f"Page: https://migratestate.com/{fname[:-5]}\n\n"
@@ -139,6 +179,9 @@ def main() -> None:
             print(f"  fixed: {c['reason']}")
         for f in result.get("flags", []):
             all_flags.append((fname, f))
+        n = register_sources(fname[:-5], result.get("sources_used", []))
+        if n:
+            print(f"  sources added: {n}")
         checked.append(fname)
         state[fname] = today
 
@@ -150,6 +193,17 @@ def main() -> None:
             for fname, c in all_applied:
                 fh.write(f"- **{fname}**: {c['reason']} "
                          f"([source]({c['source']}))\n")
+
+    # FLAGS.md is Barak's human-review queue and the only durable record of an
+    # uncertain claim. Before this existed, flags went to .pipeline_summary.md
+    # only — which is overwritten every run, so they were silently lost.
+    if all_flags:
+        with open(FLAGS, "a", encoding="utf-8") as fh:
+            fh.write(f"\n## {today}\n")
+            for fname, f in all_flags:
+                fh.write(f"- **OPEN** · {fname} · claim: {f.get('claim','')} "
+                         f"· issue: {f.get('issue','')} "
+                         f"· verify at: {f.get('where_to_verify','')}\n")
 
     with open(SUMMARY, "a", encoding="utf-8") as fh:
         fh.write(f"### Fact-check ({today})\n")
