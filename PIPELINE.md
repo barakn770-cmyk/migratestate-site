@@ -28,9 +28,36 @@ not help. The only remedy is to remove the update and pause Windows updates —
 `.pipeline/fix-plan9-kb5124008.ps1` does it (run elevated, then reboot).
 
 **While device_bash is down, publish from Claude Code / a terminal on the PC**
-(plain git works there — it is unaffected), or enable the Actions workflow. Anything
-already written during a failed run is not lost: check the working tree and
-`git stash list` before resetting anything.
+(plain git works there — it is unaffected). Anything already written during a
+failed run is not lost: check the working tree and `git stash list` before
+resetting anything.
+
+### Second runner: local Windows scheduled task (2026-09-14 onward)
+
+A backup runner that does not touch Cowork's VM at all, so a Plan9-style
+regression cannot stop the site again. It uses the **Claude Code CLI on the
+subscription — no API credits.**
+
+- Task: **"MigrateState Daily Pipeline (local)"** in Windows Task Scheduler,
+  daily 08:30 local, `StartWhenAvailable` (it catches up if the PC was off).
+- It runs `.pipeline\run-daily.ps1`, which pipes `.pipeline\local-task-prompt.md`
+  into `claude -p` and tees everything to `.pipeline\runs\local-<date>.log`.
+  The task's "Last Run Result" is the script's exit code, so a failure is visible
+  without opening the log. `-DryRun` reports what it would do and changes nothing.
+- CLI: install it stably with `npm install -g @anthropic-ai/claude-code`
+  (`%APPDATA%\npm\claude.cmd`). The copy inside the VS Code extension is only a
+  fallback — its path carries the extension version, so it moves on every update.
+- Permissions: `--permission-mode acceptEdits` plus an allowlist passed as flags
+  (`git *`, `python scripts/*`, WebSearch, WebFetch; force-push, `reset --hard`,
+  `clean` and `rm -rf` denied). `.claude/settings.json` mirrors the same rules for
+  interactive sessions.
+- **The workspace must be trusted or the whole thing silently does nothing.**
+  Claude Code ignores permission rules — from settings *and* from `--allowedTools`
+  — in an untrusted workspace, so every git/python step is refused and an
+  unattended run has nobody to answer the prompt. Trust is recorded per project
+  path in `~/.claude.json` (`hasTrustDialogAccepted: true`); note the path can
+  appear under both `c:/...` and `C:/...`, and both spellings must say true.
+  Accepting the trust dialog once in an interactive `claude` session does it too.
 
 
 ## Additional steps since the Sept 2026 SEO audit (MANDATORY — read before step 2)
