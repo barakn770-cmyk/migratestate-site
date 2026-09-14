@@ -59,9 +59,40 @@ HUB_LABELS = {
     "costa-rica-guides": "Costa Rica",
 }
 
-FONT_SERIF = "/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf"
-FONT_SANS_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
-FONT_SANS = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
+# Font candidates, first existing file wins. The Linux paths are what the CI
+# runner has; the Windows ones let the same card render when the pipeline runs
+# from the PC. Without a fallback, OG rendering fails there — not fatally (see
+# render_missing_og), but every new article would ship a 404 og:image.
+FONT_SERIF = ["/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf",
+              "C:/Windows/Fonts/georgia.ttf"]
+FONT_SERIF_BOLD = ["/usr/share/fonts/truetype/google-fonts/Lora-Variable.ttf",
+                   "C:/Windows/Fonts/georgiab.ttf"]
+FONT_SANS_BOLD = ["/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+                  "C:/Windows/Fonts/arialbd.ttf"]
+FONT_SANS = ["/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+             "C:/Windows/Fonts/arial.ttf"]
+
+
+def load_font(candidates: list[str], size: int, weight: int | None = None):
+    """First candidate that exists, at `size`.
+
+    `weight` is a variable-font axis (Lora). Static faces such as Georgia raise
+    on set_variation_by_axes, so their own weight is used instead — which is why
+    the bold candidates list names the bold file directly.
+    """
+    from PIL import ImageFont
+
+    for path in candidates:
+        if not os.path.exists(path):
+            continue
+        font = ImageFont.truetype(path, size)
+        if weight is not None:
+            try:
+                font.set_variation_by_axes([weight])
+            except OSError:
+                pass
+        return font
+    return ImageFont.load_default(size)
 
 NAVY = (15, 42, 67)
 GOLD = (200, 162, 74)
@@ -142,11 +173,10 @@ def render_og_card(slug: str, title: str, out_dir: str) -> None:
     d.rectangle([0, 0, 10, CARD_H], fill=GOLD)              # left accent bar
     d.rounded_rectangle([64, 54, 116, 106], 12, fill=GOLD)  # logo mark
 
-    mark = ImageFont.truetype(FONT_SERIF, 34)
-    mark.set_variation_by_axes([700])
+    mark = load_font(FONT_SERIF_BOLD, 34, 700)
     d.text((90, 80), "M", font=mark, fill=NAVY, anchor="mm")
     d.text((132, 80), "MigrateState",
-           font=ImageFont.truetype(FONT_SANS_BOLD, 26), fill=CREAM, anchor="lm")
+           font=load_font(FONT_SANS_BOLD, 26), fill=CREAM, anchor="lm")
 
     def wrap(text, font, max_w):
         lines, cur = [], ""
@@ -164,8 +194,7 @@ def render_og_card(slug: str, title: str, out_dir: str) -> None:
 
     size = 64
     while size >= 34:  # shrink until it fits in 4 lines
-        font = ImageFont.truetype(FONT_SERIF, size)
-        font.set_variation_by_axes([600])
+        font = load_font(FONT_SERIF, size, 600)
         lines = wrap(title, font, CARD_W - 128)
         if len(lines) <= 4:
             break
@@ -179,7 +208,7 @@ def render_og_card(slug: str, title: str, out_dir: str) -> None:
 
     d.rectangle([64, CARD_H - 116, 184, CARD_H - 112], fill=GOLD)
     d.text((64, CARD_H - 80), "Lawyer-reviewed guides for Americans buying abroad",
-           font=ImageFont.truetype(FONT_SANS, 24), fill=MUTED)
+           font=load_font(FONT_SANS, 24), fill=MUTED)
 
     img.save(os.path.join(out_dir, f"{slug}.png"), "PNG", optimize=True)
 
