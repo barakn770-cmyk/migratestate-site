@@ -40,8 +40,9 @@
     "fbar-foreign-property-owners",
     "form-8938-fatca-foreign-assets",
     "depreciation-foreign-rental-property",
-    "us-tax-foreign-property"
+    "us-tax-foreign-property",
+    "fideicomiso"
   ],
-  "lastRun": "2026-09-05",
-  "lastSlug": "depreciation-foreign-rental-property"
+  "lastRun": "2026-09-15",
+  "lastSlug": "fideicomiso"
 }

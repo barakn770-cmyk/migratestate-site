@@ -55,6 +55,18 @@
    {
     "n": "ePortugal — NIF for a natural person",
     "u": "https://eportugal.gov.pt/en/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular"
+   },
+   {
+    "n": "Diário da República — Lei n.º 9-A/2026, de 6 de março (Construir Portugal, autoriza a taxa de IMT de 7,5% para não residentes)",
+    "u": "https://files.diariodarepublica.pt/1s/2026/03/04601/0000200005.pdf"
+   },
+   {
+    "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio (IMT 7,5% não residentes, Art. 6.º)",
+    "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
+   },
+   {
+    "n": "Autoridade Tributária — Ofício-Circulado n.º 40131/2026 (IMT não residentes, orientações)",
+    "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio-circulado-40131-2026.pdf"
    }
   ],
   "selling-property-portugal-us-citizen": [
@@ -103,6 +115,18 @@
    {
     "n": "Ministerio del Interior — NIE / extranjería",
     "u": "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/"
+   },
+   {
+    "n": "La Moncloa — Fin del Golden Visa en España (comunicado oficial, 3 abril 2025)",
+    "u": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/paginas/2025/020425-fin-golden-visa.aspx"
+   },
+   {
+    "n": "BOE — Ley Orgánica 1/2025, de 2 de enero (deroga el visado de residencia por inversión)",
+    "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76"
+   },
+   {
+    "n": "Agencia Tributaria — IRNR, renta imputada de inmueble urbano de uso propio",
+    "u": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/cuestiones-especificas-sobre-tributacion-inmuebles/renta-imputada-inmueble-urbano-uso-propio.html"
    }
   ],
   "greece-golden-visa": [
@@ -579,6 +603,10 @@
    {
     "n": "IRS — Comparison of Form 8938 and FBAR requirements",
     "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
+   },
+   {
+    "n": "eCFR — 31 CFR 1010.821 (FBAR civil penalty inflation adjustment table)",
+    "u": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821"
    }
   ],
   "owning-property-abroad-tax-reporting": [
@@ -923,10 +951,6 @@
   ],
   "us-tax-foreign-property": [
    {
-    "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
-    "u": "https://www.irs.gov/publications/p54"
-   },
-   {
     "n": "IRS — Comparison of Form 8938 and FBAR requirements",
     "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
    },
@@ -945,6 +969,46 @@
    {
     "n": "IRS — About Form 3520 (foreign gifts and trusts)",
     "u": "https://www.irs.gov/forms-pubs/about-form-3520"
+   },
+   {
+    "n": "IRS — Like-Kind Exchanges Under IRC Code Section 1031",
+    "u": "https://www.irs.gov/node/5256"
+   }
+  ],
+  "form-8938-fatca-foreign-assets": [
+   {
+    "n": "IRS — Summary of FATCA Reporting for U.S. Taxpayers (Form 8938 thresholds)",
+    "u": "https://www.irs.gov/businesses/corporations/summary-of-fatca-reporting-for-us-taxpayers"
+   },
+   {
+    "n": "IRS — Comparison of Form 8938 and FBAR requirements",
+    "u": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements"
+   }
+  ],
+  "fideicomiso": [
+   {
+    "n": "Constitución Política — Artículo 27 (zona restringida)",
+    "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+   },
+   {
+    "n": "Ley de Inversión Extranjera — Arts. 10, 11, 13 (fideicomiso, término de 50 años)",
+    "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIE.pdf"
+   },
+   {
+    "n": "Ley Federal de Derechos, Art. 25 (tarifa del permiso SRE)",
+    "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFD.pdf"
+   },
+   {
+    "n": "SRE — Permiso para constitución de fideicomiso (trámite oficial)",
+    "u": "https://portales.sre.gob.mx/tramites-dgaj/art-27-constitucional/permiso-para-constitucion-de-fideicomiso-sobre-inmuebles-localizados-dentro-de-la-zona-restringida"
+   },
+   {
+    "n": "Ley General de Títulos y Operaciones de Crédito (beneficiario sustituto)",
+    "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf"
+   },
+   {
+    "n": "IRS — Revenue Ruling 2013-14 (Mexican land trust not a trust for US tax purposes)",
+    "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
    }
   ]
  },
