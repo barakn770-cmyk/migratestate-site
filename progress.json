@@ -41,8 +41,9 @@
     "form-8938-fatca-foreign-assets",
     "depreciation-foreign-rental-property",
     "us-tax-foreign-property",
-    "fideicomiso"
+    "fideicomiso",
+    "mexico-temporary-resident-visa"
   ],
-  "lastRun": "2026-09-15",
-  "lastSlug": "fideicomiso"
+  "lastRun": "2026-09-16",
+  "lastSlug": "mexico-temporary-resident-visa"
 }
