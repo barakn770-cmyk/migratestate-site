@@ -149,6 +149,18 @@
       {
         "n": "AADE — Independent Authority for Public Revenue (Greek tax)",
         "u": "https://www.aade.gr/"
+      },
+      {
+        "n": "Ministry of Migration and Asylum — Golden Visa fees (€2,000 + €16 initial/renewal)",
+        "u": "https://migration.gov.gr/en/golden-visa/"
+      },
+      {
+        "n": "AADE — Tax incentives to attract new tax residents (Art. 5A €100K/€500K, Art. 5B 7% pensioners)",
+        "u": "https://www.aade.gr/sites/default/files/2023-08/forologika_kinitra_proselkysis_f.katoikiwn.pdf"
+      },
+      {
+        "n": "AADE — ENFIA / E9 declaration (Unified Real Estate Property Tax)",
+        "u": "https://www.aade.gr/en/e9enfia"
       }
     ],
     "buying-property-greece": [
@@ -273,8 +285,8 @@
         "u": "https://gdrfad.gov.ae/"
       },
       {
-        "n": "Dubai Land Department",
-        "u": "https://dubailand.gov.ae/"
+        "n": "Dubai Land Department — Investor Visa (Taskeen) eligibility, no property-value floor",
+        "u": "https://dubailand.gov.ae/en/eservices/request-for-investor-visa/"
       }
     ],
     "buying-property-dubai": [
@@ -853,6 +865,22 @@
       {
         "n": "IRS — Publication 527, Residential Rental Property",
         "u": "https://www.irs.gov/publications/p527"
+      },
+      {
+        "n": "Diário da República — Decreto-Lei n.º 97/2026 (flat 7.5% IMT for non-residents, Art. 17)",
+        "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
+      },
+      {
+        "n": "Dubai Land Department — Investor Visa (Taskeen) eligibility, no property-value floor",
+        "u": "https://dubailand.gov.ae/en/eservices/request-for-investor-visa/"
+      },
+      {
+        "n": "Comunidad de Madrid — Transmisiones Patrimoniales Onerosas (ITP rate)",
+        "u": "https://www.comunidad.madrid/servicios/atencion-contribuyente/transmisiones-patrimoniales-onerosas"
+      },
+      {
+        "n": "Junta de Andalucía — ITP tipo general 7%",
+        "u": "https://www.juntadeandalucia.es/organismos/economiahaciendayfondoseuropeos/areas/tributos-juego/tributos/paginas/medidastpo.html"
       }
     ],
     "short-term-rental-rules-abroad": [
@@ -1077,6 +1105,24 @@
       {
         "n": "IRS — FBAR requirements for foreign accounts",
         "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
+      }
+    ],
+    "panama-pensionado-visa": [
+      {
+        "n": "Servicio Nacional de Migración — Jubilado/Pensionado permanent residence requirements (official)",
+        "u": "https://www.migracion.gob.pa/wp-content/uploads/02-JUBILADO-PENSIONADO-1.pdf"
+      },
+      {
+        "n": "Consulate General of Panama — Law 6 of 16 June 1987, retiree/pensioner benefits (official text)",
+        "u": "https://www.consulatgeneraldepanamamarseille.com/pdf/benefices-retraites-pensionnes.pdf"
+      },
+      {
+        "n": "Servicio Nacional de Migración (Panama) — official portal",
+        "u": "https://www.migracion.gob.pa/"
+      },
+      {
+        "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+        "u": "https://www.irs.gov/publications/p54"
       }
     ]
   },

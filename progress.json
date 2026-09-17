@@ -43,8 +43,9 @@
     "us-tax-foreign-property",
     "fideicomiso",
     "mexico-temporary-resident-visa",
-    "costa-rica-pensionado-visa"
+    "costa-rica-pensionado-visa",
+    "panama-pensionado-visa"
   ],
   "lastRun": "2026-09-17",
-  "lastSlug": "costa-rica-pensionado-visa"
+  "lastSlug": "panama-pensionado-visa"
 }
