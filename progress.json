@@ -42,8 +42,9 @@
     "depreciation-foreign-rental-property",
     "us-tax-foreign-property",
     "fideicomiso",
-    "mexico-temporary-resident-visa"
+    "mexico-temporary-resident-visa",
+    "costa-rica-pensionado-visa"
   ],
-  "lastRun": "2026-09-16",
-  "lastSlug": "mexico-temporary-resident-visa"
+  "lastRun": "2026-09-17",
+  "lastSlug": "costa-rica-pensionado-visa"
 }

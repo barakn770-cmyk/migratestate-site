@@ -11,12 +11,20 @@
         "u": "https://aima.gov.pt/pt/a-aima/perguntas-frequentes-faqs/autorizacao-de-residencia-para-investimento-ari/faq-residence-permit-for-investment-activity-ari"
       },
       {
-        "n": "Lei Orgânica n.º 1/2026 (Nationality Law amendment) — Diário da República, Série I n.º 95, 18 May 2026",
+        "n": "Lei Orgânica n.º 1/2026 (Nationality Law amendment) — Diário da República, 18 May 2026",
         "u": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
       },
       {
         "n": "Lei n.º 23/2007 (Foreigners' Law) — consolidated text, Diário da República",
         "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2007-34509975"
+      },
+      {
+        "n": "Portaria n.º 307/2023, de 13 de outubro (ARI/visa fee schedule) — Diário da República",
+        "u": "https://diariodarepublica.pt/dr/detalhe/portaria/307-2023-222779383"
+      },
+      {
+        "n": "Portal das Finanças",
+        "u": "https://www.portaldasfinancas.gov.pt/"
       }
     ],
     "portugal-d7-visa": [
@@ -443,6 +451,10 @@
       {
         "n": "DGI — Dirección General Impositiva (Uruguay)",
         "u": "https://www.dgi.gub.uy/"
+      },
+      {
+        "n": "DGI — Causales de Residencia Fiscal (Uruguay)",
+        "u": "https://www.gub.uy/direccion-general-impositiva/comunicacion/publicaciones/causales-residencia-fiscal"
       }
     ],
     "buying-property-brazil": [
@@ -537,12 +549,16 @@
       {
         "n": "Revenue Department (Thailand)",
         "u": "https://www.rd.go.th/english/"
+      },
+      {
+        "n": "Department of Business Development (Thailand) — company registration rules",
+        "u": "https://www.dbd.go.th/"
       }
     ],
     "buying-property-philippines": [
       {
-        "n": "Philippine Retirement Authority (SRRV)",
-        "u": "https://pra.gov.ph/"
+        "n": "Philippine Retirement Authority — SRRV Visa page",
+        "u": "https://pra.gov.ph/SRRVisa"
       },
       {
         "n": "Bureau of Internal Revenue",
@@ -689,6 +705,10 @@
       {
         "n": "IRS — Topic 559, Net Investment Income Tax",
         "u": "https://www.irs.gov/taxtopics/tc559"
+      },
+      {
+        "n": "IRS — Net Investment Income Tax (NIIT) thresholds",
+        "u": "https://www.irs.gov/individuals/net-investment-income-tax"
       }
     ],
     "form-8949-foreign-property-sale": [
@@ -1035,6 +1055,28 @@
       {
         "n": "Embajada de México en España — Visa de residente temporal por adquisición de inmuebles",
         "u": "https://embamex.sre.gob.mx/espana/index.php/visas/541"
+      }
+    ],
+    "costa-rica-pensionado-visa": [
+      {
+        "n": "Dirección General de Migración y Extranjería (DGME), Costa Rica",
+        "u": "https://www.migracion.go.cr/"
+      },
+      {
+        "n": "SCIJ — Sistema Costarricense de Información Jurídica",
+        "u": "https://pgrweb.go.cr/scij/"
+      },
+      {
+        "n": "Caja Costarricense de Seguro Social (CCSS)",
+        "u": "https://www.ccss.sa.cr/"
+      },
+      {
+        "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+        "u": "https://www.irs.gov/publications/p54"
+      },
+      {
+        "n": "IRS — FBAR requirements for foreign accounts",
+        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
       }
     ]
   },
