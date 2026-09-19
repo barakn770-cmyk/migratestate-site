@@ -291,16 +291,20 @@
     ],
     "buying-property-dubai": [
       {
-        "n": "Dubai Land Department",
-        "u": "https://dubailand.gov.ae/"
+        "n": "Dubai Land Department — Regulation No. (3) of 2006 (freehold areas)",
+        "u": "https://dlp.dubai.gov.ae/Legislation%20Reference/2006/Regulation%20No.%20(3)%20of%202006.html"
+      },
+      {
+        "n": "Dubai Land Department — Law No. (8) of 2007 (escrow accounts)",
+        "u": "https://dlp.dubai.gov.ae/Legislation%20Reference/2007/Law%20No.%20(8)%20of%202007.html"
+      },
+      {
+        "n": "Central Bank of the UAE — Regulations Regarding Mortgage Loans",
+        "u": "https://rulebook.centralbank.ae/en/rulebook/regulations-regarding-mortgage-loans"
       },
       {
         "n": "u.ae — Golden visa (official UAE Government portal)",
         "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
-      },
-      {
-        "n": "UAE Federal Tax Authority",
-        "u": "https://tax.gov.ae/"
       }
     ],
     "mexico": [
@@ -1173,6 +1177,16 @@
       {
         "n": "IRS — Report of Foreign Bank and Financial Accounts (FBAR)",
         "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
+      }
+    ],
+    "greece-fip-visa": [
+      {
+        "n": "Law 5038/2023 (Code of Immigration and Social Integration) — full text",
+        "u": "https://migration.gov.gr/wp-content/uploads/2023/04/%CE%9A%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1%CF%82-%CE%9C%CE%B5%CF%84%CE%B1%CE%BD%CE%AC%CF%83%CF%84%CE%B5%CF%85%CF%83%CE%B7%CF%82.pdf"
+      },
+      {
+        "n": "Ministry of Migration and Asylum — 3 June 2024 circular on Law 5038/2023 income thresholds",
+        "u": "https://migration.gov.gr/wp-content/uploads/2024/10/6%CE%95%CE%B3%CE%BA%CF%8D%CE%BB%CE%B9%CE%BF%CF%82-3JUN2024-%CE%BD_5038_2023-%CE%B7-1%CE%B7-%CE%BC%CE%B5%CE%B3%CE%B1%CE%BB%CE%B7-%CE%9D%CF%8C%CE%BC%CE%BF%CF%85.pdf"
       }
     ]
   },
