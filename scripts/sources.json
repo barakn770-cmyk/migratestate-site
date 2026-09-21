@@ -49,6 +49,10 @@
       {
         "n": "Portal das Finanças (Autoridade Tributária e Aduaneira)",
         "u": "https://www.portaldasfinancas.gov.pt/"
+      },
+      {
+        "n": "Portal das Finanças — Imposto anual: IMI e AIMI (rates and brackets)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/apoio_ao_contribuinte/Cidadaos/Casa_e_propriedades/Imposto_anual/Paginas/default.aspx"
       }
     ],
     "buying-property-portugal": [
@@ -95,6 +99,10 @@
       {
         "n": "Ministerio de Inclusión, Seguridad Social y Migraciones — Migraciones",
         "u": "https://www.inclusion.gob.es/en/web/migraciones"
+      },
+      {
+        "n": "Consulado General de España en Washington — Telework (Digital Nomad) Visa income requirements (2026)",
+        "u": "https://www.exteriores.gob.es/Consulados/washington/en/ServiciosConsulares/Paginas/Consular/Telework-visa.aspx"
       }
     ],
     "spain-non-lucrative-visa": [
@@ -819,6 +827,10 @@
       {
         "n": "CFPB — mortgage basics (US consumer reference)",
         "u": "https://www.consumerfinance.gov/owning-a-home/"
+      },
+      {
+        "n": "Alpha Bank (Greece) — Mortgage Loan for Foreigners: LTV, rate and documentation terms",
+        "u": "https://www.alpha.gr/en/retail/alpha-bank-your-premier-banking-partner-in-greece/banking-with-us/mortgage-loan-for-foreigners"
       }
     ],
     "transfer-money-abroad-property": [
@@ -837,6 +849,14 @@
       {
         "n": "OFAC — Sanctions programs and country information",
         "u": "https://ofac.treasury.gov/sanctions-programs-and-country-information"
+      },
+      {
+        "n": "IRS — Remittance Transfer Excise Tax (One Big Beautiful Bill, effective Jan. 1, 2026)",
+        "u": "https://www.irs.gov/newsroom/treasury-irs-issue-proposed-regulations-on-the-new-remittance-transfer-tax-established-under-the-one-big-beautiful-bill"
+      },
+      {
+        "n": "Federal Register — FinCEN Inflation Adjustment of FBAR Civil Monetary Penalties",
+        "u": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties"
       }
     ],
     "inheritance-tax-property-abroad": [
@@ -1187,6 +1207,32 @@
       {
         "n": "Ministry of Migration and Asylum — 3 June 2024 circular on Law 5038/2023 income thresholds",
         "u": "https://migration.gov.gr/wp-content/uploads/2024/10/6%CE%95%CE%B3%CE%BA%CF%8D%CE%BB%CE%B9%CE%BF%CF%82-3JUN2024-%CE%BD_5038_2023-%CE%B7-1%CE%B7-%CE%BC%CE%B5%CE%B3%CE%B1%CE%BB%CE%B7-%CE%9D%CF%8C%CE%BC%CE%BF%CF%85.pdf"
+      }
+    ],
+    "malaysia-mm2h-visa": [
+      {
+        "n": "MM2H Centre (Ministry of Tourism, Arts and Culture Malaysia) — Platinum tier requirements",
+        "u": "https://www.mm2h.gov.my/category/platinum"
+      },
+      {
+        "n": "MM2H Centre — Gold tier requirements",
+        "u": "https://www.mm2h.gov.my/category/gold"
+      },
+      {
+        "n": "MM2H Centre — Silver tier requirements",
+        "u": "https://www.mm2h.gov.my/category/silver"
+      },
+      {
+        "n": "MM2H Centre — SEZ/SFZ (Forest City) tier requirements",
+        "u": "https://www.mm2h.gov.my/category/sez"
+      },
+      {
+        "n": "MM2H Centre — Application guidelines (FD withdrawal, age, medical/insurance rules)",
+        "u": "https://www.mm2h.gov.my/apply/guidelines"
+      },
+      {
+        "n": "Sarawak Ministry of Tourism, Creative Industry & Performing Arts — S-MM2H requirements",
+        "u": "https://mtcp.sarawak.gov.my/web/subpage/webpage_view/262"
       }
     ]
   },
