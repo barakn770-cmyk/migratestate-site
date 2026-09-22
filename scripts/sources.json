@@ -353,6 +353,14 @@
       {
         "n": "IRS — Publication 936, Home Mortgage Interest Deduction",
         "u": "https://www.irs.gov/publications/p936"
+      },
+      {
+        "n": "Federal Reserve — H.15 Selected Interest Rates (Bank Prime Loan rate)",
+        "u": "https://www.federalreserve.gov/releases/h15/"
+      },
+      {
+        "n": "Cámara de Diputados — Ley para la Transparencia y Ordenamiento de los Servicios Financieros",
+        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LTOSF.pdf"
       }
     ],
     "us-taxes-property-mexico": [
@@ -767,6 +775,10 @@
       {
         "n": "IRS — About Schedule D (Form 1040)",
         "u": "https://www.irs.gov/forms-pubs/about-schedule-d-form-1040"
+      },
+      {
+        "n": "IRS — Rev. Proc. 2025-32 (2026 capital gains rate thresholds)",
+        "u": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf"
       }
     ],
     "section-121-exclusion-foreign-home-sale": [
@@ -971,6 +983,10 @@
       {
         "n": "IRS — Publication 54, US citizens and resident aliens abroad",
         "u": "https://www.irs.gov/publications/p54"
+      },
+      {
+        "n": "IRS — Rev. Proc. 2025-32 (2026 inflation adjustments, §4.38 §877A exclusion)",
+        "u": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf"
       }
     ],
     "best-golden-visa-for-americans": [
@@ -1233,6 +1249,50 @@
       {
         "n": "Sarawak Ministry of Tourism, Creative Industry & Performing Arts — S-MM2H requirements",
         "u": "https://mtcp.sarawak.gov.my/web/subpage/webpage_view/262"
+      }
+    ],
+    "dubai-guides": [
+      {
+        "n": "Central Bank of the UAE — Regulations Regarding Mortgage Loans",
+        "u": "https://rulebook.centralbank.ae/en/rulebook/regulations-regarding-mortgage-loans"
+      },
+      {
+        "n": "Dubai Land Department — Regulation No. 3 of 2006 (freehold areas)",
+        "u": "https://dlp.dubai.gov.ae/Legislation%20Reference/2006/Regulation%20No.%20(3)%20of%202006.html"
+      }
+    ],
+    "france-guides": [
+      {
+        "n": "Direction générale des Finances publiques — IFI 2026 (formulaire 2042-IFI)",
+        "u": "https://www.impots.gouv.fr/sites/default/files/formulaires/2042-ifi/2026/2042-ifi_5480.pdf"
+      }
+    ],
+    "germany-guides": [
+      {
+        "n": "Bundesfinanzhof — decision upholding the 2025 Grundsteuer reform (12 Nov 2025)",
+        "u": "https://www.bundesfinanzhof.de/en/entscheidungen/entscheidungen-online/decision-detail/STRE202620008/"
+      }
+    ],
+    "thailand-ltr-visa": [
+      {
+        "n": "Board of Investment (Thailand) — LTR Visa Program",
+        "u": "https://ltr.boi.go.th/"
+      },
+      {
+        "n": "Revenue Department (Thailand)",
+        "u": "https://www.rd.go.th/english/"
+      },
+      {
+        "n": "Department of Lands (Thailand)",
+        "u": "https://www.dol.go.th/"
+      },
+      {
+        "n": "IRS — Publication 54, US citizens and resident aliens abroad",
+        "u": "https://www.irs.gov/publications/p54"
+      },
+      {
+        "n": "IRS — Foreign Tax Credit (Form 1116)",
+        "u": "https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit"
       }
     ]
   },

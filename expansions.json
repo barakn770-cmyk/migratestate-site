@@ -33,7 +33,7 @@
     },
     {
       "slug": "mortgage-in-mexico",
-      "status": "open",
+      "status": "done 2026-09-22",
       "target_words": 2800,
       "brief": "Currently 1,514 words. Add: who lends to foreigners (Mexican banks require residency/RFC; cross-border USD lenders and developer financing as the practical routes), typical MXN rates vs USD rates with a dated source, minimum down payments, the fideicomiso as collateral, closing timelines, prepayment rules, the §988 trap on a peso loan and the reverse (peso weakening = no deductible loss for a personal home), US deductibility (Pub 936), CONDUSEF as the regulator/complaints body, and a decision table: cash vs US HELOC vs Mexican bank vs developer financing. Inline SVG comparing total cost of the four routes on a US$300K purchase. Sources: Banxico, CONDUSEF, IRS Pub 936, 26 USC 988."
     }
