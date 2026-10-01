@@ -147,28 +147,28 @@
     ],
     "greece-golden-visa": [
       {
-        "n": "Ministry of Migration and Asylum (Hellenic Republic)",
-        "u": "https://migration.gov.gr/en/"
-      },
-      {
         "n": "mitos.gov.gr — Golden visa programme (investment in real property), initial issuance",
         "u": "https://en.mitos.gov.gr/index.php/%CE%94%CE%94:Golden_visa_programme_(investment_in_a_listed_real_property)_%E2%80%93_Initial_issuance"
-      },
-      {
-        "n": "AADE — Independent Authority for Public Revenue (Greek tax)",
-        "u": "https://www.aade.gr/"
       },
       {
         "n": "Ministry of Migration and Asylum — Golden Visa fees (€2,000 + €16 initial/renewal)",
         "u": "https://migration.gov.gr/en/golden-visa/"
       },
       {
-        "n": "AADE — Tax incentives to attract new tax residents (Art. 5A €100K/€500K, Art. 5B 7% pensioners)",
-        "u": "https://www.aade.gr/sites/default/files/2023-08/forologika_kinitra_proselkysis_f.katoikiwn.pdf"
+        "n": "AADE — Tax incentives for new tax residents (Art. 5A €100K/€500K, Art. 5B 7% pensioners), Nov 2025",
+        "u": "https://www.aade.gr/sites/default/files/2025-11/forologika_kinitra_ENG.pdf"
       },
       {
         "n": "AADE — ENFIA / E9 declaration (Unified Real Estate Property Tax)",
         "u": "https://www.aade.gr/en/e9enfia"
+      },
+      {
+        "n": "Ministry of Migration and Asylum — 24 Sept 2024 circular on Golden Visa zones/thresholds",
+        "u": "https://migration.gov.gr/wp-content/uploads/2024/10/9%CE%95%CE%B3%CE%BA%CF%8D%CE%BA%CE%BB%CE%B9%CE%BF%CF%82-Golden-24.9.2024-FINAL.pdf"
+      },
+      {
+        "n": "Ministry of Migration and Asylum (Hellenic Republic)",
+        "u": "https://migration.gov.gr/en/"
       }
     ],
     "buying-property-greece": [
@@ -207,6 +207,10 @@
       {
         "n": "Lei Orgânica n.º 1/2026 — Diário da República (Portuguese nationality timeline)",
         "u": "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf"
+      },
+      {
+        "n": "AADE — Tax incentives for new tax residents (Art. 5A/5B/5C), Nov 2025",
+        "u": "https://www.aade.gr/sites/default/files/2025-11/forologika_kinitra_ENG.pdf"
       }
     ],
     "italy-golden-visa": [
@@ -263,6 +267,10 @@
       {
         "n": "Magyar Közlöny (Hungarian official gazette)",
         "u": "https://magyarkozlony.hu/"
+      },
+      {
+        "n": "IRS — Announcement 2024-5, termination of US-Hungary tax treaty effective 1 Jan 2024",
+        "u": "https://www.irs.gov/pub/irs-drop/a-24-05.pdf"
       }
     ],
     "buying-property-cyprus": [
@@ -905,6 +913,10 @@
       {
         "n": "FinCEN — Beneficial Ownership Information reporting",
         "u": "https://www.fincen.gov/boi"
+      },
+      {
+        "n": "IRS — Rev. Rul. 2013-14 (Mexican fideicomiso is not a trust)",
+        "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
       }
     ],
     "annual-property-taxes-abroad": [
@@ -1223,6 +1235,10 @@
       {
         "n": "Ministry of Migration and Asylum — 3 June 2024 circular on Law 5038/2023 income thresholds",
         "u": "https://migration.gov.gr/wp-content/uploads/2024/10/6%CE%95%CE%B3%CE%BA%CF%8D%CE%BB%CE%B9%CE%BF%CF%82-3JUN2024-%CE%BD_5038_2023-%CE%B7-1%CE%B7-%CE%BC%CE%B5%CE%B3%CE%B1%CE%BB%CE%B7-%CE%9D%CF%8C%CE%BC%CE%BF%CF%85.pdf"
+      },
+      {
+        "n": "AADE — Tax incentives for new tax residents (Art. 5A/5B/5C), Nov 2025",
+        "u": "https://www.aade.gr/sites/default/files/2025-11/forologika_kinitra_ENG.pdf"
       }
     ],
     "malaysia-mm2h-visa": [
@@ -1293,6 +1309,24 @@
       {
         "n": "IRS — Foreign Tax Credit (Form 1116)",
         "u": "https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit"
+      }
+    ],
+    "philippines-srrv-visa": [
+      {
+        "n": "Philippine Retirement Authority — SRRV Visa program page",
+        "u": "https://pra.gov.ph/SRRVisa"
+      },
+      {
+        "n": "Official Gazette — Republic Act No. 8424 (National Internal Revenue Code of 1997), Sec. 23",
+        "u": "https://www.officialgazette.gov.ph/1997/12/11/republic-act-no-8424/"
+      },
+      {
+        "n": "Supreme Court E-Library — 1987 Constitution, Article XII (National Economy and Patrimony)",
+        "u": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/45/25555"
+      },
+      {
+        "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
+        "u": "https://www.irs.gov/publications/p54"
       }
     ]
   },
