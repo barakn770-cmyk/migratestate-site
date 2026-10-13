@@ -881,8 +881,8 @@
     ],
     "inheritance-tax-property-abroad": [
       {
-        "n": "IRS — About Form 706, United States Estate (and Generation-Skipping Transfer) Tax Return",
-        "u": "https://www.irs.gov/forms-pubs/about-form-706"
+        "n": "IRS — Instructions for Form 706 (2026 exclusion amount $15M, 40% top rate)",
+        "u": "https://www.irs.gov/instructions/i706"
       },
       {
         "n": "IRS — Estate tax",
@@ -1327,6 +1327,32 @@
       {
         "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
         "u": "https://www.irs.gov/publications/p54"
+      }
+    ],
+    "golden-visa-index-americans": [
+      {
+        "n": "OECS — Memorandum of Agreement on Citizenship by Investment (minimum $200,000, effective 1 July 2024)",
+        "u": "https://pressroom.oecs.int/caribbean-countries-pressing-forward-with-the-implementation-of-the-memorandum-of-agreement-on-citizenship-by-investment-programmes"
+      },
+      {
+        "n": "Ministry of Migration and Asylum (Greece) — Golden Visa",
+        "u": "https://migration.gov.gr/en/?p=954"
+      },
+      {
+        "n": "Investor Visa for Italy — official programme site",
+        "u": "https://investorvisa.mise.gov.it/index.php/en/"
+      },
+      {
+        "n": "AIMA — Portal ARI (Portugal)",
+        "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
+      },
+      {
+        "n": "Residency Malta Agency — MPRP legal framework",
+        "u": "https://residencymalta.gov.mt/legal-framework-mprp-2/"
+      },
+      {
+        "n": "IRS — About Form 8621 (PFIC reporting)",
+        "u": "https://www.irs.gov/forms-pubs/about-form-8621"
       }
     ]
   },
