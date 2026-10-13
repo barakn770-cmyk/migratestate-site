@@ -32,6 +32,42 @@ not help. The only remedy is to remove the update and pause Windows updates —
 failed run is not lost: check the working tree and `git stash list` before
 resetting anything.
 
+**Update 2026-10-13 — outage recurred 10-02→10-12, then cleared on its own.**
+The primary runner (the device-bound Cowork scheduled task, trigger name
+"migratestate.com — יומי: fact-check + מאמר + SEO (מאוחד)") produced no
+`.pipeline/runs/*.md` log between 2026-10-01 and 2026-10-13 — 11 missed daily
+fires, no commits to `main` in that window (`git log` jumps straight from
+2026-10-01 to 2026-10-13). `list_triggers` shows the schedule stayed `enabled:
+true` throughout with no `suspension_reason`, so the task itself was never
+paused — each fire most likely died at the very first `device_bash` call
+(before any run log could be written), consistent with this same Plan9/
+KB5124008-style mount failure recurring. On 2026-10-13 `device_bash` mounted
+the folder normally again and the run completed end-to-end, so whatever was
+blocking it has cleared (Windows auto-update, a reboot, or the fix script
+below — not confirmed which). No action was taken beyond observing this; if
+the gap recurs, check `device_bash` connectivity first before suspecting the
+trigger itself, and consider asking Barak whether KB5124008 is still installed
+(`Get-HotFix` on the PC, not reachable from this bridge) if it does.
+
+**The local backup runner (below) has been broken since 2026-09-15 — needs
+Barak's action.** `local-task-prompt.md` ran daily via Task Scheduler the
+whole time, but every run has failed:
+- 2026-09-15 → 2026-09-29: the `claude -p` process hung forever right after
+  starting (`local-*.log` has only a `START` line, no `END`, no exit code —
+  Task Scheduler never saw a completion).
+- 2026-10-01 → today (2026-10-13): same process now fails fast instead of
+  hanging — every log shows `START` → `Failed to authenticate: OAuth session
+  expired and could not be refreshed` → `END exit=1` within seconds.
+This is the Claude Code CLI's subscription login on Barak's PC, not an API
+key, and it cannot be refreshed non-interactively — Task Scheduler has no
+browser to complete the OAuth flow. **Fix: on the PC, open a terminal and run
+`claude` once interactively (or `claude /login`), finish the browser sign-in,
+then the next scheduled `run-daily.ps1` fire will pick up the refreshed
+session.** Until that happens this runner keeps failing silently (Task
+Scheduler shows the exit code, but nothing surfaces it to Barak otherwise) —
+low urgency only because the primary runner above is currently healthy and
+covers the daily pipeline on its own.
+
 ### Second runner: local Windows scheduled task (2026-09-14 onward)
 
 A backup runner that does not touch Cowork's VM at all, so a Plan9-style
