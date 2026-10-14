@@ -151,6 +151,10 @@
         "u": "https://en.mitos.gov.gr/index.php/%CE%94%CE%94:Golden_visa_programme_(investment_in_a_listed_real_property)_%E2%80%93_Initial_issuance"
       },
       {
+        "n": "Ministry of Economy and Finance — Income taxation: rental-income rates (2026 scale)",
+        "u": "https://minfin.gov.gr/en/tax-policy/tax-guide/income-taxation/"
+      },
+      {
         "n": "Ministry of Migration and Asylum — Golden Visa fees (€2,000 + €16 initial/renewal)",
         "u": "https://migration.gov.gr/en/golden-visa/"
       },
@@ -165,10 +169,6 @@
       {
         "n": "Ministry of Migration and Asylum — 24 Sept 2024 circular on Golden Visa zones/thresholds",
         "u": "https://migration.gov.gr/wp-content/uploads/2024/10/9%CE%95%CE%B3%CE%BA%CF%8D%CE%BA%CE%BB%CE%B9%CE%BF%CF%82-Golden-24.9.2024-FINAL.pdf"
-      },
-      {
-        "n": "Ministry of Migration and Asylum (Hellenic Republic)",
-        "u": "https://migration.gov.gr/en/"
       }
     ],
     "buying-property-greece": [
@@ -907,16 +907,20 @@
         "u": "https://www.irs.gov/forms-pubs/about-form-8858"
       },
       {
-        "n": "IRS — About Form 8865 (foreign partnerships)",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8865"
-      },
-      {
         "n": "FinCEN — Beneficial Ownership Information reporting",
         "u": "https://www.fincen.gov/boi"
       },
       {
         "n": "IRS — Rev. Rul. 2013-14 (Mexican fideicomiso is not a trust)",
         "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
+      },
+      {
+        "n": "impots.gouv.fr — Taxe de 3% sur la valeur vénale des immeubles des entités juridiques (art. 990 D–G CGI, déclaration 2746)",
+        "u": "https://www.impots.gouv.fr/international-professionnel/taxe-3-sur-valeur-venale"
+      },
+      {
+        "n": "Diário da República — Portaria n.º 292/2025/1 (Portugal's tax-haven list: Hong Kong, Liechtenstein and Uruguay removed from 1 Jan 2026)",
+        "u": "https://diariodarepublica.pt/dr/detalhe/portaria/292-2025-934278891"
       }
     ],
     "annual-property-taxes-abroad": [
@@ -1239,6 +1243,10 @@
       {
         "n": "AADE — Tax incentives for new tax residents (Art. 5A/5B/5C), Nov 2025",
         "u": "https://www.aade.gr/sites/default/files/2025-11/forologika_kinitra_ENG.pdf"
+      },
+      {
+        "n": "Ministry of Economy and Finance — Income taxation (Greek rates and tax residency)",
+        "u": "https://minfin.gov.gr/en/tax-policy/tax-guide/income-taxation/"
       }
     ],
     "malaysia-mm2h-visa": [
