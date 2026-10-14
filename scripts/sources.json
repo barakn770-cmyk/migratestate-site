@@ -1446,6 +1446,54 @@
         "n": "IRS — About Form 8621 (PFIC reporting)",
         "u": "https://www.irs.gov/forms-pubs/about-form-8621"
       }
+    ],
+    "portugal-guides": [
+      {
+        "n": "Portal das Finanças — Ofício-circulado n.º 40131/2026 (IMT art. 17º, flat 7.5% non-resident rate)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio-circulado-40131-2026.pdf"
+      },
+      {
+        "n": "Agência Tributária e Aduaneira — Código do IMT, artigo 17.º",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cimt/Pages/cimt17.aspx"
+      }
+    ],
+    "spain-guides": [
+      {
+        "n": "La Moncloa (Gobierno de España) — fin de la Golden Visa, en vigor 3 de abril de 2025",
+        "u": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/vivienda-agenda-urbana/Paginas/2025/020425-fin-golden-visa.aspx"
+      }
+    ],
+    "mexico-guides": [
+      {
+        "n": "IRS — Revenue Ruling 2013-14 (Mexican land trust / fideicomiso not a foreign trust)",
+        "u": "https://www.irs.gov/pub/foia/ig/wi/wi-21-0720-0808_redacted.pdf"
+      }
+    ],
+    "turkey-guides": [
+      {
+        "n": "T.B.M.M. (Turkish Grand National Assembly) — bill justification citing the USD 400,000 real-estate citizenship threshold",
+        "u": "https://cdn.tbmm.gov.tr/KKBSPublicFile/D28/Y1/T2/WebOnergeMetni/588ce2a4-859e-494b-bfda-ccdd4361e323.pdf"
+      }
+    ],
+    "uruguay-guides": [
+      {
+        "n": "Presidencia de la República (Uruguay) — decreto reglamentario, régimen de impatriados bajo Ley 20.446 (umbral de 12.500.000 UI desde 1/1/2026)",
+        "u": "https://medios.presidencia.gub.uy/legal/2026/decretos/08/mef_442.pdf"
+      }
+    ],
+    "mexico-vs-costa-rica-vs-panama-property": [
+      {
+        "n": "IRS — Revenue Ruling 2013-14 (Mexican fideicomiso not a foreign trust)",
+        "u": "https://www.irs.gov/pub/foia/ig/wi/wi-21-0720-0808_redacted.pdf"
+      },
+      {
+        "n": "Panama — Ley 66 de 2017 (IBI property-tax exemption up to $120,000)",
+        "u": "https://www.gacetaoficial.gob.pa/"
+      },
+      {
+        "n": "Costa Rica — SCIJ (Sistema Costarricense de Información Jurídica), Ley del Impuesto sobre la Renta (territorial principle)",
+        "u": "https://pgrweb.go.cr/scij/"
+      }
     ]
   },
   "rules": [
