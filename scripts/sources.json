@@ -329,10 +329,6 @@
     ],
     "mexico": [
       {
-        "n": "Ley de Inversión Extranjera (Foreign Investment Law) — Cámara de Diputados",
-        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIE.pdf"
-      },
-      {
         "n": "Constitución Política — Artículo 27 (restricted zone) — Cámara de Diputados",
         "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
       },
@@ -351,6 +347,14 @@
       {
         "n": "Registro Agrario Nacional (RAN) — trámites y consulta de dominio pleno",
         "u": "https://www.gob.mx/ran/acciones-y-programas/tramites-y-servicios-27379"
+      },
+      {
+        "n": "Código Fiscal de la Federación, Artículo 9 — Cámara de Diputados",
+        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf"
+      },
+      {
+        "n": "Ley del ISAI de los Municipios del Estado de Quintana Roo, Art. 9 (Ayuntamiento de Benito Juárez / Cancún)",
+        "u": "https://transparencia.cancun.gob.mx/uploads/24/28/Ley%20Del%20Impuesto%20Sobre%20Adquisicion%20De%20Bienes%20Inmuebles%20De%20Los%20Municipios%20Del%20Estado%20De%20Quintana%20Roo.pdf"
       }
     ],
     "mortgage-in-mexico": [
@@ -1445,6 +1449,10 @@
       {
         "n": "IRS — About Form 8621 (PFIC reporting)",
         "u": "https://www.irs.gov/forms-pubs/about-form-8621"
+      },
+      {
+        "n": "Latvijas Vēstnesis (official gazette publisher) — jaunais Imigrācijas likums, spēkā no 15.09.2026",
+        "u": "https://lvportals.lv/skaidrojumi/394430-stajas-speka-jaunais-imigracijas-likums-2026"
       }
     ],
     "portugal-guides": [
@@ -1493,6 +1501,36 @@
       {
         "n": "Costa Rica — SCIJ (Sistema Costarricense de Información Jurídica), Ley del Impuesto sobre la Renta (territorial principle)",
         "u": "https://pgrweb.go.cr/scij/"
+      },
+      {
+        "n": "Código Fiscal de la Federación, Artículo 9 — Cámara de Diputados",
+        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf"
+      }
+    ],
+    "dubai-vs-cyprus-property-residency": [
+      {
+        "n": "U.AE — Personal Status Affairs for Non-Muslims (Federal Decree-Law No. 41 of 2022)",
+        "u": "https://www.u.ae/en/information-and-services/social-affairs/personal-status-affairs-for-non-muslims"
+      },
+      {
+        "n": "DIFC Courts — Wills Service",
+        "u": "https://www.difccourts.ae/difc-courts-wills/services"
+      },
+      {
+        "n": "Deloitte Cyprus — Permanent Residence (Regulation 6(2)) requirements",
+        "u": "https://www.deloitte.com/cy/en/services/tax/perspectives/permanent-residence-in-cyprus.html"
+      },
+      {
+        "n": "Cyprus Ministry of Interior — Civil Registry & Migration Department",
+        "u": "https://www.moi.gov.cy/"
+      },
+      {
+        "n": "IRS — Cyprus Tax Treaty Documents (in force since 1984)",
+        "u": "https://www.irs.gov/businesses/international-businesses/cyprus-tax-treaty-documents"
+      },
+      {
+        "n": "UAE Golden Visa through Dubai property — current threshold & mortgage rules (PropertyFinder help center)",
+        "u": "https://help.propertyfinder.ae/hc/en-us/articles/37816365548946-How-to-get-a-UAE-Golden-Visa-through-Dubai-property"
       }
     ]
   },
