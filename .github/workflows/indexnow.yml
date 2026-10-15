@@ -23,7 +23,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          # Full history. depth 2 only has HEAD and HEAD~1, so a push of more
+          # than one commit leaves github.event.before unfetched and git diff fails.
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
