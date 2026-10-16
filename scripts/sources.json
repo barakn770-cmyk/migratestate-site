@@ -459,6 +459,10 @@
       {
         "n": "Gaceta Oficial de Panamá",
         "u": "https://www.gacetaoficial.gob.pa/"
+      },
+      {
+        "n": "Servicio Nacional de Migración — Friendly Nations / specific-countries visa requirements (official)",
+        "u": "https://www.migracion.gob.pa/wp-content/uploads/02-PAISES-ESPECIFICOS.pdf"
       }
     ],
     "buying-property-colombia": [
@@ -697,6 +701,10 @@
       {
         "n": "IRS — Publication 527, Residential Rental Property",
         "u": "https://www.irs.gov/publications/p527"
+      },
+      {
+        "n": "eCFR — 31 CFR 1010.821 (FBAR civil penalty amounts)",
+        "u": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-H/section-1010.821"
       }
     ],
     "foreign-rental-income-us-tax": [
@@ -1529,8 +1537,52 @@
         "u": "https://www.irs.gov/businesses/international-businesses/cyprus-tax-treaty-documents"
       },
       {
-        "n": "UAE Golden Visa through Dubai property — current threshold & mortgage rules (PropertyFinder help center)",
-        "u": "https://help.propertyfinder.ae/hc/en-us/articles/37816365548946-How-to-get-a-UAE-Golden-Visa-through-Dubai-property"
+        "n": "GDRFA Dubai — Golden Visa: Real Estate Investor (official)",
+        "u": "https://gdrfad.gov.ae/en/node/13914"
+      }
+    ],
+    "panama-guides": [
+      {
+        "n": "Gaceta Oficial de Panamá No. 30613 — Decreto Ejecutivo No. 17 (8 Sept 2026, publ. 16 Sept 2026)",
+        "u": "https://www.gacetaoficial.gob.pa/storage/gacetas/2026/09/30613/GacetaNo_30613_20260916.pdf"
+      },
+      {
+        "n": "Servicio Nacional de Migración (Panama) — official portal",
+        "u": "https://www.migracion.gob.pa/"
+      },
+      {
+        "n": "Servicio Nacional de Migración — Jubilado/Pensionado permanent residence requirements (official)",
+        "u": "https://www.migracion.gob.pa/wp-content/uploads/02-JUBILADO-PENSIONADO.pdf"
+      },
+      {
+        "n": "Servicio Nacional de Migración — Friendly Nations / specific-countries visa requirements (official)",
+        "u": "https://www.migracion.gob.pa/wp-content/uploads/02-PAISES-ESPECIFICOS.pdf"
+      }
+    ],
+    "healthcare-abroad-american-property-owners": [
+      {
+        "n": "Medicare.gov — Travel outside the US (coverage rules)",
+        "u": "https://www.medicare.gov/coverage/travel-outside-the-u.s."
+      },
+      {
+        "n": "Gov.pt — Healthcare for migrants in Portugal (SNS número de utente, official)",
+        "u": "https://www.gov.pt/en/guias/migrantes-cuidados-de-saude-em-portugal"
+      },
+      {
+        "n": "Spanish Ministry of Health — Convenio especial (public-system buy-in)",
+        "u": "https://www.sanidad.gob.es/servCiudadanos/internacional/convenioEspecial.htm"
+      },
+      {
+        "n": "Hellenic Golden Visa official portal — private insurance requirement",
+        "u": "https://migration.gov.gr/en/gold/"
+      },
+      {
+        "n": "Costa Rica — Ley General de Migración y Extranjería, Título VI (CCSS requirement)",
+        "u": "https://dhr.go.cr/images/ley-general-de-migracion-y-extranjeria/titulo_vi.pdf"
+      },
+      {
+        "n": "IMSS — Seguro de Salud para la Familia (official enrollment/fee page)",
+        "u": "https://imss.gob.mx/tramites/imss02014"
       }
     ]
   },
