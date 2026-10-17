@@ -3,12 +3,10 @@ name: Daily Content Pipeline
 
 # DORMANT BACKUP (since 2026-09-04): the daily run moved to a device-bound
 # Claude scheduled task on Barak's PC (see PIPELINE.md). This workflow needs an
-# ANTHROPIC_API_KEY secret + credits, so its cron is disabled to avoid a daily
-# failure email. Trigger manually from the Actions tab if ever needed.
+# ANTHROPIC_API_KEY secret + credits. The cron was removed on 2026-10-17 at
+# Barak's request. Trigger manually from the Actions tab if ever needed.
 # (Original schedule: cron "30 5 * * *" = 05:30 UTC.)
 on:
-  schedule:
-    - cron: "30 5 * * *"
   workflow_dispatch:
 
 permissions:
