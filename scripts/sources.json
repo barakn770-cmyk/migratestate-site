@@ -193,6 +193,10 @@
       {
         "n": "IRS — US income tax treaties A to Z (US–Greece treaty)",
         "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
+      },
+      {
+        "n": "AADE (Greek Tax Authority) — Circular Α.3064/2024: Law 5162/2024 provisions, incl. Art. 90 extension of the Art. 41 capital-gains suspension",
+        "u": "https://www.aade.gr/sites/default/files/2024-12/%CE%BF3064.pdf"
       }
     ],
     "greece-vs-portugal-golden-visa": [
@@ -1431,6 +1435,10 @@
       {
         "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
         "u": "https://www.irs.gov/publications/p54"
+      },
+      {
+        "n": "IRS — Report of Foreign Bank and Financial Accounts (FBAR)",
+        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
       }
     ],
     "golden-visa-index-americans": [
@@ -1583,6 +1591,32 @@
       {
         "n": "IMSS — Seguro de Salud para la Familia (official enrollment/fee page)",
         "u": "https://imss.gob.mx/tramites/imss02014"
+      }
+    ],
+    "italian-citizenship-by-descent-2025-changes": [
+      {
+        "n": "Normattiva — Decreto-Legge 28 marzo 2025, n. 36 (consolidated text, as converted by Law 74/2025)",
+        "u": "https://www.normattiva.it/eli/id/2025/03/28/25G00049/CONSOLIDATED"
+      },
+      {
+        "n": "Camera dei Deputati — D.L. 36/2025: disposizioni urgenti in materia di cittadinanza (legislative dossier)",
+        "u": "https://temi.camera.it/leg19/provvedimento/d-l-36-2025-disposizioni-urgenti-in-materia-di-cittadinanza.html"
+      },
+      {
+        "n": "Consulate General of Italy, Brisbane — Citizenship by descent (iure sanguinis): new rules",
+        "u": "https://consbrisbane.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/citizenship-by-descent-iure-sanguinis-new-rules/"
+      },
+      {
+        "n": "Consulate General of Italy, Adelaide — Citizenship by descent: official notice on DL 36/2025 and Law 74/2025",
+        "u": "https://consadelaide.esteri.it/en/?p=5392"
+      },
+      {
+        "n": "IRS — Expatriation tax (Section 877A)",
+        "u": "https://www.irs.gov/individuals/international-taxpayers/expatriation-tax"
+      },
+      {
+        "n": "U.S. Department of State — Dual nationality",
+        "u": "https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Dual-Nationality.html"
       }
     ]
   },
