@@ -501,6 +501,18 @@
       {
         "n": "Belize Tax Service Department",
         "u": "https://bts.gov.bz/"
+      },
+      {
+        "n": "Belize National Assembly — Act No. 13 of 2023, Retired Persons Incentives Amendment Act (QRP minimum age 40)",
+        "u": "https://www.nationalassembly.gov.bz/wp-content/uploads/2023/04/Act-No.-13-of-2023-Retired-Persons-Incentives-Amendment-Act-2023.pdf"
+      },
+      {
+        "n": "Attorney General's Ministry (Belize) — Cap. 62, Retired Persons (Incentives) Act and Regulations",
+        "u": "https://agm.gov.bz/uploads/laws/63976e60333b3_Cap_62_Retired_Persons__Incentives__Act.pdf"
+      },
+      {
+        "n": "Belize Judiciary — Laws of Belize, Aliens Landholding (Repeal) Act, 2001",
+        "u": "https://belizejudiciary.org/download/Laws-of-Belize-Update-2011/VOLUME%209A/Cap%20179%20Aliens%20Landholding%20(Repeal)%20Act.pdf"
       }
     ],
     "buying-property-uruguay": [
@@ -525,6 +537,22 @@
       {
         "n": "Polícia Federal — immigration",
         "u": "https://www.gov.br/pf/"
+      },
+      {
+        "n": "Lei nº 5.709/1971 — Presidência da República (rural land acquisition by foreigners)",
+        "u": "http://www.planalto.gov.br/ccivil_03/leis/l5709.htm"
+      },
+      {
+        "n": "Lei nº 8.981/1995 art. 21, as amended by Lei 13.259/2016 — Senado Federal (capital gains brackets)",
+        "u": "https://legis.senado.leg.br/norma/602484/publicacao/15631355"
+      },
+      {
+        "n": "Banco Central do Brasil — Lei 14.286/2021, Marco Legal do Câmbio",
+        "u": "https://www.bcb.gov.br/conteudo/home-ptbr/TextosApresentacoes/Lei%20Cambial%20-%20ENAEX%20-18.11.pdf"
+      },
+      {
+        "n": "INCRA — Cartilha sobre Aquisição e Arrendamento de Terras por Estrangeiros",
+        "u": "https://www.gov.br/incra/pt-br/assuntos/governanca-fundiaria/cartilha_final.pdf"
       }
     ],
     "buying-property-france": [
@@ -651,6 +679,14 @@
       {
         "n": "Direktorat Jenderal Pajak (Indonesian tax)",
         "u": "https://pajak.go.id/"
+      },
+      {
+        "n": "Direktorat Jenderal Pajak — BPHTB (max 5%) and PPh Final (2.5%) on property transfers",
+        "u": "https://www.pajak.go.id/id/artikel/mau-beli-tanah-apa-saja-pajaknya"
+      },
+      {
+        "n": "Sekretariat Kabinet RI — official notice on foreign Hak Pakai home ownership (30+20+30-year structure)",
+        "u": "https://setkab.go.id/?p=44692"
       }
     ],
     "foreign-bank-account-americans": [
@@ -1617,6 +1653,24 @@
       {
         "n": "U.S. Department of State — Dual nationality",
         "u": "https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Dual-Nationality.html"
+      }
+    ],
+    "brazil-guides": [
+      {
+        "n": "Receita Federal do Brasil (CPF, taxes)",
+        "u": "https://www.gov.br/receitafederal/"
+      },
+      {
+        "n": "Lei nº 5.709/1971 — Presidência da República (rural land acquisition by foreigners)",
+        "u": "http://www.planalto.gov.br/ccivil_03/leis/l5709.htm"
+      },
+      {
+        "n": "Lei nº 8.981/1995 art. 21, as amended by Lei 13.259/2016 — Senado Federal (capital gains brackets)",
+        "u": "https://legis.senado.leg.br/norma/602484/publicacao/15631355"
+      },
+      {
+        "n": "Banco Central do Brasil — Lei 14.286/2021, Marco Legal do Câmbio",
+        "u": "https://www.bcb.gov.br/conteudo/home-ptbr/TextosApresentacoes/Lei%20Cambial%20-%20ENAEX%20-18.11.pdf"
       }
     ]
   },
