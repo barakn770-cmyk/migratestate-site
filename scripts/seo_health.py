@@ -20,11 +20,13 @@ WHAT IT AUTO-FIXES (--fix)
   2. Missing og:image/url/type/site_name, twitter:* -> injected into <head>
   3. Missing BreadcrumbList      -> built from hub membership (guide-card links)
   4. Stale footer hub index      -> re-rendered with every current *-guides page
-  5. sitemap.xml                 -> rebuilt from the filesystem, lastmod from git
+  5. sitemap.xml                 -> rebuilt from the filesystem; lastmod matches schema dateModified
   6. CollectionPage ItemList     -> regenerated from the hub's real guide cards
   7. Sources block               -> official references from scripts/sources.json on every article
-  8. Related guides              -> 6 scored internal links per article (boosts under-linked pages)
-  9. AdSense                     -> stripped from lead pages listed in NO_ADS
+  8. Related guides              -> stable scored links (unchanged blocks are left alone)
+  9. Hub FAQPage schema          -> built from the on-page FAQ
+ 10. Taxes & Money nav          -> points at the tax pillar, not the homepage guide grid
+ 11. AdSense                    -> stripped from lead pages listed in NO_ADS
 
 WHAT IT ONLY REPORTS (needs a human)
   - broken internal links, unbalanced <div>, invalid JSON-LD, truncated files
@@ -36,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import hashlib
 import html
 import json
 import os
@@ -141,6 +144,75 @@ def git_lastmod(path: str, repo_root: str) -> str:
         return out or _today()
     except Exception:
         return _today()
+
+
+def content_body(doc: str) -> str:
+    """Page content used for lastmod. Chrome, generated blocks, and JSON-LD are ignored."""
+    body = re.sub(r"<header\b[^>]*>.*?</header>", "", doc, flags=re.S | re.I)
+    body = re.sub(r"<footer\b[^>]*>.*?</footer>", "", body, flags=re.S | re.I)
+    body = re.sub(r'<div class="mobile-menu"[^>]*>.*?</div>', "", body, flags=re.S)
+    body = re.sub(r"<!-- related:start -->.*?<!-- related:end -->", "", body, flags=re.S)
+    body = re.sub(r'<nav class="related-guides"[^>]*>.*?</nav>', "", body, flags=re.S)
+    body = re.sub(r'<div class="related-guides"[^>]*>.*?</div>', "", body, flags=re.S)
+    body = re.sub(r"<!-- sources:start -->.*?<!-- sources:end -->", "", body, flags=re.S)
+    body = re.sub(r"<script\b[^>]*>.*?</script>", "", body, flags=re.S)
+    return body
+
+
+def content_hash(doc: str) -> str:
+    return hashlib.sha256(content_body(doc).encode("utf-8")).hexdigest()[:16]
+
+
+def content_dates_path(repo_root: str) -> str:
+    return os.path.join(repo_root, "scripts", "content_dates.json")
+
+
+def load_content_dates(repo_root: str) -> dict:
+    path = content_dates_path(repo_root)
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    return data if isinstance(data, dict) else {}
+
+
+def save_content_dates(repo_root: str, data: dict) -> None:
+    with open(content_dates_path(repo_root), "w", encoding="utf-8") as fh:
+        json.dump(data, fh, ensure_ascii=False, indent=2, sort_keys=True)
+        fh.write("\n")
+
+
+def schema_date_modified(doc: str) -> str:
+    m = re.search(r'"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})"', doc)
+    return m.group(1) if m else ""
+
+
+def upsert_date_modified(doc: str, date: str) -> str:
+    if re.search(r'"dateModified"\s*:', doc):
+        return re.sub(
+            r'("dateModified"\s*:\s*")\d{4}-\d{2}-\d{2}(")',
+            rf"\g<1>{date}\2",
+            doc,
+            count=1,
+        )
+    for pat in (
+        r'("datePublished"\s*:\s*"\d{4}-\d{2}-\d{2}")',
+        r'("headline"\s*:\s*"(?:\\.|[^"\\])*")',
+        r'("name"\s*:\s*"(?:\\.|[^"\\])*")',
+    ):
+        m = re.search(pat, doc)
+        if m:
+            return doc[:m.end()] + f',\n      "dateModified": "{date}"' + doc[m.end():]
+    return doc
+
+
+def content_lastmod(site: "Site", slug: str) -> str:
+    """Sitemap lastmod tracks schema dateModified, then the stored content date."""
+    schema = schema_date_modified(site.docs[slug])
+    if schema:
+        return schema
+    rec = load_content_dates(site.repo_root).get(slug) or {}
+    return rec.get("date") or git_lastmod(f"public/{slug}.html", site.repo_root)
 
 
 def og_title_of(doc: str, slug: str) -> str:
@@ -373,6 +445,7 @@ def fix_schema(site: Site, log: list) -> None:
 
         # A breadcrumb may live in any block; only add one if the page has none.
         has_breadcrumb = False
+        has_faqpage = False
         for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', doc, re.S):
             try:
                 d = json.loads(block)
@@ -381,7 +454,8 @@ def fix_schema(site: Site, log: list) -> None:
             g = d.get("@graph", [d]) if isinstance(d, dict) else d
             if any(isinstance(n, dict) and n.get("@type") == "BreadcrumbList" for n in g):
                 has_breadcrumb = True
-                break
+            if any(isinstance(n, dict) and n.get("@type") == "FAQPage" for n in g):
+                has_faqpage = True
 
         if m:
             try:
@@ -414,6 +488,11 @@ def fix_schema(site: Site, log: list) -> None:
                 graph.append(site.breadcrumb(slug))
                 changed = True
 
+            faq = faq_entities(doc) if slug in site.hubs else []
+            if faq and not has_faqpage:
+                graph.append({"@type": "FAQPage", "mainEntity": faq})
+                changed = True
+
             if changed:
                 block = json.dumps(data, ensure_ascii=False, indent=2)
                 site.write(slug, doc[:m.start()] +
@@ -440,7 +519,11 @@ def fix_schema(site: Site, log: list) -> None:
                         "@type": "ItemList", "numberOfItems": len(cards),
                         "itemListElement": [{"@type": "ListItem", "position": i + 1,
                                              "url": f"{BASE}/{c}"} for i, c in enumerate(cards)]}
-            data = {"@context": "https://schema.org", "@graph": [node, site.breadcrumb(slug)]}
+            graph = [node, site.breadcrumb(slug)]
+            faq = faq_entities(doc) if slug in site.hubs else []
+            if faq:
+                graph.append({"@type": "FAQPage", "mainEntity": faq})
+            data = {"@context": "https://schema.org", "@graph": graph}
             block = json.dumps(data, ensure_ascii=False, indent=2)
             site.write(slug, doc.replace(
                 "</head>", f'<script type="application/ld+json">\n{block}\n</script>\n</head>', 1))
@@ -486,9 +569,7 @@ def fix_sitemap(site: Site, log: list) -> None:
             pri = "0.7"
         else:
             pri = "0.8"
-        rows.append((site.url(slug),
-                     git_lastmod(f"public/{slug}.html", site.repo_root),
-                     pri))
+        rows.append((site.url(slug), content_lastmod(site, slug), pri))
 
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -659,38 +740,39 @@ def fix_sources(site: "Site", log: list) -> None:
             log.append(f"sources block {'updated' if '<!-- sources:start -->' in doc else 'added'}: {slug} ({len(items)})")
 
 
-def related_candidates(site: "Site", slug: str, inbound: Counter, exclude: set, n: int) -> list:
-    my_c, my_cat, my_hub = slug_countries(slug), slug_category(slug), site.hub_of.get(slug)
-    body = re.sub(r"<!-- related:start -->.*?<!-- related:end -->", "", site.docs[slug], flags=re.S)
-    body = re.sub(r'<div class="related-guides".*?</div>', "", body, flags=re.S)
+def related_candidates(site: "Site", slug: str, exclude: set, n: int, min_score: float) -> list:
+    """Highest-relevance articles not already chosen. No popularity or coverage bias."""
     scored = []
     for other in site.slugs:
         if other == slug or other in exclude or not is_article(site, other):
             continue
-        s = 0.0
-        oc, ocat = slug_countries(other), slug_category(other)
-        if my_c and oc & my_c:
-            s += 4
-        if my_hub and site.hub_of.get(other) == my_hub:
-            s += 2
-        s += JOURNEY.get(my_cat, {}).get(ocat, 0)
-        if not my_c and not oc:      # general <-> general
-            s += 1
-        if my_c and not oc and ocat in ("tax", "money", "general"):
-            s += 1                   # country page -> cross-country money/tax guide
-        if not my_c and oc and ocat == "buy":
-            s += 1                   # cross-country guide -> country example
-        ib = inbound.get(other, 0)
-        if s >= 2.5:                 # only boost pages that are actually related
-            if ib < 6:
-                s += 2.5
-            elif ib < 12:
-                s += 1
-        if re.search(rf'href="{re.escape(other)}"', body):
-            s -= 3                   # already linked in the body; prefer new paths
-        scored.append((s, ib, other))
-    scored.sort(key=lambda t: (-t[0], t[1], t[2]))
-    return [o for _, _, o in scored[:n]]
+        score = relevance(site, slug, other)
+        if score >= min_score:
+            scored.append((score, other))
+    scored.sort(key=lambda t: (-t[0], t[1]))
+    return [other for _, other in scored[:n]]
+
+
+def faq_entities(doc: str) -> list:
+    """Question/answer pairs from the on-page FAQ, for FAQPage schema."""
+    m = re.search(r'<div class="faq">(.*?)</div>', doc, re.S)
+    if not m:
+        return []
+    out = []
+    for part in re.split(r"<h3>", m.group(1))[1:]:
+        qm = re.match(r"(.*?)</h3>\s*(.*)", part, re.S)
+        if not qm:
+            continue
+        question = html.unescape(strip_tags(qm.group(1))).strip()
+        answers = re.findall(r"<p>(.*?)</p>", qm.group(2), re.S)
+        answer = " ".join(html.unescape(strip_tags(p)).strip() for p in answers).strip()
+        if question and answer:
+            out.append({
+                "@type": "Question",
+                "name": question,
+                "acceptedAnswer": {"@type": "Answer", "text": answer},
+            })
+    return out
 
 
 def link_label(site: "Site", slug: str) -> str:
@@ -726,49 +808,49 @@ def relevance(site: "Site", a: str, b: str) -> float:
     return s
 
 
-def fix_related_guides(site: "Site", log: list, per_page: int = 6, max_links: int = 8) -> None:
-    inbound = inbound_counts(site)
+def stable_related(site: "Site", slug: str, existing: list, per_page: int = 6) -> list:
+    """Keep relevant links in their current order. Fill only with clearly related guides."""
+    kept = [h for h in existing if relevance(site, slug, h) >= 2.0]
+    if len(kept) < per_page:
+        kept += related_candidates(site, slug, set(kept), per_page - len(kept), 2.5)
+    if len(kept) < 3:
+        rest = [h for h in existing if h not in kept]
+        rest.sort(key=lambda h: (-relevance(site, slug, h), h))
+        for h in rest:
+            if len(kept) >= 3:
+                break
+            kept.append(h)
+    return kept[:per_page]
+
+
+def fix_related_guides(site: "Site", log: list, per_page: int = 6) -> None:
     articles = [s for s in sorted(site.slugs) if is_article(site, s)]
-    picks_of: dict[str, list] = {}
-    found: dict[str, object] = {}
     for slug in articles:
         doc = site.docs[slug]
-        existing: list = []
         m = re.search(r"<!-- related:start -->.*?<!-- related:end -->", doc, re.S)
         if not m:
             m = re.search(r'<div class="related-guides".*?</div>', doc, re.S)
-        found[slug] = m
+        existing: list = []
         if m:
             for h in re.findall(r'href="([^"#?]+)"', m.group(0)):
                 h = h.rstrip("/")
                 if h in site.slugs and h != slug and h not in existing and is_article(site, h):
                     existing.append(h)
-        keep = existing[:3]  # hand-picked links survive; the rest is recomputed
-        picks_of[slug] = keep + related_candidates(site, slug, inbound, set(keep), per_page - len(keep))
-
-    # coverage pass: every article should end up with >= 6 inbound links site-wide.
-    # Editorial inbound + related-block inbound, then top-up from the most related hosts.
-    def total_inbound(target: str) -> int:
-        return inbound.get(target, 0) + sum(1 for s, p in picks_of.items() if target in p)
-    for target in sorted(articles, key=lambda t: (total_inbound(t), t)):
-        need = 6 - total_inbound(target)
-        if need <= 0:
+        picks = stable_related(site, slug, existing, per_page)
+        if m and picks == existing:
+            continue  # do not rewrite a block whose links did not change
+        if not picks:
             continue
-        hosts = sorted((h for h in articles if h != target and target not in picks_of[h]
-                        and len(picks_of[h]) < max_links and relevance(site, h, target) >= 2.5),
-                       key=lambda h: (-relevance(site, h, target), len(picks_of[h]), h))
-        for h in hosts[:need]:
-            picks_of[h].append(target)
-
-    for slug in articles:
-        doc, m = site.docs[slug], found[slug]
-        block = render_related(site, picks_of[slug])
+        block = render_related(site, picks)
         close = re.search(r"\n\s*</article>", doc) or re.search(r"\n\s*</main>", doc)
         if m and close and m.start() > close.start():
-            # legacy block sat outside the article wrapper (full-width); move it inside
             doc = doc[:m.start()] + doc[m.end():]
-            doc = re.sub(r"\n+(\s*)(</article>|</main>)", r"\n\n" + block.replace("\\", "\\\\") + r"\n\1\2", doc, count=1)
-            new = doc
+            new = re.sub(
+                r"\n+(\s*)(</article>|</main>)",
+                "\n\n" + block.replace("\\", "\\\\") + r"\n\1\2",
+                doc,
+                count=1,
+            )
         elif m:
             new = doc[:m.start()] + block + doc[m.end():]
         else:
@@ -779,6 +861,55 @@ def fix_related_guides(site: "Site", log: list, per_page: int = 6, max_links: in
         if new != doc:
             site.write(slug, new)
             log.append(f"related guides {'refreshed' if m else 'added'}: {slug}")
+
+
+TAX_NAV_RE = re.compile(r'(<a href=")/#guides(">\s*Taxes &amp; Money\s*</a>)')
+
+
+def fix_tax_nav(site: "Site", log: list) -> None:
+    """The Taxes & Money item was sending readers to the homepage country grid."""
+    for slug in sorted(site.slugs):
+        if slug in BARE_PAGES:
+            continue
+        doc = site.docs[slug]
+        new = TAX_NAV_RE.sub(r"\1us-tax-foreign-property\2", doc)
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"tax nav retargeted: {slug}")
+
+
+def sync_content_dates(site: "Site", log: list) -> None:
+    """Record a content hash per page. lastmod moves only when that hash changes.
+
+    The first time a page is seen, the date is the JSON-LD dateModified already
+    on the page, or the last git date — never today — so a first run does not
+    mark the whole site as freshly updated.
+    """
+    store = load_content_dates(site.repo_root)
+    changed = False
+    for slug in sorted(site.slugs):
+        if slug in BARE_PAGES:
+            continue
+        doc = site.docs[slug]
+        digest = content_hash(doc)
+        rec = store.get(slug)
+        if not isinstance(rec, dict) or "hash" not in rec:
+            date = schema_date_modified(doc) or git_lastmod(f"public/{slug}.html", site.repo_root)
+            store[slug] = {"hash": digest, "date": date}
+            changed = True
+            continue
+        if rec.get("hash") == digest:
+            continue
+        date = _today()
+        store[slug] = {"hash": digest, "date": date}
+        changed = True
+        new = upsert_date_modified(doc, date)
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"dateModified set to {date}: {slug}")
+    if changed:
+        save_content_dates(site.repo_root, store)
+        log.append(f"content dates recorded: {len(store)} pages")
 
 
 ADSENSE_RE = re.compile(r'\s*<script async src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js[^"]*"[^>]*></script>')
@@ -951,7 +1082,9 @@ def main() -> int:
         fix_schema(site, log)
         fix_footer_hubs(site, log)
         fix_adsense(site, log)
+        fix_tax_nav(site, log)
         fix_sources(site, log)
+        sync_content_dates(site, log)
         fix_related_guides(site, log)
         fix_sitemap(site, log)
 
