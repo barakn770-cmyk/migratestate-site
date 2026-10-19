@@ -57,8 +57,8 @@
     ],
     "buying-property-portugal": [
       {
-        "n": "Portal das Finanças — IMT / IMI (property taxes)",
-        "u": "https://www.portaldasfinancas.gov.pt/"
+        "n": "Diário da República — Lei n.º 74/98, de 11 de novembro, artigo 2.º, n.os 2 e 4 (vacatio legis: o 5.º dia após a publicação)",
+        "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1998-34448175"
       },
       {
         "n": "IRN — Registo Predial (land registry)",
@@ -69,15 +69,15 @@
         "u": "https://eportugal.gov.pt/en/servicos/pedir-o-numero-de-identificacao-fiscal-para-pessoa-singular"
       },
       {
-        "n": "Diário da República — Lei n.º 9-A/2026, de 6 de março (Construir Portugal, autoriza a taxa de IMT de 7,5% para não residentes)",
+        "n": "Diário da República — Lei n.º 9-A/2026, de 6 de março, artigo 2.º, alínea p) (autorização da taxa de IMT de 7,5%; aprovada em 20 de fevereiro de 2026)",
         "u": "https://files.diariodarepublica.pt/1s/2026/03/04601/0000200005.pdf"
       },
       {
-        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio (IMT 7,5% não residentes, Art. 6.º)",
+        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio, artigo 6.º (adita o n.º 10 ao artigo 17.º do CIMT: taxa de 7,5%). O artigo 18.º n.º 1 fixa 1 de setembro de 2026 só para a revogação e os regimes CIA e RSAA",
         "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
       },
       {
-        "n": "Autoridade Tributária — Ofício-Circulado n.º 40131/2026 (IMT não residentes, orientações)",
+        "n": "Autoridade Tributária — Ofício-Circulado n.º 40131/2026 (âmbito do n.º 10 do artigo 17.º do CIMT; não fixa a data de entrada em vigor)",
         "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio-circulado-40131-2026.pdf"
       }
     ],
@@ -999,7 +999,7 @@
         "u": "https://www.irs.gov/publications/p527"
       },
       {
-        "n": "Diário da República — Decreto-Lei n.º 97/2026 (flat 7.5% IMT for non-residents, Art. 17)",
+        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio, artigo 6.º (adita o n.º 10 ao artigo 17.º do CIMT: taxa de 7,5% para não residentes). O artigo 18.º n.º 1 não aplica 1 de setembro de 2026 a esta taxa",
         "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
       },
       {
@@ -1343,7 +1343,7 @@
     ],
     "portugal-vs-spain-property-residency": [
       {
-        "n": "Autoridade Tributária (Portugal) — CIMT article 17: IMT rate tables and the flat 7.5% rate for non-resident buyers (DL 97/2026)",
+        "n": "Autoridade Tributária — CIMT artigo 17.º n.º 10 (taxa de 7,5% para não residentes, aditada pelo Decreto-Lei n.º 97/2026, artigo 6.º)",
         "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cimt/Pages/cimt17.aspx"
       },
       {
@@ -1509,7 +1509,19 @@
     ],
     "portugal-guides": [
       {
-        "n": "Portal das Finanças — Ofício-circulado n.º 40131/2026 (IMT art. 17º, flat 7.5% non-resident rate)",
+        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio, artigo 6.º (adita o n.º 10 ao artigo 17.º do CIMT)",
+        "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
+      },
+      {
+        "n": "Diário da República — Lei n.º 74/98, de 11 de novembro, artigo 2.º, n.os 2 e 4 (entrada em vigor no 5.º dia após a publicação: 25 de maio de 2026)",
+        "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1998-34448175"
+      },
+      {
+        "n": "Diário da República — Lei n.º 9-A/2026, de 6 de março, artigo 2.º, alínea p) (autorização legislativa da taxa de 7,5%)",
+        "u": "https://files.diariodarepublica.pt/1s/2026/03/04601/0000200005.pdf"
+      },
+      {
+        "n": "Autoridade Tributária — Ofício-Circulado n.º 40131/2026 (âmbito do n.º 10 do artigo 17.º do CIMT; não fixa a data de entrada em vigor)",
         "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio-circulado-40131-2026.pdf"
       },
       {
