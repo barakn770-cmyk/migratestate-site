@@ -485,6 +485,10 @@
       {
         "n": "DIAN — Dirección de Impuestos y Aduanas Nacionales",
         "u": "https://www.dian.gov.co/"
+      },
+      {
+        "n": "Cancillería de Colombia — Visa M Inversionista (real estate M-10)",
+        "u": "https://www.cancilleria.gov.co/node/26979"
       }
     ],
     "buying-property-dominican-republic": [
@@ -1115,6 +1119,10 @@
       {
         "n": "IRS — Publication 54, US citizens and resident aliens abroad",
         "u": "https://www.irs.gov/publications/p54"
+      },
+      {
+        "n": "Embassy of Hungary — Guest Investor Visa (official routes)",
+        "u": "https://peking.mfa.gov.hu/en/guest-investor-visa"
       }
     ],
     "buying-property-abroad-experts": [
@@ -1753,6 +1761,50 @@
       {
         "n": "Portal das Finanças — Decreto-Lei n.º 76/2024 (regime do Alojamento Local, zonas de contenção)",
         "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/Decreto_Lei_76_2024.pdf"
+      }
+    ],
+    "thailand-guides": [
+      {
+        "n": "Department of Lands (Thailand)",
+        "u": "https://www.dol.go.th/"
+      },
+      {
+        "n": "Department of Business Development (Thailand) — company registration rules",
+        "u": "https://www.dbd.go.th/"
+      },
+      {
+        "n": "Revenue Department (Thailand)",
+        "u": "https://www.rd.go.th/english/"
+      },
+      {
+        "n": "Board of Investment (Thailand) — LTR Visa Program",
+        "u": "https://ltr.boi.go.th/"
+      }
+    ],
+    "buying-property-algarve": [
+      {
+        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio, artigo 6.º (flat 7.5% non-resident IMT)",
+        "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
+      },
+      {
+        "n": "Diário da República — Lei n.º 74/98, artigo 2.º (vacatio legis: entry into force)",
+        "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1998-34448175"
+      },
+      {
+        "n": "INE — Estatísticas de preços da habitação ao nível local (regional median, Algarve)",
+        "u": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_destaques&DESTAQUESdest_boui=770298635&DESTAQUESmodo=2&xlang=pt"
+      },
+      {
+        "n": "Diário da República — Decreto-Lei n.º 39/2008 (regime jurídico dos empreendimentos turísticos, artigo 45.º)",
+        "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/39-2008-247248"
+      },
+      {
+        "n": "Portal das Finanças — Decreto-Lei n.º 76/2024 (regime do Alojamento Local, zonas de contenção)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/Decreto_Lei_76_2024.pdf"
+      },
+      {
+        "n": "Diário da República — Decreto-Lei n.º 124/2006 (texto consolidado), Sistema de Defesa da Floresta Contra Incêndios",
+        "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2006-160585689"
       }
     ]
   },

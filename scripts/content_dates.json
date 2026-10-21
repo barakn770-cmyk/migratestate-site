@@ -27,6 +27,10 @@
     "date": "2026-10-19",
     "hash": "1fc81712f0dc5849"
   },
+  "buying-property-algarve": {
+    "date": "2026-10-21",
+    "hash": "00fa461ceee71522"
+  },
   "buying-property-bali": {
     "date": "2026-10-19",
     "hash": "0b9326262520f2d4"
@@ -40,8 +44,8 @@
     "hash": "efca4a697ee57330"
   },
   "buying-property-colombia": {
-    "date": "2026-10-19",
-    "hash": "976737a5e1bbf904"
+    "date": "2026-10-21",
+    "hash": "124fc692eefbb9f7"
   },
   "buying-property-costa-rica": {
     "date": "2026-10-19",
@@ -84,8 +88,8 @@
     "hash": "be3b3d8f2c37cbff"
   },
   "buying-property-lisbon": {
-    "date": "2026-10-20",
-    "hash": "880ee54a5a621329"
+    "date": "2026-10-21",
+    "hash": "c3bfff6922db7e8d"
   },
   "buying-property-malaysia": {
     "date": "2026-10-19",
@@ -100,8 +104,8 @@
     "hash": "0730ea73dee87ac0"
   },
   "buying-property-portugal": {
-    "date": "2026-10-20",
-    "hash": "6e34f171292e2829"
+    "date": "2026-10-21",
+    "hash": "241a197df5e87d4f"
   },
   "buying-property-spain": {
     "date": "2026-10-19",
@@ -356,8 +360,8 @@
     "hash": "2a0cbb853a9953d7"
   },
   "portugal-guides": {
-    "date": "2026-10-20",
-    "hash": "afdf592ca62b014d"
+    "date": "2026-10-21",
+    "hash": "0673e41e795f7c1b"
   },
   "portugal-nif": {
     "date": "2026-10-20",
@@ -400,12 +404,12 @@
     "hash": "5ab3ceb43d180c9e"
   },
   "spain-non-lucrative-visa": {
-    "date": "2026-10-19",
-    "hash": "a6416e0cf3345816"
+    "date": "2026-10-21",
+    "hash": "71061a03e8aec1ad"
   },
   "thailand-guides": {
-    "date": "2026-09-22",
-    "hash": "e890ced1ef4c52ea"
+    "date": "2026-10-21",
+    "hash": "a3d62c9274655381"
   },
   "thailand-ltr-visa": {
     "date": "2026-09-22",
@@ -420,8 +424,8 @@
     "hash": "a0d3b478a56c5fac"
   },
   "ultimate-guide-golden-visa": {
-    "date": "2026-10-19",
-    "hash": "21fd751cc7bb04fa"
+    "date": "2026-10-21",
+    "hash": "1a159aef126b7e90"
   },
   "uruguay-guides": {
     "date": "2026-10-14",
