@@ -207,23 +207,53 @@
     <button class="btn" type="submit">Match me with an expert →</button>
     <p style="font-size:12.5px;color:var(--muted);margin:12px 0 0">No spam. We never sell your data to mass lists — your details are shared only with the specific vetted partners relevant to your enquiry, with your consent.</p>
     <p class="ms-success" style="display:none;color:var(--green);font-weight:600;font-size:17px;margin:10px 0 0">✓ Thank you — your request is in. A relevant vetted specialist will be in touch shortly.</p>
+    <p class="ms-error" style="display:none;color:#b42318;font-size:14.5px;margin:10px 0 0">Sorry — something went wrong sending your request. Please try again, or email us directly at <a href="mailto:barakn770@gmail.com?subject=Get%20matched%20via%20MigrateState">barakn770@gmail.com</a>.</p>
+    <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden"><label>Leave this empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
   </form>
   <script>
+  // Get Matched leads go to HubSpot (same portal and form as the Contact page), so each
+  // request lands in the CRM as a contact with its qualifying answers in the message field.
   function msLead(e){
     e.preventDefault();
     var f=e.target;
     if(!document.getElementById('lf-consent').checked){return false;}
-    var b=f.querySelector('button'),d=new FormData(f);
-    d.append('ml-submit','1');d.append('anticsrf','true');
+    var ok=f.querySelector('.ms-success'), er=f.querySelector('.ms-error'), b=f.querySelector('button[type="submit"]');
+    function v(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value.trim():'';}
+    function done(){
+      if(ok){ok.style.display='block';}
+      if(er){er.style.display='none';}
+      Array.prototype.forEach.call(f.querySelectorAll('.lead-grid,.row,.consent,button'),function(el){el.style.display='none';});
+      if(window.gtag){gtag('event','generate_lead',{form:'get-started'});}
+    }
+    function fail(){
+      b.textContent='Match me with an expert →';b.disabled=false;
+      if(er){er.style.display='block';}
+    }
+    if(v('company_website')){done();return false;} // honeypot: a bot filled the hidden field
+    var full=v('fields[name]'), sp=full.indexOf(' ');
+    var first=sp>0?full.slice(0,sp):full, last=sp>0?full.slice(sp+1).trim():'';
+    var msg=['[Get Matched request]',
+      'Interested in: '+v('fields[goal]'),
+      'Target country: '+v('fields[country]'),
+      'Budget: '+v('fields[budget]'),
+      'Timeline: '+v('fields[timeline]'),
+      'Financing: '+(v('fields[financing]')||'not stated'),
+      'Nationality: '+(v('fields[nationality]')||'not stated'),
+      'Consent to share with vetted partners: yes'].join('\n');
+    var fields=[
+      {name:'firstname',value:first},
+      {name:'lastname',value:last},
+      {name:'email',value:v('fields[email]')},
+      {name:'phone',value:v('fields[phone]')},
+      {name:'message',value:msg}
+    ].filter(function(x){return x.value;});
+    var ctx={pageUri:location.href,pageName:document.title};
+    var m=document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/); if(m){ctx.hutk=m[1];}
     b.textContent='Sending…';b.disabled=true;
-    // NOTE: posts to the MigrateState MailerLite form (same account as the newsletter).
-    // For full lead routing, create a dedicated MailerLite group/form or connect Zapier → your CRM / lead buyer.
-    fetch('https://assets.mailerlite.com/jsonp/2428927/forms/190085025285276727/subscribe',{method:'POST',body:d,mode:'no-cors'})
-      .finally(function(){
-        var s=f.querySelector('.ms-success'); if(s){s.style.display='block';}
-        Array.prototype.forEach.call(f.querySelectorAll('.row,.consent,button'),function(el){el.style.display='none';});
-        if(window.gtag){gtag('event','generate_lead',{form:'get-started'});}
-      });
+    fetch('https://api-eu1.hsforms.com/submissions/v3/integration/submit/148691139/257410c6-8798-4a99-82a2-21f52b77faa9',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({fields:fields,context:ctx})
+    }).then(function(r){if(r.ok){done();}else{fail();}}).catch(fail);
     return false;
   }
   </script>
