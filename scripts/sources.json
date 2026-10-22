@@ -499,6 +499,10 @@
       {
         "n": "Dirección General de Migración (Dominican Republic)",
         "u": "https://www.migracion.gob.do/"
+      },
+      {
+        "n": "DGII (hosting) — Ley No. 1683 sobre Naturalización, Art. 1 (six-month track for property owners)",
+        "u": "https://dgii.gov.do/legislacion/leyesTributarias/Documents/Otras%20Leyes%20de%20Inter%C3%A9s/1683.pdf"
       }
     ],
     "buying-property-belize": [
@@ -597,12 +601,12 @@
         "u": "https://mup.gov.hr/"
       },
       {
-        "n": "Porezna uprava — Croatian Tax Administration",
-        "u": "https://www.porezna-uprava.hr/"
-      },
-      {
         "n": "Ministry of Justice — reciprocity for property acquisition by foreigners",
         "u": "https://mpu.gov.hr/"
+      },
+      {
+        "n": "Porezna uprava — Real Estate Transfer Tax (official, 3% rate, VAT-exempt acquisitions only)",
+        "u": "https://porezna-uprava.gov.hr/en/real-estate-transfer-tax-7368/7368"
       }
     ],
     "buying-property-turkey": [
@@ -1787,10 +1791,6 @@
         "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
       },
       {
-        "n": "Diário da República — Lei n.º 74/98, artigo 2.º (vacatio legis: entry into force)",
-        "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1998-34448175"
-      },
-      {
         "n": "INE — Estatísticas de preços da habitação ao nível local (regional median, Algarve)",
         "u": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_destaques&DESTAQUESdest_boui=770298635&DESTAQUESmodo=2&xlang=pt"
       },
@@ -1805,6 +1805,36 @@
       {
         "n": "Diário da República — Decreto-Lei n.º 124/2006 (texto consolidado), Sistema de Defesa da Floresta Contra Incêndios",
         "u": "https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2006-160585689"
+      },
+      {
+        "n": "Portal das Finanças — Non-Habitual Resident registration (NHR closed to new registrations 1 Jan 2024; IFICI)",
+        "u": "https://info.portaldasfinancas.gov.pt/en/tax-information/getting-started-in-portugal/non-habitual-resident/register-as-a-non-habitual-resident/Pages/default.aspx"
+      }
+    ],
+    "buying-property-porto": [
+      {
+        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio, artigo 6.º (flat 7.5% non-resident IMT)",
+        "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
+      },
+      {
+        "n": "INE — Estatísticas de preços da habitação ao nível local (regional/metro median, Porto)",
+        "u": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_destaques&DESTAQUESdest_boui=770298635&DESTAQUESmodo=2&xlang=pt"
+      },
+      {
+        "n": "Portal das Finanças — Estatuto dos Benefícios Fiscais, artigo 45.º (rehabilitated urban buildings: IMI/IMT exemptions)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/Cod_download/Documents/EBF_072025.pdf"
+      },
+      {
+        "n": "Diário da República — Regulamento n.º 1462/2024 (Porto Alojamento Local containment zones)",
+        "u": "https://diariodarepublica.pt/dr/detalhe/regulamento/1462-2024-900687683"
+      },
+      {
+        "n": "Portal das Finanças — Decreto-Lei n.º 76/2024 (regime do Alojamento Local, zonas de contenção)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/Decreto_Lei_76_2024.pdf"
+      },
+      {
+        "n": "Autoridade Tributária — Informação Vinculativa PIV 29225 (verba 2.27 Lista I CIVA: 6% VAT on residential renovation works)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/informacoes_vinculativas/despesa/civa/Documents/PIV_29225.pdf"
       }
     ]
   },
