@@ -1836,6 +1836,32 @@
         "n": "Autoridade Tributária — Informação Vinculativa PIV 29225 (verba 2.27 Lista I CIVA: 6% VAT on residential renovation works)",
         "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/informacoes_vinculativas/despesa/civa/Documents/PIV_29225.pdf"
       }
+    ],
+    "buying-property-costa-del-sol": [
+      {
+        "n": "BOE — Ley 5/2021, de 20 de octubre, de Tributos Cedidos de Andalucía, art. 41 (flat 7% ITP)",
+        "u": "https://www.boe.es/eli/es-an/l/2021/10/20/5/con"
+      },
+      {
+        "n": "BOE — Ley 20/2015, de 14 de julio, Disposición Adicional Primera (off-plan deposit guarantee)",
+        "u": "https://www.boe.es/eli/es/l/2015/07/14/20"
+      },
+      {
+        "n": "Junta de Andalucía — Decreto 28/2016, de 2 de febrero, de las viviendas de uso turístico",
+        "u": "https://www.juntadeandalucia.es/sites/default/files/inline-files/2024/07/Decreto%2028-2016%20de%202%20de%20febrero%2C%20de%20las%20viviendas%20de%20uso%20turistico.pdf"
+      },
+      {
+        "n": "BOJA — Decreto 31/2024, de 29 de enero (amending the VUT regulation)",
+        "u": "https://www.juntadeandalucia.es/boja/2024/24/50"
+      },
+      {
+        "n": "Ministerio de Asuntos Exteriores — Non-lucrative residence visa (income tied to IPREM)",
+        "u": "https://www.exteriores.gob.es/Embajadas/nuevadelhi/en/ServiciosConsulares/Paginas/Consular/Visado-de-residencia-no-lucrativa.aspx"
+      },
+      {
+        "n": "Agencia Tributaria — IRNR, renta imputada de inmueble urbano de uso propio",
+        "u": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/cuestiones-especificas-sobre-tributacion-inmuebles/renta-imputada-inmueble-urbano-uso-propio.html"
+      }
     ]
   },
   "rules": [
