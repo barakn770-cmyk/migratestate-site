@@ -569,23 +569,31 @@
     ],
     "buying-property-france": [
       {
-        "n": "France-Visas — official visa portal",
-        "u": "https://france-visas.gouv.fr/"
+        "n": "BOFIP — ACTU-2025-00129, departmental droits de mutation raised to 5% from 1 April 2025",
+        "u": "https://bofip.impots.gouv.fr/bofip/14771-PGP.html/ACTU-2025-00129"
       },
       {
-        "n": "impots.gouv.fr — French tax administration",
-        "u": "https://www.impots.gouv.fr/"
+        "n": "Direction générale des collectivités locales — droits de mutation à titre onéreux",
+        "u": "https://www.collectivites-locales.gouv.fr/gerer-les-finances-publiques-locales/fiscalite-locale/fiscalite-indirecte-locale/droits-de-mutation"
       },
       {
-        "n": "service-public.fr — Logement (housing: buying, taxes, notaire)",
-        "u": "https://www.service-public.fr/particuliers/vosdroits/N10"
+        "n": "Légifrance — CGI, section Impôt sur la fortune immobilière (arts. 964 and 977)",
+        "u": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000036384995/"
+      },
+      {
+        "n": "BOFIP — plus-values immobilières des particuliers (22-year and 30-year taper)",
+        "u": "https://bofip.impots.gouv.fr/bofip/292-PGP.html"
+      },
+      {
+        "n": "Légifrance — CCH art. L. 31-10-3 (first principal residence)",
+        "u": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048826429"
+      },
+      {
+        "n": "Légifrance — CGI, section droits de mutation (art. 1594 D)",
+        "u": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006162673/2026-02-21/"
       }
     ],
     "buying-property-germany": [
-      {
-        "n": "Make it in Germany — official portal (visas & residence)",
-        "u": "https://www.make-it-in-germany.com/en/"
-      },
       {
         "n": "Bundeszentralamt für Steuern (Federal Central Tax Office)",
         "u": "https://www.bzst.de/"
@@ -593,6 +601,22 @@
       {
         "n": "Bundesfinanzhof — Grundsteuer reform decision (12 Nov 2025)",
         "u": "https://www.bundesfinanzhof.de/en/entscheidungen/entscheidungen-online/decision-detail/STRE202620008/"
+      },
+      {
+        "n": "Finanzamt NRW — Grunderwerbsteuer 6.5% from 1 January 2015",
+        "u": "https://www.finanzamt.nrw.de/steuerinfos/privatpersonen/haus-und-grund/grunderwerbsteuer-wissenswertes-beim-grundstuecks-oder"
+      },
+      {
+        "n": "Finanzamt Brandenburg — state Grunderwerbsteuer rates (Bayern 3.5%, NRW, Brandenburg, Saarland, Schleswig-Holstein 6.5%)",
+        "u": "https://finanzamt.brandenburg.de/fa/de/steuern/steuerinformationen/grunderwerbsteuer/"
+      },
+      {
+        "n": "Gesetze im Internet — GrEStG § 11 (default 3.5%)",
+        "u": "https://www.gesetze-im-internet.de/grestg_1983/__11.html"
+      },
+      {
+        "n": "Gesetze im Internet — EStG § 23 (10-year private real-estate period)",
+        "u": "https://www.gesetze-im-internet.de/estg/__23.html"
       }
     ],
     "buying-property-croatia": [
@@ -1087,8 +1111,8 @@
         "u": "https://aima.gov.pt/pt/viver/autorizacao-de-residencia-para-investimento-art-90-o-a/portal-ari"
       },
       {
-        "n": "Ministry of Migration and Asylum (Greece)",
-        "u": "https://migration.gov.gr/en/"
+        "n": "Agenzia delle Entrate — opzione per i neo residenti (€200,000 / €300,000)",
+        "u": "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/opzione-per-i-neo-residenti/infogen-opzionale-neo-residenti"
       },
       {
         "n": "Investor Visa for Italy — official programme site",
@@ -1099,8 +1123,8 @@
         "u": "https://residencymalta.gov.mt/legal-framework-mprp-2/"
       },
       {
-        "n": "BOE — Ley 14/2013 (Spain, investor residence provisions)",
-        "u": "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074"
+        "n": "Ministerio de Inclusión — inversores (Golden Visa closed to new applicants, 3 April 2025)",
+        "u": "https://www.inclusion.gob.es/web/unidadgrandesempresas/inversores"
       },
       {
         "n": "IRS — Publication 54, US citizens and resident aliens abroad",
@@ -1857,6 +1881,32 @@
       {
         "n": "Ministerio de Asuntos Exteriores — Non-lucrative residence visa (income tied to IPREM)",
         "u": "https://www.exteriores.gob.es/Embajadas/nuevadelhi/en/ServiciosConsulares/Paginas/Consular/Visado-de-residencia-no-lucrativa.aspx"
+      },
+      {
+        "n": "Agencia Tributaria — IRNR, renta imputada de inmueble urbano de uso propio",
+        "u": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/cuestiones-especificas-sobre-tributacion-inmuebles/renta-imputada-inmueble-urbano-uso-propio.html"
+      }
+    ],
+    "buying-property-valencia": [
+      {
+        "n": "BOE — Ley 5/2025, de 30 de mayo, arts. 33–34 (ITP 9%/11% and AJD 1.4% from 1 June 2026)",
+        "u": "https://www.boe.es/eli/es-vc/l/2025/05/30/5"
+      },
+      {
+        "n": "ATV — He comprat un immoble (9% from 1 June 2026, 11% above €1 million)",
+        "u": "https://atv.gva.es/va/he-comprat-un-inmoble"
+      },
+      {
+        "n": "BOE — Decreto-ley 9/2024, viviendas de uso turístico (DOGV)",
+        "u": "https://www.boe.es/buscar/doc.php?id=DOGV-r-2024-90168"
+      },
+      {
+        "n": "BOE — STS 1 June 2026, annulling parts of Real Decreto 1312/2024",
+        "u": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-15677"
+      },
+      {
+        "n": "Ministerio de Vivienda — Valor tasado de la vivienda libre, serie VDP006 (CSV, Q2 2026)",
+        "u": "https://cdn.mivau.gob.es/portal-web-mivau/Datos_MIVAU/CSV/VDP006_01.csv"
       },
       {
         "n": "Agencia Tributaria — IRNR, renta imputada de inmueble urbano de uso propio",
