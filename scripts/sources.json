@@ -177,16 +177,20 @@
     ],
     "buying-property-greece": [
       {
-        "n": "Hellenic Cadastre (Ktimatologio)",
-        "u": "https://www.ktimatologio.gr/"
+        "n": "Ministry of Finance — capital taxation guide (3% transfer tax under Law 5219/2025)",
+        "u": "https://minfin.gov.gr/en/tax-policy/tax-guide/capital-taxation/"
       },
       {
-        "n": "AADE — Independent Authority for Public Revenue",
-        "u": "https://www.aade.gr/"
+        "n": "Υπουργείο Οικονομικών — φορολογία κεφαλαίου (same guide, Greek)",
+        "u": "https://minfin.gov.gr/forologiki-politiki/forologikos-odigos/forologia-kefalaiou/"
       },
       {
-        "n": "Ministry of Migration and Asylum",
-        "u": "https://migration.gov.gr/en/"
+        "n": "AADE — Law 5246/2025, FEK A 198/2025 extract (new-build VAT suspension extended for 2026)",
+        "u": "https://www.aade.gr/sites/default/files/2025-11/ΑΠΟΣΠΑΣΜΑ%20ΦΕΚ%20Α%20198_2025%20Ν%205246_2025.pdf"
+      },
+      {
+        "n": "AADE library — Law 5219/2025, Property Tax Code",
+        "u": "http://elib.aade.gr/elib/DesktopModules/ViewModule/Documents/gr-act-2025-5219-5219_2025.pdf"
       }
     ],
     "selling-property-greece-us-citizen": [
@@ -241,12 +245,24 @@
     ],
     "buying-property-italy": [
       {
-        "n": "Agenzia delle Entrate — property taxes and cadastre",
-        "u": "https://www.agenziaentrate.gov.it/"
+        "n": "MEF — IMU aliquote (Legge 160/2019, commi 754–755: base 0.86%, range 0–1.06%, optional 1.14%)",
+        "u": "https://www.finanze.gov.it/it/fiscalita/fiscalita-regionale-e-locale/Imposta-municipale-propria-IMU/disciplina-del-tributo/aliquote/"
       },
       {
-        "n": "Visto per l'Italia — official visa portal (Ministry of Foreign Affairs)",
-        "u": "https://vistoperitalia.esteri.it/"
+        "n": "Agenzia delle Entrate — regime opzionale per i pensionati esteri (7%, 30,000 inhabitants, updated 8 May 2026)",
+        "u": "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/regime-opzionale-per-i-pensionati-esteri-che-cose"
+      },
+      {
+        "n": "Gazzetta Ufficiale — Legge 11 marzo 2026, n. 34 (art. 26 raises the pensioner-municipality cap to 30,000 from 7 April 2026)",
+        "u": "https://www.gazzettaufficiale.it/eli/id/2026/03/23/26G00050/sg"
+      },
+      {
+        "n": "Normattiva — Legge 11 marzo 2026, n. 34, original text",
+        "u": "https://www.normattiva.it/eli/id/2026/03/23/26G00050/ORIGINAL"
+      },
+      {
+        "n": "Agenzia delle Entrate — opzione per i neo residenti (€300,000 from 1 January 2026)",
+        "u": "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/opzione-per-i-neo-residenti/infogen-opzionale-neo-residenti"
       },
       {
         "n": "Agenzia delle Entrate — Circolare n. 2/E of 21 Feb 2014 (fixed registration, cadastral and mortgage taxes)",
@@ -457,6 +473,10 @@
       {
         "n": "MEF Panamá — Ley 546 of 2026 (ITBI relief on new housing)",
         "u": "https://www.mef.gob.pa/2026/08/presidente-mulino-sanciona-ley-que-exonera-el-2-del-itbi-para-facilitar-el-acceso-a-viviendas-nuevas/"
+      },
+      {
+        "n": "Migración — Decreto Ejecutivo No. 17 de 8 de septiembre de 2026 (Gaceta Oficial No. 30613, 16 September 2026)",
+        "u": "https://www.migracion.gob.pa/wp-content/uploads/2026/09/Decreto-Ejecutivo-No.-17-de-8-9-2026.pdf"
       }
     ],
     "panama-friendly-nations-visa": [
@@ -649,16 +669,28 @@
     ],
     "buying-property-japan": [
       {
-        "n": "Immigration Services Agency of Japan",
-        "u": "https://www.moj.go.jp/isa/"
+        "n": "Ministry of Finance — reporting system for acquisition of real property by non-residents",
+        "u": "https://www.mof.go.jp/english/policy/international_policy/real_property/index.html"
       },
       {
-        "n": "National Tax Agency (English)",
-        "u": "https://www.nta.go.jp/english/"
+        "n": "Ministry of Finance — FEFTA real-property leaflet (June 2026 / Reiwa 8)",
+        "u": "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/real_property_leafletJ.pdf"
       },
       {
-        "n": "Ministry of Land, Infrastructure, Transport and Tourism (MLIT)",
-        "u": "https://www.mlit.go.jp/en/"
+        "n": "Ministry of Finance — English FAQ on the real-property reporting system",
+        "u": "https://www.mof.go.jp/english/policy/international_policy/real_property/faq.pdf"
+      },
+      {
+        "n": "Ministry of Finance — overview of the real-property reporting system (Japanese)",
+        "u": "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/real_property/seido_gaiyo.html"
+      },
+      {
+        "n": "National Tax Agency — No. 7191 registration and license tax (law as of 1 April 2026)",
+        "u": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/inshi/7191.htm"
+      },
+      {
+        "n": "National Tax Agency — Reiwa 8 registration-tax pamphlet (land 1.5% through 31 March 2029; residential house 0.3% through 31 March 2027)",
+        "u": "https://www.nta.go.jp/publication/pamph/sonota/0020003-124_01.pdf"
       }
     ],
     "buying-property-thailand": [
@@ -1859,6 +1891,32 @@
       {
         "n": "Autoridade Tributária — Informação Vinculativa PIV 29225 (verba 2.27 Lista I CIVA: 6% VAT on residential renovation works)",
         "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/informacoes_vinculativas/despesa/civa/Documents/PIV_29225.pdf"
+      }
+    ],
+    "buying-property-puerto-vallarta": [
+      {
+        "n": "SRE — costos y tiempos, permiso para constituir fideicomiso en la zona restringida ($21,650)",
+        "u": "https://portales.sre.gob.mx/tramites-dgaj/art-27-constitucional/costos-y-tiempos"
+      },
+      {
+        "n": "Ley de Ingresos del Municipio de Puerto Vallarta, Jalisco, ejercicio 2026, artículo 41 (impuesto sobre transmisiones patrimoniales)",
+        "u": "https://www.seapal.gob.mx/docs/transparencia_opd/Ley%20de%20Ingresos%20del%20Municipio%20de%20Puerto%20Vallarta,%20Jalisco%20para%20el%20ejercicio%20fiscal%202026-300126.cleaned.pdf"
+      },
+      {
+        "n": "Ley de Ingresos del Municipio de Bahía de Banderas, Nayarit, ejercicio fiscal 2026, artículo 21 (ISAI 2%)",
+        "u": "https://congresonayarit.gob.mx/wp-content/uploads/QUE_HACEMOS/LEGISLACION_ESTATAL/leyes_ingresos_presupuesto/2026/ley_ingresos_bahia_de_banderas_2026.pdf"
+      },
+      {
+        "n": "Ley de Ingresos del Estado de Jalisco para el ejercicio fiscal 2026, artículo 12 (impuesto sobre hospedaje, 5.0%)",
+        "u": "https://congresoweb.congresojal.gob.mx/bibliotecavirtual/legislacion/Ingresos/Documentos_PDF-Ingresos/Ley%20de%20Ingresos%20del%20Estado%20de%20Jalisco-240226.pdf"
+      },
+      {
+        "n": "Ley de Ingresos del Estado de Nayarit para el ejercicio fiscal 2026, artículo 4 (impuesto sobre hospedaje, 5%)",
+        "u": "https://congresonayarit.gob.mx/wp-content/uploads/QUE_HACEMOS/LEGISLACION_ESTATAL/leyes_ingresos_presupuesto/2026/ley_de_ingresos_del_estado_libre_y_soberano_de_nayarit_2026.pdf"
+      },
+      {
+        "n": "IRS Revenue Ruling 2013-14 — a standard Mexican fideicomiso holding a personal residence is not a trust",
+        "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
       }
     ],
     "buying-property-costa-del-sol": [
