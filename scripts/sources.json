@@ -125,10 +125,6 @@
     ],
     "buying-property-spain": [
       {
-        "n": "Agencia Tributaria (Spanish tax authority)",
-        "u": "https://sede.agenciatributaria.gob.es/"
-      },
-      {
         "n": "Colegio de Registradores — Registro de la Propiedad",
         "u": "https://www.registradores.org/"
       },
@@ -147,6 +143,10 @@
       {
         "n": "Agencia Tributaria — IRNR, renta imputada de inmueble urbano de uso propio",
         "u": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/cuestiones-especificas-sobre-tributacion-inmuebles/renta-imputada-inmueble-urbano-uso-propio.html"
+      },
+      {
+        "n": "BOE — STS 19 May 2026 (BOE-A-2026-12300), annulling parts of Real Decreto 1312/2024 (national rental registry)",
+        "u": "https://www.boe.es/boe/dias/2026/06/08/pdfs/BOE-A-2026-12300.pdf"
       }
     ],
     "greece-golden-visa": [
@@ -1959,8 +1959,8 @@
         "u": "https://www.boe.es/buscar/doc.php?id=DOGV-r-2024-90168"
       },
       {
-        "n": "BOE — STS 1 June 2026, annulling parts of Real Decreto 1312/2024",
-        "u": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-15677"
+        "n": "BOE — STS 19 May 2026 (BOE-A-2026-12300, publ. 8 June 2026), annulling parts of Real Decreto 1312/2024",
+        "u": "https://www.boe.es/boe/dias/2026/06/08/pdfs/BOE-A-2026-12300.pdf"
       },
       {
         "n": "Ministerio de Vivienda — Valor tasado de la vivienda libre, serie VDP006 (CSV, Q2 2026)",
@@ -1969,6 +1969,28 @@
       {
         "n": "Agencia Tributaria — IRNR, renta imputada de inmueble urbano de uso propio",
         "u": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/cuestiones-especificas-sobre-tributacion-inmuebles/renta-imputada-inmueble-urbano-uso-propio.html"
+      }
+    ],
+    "buying-property-tulum": [
+      {
+        "n": "SRE — costos y tiempos, permiso para constituir fideicomiso en la zona restringida ($21,650)",
+        "u": "https://portales.sre.gob.mx/tramites-dgaj/art-27-constitucional/costos-y-tiempos"
+      },
+      {
+        "n": "Ley Agraria (texto vigente, PAOT) — arts. 23-28, 56-58, 80-86, 130 (dominio pleno, RAN, derecho del tanto)",
+        "u": "https://paot.org.mx/centro/leyes/federales/pdf/2017/LEY_AGRARIA_19_12_2016.pdf"
+      },
+      {
+        "n": "Ley del Impuesto Sobre Adquisición de Bienes Inmuebles de los Municipios del Estado de Quintana Roo (incl. Tulum), arts. 8-9 (ISABI 2%)",
+        "u": "https://documentos.congresoqroo.gob.mx/leyes/L154-XV-31122018-777.pdf"
+      },
+      {
+        "n": "Constitución Política de los Estados Unidos Mexicanos, artículo 27 (zona restringida)",
+        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "n": "IRS Revenue Ruling 2013-14 — a standard Mexican fideicomiso holding a personal residence is not a trust",
+        "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
       }
     ]
   },

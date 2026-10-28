@@ -120,12 +120,16 @@
     "hash": "2d06f0613288baf7"
   },
   "buying-property-spain": {
-    "date": "2026-10-23",
-    "hash": "80b3670d926f2958"
+    "date": "2026-10-28",
+    "hash": "ca5cd60825caee25"
   },
   "buying-property-thailand": {
     "date": "2026-10-19",
     "hash": "f9ca3d354b7492b3"
+  },
+  "buying-property-tulum": {
+    "date": "2026-10-28",
+    "hash": "256ce092f68da30e"
   },
   "buying-property-turkey": {
     "date": "2026-10-19",
@@ -136,8 +140,8 @@
     "hash": "26e36f3713360ac9"
   },
   "buying-property-valencia": {
-    "date": "2026-10-25",
-    "hash": "e2f82b7147d282d4"
+    "date": "2026-10-28",
+    "hash": "f90d20203d9dddee"
   },
   "capital-gains-property-abroad": {
     "date": "2026-10-19",
@@ -332,8 +336,8 @@
     "hash": "329405eb98e3a8fa"
   },
   "mexico-guides": {
-    "date": "2026-10-27",
-    "hash": "16157a707e53b2fc"
+    "date": "2026-10-28",
+    "hash": "302d53b9c6633e39"
   },
   "mexico-temporary-resident-visa": {
     "date": "2026-10-18",
