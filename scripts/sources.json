@@ -695,6 +695,10 @@
     ],
     "buying-property-thailand": [
       {
+        "n": "Government Public Relations Department — 28 October 2026: no Cabinet resolution raising the condo quota; Interior Ministry study is 49% to not more than 75%",
+        "u": "https://thainews.prd.go.th/thainews/news/view/369760/?bid=1"
+      },
+      {
         "n": "Department of Lands (Thailand)",
         "u": "https://www.dol.go.th/"
       },
@@ -712,6 +716,18 @@
       }
     ],
     "buying-property-philippines": [
+      {
+        "n": "BIR Revenue Regulations No. 1-2024 — VAT-exempt threshold for house and lot and other residential dwellings, ₱3,600,000 from 1 January 2024",
+        "u": "https://bir-cdn.bir.gov.ph/BIR/pdf/RR%20No.%201-2024.pdf"
+      },
+      {
+        "n": "DTI-BOI and LRA — IRR of RA 12252, effectivity 4 January 2026; 99-year investor lease",
+        "u": "https://boi.gov.ph/dti-boi-lra-sign-irr-for-99-year-investors-lease-act-to-boost-foreign-investments/"
+      },
+      {
+        "n": "Republic Act No. 12252 — Lawphil text, including the US$5,000,000 tourism-project floor",
+        "u": "https://www.lawphil.net/statutes/repacts/ra2025/ra_12252_2025.html"
+      },
       {
         "n": "Philippine Retirement Authority — SRRV Visa page",
         "u": "https://pra.gov.ph/SRRVisa"
@@ -781,8 +797,16 @@
         "u": "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar"
       },
       {
-        "n": "FinCEN — BSA E-Filing System",
-        "u": "https://bsaefiling.fincen.treas.gov/"
+        "n": "FinCEN — inflation adjustment of civil monetary penalties, effective 17 January 2025 (non-willful $16,536; willful minimum $165,353)",
+        "u": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties"
+      },
+      {
+        "n": "Supreme Court — Bittner v. United States (non-willful FBAR penalty is per report)",
+        "u": "https://www.supremecourt.gov/opinions/22pdf/21-1195_h3ci.pdf"
+      },
+      {
+        "n": "Federal Register — OMB M-26-11 cancelled the 2026 civil-penalty inflation adjustment (FTC notice, 15 September 2026)",
+        "u": "https://www.federalregister.gov/documents/2026/09/15/2026-18853/civil-penalty-inflation-adjustments"
       },
       {
         "n": "IRS — Comparison of Form 8938 and FBAR requirements",
@@ -1987,6 +2011,32 @@
       {
         "n": "Constitución Política de los Estados Unidos Mexicanos, artículo 27 (zona restringida)",
         "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "n": "IRS Revenue Ruling 2013-14 — a standard Mexican fideicomiso holding a personal residence is not a trust",
+        "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
+      }
+    ],
+    "buying-property-los-cabos": [
+      {
+        "n": "Ley de Hacienda para el Municipio de Los Cabos — art. 35 (3% acquisition tax), art. 37 (90-day appraisal), arts. 137 Quáter and 137 Quater 1 (sanitation fee)",
+        "u": "https://www.tesoreria.loscabos.gob.mx/wp-content/uploads/2025/03/LEY-DE-HACIENDA-PARA-EL-MUNICIPIO-DE-LOS-CABOS.pdf"
+      },
+      {
+        "n": "INEGI — UMA 2026 bulletin (daily MXN 117.31 from 1 February 2026)",
+        "u": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/uma/uma2026.pdf"
+      },
+      {
+        "n": "SRE — costos y tiempos, permiso para constituir fideicomiso en la zona restringida (MXN 21,650 from 1 January 2026)",
+        "u": "https://portales.sre.gob.mx/tramites-dgaj/art-27-constitucional/costos-y-tiempos"
+      },
+      {
+        "n": "Constitución Política, artículo 27 — zona restringida",
+        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "n": "Ley de Hacienda del Estado de Baja California Sur — arts. 13-16, lodging tax (compiled text states 3% in art. 16)",
+        "u": "https://finanzas.bcs.gob.mx/wp-content/themes/voice/assets/img/normatividad/Leyes%20Estatales/LeydeHaciendaBCS.pdf"
       },
       {
         "n": "IRS Revenue Ruling 2013-14 — a standard Mexican fideicomiso holding a personal residence is not a trust",
