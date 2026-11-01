@@ -549,16 +549,16 @@
     ],
     "buying-property-uruguay": [
       {
+        "n": "IMPO — Ley N° 20.446, artículo 24-BIS (opción IRNR para residentes fiscales desde el 1 de enero de 2026)",
+        "u": "https://www.impo.com.uy/bases/leyes-originales/20446-2025/648"
+      },
+      {
+        "n": "DGI — Causales de residencia fiscal (UI 15.000.000 y UI 3.500.000 más 60 días)",
+        "u": "https://www.gub.uy/direccion-general-impositiva/comunicacion/publicaciones/causales-residencia-fiscal"
+      },
+      {
         "n": "Dirección Nacional de Migración (Uruguay)",
         "u": "https://www.gub.uy/ministerio-interior/direccion-nacional-migracion"
-      },
-      {
-        "n": "DGI — Dirección General Impositiva (Uruguay)",
-        "u": "https://www.dgi.gub.uy/"
-      },
-      {
-        "n": "DGI — Causales de Residencia Fiscal (Uruguay)",
-        "u": "https://www.gub.uy/direccion-general-impositiva/comunicacion/publicaciones/causales-residencia-fiscal"
       }
     ],
     "buying-property-brazil": [
@@ -655,16 +655,16 @@
     ],
     "buying-property-turkey": [
       {
-        "n": "Presidency of Migration Management (Göç İdaresi)",
-        "u": "https://www.goc.gov.tr/"
+        "n": "GIB — 2026 infographic on real-estate value-increase gains (150,000 TL exemption; five-year holding period)",
+        "u": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Finfografikler%2Fpdfs%2F2026_deger_artisi_kazanci.pdf"
       },
       {
-        "n": "General Directorate of Land Registry and Cadastre (TKGM)",
-        "u": "https://www.tkgm.gov.tr/"
+        "n": "GIB — value-increase exemption table, 2026 amount 150,000 TL (General Communiqué No. 332)",
+        "u": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2Fdeger-artisi-kazanclarina-iliskin-istisna-tutari.pdf"
       },
       {
-        "n": "Resmî Gazete (official gazette)",
-        "u": "https://www.resmigazete.gov.tr/"
+        "n": "GIB — real-estate purchase and sale guide (title-deed fee 2% buyer and 2% seller; floor is the property-tax value)",
+        "u": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fonceki-dokumanlar%2Fgayrimenkul_alimsatim_vergilendirilmesi.pdf"
       }
     ],
     "buying-property-japan": [
@@ -899,6 +899,10 @@
     ],
     "capital-gains-property-abroad": [
       {
+        "n": "IRS — Rev. Proc. 2025-32, section 4.03 (2026 zero-rate and 15% rate amounts)",
+        "u": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf"
+      },
+      {
         "n": "IRS — Publication 544, Sales and Other Dispositions of Assets",
         "u": "https://www.irs.gov/publications/p544"
       },
@@ -911,8 +915,8 @@
         "u": "https://www.irs.gov/publications/p514"
       },
       {
-        "n": "IRS — Topic 559, Net Investment Income Tax",
-        "u": "https://www.irs.gov/taxtopics/tc559"
+        "n": "IRS — Instructions for Form 1116 (2025), rate-differential factors 0.4054 and 0.5405",
+        "u": "https://www.irs.gov/instructions/i1116"
       },
       {
         "n": "IRS — Net Investment Income Tax (NIIT) thresholds",
@@ -1091,15 +1095,19 @@
     ],
     "closing-costs-property-abroad": [
       {
+        "n": "Agenzia delle Entrate — L'acquisto di una casa: le imposte (9% + €50 + €50; IVA 10%/4%/22% + €200)",
+        "u": "https://www.agenziaentrate.gov.it/portale/acquisto-di-una-casa-le-imposte"
+      },
+      {
+        "n": "Ministry of Economy and Finance (Greece) — capital taxation, transfer tax 3% under Law 5219/2025",
+        "u": "https://minfin.gov.gr/en/tax-policy/tax-guide/capital-taxation/"
+      },
+      {
         "n": "IRS — Publication 551, Basis of Assets (capitalising closing costs)",
         "u": "https://www.irs.gov/publications/p551"
       },
       {
-        "n": "IRS — Publication 527, Residential Rental Property",
-        "u": "https://www.irs.gov/publications/p527"
-      },
-      {
-        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio, artigo 6.º (adita o n.º 10 ao artigo 17.º do CIMT: taxa de 7,5% para não residentes). O artigo 18.º n.º 1 não aplica 1 de setembro de 2026 a esta taxa",
+        "n": "Diário da República — Decreto-Lei n.º 97/2026, de 20 de maio, artigo 6.º (IMT 7,5% no residentes)",
         "u": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/97-2026-1124493227"
       },
       {
@@ -1109,10 +1117,6 @@
       {
         "n": "Comunidad de Madrid — Transmisiones Patrimoniales Onerosas (ITP rate)",
         "u": "https://www.comunidad.madrid/servicios/atencion-contribuyente/transmisiones-patrimoniales-onerosas"
-      },
-      {
-        "n": "Junta de Andalucía — ITP tipo general 7%",
-        "u": "https://www.juntadeandalucia.es/organismos/economiahaciendayfondoseuropeos/areas/tributos-juego/tributos/paginas/medidastpo.html"
       }
     ],
     "short-term-rental-rules-abroad": [
@@ -2041,6 +2045,32 @@
       {
         "n": "IRS Revenue Ruling 2013-14 — a standard Mexican fideicomiso holding a personal residence is not a trust",
         "u": "https://www.irs.gov/pub/irs-drop/rr-13-14.pdf"
+      }
+    ],
+    "buying-property-san-miguel-de-allende": [
+      {
+        "n": "Ley de Ingresos para el Municipio de San Miguel de Allende, Guanajuato, ejercicio 2026 — art. 7 (tarifa), art. 4 (predial urbano), art. 49 (cuota mínima y descuentos), art. 50 (0.5% donación o sucesión)",
+        "u": "https://congreso-gto.s3.amazonaws.com/uploads/municipio/pdf/33/San_Miguel_de_Allende_2026.pdf"
+      },
+      {
+        "n": "Ley Hacendaria Municipal para el Estado de Guanajuato, Decreto 202 (P.O. 135, 8 de julio de 2026) — arts. 42, 44, 45 y 338",
+        "u": "https://congreso-gto.s3.amazonaws.com/uploads/reforma/pdf/3726/570933a8-6d12-441c-b35e-73ae32f354d0.pdf"
+      },
+      {
+        "n": "SRE — costos y tiempos, convenio de renuncia fuera de la zona restringida (MXN 5,250 desde el 1 de enero de 2026)",
+        "u": "https://portales.sre.gob.mx/tramites-dgaj/art-27-constitucional/costos-y-tiempos"
+      },
+      {
+        "n": "Constitución Política, artículo 27 — zona restringida y convenio de renuncia",
+        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"
+      },
+      {
+        "n": "Decreto de 28 de julio de 1982 — zona de monumentos históricos de San Miguel de Allende (0.75 km²)",
+        "u": "https://sic.cultura.gob.mx/documentos/1837.pdf"
+      },
+      {
+        "n": "INEGI — UMA 2026 (anual MXN 42,794.64 desde el 1 de febrero de 2026)",
+        "u": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/uma/uma2026.pdf"
       }
     ]
   },
