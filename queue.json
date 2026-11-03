@@ -32,7 +32,8 @@
     "hub": "panama-guides.html",
     "template": "panama-friendly-nations-visa.html",
     "keywords": "panama pensionado visa requirements, panama retirement visa americans 2026, pensionado discounts panama",
-    "angle": "US$1,000/month lifetime pension (US$750 with a US$100,000 property purchase — verify current Servicio Nacional de Migración rules), the statutory discounts list, permanent status from day one, no path to citizenship via pensionado alone, Friendly Nations Visa as the alternative for non-retirees, apostille chain for US documents, and US tax (Panama's territorial system means no Panamanian tax on US pension; still fully US-taxable)."
+    "angle": "US$1,000/month lifetime pension (US$750 with a US$100,000 property purchase — verify current Servicio Nacional de Migración rules), the statutory discounts list, permanent status from day one, no path to citizenship via pensionado alone, Friendly Nations Visa as the alternative for non-retirees, apostille chain for US documents, and US tax (Panama's territorial system means no Panamanian tax on US pension; still fully US-taxable).",
+    "status": "done"
   },
   {
     "slug": "italy-elective-residence-visa",
@@ -40,7 +41,8 @@
     "hub": "italy-guides.html",
     "template": "spain-non-lucrative-visa.html",
     "keywords": "italy elective residence visa requirements, italy elective residency visa income, ERV italy americans 2026",
-    "angle": "Visto per residenza elettiva: passive income only (no work), the consulate-set minimum (commonly cited ~€31,000/yr single, ~€38,000 couple — cite the consulate/Esteri source used and flag consulate discretion), proof of accommodation (deed or registered lease), health insurance, the questura permesso di soggiorno within 8 days, renewal, 5-year path to EU long-term residence, 10 years to citizenship, and the tax side: Italian tax residency after 183 days, the 7% pensioner flat tax in southern municipalities (Art. 24-ter TUIR) and the €200K/€300K flat tax for HNW (link italy-golden-visa), US pension taxation under the US-Italy treaty."
+    "angle": "Visto per residenza elettiva: passive income only (no work), the consulate-set minimum (commonly cited ~€31,000/yr single, ~€38,000 couple — cite the consulate/Esteri source used and flag consulate discretion), proof of accommodation (deed or registered lease), health insurance, the questura permesso di soggiorno within 8 days, renewal, 5-year path to EU long-term residence, 10 years to citizenship, and the tax side: Italian tax residency after 183 days, the 7% pensioner flat tax in southern municipalities (Art. 24-ter TUIR) and the €200K/€300K flat tax for HNW (link italy-golden-visa), US pension taxation under the US-Italy treaty.",
+    "status": "done"
   },
   {
     "slug": "greece-fip-visa",
@@ -48,7 +50,8 @@
     "hub": "greece-guides.html",
     "template": "spain-non-lucrative-visa.html",
     "keywords": "greece financially independent person visa, greece FIP visa requirements 2026, greece retirement visa americans",
-    "angle": "The non-working residence permit under Law 5038/2023 (Code of Immigration): the €3,500/month income threshold (+20% spouse, +15% per child — verify at migration.gov.gr), 2-year permit renewable for 3 years, no employment, 183-day tax-residency consequence and the 7% flat tax for foreign pensioners (Art. 5B ITC) as the pairing, buying a home with it (link buying-property-greece) vs the Golden Visa (no stay requirement) — a decision table. Second child for the greece hub beyond golden visa."
+    "angle": "The non-working residence permit under Law 5038/2023 (Code of Immigration): the €3,500/month income threshold (+20% spouse, +15% per child — verify at migration.gov.gr), 2-year permit renewable for 3 years, no employment, 183-day tax-residency consequence and the 7% flat tax for foreign pensioners (Art. 5B ITC) as the pairing, buying a home with it (link buying-property-greece) vs the Golden Visa (no stay requirement) — a decision table. Second child for the greece hub beyond golden visa.",
+    "status": "done"
   },
   {
     "slug": "malaysia-mm2h-visa",
@@ -56,7 +59,8 @@
     "hub": "malaysia-guides.html",
     "template": "panama-friendly-nations-visa.html",
     "keywords": "mm2h requirements 2026, malaysia my second home americans, mm2h fixed deposit tiers",
-    "angle": "The 2024 relaunch tiers (Silver / Gold / Platinum fixed deposits US$150K / $500K / $1M, property-purchase minimums, 90-day stay rule, SEZ/Sarawak variants — cite mm2h.gov.my), age rules, dependants, the 50% deposit withdrawal for property, foreign-buyer state minimum prices and the 2026 8% foreign stamp duty (link buying-property-malaysia), US tax: Malaysia's territorial regime vs US worldwide tax. Second child for the malaysia hub."
+    "angle": "The 2024 relaunch tiers (Silver / Gold / Platinum fixed deposits US$150K / $500K / $1M, property-purchase minimums, 90-day stay rule, SEZ/Sarawak variants — cite mm2h.gov.my), age rules, dependants, the 50% deposit withdrawal for property, foreign-buyer state minimum prices and the 2026 8% foreign stamp duty (link buying-property-malaysia), US tax: Malaysia's territorial regime vs US worldwide tax. Second child for the malaysia hub.",
+    "status": "done"
   },
   {
     "slug": "thailand-ltr-visa",
@@ -64,7 +68,8 @@
     "hub": "thailand-guides.html",
     "template": "panama-friendly-nations-visa.html",
     "keywords": "thailand ltr visa requirements 2026, thailand long term resident visa americans, ltr visa wealthy pensioner",
-    "angle": "The four LTR categories (Wealthy Global Citizen, Wealthy Pensioner, Work-from-Thailand Professional, Highly-Skilled) with the 2025 relaxed thresholds (cite ltr.boi.go.th), 10-year validity, 90-day report replaced by annual, the 17% flat income tax for highly-skilled, tax exemption on foreign-sourced income for LTR holders vs the 2024 remittance rule change for everyone else, condo-ownership (49% quota) and leasehold land (link buying-property-thailand), US tax interplay. Second child for the thailand hub."
+    "angle": "The four LTR categories (Wealthy Global Citizen, Wealthy Pensioner, Work-from-Thailand Professional, Highly-Skilled) with the 2025 relaxed thresholds (cite ltr.boi.go.th), 10-year validity, 90-day report replaced by annual, the 17% flat income tax for highly-skilled, tax exemption on foreign-sourced income for LTR holders vs the 2024 remittance rule change for everyone else, condo-ownership (49% quota) and leasehold land (link buying-property-thailand), US tax interplay. Second child for the thailand hub.",
+    "status": "done"
   },
   {
     "slug": "philippines-srrv-visa",
@@ -72,7 +77,8 @@
     "hub": "philippines-guides.html",
     "template": "panama-friendly-nations-visa.html",
     "keywords": "srrv philippines requirements, philippines retirement visa americans 2026, srrv deposit amount",
-    "angle": "PRA SRRV options (Classic, Smile, Courtesy, Human Touch) with deposit amounts by age and pension status (cite pra.gov.ph), converting the deposit into a condo purchase or long-term lease, the foreign land-ownership ban and 40% condo cap (link buying-property-philippines), multiple-entry indefinite stay, dependants, exit/withdrawal rules, and US tax: Philippine tax on foreign-sourced pension (non-resident aliens taxed only on Philippine-source income), FBAR on the deposit. Second child for the philippines hub."
+    "angle": "PRA SRRV options (Classic, Smile, Courtesy, Human Touch) with deposit amounts by age and pension status (cite pra.gov.ph), converting the deposit into a condo purchase or long-term lease, the foreign land-ownership ban and 40% condo cap (link buying-property-philippines), multiple-entry indefinite stay, dependants, exit/withdrawal rules, and US tax: Philippine tax on foreign-sourced pension (non-resident aliens taxed only on Philippine-source income), FBAR on the deposit. Second child for the philippines hub.",
+    "status": "done"
   },
   {
     "slug": "golden-visa-index-americans",
@@ -80,7 +86,8 @@
     "hub": "general-guides.html",
     "template": "best-golden-visa-for-americans.html",
     "keywords": "golden visa index 2026, best golden visa ranking americans, golden visa comparison scored",
-    "angle": "A scored, methodology-first ranking (the only index scored on US-tax friction). Score each program 0–10 on five weighted criteria: minimum investment (20%), physical-presence requirement (20%), time and certainty to citizenship (20%), US-tax friction — PFIC exposure of fund routes, wealth/exit taxes, treaty (25%), program stability/political risk (15%). Programs: Portugal (fund), Greece (RE tiers), Italy (investor visa), Malta (MPRP), Hungary (guest investor), Cyprus (PR by investment), UAE (property golden visa), Latvia, Turkey (CBI), Panama (qualified investor), Caribbean CBI (Antigua/Dominica/St Kitts as one row), Spain (closed — score 0 as a control). Show the scoring table, per-program one-paragraph rationale, a 'who this is for' line, and an explicit 'how we scored' section with the weights. Cite official program sources for every threshold. Refresh annually (say so). Link every program to its MigrateState guide."
+    "angle": "A scored, methodology-first ranking (the only index scored on US-tax friction). Score each program 0–10 on five weighted criteria: minimum investment (20%), physical-presence requirement (20%), time and certainty to citizenship (20%), US-tax friction — PFIC exposure of fund routes, wealth/exit taxes, treaty (25%), program stability/political risk (15%). Programs: Portugal (fund), Greece (RE tiers), Italy (investor visa), Malta (MPRP), Hungary (guest investor), Cyprus (PR by investment), UAE (property golden visa), Latvia, Turkey (CBI), Panama (qualified investor), Caribbean CBI (Antigua/Dominica/St Kitts as one row), Spain (closed — score 0 as a control). Show the scoring table, per-program one-paragraph rationale, a 'who this is for' line, and an explicit 'how we scored' section with the weights. Cite official program sources for every threshold. Refresh annually (say so). Link every program to its MigrateState guide.",
+    "status": "done"
   },
   {
     "slug": "portugal-vs-spain-property-residency",
@@ -88,7 +95,8 @@
     "hub": "portugal-guides.html",
     "template": "greece-vs-portugal-golden-visa.html",
     "keywords": "portugal vs spain buying property, portugal or spain for americans, portugal vs spain residency visa",
-    "angle": "Side-by-side decision guide: purchase costs (IMT/IMI vs ITP/IBI and regional variation), non-resident mortgages, residency options (D7 vs NLV, D8 vs Spain DNV, Portugal GV vs Spain GV closed), income tax on non-residents and after 183 days (IFICI/NHR 2.0 vs Beckham law), capital gains on exit, inheritance (Portugal no inheritance tax between direct family vs Spain regional ISD), short-let regulation, healthcare access, and a 'choose Portugal if / choose Spain if' table. Cite official sources for every figure."
+    "angle": "Side-by-side decision guide: purchase costs (IMT/IMI vs ITP/IBI and regional variation), non-resident mortgages, residency options (D7 vs NLV, D8 vs Spain DNV, Portugal GV vs Spain GV closed), income tax on non-residents and after 183 days (IFICI/NHR 2.0 vs Beckham law), capital gains on exit, inheritance (Portugal no inheritance tax between direct family vs Spain regional ISD), short-let regulation, healthcare access, and a 'choose Portugal if / choose Spain if' table. Cite official sources for every figure.",
+    "status": "done"
   },
   {
     "slug": "mexico-vs-costa-rica-vs-panama-property",
@@ -96,7 +104,8 @@
     "hub": "general-guides.html",
     "template": "greece-vs-portugal-golden-visa.html",
     "keywords": "mexico vs costa rica vs panama retire, costa rica vs panama buying property, mexico or costa rica for americans",
-    "angle": "Three-column comparison: foreign ownership (fideicomiso / Maritime Zone concessions / Panama's border and island restrictions), closing costs, residency routes (Mexico temporary via solvency, Costa Rica Pensionado/Rentista/Inversionista, Panama Pensionado/Friendly Nations), income tax regimes (worldwide vs territorial), healthcare, currency (peso vs colón vs USD), title security, and a decision table. Link the six existing country guides."
+    "angle": "Three-column comparison: foreign ownership (fideicomiso / Maritime Zone concessions / Panama's border and island restrictions), closing costs, residency routes (Mexico temporary via solvency, Costa Rica Pensionado/Rentista/Inversionista, Panama Pensionado/Friendly Nations), income tax regimes (worldwide vs territorial), healthcare, currency (peso vs colón vs USD), title security, and a decision table. Link the six existing country guides.",
+    "status": "done"
   },
   {
     "slug": "dubai-vs-cyprus-property-residency",
@@ -113,7 +122,8 @@
     "hub": "general-guides.html",
     "template": "best-countries-buy-property-abroad.html",
     "keywords": "medicare abroad, healthcare for americans living abroad, expat health insurance property owners, public healthcare access residency visa",
-    "angle": "Medicare generally does not pay outside the US (cite medicare.gov); which residency visas unlock public healthcare (Portugal SNS via residency, Spain public system via NLV needs private cover first, Greece EFKA, Costa Rica CCSS mandatory, Mexico IMSS voluntary, Panama private), private international insurance basics, the visa-required insurance minimums, Medicare Part B decision if you keep US ties, and the tax angle (foreign health insurance premiums and the ACA). Country table linking to each guide."
+    "angle": "Medicare generally does not pay outside the US (cite medicare.gov); which residency visas unlock public healthcare (Portugal SNS via residency, Spain public system via NLV needs private cover first, Greece EFKA, Costa Rica CCSS mandatory, Mexico IMSS voluntary, Panama private), private international insurance basics, the visa-required insurance minimums, Medicare Part B decision if you keep US ties, and the tax angle (foreign health insurance premiums and the ACA). Country table linking to each guide.",
+    "status": "done"
   },
   {
     "slug": "italian-citizenship-by-descent-2025-changes",
@@ -121,7 +131,8 @@
     "hub": "italy-guides.html",
     "template": "golden-visa-vs-second-passport.html",
     "keywords": "italian citizenship by descent 2025 changes, jure sanguinis new law, decree 36/2025 italian citizenship americans",
-    "angle": "Decree-Law 36/2025 converted by Law 74/2025: the new two-generation limit (parent or grandparent born in Italy, or parent resident 2 years), who is grandfathered (applications/appointments before 27 March 2025), consular vs court route, documents and apostilles, timelines, and what a passport does and doesn't change for US tax (nothing — still worldwide taxation; exit tax only on renunciation). Cite Gazzetta Ufficiale and Esteri."
+    "angle": "Decree-Law 36/2025 converted by Law 74/2025: the new two-generation limit (parent or grandparent born in Italy, or parent resident 2 years), who is grandfathered (applications/appointments before 27 March 2025), consular vs court route, documents and apostilles, timelines, and what a passport does and doesn't change for US tax (nothing — still worldwide taxation; exit tax only on renunciation). Cite Gazzetta Ufficiale and Esteri.",
+    "status": "done"
   },
   {
     "slug": "is-portugal-golden-visa-worth-it",
@@ -129,7 +140,8 @@
     "hub": "portugal-guides.html",
     "template": "golden-visa-vs-second-passport.html",
     "keywords": "is portugal golden visa worth it 2026, portugal golden visa pros and cons, portugal golden visa 10 years citizenship",
-    "angle": "Opinion-led but sourced: the 10-year citizenship timeline (Lei Orgânica 1/2026), fund-route PFIC exposure and Form 8621 for US investors, fund fees and lock-ups, AIMA processing backlog, the 7-day rule's real value, family inclusion, versus D7/D8 alternatives that cost nothing. Verdict matrix by profile (Plan-B holder, retiree, remote worker, HNW). Link portugal-golden-visa, greece-vs-portugal, best-golden-visa-for-americans."
+    "angle": "Opinion-led but sourced: the 10-year citizenship timeline (Lei Orgânica 1/2026), fund-route PFIC exposure and Form 8621 for US investors, fund fees and lock-ups, AIMA processing backlog, the 7-day rule's real value, family inclusion, versus D7/D8 alternatives that cost nothing. Verdict matrix by profile (Plan-B holder, retiree, remote worker, HNW). Link portugal-golden-visa, greece-vs-portugal, best-golden-visa-for-americans.",
+    "status": "done"
   },
   {
     "slug": "buying-property-lisbon",
@@ -137,7 +149,8 @@
     "hub": "portugal-guides.html",
     "template": "buying-property-portugal.html",
     "keywords": "buying property in lisbon as an american, lisbon real estate prices 2026, lisbon apartment purchase foreigner",
-    "angle": "City-level guide: neighbourhood map (Chiado, Príncipe Real, Alfama, Campo de Ourique, Parque das Nações, Alvalade), price-per-m² ranges citing INE/Confidencial Imobiliário, IMT/IMI/stamp duty worked example on a €600K flat, condominium (condomínio) rules, licensing of AL short-lets under the 2024–26 rules, earthquake/older-building diligence, non-resident mortgages, and the residency angle (D7/D8 — GV property route gone). Link buying-property-portugal, portugal-nif, portugal-d7-visa."
+    "angle": "City-level guide: neighbourhood map (Chiado, Príncipe Real, Alfama, Campo de Ourique, Parque das Nações, Alvalade), price-per-m² ranges citing INE/Confidencial Imobiliário, IMT/IMI/stamp duty worked example on a €600K flat, condominium (condomínio) rules, licensing of AL short-lets under the 2024–26 rules, earthquake/older-building diligence, non-resident mortgages, and the residency angle (D7/D8 — GV property route gone). Link buying-property-portugal, portugal-nif, portugal-d7-visa.",
+    "status": "done"
   },
   {
     "slug": "buying-property-algarve",
@@ -145,7 +158,8 @@
     "hub": "portugal-guides.html",
     "template": "buying-property-portugal.html",
     "keywords": "buying property in algarve as an american, algarve real estate 2026, algarve villa purchase taxes",
-    "angle": "Lagos, Vilamoura, Tavira, Carvoeiro, Quinta do Lago; resort/touristic-complex ownership and rental-pool contracts; AL licensing; water and wildfire diligence; price ranges citing INE; IMT worked example; the retiree tax angle (NHR successor / IFICI eligibility) and US tax. Link buying-property-portugal, portugal-d7-visa, selling-property-portugal-us-citizen."
+    "angle": "Lagos, Vilamoura, Tavira, Carvoeiro, Quinta do Lago; resort/touristic-complex ownership and rental-pool contracts; AL licensing; water and wildfire diligence; price ranges citing INE; IMT worked example; the retiree tax angle (NHR successor / IFICI eligibility) and US tax. Link buying-property-portugal, portugal-d7-visa, selling-property-portugal-us-citizen.",
+    "status": "done"
   },
   {
     "slug": "buying-property-porto",
@@ -153,7 +167,8 @@
     "hub": "portugal-guides.html",
     "template": "buying-property-portugal.html",
     "keywords": "buying property in porto as an american, porto real estate prices 2026, porto apartment foreigner",
-    "angle": "Ribeira/Cedofeita/Foz/Boavista/Gaia; rehabilitation of historic buildings (ARU zones, IMI exemptions and 6% VAT on works — verify at Portal das Finanças), AL licensing status in Porto, price ranges (INE), IMT worked example, non-resident mortgages, US tax. Link buying-property-portugal, portugal-nif."
+    "angle": "Ribeira/Cedofeita/Foz/Boavista/Gaia; rehabilitation of historic buildings (ARU zones, IMI exemptions and 6% VAT on works — verify at Portal das Finanças), AL licensing status in Porto, price ranges (INE), IMT worked example, non-resident mortgages, US tax. Link buying-property-portugal, portugal-nif.",
+    "status": "done"
   },
   {
     "slug": "buying-property-costa-del-sol",
@@ -161,7 +176,8 @@
     "hub": "spain-guides.html",
     "template": "buying-property-spain.html",
     "keywords": "buying property costa del sol american, marbella property purchase foreigner 2026, andalusia property transfer tax",
-    "angle": "Andalusia's 7% ITP flat rate and 1.2% AJD (verify Junta de Andalucía), off-plan bank guarantees (Ley 20/2015), urbanisation/community fees, tourist-licence (VUT) rules in Andalusia and the 2025 national registry, NIE and the non-resident mortgage market, the NLV/DNV residency pairing, IRNR non-resident tax, and US tax. Link buying-property-spain, spain-non-lucrative-visa."
+    "angle": "Andalusia's 7% ITP flat rate and 1.2% AJD (verify Junta de Andalucía), off-plan bank guarantees (Ley 20/2015), urbanisation/community fees, tourist-licence (VUT) rules in Andalusia and the 2025 national registry, NIE and the non-resident mortgage market, the NLV/DNV residency pairing, IRNR non-resident tax, and US tax. Link buying-property-spain, spain-non-lucrative-visa.",
+    "status": "done"
   },
   {
     "slug": "buying-property-valencia",
@@ -187,7 +203,8 @@
     "hub": "mexico-guides.html",
     "template": "mexico.html",
     "keywords": "buying property in tulum as an american, tulum real estate risks, tulum pre construction condo 2026",
-    "angle": "The ejido-land trap (why title insurance and a certificado de libertad de gravamen matter), Quintana Roo ISAI and closing costs, the 2024–26 oversupply and pre-construction escrow (or lack of it), fideicomiso, environmental/cenote and SEMARNAT permits, Airbnb saturation data, notario diligence, and US tax. Link mexico, fideicomiso, us-taxes-property-mexico."
+    "angle": "The ejido-land trap (why title insurance and a certificado de libertad de gravamen matter), Quintana Roo ISAI and closing costs, the 2024–26 oversupply and pre-construction escrow (or lack of it), fideicomiso, environmental/cenote and SEMARNAT permits, Airbnb saturation data, notario diligence, and US tax. Link mexico, fideicomiso, us-taxes-property-mexico.",
+    "status": "done"
   },
   {
     "slug": "buying-property-los-cabos",
@@ -213,7 +230,8 @@
     "hub": "general-guides.html",
     "template": "foreign-tax-credit-property-abroad.html",
     "keywords": "FBAR foreign property, FinCEN 114 real estate, foreign bank account property purchase",
-    "angle": "Property itself is not reportable, but the foreign accounts used to buy/manage it usually are. $10,000 aggregate threshold, penalties, examples."
+    "angle": "Property itself is not reportable, but the foreign accounts used to buy/manage it usually are. $10,000 aggregate threshold, penalties, examples.",
+    "status": "done"
   },
   {
     "slug": "form-8938-fatca-foreign-assets",
@@ -221,7 +239,8 @@
     "hub": "general-guides.html",
     "template": "foreign-tax-credit-property-abroad.html",
     "keywords": "form 8938 foreign real estate, FATCA property reporting",
-    "angle": "Directly held real estate vs. property through entities/fideicomisos, thresholds by filing status and residence, 8938 vs FBAR table."
+    "angle": "Directly held real estate vs. property through entities/fideicomisos, thresholds by filing status and residence, 8938 vs FBAR table.",
+    "status": "done"
   },
   {
     "slug": "depreciation-foreign-rental-property",
@@ -229,7 +248,8 @@
     "hub": "general-guides.html",
     "template": "foreign-rental-income-us-tax.html",
     "keywords": "foreign rental property depreciation, ADS 30 year foreign property",
-    "angle": "Foreign residential rentals use ADS (30-yr, 40-yr pre-2018) not 27.5-yr GDS — the #1 CPA-level mistake DIY filers make."
+    "angle": "Foreign residential rentals use ADS (30-yr, 40-yr pre-2018) not 27.5-yr GDS — the #1 CPA-level mistake DIY filers make.",
+    "status": "done"
   },
   {
     "slug": "selling-property-spain-us-citizen",
@@ -237,7 +257,8 @@
     "hub": "spain-guides.html",
     "template": "selling-property-portugal-us-citizen.html",
     "keywords": "selling property spain us citizen, spain capital gains non-resident",
-    "angle": "19% non-resident CGT, 3% retention on sale price, plusvalía municipal, US foreign tax credit interplay."
+    "angle": "19% non-resident CGT, 3% retention on sale price, plusvalía municipal, US foreign tax credit interplay.",
+    "status": "done"
   },
   {
     "slug": "portugal-digital-nomad-visa",

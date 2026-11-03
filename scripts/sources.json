@@ -95,6 +95,32 @@
         "u": "https://aima.gov.pt/"
       }
     ],
+    "selling-property-spain-us-citizen": [
+      {
+        "n": "Agencia Tributaria — Ganancia patrimonial por la transmisión de un inmueble (tipo 19%)",
+        "u": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/cuestiones-especificas-sobre-tributacion-inmuebles/ganancia-patrimonial-derivada-transmision.html"
+      },
+      {
+        "n": "Agencia Tributaria — Retención del 3% por el adquirente de un inmueble (modelo 211)",
+        "u": "https://sede.agenciatributaria.gob.es/Sede/no-residentes/irnr-sin-establecimiento-permanente/retenciones-irnr-sin-establecimiento-permanente/retencion-adquirente-inmueble.html"
+      },
+      {
+        "n": "Agencia Tributaria — Instrucciones del modelo 210 (apartado 210 H y plazo)",
+        "u": "https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/impuesto-sobre-renta-no-residentes/modelo-210-irnr______a-no-residentes-permanente_/instrucciones.html"
+      },
+      {
+        "n": "BOE — Texto refundido de la Ley Reguladora de las Haciendas Locales, última modificación 7 de octubre de 2026 (arts. 104.5, 106, 107 y 108)",
+        "u": "https://www.boe.es/biblioteca_juridica/pdf/PUB-PB-2026-201.pdf"
+      },
+      {
+        "n": "IRS — Publication 523, Selling Your Home (Section 121)",
+        "u": "https://www.irs.gov/publications/p523"
+      },
+      {
+        "n": "IRS — About Form 1116, Foreign Tax Credit",
+        "u": "https://www.irs.gov/forms-pubs/about-form-1116"
+      }
+    ],
     "spain-golden-visa": [
       {
         "n": "BOE — Ley 14/2013 de apoyo a los emprendedores (investor-residence provisions, as amended)",
@@ -321,8 +347,8 @@
         "u": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa"
       },
       {
-        "n": "ICP — Federal Authority for Identity, Citizenship, Customs & Port Security",
-        "u": "https://icp.gov.ae/"
+        "n": "ICP — UAE Golden Residency, real-estate investor conditions (AED 2,000,000; local-bank loan allowed)",
+        "u": "https://icp.gov.ae/en/services/uae-golden-residency/"
       },
       {
         "n": "GDRFA Dubai",
@@ -877,6 +903,10 @@
       {
         "n": "26 U.S.C. § 168(g) — Alternative depreciation system (property used predominantly outside the US)",
         "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section168&num=0&edition=prelim"
+      },
+      {
+        "n": "IRS — 2025 Instructions for Form 4562 (line 20c residential rental, line 20d nonresidential)",
+        "u": "https://www.irs.gov/pub/irs-pdf/i4562.pdf"
       }
     ],
     "foreign-tax-credit-property-abroad": [
@@ -1287,16 +1317,16 @@
         "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIE.pdf"
       },
       {
-        "n": "Ley Federal de Derechos, Art. 25 (tarifa del permiso SRE)",
-        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFD.pdf"
+        "n": "SRE — Costos y tiempos 2026 (permiso de fideicomiso MXN 21,650; convenio MXN 5,250)",
+        "u": "https://portales.sre.gob.mx/tramites-dgaj/art-27-constitucional/costos-y-tiempos"
       },
       {
         "n": "SRE — Permiso para constitución de fideicomiso (trámite oficial)",
         "u": "https://portales.sre.gob.mx/tramites-dgaj/art-27-constitucional/permiso-para-constitucion-de-fideicomiso-sobre-inmuebles-localizados-dentro-de-la-zona-restringida"
       },
       {
-        "n": "Ley General de Títulos y Operaciones de Crédito (beneficiario sustituto)",
-        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGTOC.pdf"
+        "n": "DOF — Acuerdo de simplificación de trámites SRE, 16 de junio de 2026 (plazo de 3 días hábiles)",
+        "u": "https://sidof.segob.gob.mx/notas/5790679"
       },
       {
         "n": "IRS — Revenue Ruling 2013-14 (Mexican land trust not a trust for US tax purposes)",
@@ -1331,16 +1361,20 @@
     ],
     "costa-rica-pensionado-visa": [
       {
-        "n": "Dirección General de Migración y Extranjería (DGME), Costa Rica",
-        "u": "https://www.migracion.go.cr/"
+        "n": "SCIJ — Decreto Ejecutivo 37112, artículos 99, 100 y 228 (rentista, pensionado, renovación)",
+        "u": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_articulo.aspx?nValor1=1&nValor2=72489&nValor3=140878&nValor5=101&param1=NRA"
       },
       {
-        "n": "SCIJ — Sistema Costarricense de Información Jurídica",
-        "u": "https://pgrweb.go.cr/scij/"
+        "n": "SCIJ — Decreto Ejecutivo 43926, artículo 4 (US$150,000) y artículo 30 (definición de renta)",
+        "u": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=98909&nValor3=134910&param1=NRTC&strTipM=TC"
       },
       {
-        "n": "Caja Costarricense de Seguro Social (CCSS)",
-        "u": "https://www.ccss.sa.cr/"
+        "n": "SCIJ — Ley 8764, artículos 78 y 129 (residencia permanente y cancelación por ausencia)",
+        "u": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=66139"
+      },
+      {
+        "n": "SCIJ — Ley 9996, artículos 8 y 12 (monto del inversionista e incentivos por cinco años)",
+        "u": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=94782&nValor3=0&param1=NRTC&strTipM=TC"
       },
       {
         "n": "IRS — Publication 54, Tax Guide for U.S. Citizens and Resident Aliens Abroad",
