@@ -212,8 +212,8 @@
     "hash": "880fcf8e0b2d383f"
   },
   "foreign-bank-account-americans": {
-    "date": "2026-10-19",
-    "hash": "c1208f685b213bd1"
+    "date": "2026-11-11",
+    "hash": "08553210bf0046e4"
   },
   "foreign-mortgage-currency-gain-tax": {
     "date": "2026-07-20",
@@ -380,16 +380,20 @@
     "hash": "56f30e80482e8c8a"
   },
   "portugal-d7-visa": {
-    "date": "2026-10-19",
-    "hash": "e7319705e5dfa1c5"
+    "date": "2026-11-11",
+    "hash": "5cb02771bf209e01"
+  },
+  "portugal-digital-nomad-visa": {
+    "date": "2026-11-11",
+    "hash": "56c2813944e9eaee"
   },
   "portugal-golden-visa": {
     "date": "2026-10-19",
     "hash": "2a0cbb853a9953d7"
   },
   "portugal-guides": {
-    "date": "2026-10-22",
-    "hash": "f39ea24d8e2276c6"
+    "date": "2026-11-11",
+    "hash": "a28b4915c1192c1a"
   },
   "portugal-nif": {
     "date": "2026-10-20",

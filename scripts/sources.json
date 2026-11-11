@@ -2106,6 +2106,32 @@
         "n": "INEGI — UMA 2026 (anual MXN 42,794.64 desde el 1 de febrero de 2026)",
         "u": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/uma/uma2026.pdf"
       }
+    ],
+    "portugal-digital-nomad-visa": [
+      {
+        "n": "Portal das Finanças — Portaria n.º 352/2024/1 (IFICI eligibility gateways)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/Portaria_352_2024_1.pdf"
+      },
+      {
+        "n": "Portal das Finanças — IFICI official leaflet",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/Folhetos_informativos/Documents/incentivos_investigacao.pdf"
+      },
+      {
+        "n": "Portal das Finanças — Código do IRS, Artigo 16º (tax residency, 183-day rule)",
+        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/irs/Pages/irs16.aspx"
+      },
+      {
+        "n": "Governo Regional da Madeira — official mirror of Lei Orgânica 1/2026 (nationality law)",
+        "u": "https://www.madeira.gov.pt//Portals/25/Documentos/Legislacao/Lei_Organica_1_2026.pdf"
+      },
+      {
+        "n": "IRS — Foreign Earned Income Exclusion",
+        "u": "https://www.irs.gov/individuals/international-taxpayers/foreign-earned-income-exclusion"
+      },
+      {
+        "n": "IRS — 2026 tax inflation adjustments (FEIE $132,900)",
+        "u": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill"
+      }
     ]
   },
   "rules": [
