@@ -925,6 +925,10 @@
       {
         "n": "IRS — Instructions for Form 1116 (rate-differential adjustment worksheet)",
         "u": "https://www.irs.gov/instructions/i1116"
+      },
+      {
+        "n": "26 U.S.C. §164(b)(6) — foreign real property tax exclusion (US Code, House Office of the Law Revision Counsel)",
+        "u": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section164"
       }
     ],
     "capital-gains-property-abroad": [
@@ -2109,10 +2113,6 @@
     ],
     "portugal-digital-nomad-visa": [
       {
-        "n": "Portal das Finanças — Portaria n.º 352/2024/1 (IFICI eligibility gateways)",
-        "u": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/Portaria_352_2024_1.pdf"
-      },
-      {
         "n": "Portal das Finanças — IFICI official leaflet",
         "u": "https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/Folhetos_informativos/Documents/incentivos_investigacao.pdf"
       },
@@ -2131,6 +2131,54 @@
       {
         "n": "IRS — 2026 tax inflation adjustments (FEIE $132,900)",
         "u": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill"
+      },
+      {
+        "n": "DGERT / Diário da República — Decreto-Lei fixing the 2026 national minimum wage (RMMG) at €920/month",
+        "u": "https://www.dgert.gov.pt/retribuicao-minima-mensal-garantida-para-2026"
+      }
+    ],
+    "colombia-guides": [
+      {
+        "n": "Portafolio — Consejo de Estado reactivates the 23% 2026 minimum-wage increase (litigation over the 2026 SMMLV decree)",
+        "u": "https://www.portafolio.co/economia/gobierno/consejo-de-estado-reactiva-el-aumento-del-23-del-salario-minimo-de-2026-esto-determino-498416"
+      }
+    ],
+    "costa-rica-guides": [
+      {
+        "n": "Costa Rica — Law 9996 (Ley para la Atracción de Inversionistas, Rentistas y Pensionados), official legal text",
+        "u": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=94782"
+      },
+      {
+        "n": "Costa Rica DGME — Regularización Migratoria (investor-residency requirements)",
+        "u": "https://migracion.go.cr/regularizacion/"
+      }
+    ],
+    "croatia-guides": [
+      {
+        "n": "Porezna uprava (Croatian Tax Administration) — Real Estate Tax, official rate range €0.60–€8.00/m²",
+        "u": "https://porezna-uprava.gov.hr/en/real-estate-tax/7372"
+      }
+    ],
+    "spain-digital-nomad-visa": [
+      {
+        "n": "Ministerio de Inclusión, Seguridad Social y Migraciones — Nómadas Digitales FAQ (official)",
+        "u": "https://bibliovirtual.inclusion.gob.es/documents/d/unidadgrandesempresas/nomadas-digitales-faqs-espanol"
+      },
+      {
+        "n": "BOE — Real Decreto 126/2026, fijación del Salario Mínimo Interprofesional para 2026",
+        "u": "https://www.boe.es/eli/es/rd/2026/02/18/126/con"
+      },
+      {
+        "n": "Agencia Tributaria — Régimen especial de impatriados (Article 93 LIRPF, \"Beckham law\")",
+        "u": "https://sede.agenciatributaria.gob.es/Sede/en_gb/ayuda/manuales-videos-folletos/manuales-practicos/manual-tributacion-no-residentes/regimenes-opcionales/regimen-especial-impatriados.html"
+      },
+      {
+        "n": "IRS — Foreign Earned Income Exclusion (Form 2555)",
+        "u": "https://www.irs.gov/individuals/international-taxpayers/foreign-earned-income-exclusion"
+      },
+      {
+        "n": "BOE — Código Civil, Art. 22 (residency periods for Spanish naturalisation)",
+        "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763"
       }
     ]
   },

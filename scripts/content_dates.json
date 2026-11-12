@@ -128,8 +128,8 @@
     "hash": "d4d8b09efba6176b"
   },
   "buying-property-spain": {
-    "date": "2026-11-03",
-    "hash": "7526547c77610b51"
+    "date": "2026-11-12",
+    "hash": "c579a4b21434c9fd"
   },
   "buying-property-thailand": {
     "date": "2026-10-30",
@@ -160,24 +160,24 @@
     "hash": "d323f8d5cc992b13"
   },
   "colombia-guides": {
-    "date": "2026-09-05",
-    "hash": "fbbc61ce8a01b714"
+    "date": "2026-11-12",
+    "hash": "b75bd9494a8c755c"
   },
   "contact": {
     "date": "2026-09-05",
     "hash": "a44bca37261f37a5"
   },
   "costa-rica-guides": {
-    "date": "2026-09-19",
-    "hash": "a4595d34d5d26fd0"
+    "date": "2026-11-12",
+    "hash": "1d98552631bc645c"
   },
   "costa-rica-pensionado-visa": {
     "date": "2026-11-03",
     "hash": "f3d545fde608c64e"
   },
   "croatia-guides": {
-    "date": "2026-09-05",
-    "hash": "bf330d743ee07929"
+    "date": "2026-11-12",
+    "hash": "9ee32e6f009144d5"
   },
   "cyprus-guides": {
     "date": "2026-09-05",
@@ -431,13 +431,17 @@
     "date": "2026-10-23",
     "hash": "e12c399d37a8ae9e"
   },
+  "spain-digital-nomad-visa": {
+    "date": "2026-11-12",
+    "hash": "b7b7c2eb7e6073f5"
+  },
   "spain-golden-visa": {
-    "date": "2026-09-21",
-    "hash": "3b23a13e1aeae42e"
+    "date": "2026-11-12",
+    "hash": "73b8d97ccb89cd74"
   },
   "spain-guides": {
-    "date": "2026-11-03",
-    "hash": "a1a86789811cd5ce"
+    "date": "2026-11-12",
+    "hash": "9c40455e916b3614"
   },
   "spain-non-lucrative-visa": {
     "date": "2026-10-21",
