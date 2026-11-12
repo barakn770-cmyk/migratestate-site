@@ -32,15 +32,7 @@
   .lead-form button{width:100%;font-size:17px;padding:15px}
   .trust-row{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px;margin:14px 0 0}
   .trust-row span{display:flex;align-items:center;gap:7px}
-  .partners{background:var(--cream);border-radius:16px;padding:26px;margin:34px 0 0}
-  .partners h2{font-size:22px;margin:0 0 6px}
-  .partners p{color:var(--muted);margin:0 0 18px;font-size:15.5px}
-  .partner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .partner{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-  .partner h3{font-size:16px;margin:0 0 4px}
-  .partner p{font-size:14px;color:var(--muted);margin:0 0 10px}
-  .partner a{font-weight:600;color:var(--gold-dark);font-size:14px}
-  @media(max-width:680px){.lead-grid,.partner-grid{grid-template-columns:1fr}}
+  @media(max-width:680px){.lead-grid{grid-template-columns:1fr}}
 </style>
 
 <meta property="og:image" content="https://migratestate.com/og/get-started.png">
@@ -57,7 +49,7 @@
     {
       "@type": "WebPage",
       "name": "Get Matched with a Vetted Expert",
-      "dateModified": "2026-10-22",
+      "dateModified": "2026-11-12",
       "description": "Tell us about your overseas property or residency plans and get matched, free, with vetted lawyers, brokers and advisers for your target country.",
       "url": "https://migratestate.com/get-started",
       "inLanguage": "en-US",
@@ -106,6 +98,7 @@
       <a href="contact">Contact</a>
       <a class="btn nav-cta" href="get-started">Get Matched</a>
     </nav>
+    <a class="btn nav-cta nav-cta-mobile" href="get-started" style="display:none">Get Matched</a>
     <button class="menu-toggle" aria-label="Menu">☰</button>
   </div>
 </header>
@@ -157,12 +150,29 @@
         <label for="lf-country">Target country / region</label>
         <select id="lf-country" name="fields[country]" required>
           <option value="">Select…</option>
-          <option>Portugal</option>
-          <option>Spain</option>
+          <option>Bali &amp; Indonesia</option>
+          <option>Belize</option>
+          <option>Brazil</option>
+          <option>Colombia</option>
+          <option>Costa Rica</option>
+          <option>Croatia</option>
+          <option>Cyprus</option>
+          <option>Dominican Republic</option>
+          <option>Dubai</option>
+          <option>France</option>
+          <option>Germany</option>
           <option>Greece</option>
           <option>Italy</option>
+          <option>Japan</option>
+          <option>Malaysia</option>
           <option>Mexico</option>
-          <option>Dubai / UAE</option>
+          <option>Panama</option>
+          <option>Philippines</option>
+          <option>Portugal</option>
+          <option>Spain</option>
+          <option>Thailand</option>
+          <option>Turkey</option>
+          <option>Uruguay</option>
           <option>Still deciding</option>
           <option>Other</option>
         </select>
@@ -259,33 +269,6 @@
   }
   </script>
 
-  <!-- AFFILIATE PARTNERS — replace the '#' hrefs with your real affiliate/referral links once you've joined each program. -->
-  <div class="partners">
-    <h2>Trusted services for buying abroad</h2>
-    <p>While we match you with experts, these are the tools most overseas buyers need. (We may earn a commission, at no extra cost to you.)</p>
-    <div class="partner-grid">
-      <div class="partner">
-        <h3>Send money abroad at the real rate</h3>
-        <p>Skip the 3–4% bank markup on your deposit and purchase funds with a specialist FX/transfer service.</p>
-        <a href="#" rel="sponsored nofollow noopener" target="_blank">Compare transfer options →</a>
-      </div>
-      <div class="partner">
-        <h3>Golden Visa &amp; residency specialists</h3>
-        <p>Licensed advisers who handle qualifying investments, paperwork and timelines end-to-end.</p>
-        <a href="#" rel="sponsored nofollow noopener" target="_blank">Explore programs →</a>
-      </div>
-      <div class="partner">
-        <h3>Cross-border mortgage brokers</h3>
-        <p>Non-resident financing in Spain, Portugal, Mexico and beyond — pre-qualify before you offer.</p>
-        <a href="#" rel="sponsored nofollow noopener" target="_blank">Check your options →</a>
-      </div>
-      <div class="partner">
-        <h3>International tax &amp; FBAR/FATCA help</h3>
-        <p>Cross-border CPAs who model the US (or your home-country) tax before you sign.</p>
-        <a href="#" rel="sponsored nofollow noopener" target="_blank">Find an adviser →</a>
-      </div>
-    </div>
-  </div>
 </article>
 
 <footer class="site-footer">
@@ -309,15 +292,28 @@
     </div>
   </div>
 </footer>
-
+<!-- mobilemenu:start -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">✕</button>
+  <a href="/#guides">All Guides</a>
+  <a href="buying-property-abroad-experts">Buy Property</a>
+  <a href="/#about">About</a>
+  <a href="contact">Contact</a>
+  <a class="btn" href="get-started">Get Matched</a>
+</div>
 <script>
-document.querySelector('.menu-toggle').addEventListener('click',function(){
-  var n=document.querySelector('.nav-links');
-  n.style.display=(n.style.display==='flex')?'none':'flex';
-  n.style.flexDirection='column';n.style.position='absolute';n.style.top='72px';n.style.right='24px';
-  n.style.background='#fff';n.style.padding='18px 22px';n.style.borderRadius='12px';n.style.boxShadow='0 24px 60px rgba(15,42,67,.14)';
-});
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobileMenu');
+  const close = document.getElementById('menuClose');
+  if(toggle && menu && close){
+    toggle.addEventListener('click', () => menu.classList.add('open'));
+    close.addEventListener('click', () => menu.classList.remove('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  }
 </script>
+<!-- mobilemenu:end -->
+
+
 <script src="anim.js" defer></script>
 </body>
 </html>

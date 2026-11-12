@@ -133,7 +133,7 @@
   ]
 }
 </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967831162245810" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <header class="site-header">
@@ -147,6 +147,7 @@
       <a href="contact">Contact</a>
       <a class="btn nav-cta" href="get-started">Get Matched</a>
     </nav>
+    <a class="btn nav-cta nav-cta-mobile" href="get-started" style="display:none">Get Matched</a>
     <button class="menu-toggle" aria-label="Menu">☰</button>
   </div>
 </header>
@@ -327,30 +328,33 @@
     </div>
   </div>
 </footer>
-
+<!-- mobilemenu:start -->
 <div class="mobile-menu" id="mobileMenu">
-  <button class="menu-close" id="menuClose">✕</button>
-  <nav>
-    <a href="/#guides">Buy Property</a>
-    <a href="/#guides">Golden Visa</a>
-    <a href="us-tax-foreign-property">Taxes &amp; Money</a>
-    <a href="/#about">About</a>
-    <a href="contact">Contact</a>
-      <a class="btn nav-cta" href="get-started">Get Matched</a>
-  </nav>
+  <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">✕</button>
+  <a href="/#guides">Buy Property</a>
+  <a href="/#guides">Golden Visa</a>
+  <a href="us-tax-foreign-property">Taxes &amp; Money</a>
+  <a href="/#about">About</a>
+  <a href="contact">Contact</a>
+  <a class="btn" href="get-started">Get Matched</a>
 </div>
 <script>
-  (function(){
-    var toggle=document.querySelector('.menu-toggle');
-    var menu=document.getElementById('mobileMenu');
-    var close=document.getElementById('menuClose');
-    if(toggle&&menu){
-      toggle.addEventListener('click',function(){menu.classList.add('open');});
-      if(close)close.addEventListener('click',function(){menu.classList.remove('open');});
-      menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
-    }
-  })();
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobileMenu');
+  const close = document.getElementById('menuClose');
+  if(toggle && menu && close){
+    toggle.addEventListener('click', () => menu.classList.add('open'));
+    close.addEventListener('click', () => menu.classList.remove('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  }
 </script>
+<!-- mobilemenu:end -->
+
+
+
 <script src="anim.js"></script>
-</body>
+
+<!-- mobilecta:start -->
+<a class="mobile-cta-bar" href="get-started" style="display:none">Get matched with a vetted local expert</a>
+<!-- mobilecta:end --></body>
 </html>
