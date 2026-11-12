@@ -1,2 +1,4 @@
+# Also applied in src/index.js. The Worker runs before static assets, and
+# _redirects is not applied to responses the Worker returns.
 /owning-property-abroad-tax-reporting /us-tax-foreign-property 301
 /owning-property-abroad-tax-reporting.html /us-tax-foreign-property 301

@@ -1,11 +1,15 @@
 {
-  // Cloudflare Worker (static assets) config for migratestate.com
+  // Cloudflare Worker (static assets) config for migratestate.com.
   // On every push to the connected GitHub repo, Cloudflare Workers Builds
-  // runs `wrangler deploy`, which uploads everything in ./public as the
-  // site's static assets. No build step is required.
+  // runs `wrangler deploy`, which uploads ./public as static assets and the
+  // Worker in ./src/index.js. The Worker runs first so it can 301 www/http
+  // to https://migratestate.com and attach security headers. No build step.
   "name": "migratestate",
   "compatibility_date": "2026-06-01",
+  "main": "src/index.js",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }
