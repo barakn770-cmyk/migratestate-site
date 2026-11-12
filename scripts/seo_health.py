@@ -26,7 +26,12 @@ WHAT IT AUTO-FIXES (--fix)
   8. Related guides              -> stable scored links (unchanged blocks are left alone)
   9. Hub FAQPage schema          -> built from the on-page FAQ
  10. Taxes & Money nav          -> points at the tax pillar, not the homepage guide grid
- 11. AdSense                    -> stripped from lead pages listed in NO_ADS
+ 11. AdSense                    -> stripped from lead pages, country hubs, and NO_ADS
+ 12. Mobile nav                 -> homepage #mobileMenu + wiring, and a header Get Matched button
+ 13. Mobile sticky CTA          -> bottom bar on article and hub pages
+ 14. Early CTA                  -> short Get Matched box after the answer box / Key Facts
+ 15. Checklist signup           -> MailerLite block before the end of every article
+ 16. Get-started countries      -> dropdown derived from country hub pages; dead # partner links removed
 
 WHAT IT ONLY REPORTS (needs a human)
   - broken internal links, unbalanced <div>, invalid JSON-LD, truncated files
@@ -148,7 +153,18 @@ def git_lastmod(path: str, repo_root: str) -> str:
 
 def content_body(doc: str) -> str:
     """Page content used for lastmod. Chrome, generated blocks, and JSON-LD are ignored."""
-    body = re.sub(r"<header\b[^>]*>.*?</header>", "", doc, flags=re.S | re.I)
+    body = doc
+    # Generated conversion chrome must not move dateModified / sitemap lastmod.
+    # The optional newline is the one --fix inserts in front of a marker. Eating it
+    # keeps generated chrome from changing the content hash (and sitemap lastmod).
+    for name in ("mobilemenu", "mobilecta", "earlycta", "checklist"):
+        body = re.sub(
+            rf"\n?<!-- {name}:start -->.*?<!-- {name}:end -->",
+            "",
+            body,
+            flags=re.S,
+        )
+    body = re.sub(r"<header\b[^>]*>.*?</header>", "", body, flags=re.S | re.I)
     body = re.sub(r"<footer\b[^>]*>.*?</footer>", "", body, flags=re.S | re.I)
     body = re.sub(r'<div class="mobile-menu"[^>]*>.*?</div>', "", body, flags=re.S)
     body = re.sub(r"<!-- related:start -->.*?<!-- related:end -->", "", body, flags=re.S)
@@ -593,8 +609,9 @@ def fix_sitemap(site: Site, log: list) -> None:
 NON_ARTICLES = {"index", "contact", "get-started", "privacy", "terms"}
 
 # Lead pages: no AdSense (they exist to convert to "Get matched", not to sell clicks).
+# Country hubs (*-guides) are added in ads_blocked() so a new hub is covered automatically.
 NO_ADS = {
-    "index", "contact", "get-started",
+    "index", "contact", "get-started", "buying-property-abroad-experts",
     "portugal-golden-visa", "greece-golden-visa", "spain-golden-visa", "italy-golden-visa",
     "malta-golden-visa", "hungary-golden-visa", "dubai-golden-visa",
     "best-golden-visa-for-americans", "ultimate-guide-golden-visa", "greece-vs-portugal-golden-visa",
@@ -602,6 +619,10 @@ NO_ADS = {
     "mexico", "buying-property-portugal", "buying-property-spain", "buying-property-greece",
     "buying-property-italy", "buying-property-dubai", "us-tax-foreign-property",
 }
+
+
+def ads_blocked(site: "Site", slug: str) -> bool:
+    return slug in NO_ADS or slug in site.hubs
 
 COUNTRY_TOKENS = {
     "portugal", "spain", "greece", "italy", "malta", "hungary", "cyprus", "croatia", "france",
@@ -912,18 +933,376 @@ def sync_content_dates(site: "Site", log: list) -> None:
         log.append(f"content dates recorded: {len(store)} pages")
 
 
-ADSENSE_RE = re.compile(r'\s*<script async src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js[^"]*"[^>]*></script>')
+# Do not eat surrounding whitespace: the content hash ignores the script tag itself
+# but counts the bytes around it, and lastmod should not move just because an ad tag left.
+ADSENSE_RE = re.compile(r'<script async src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js[^"]*"[^>]*></script>')
 
 
 def fix_adsense(site: "Site", log: list) -> None:
     for slug in sorted(site.slugs):
-        if slug not in NO_ADS:
+        if not ads_blocked(site, slug):
             continue
         doc = site.docs[slug]
         new = ADSENSE_RE.sub("", doc)
         if new != doc:
             site.write(slug, new)
             log.append(f"AdSense removed from lead page: {slug}")
+
+
+# --------------------------------------------------------------- conversion
+# Marker-wrapped blocks. Idempotent: a second --fix rewrites the same bytes.
+
+
+ML_SUBSCRIBE_URL = "https://assets.mailerlite.com/jsonp/2428927/forms/190085025285276727/subscribe"
+ML_MAILTO = "mailto:barakn770@gmail.com?subject=Overseas%20property%20checklist"
+
+# Reads the JSON {success:...} body. If the browser cannot read it (CORS), falls
+# back to the callback= JSONP pattern MailerLite's embed script uses.
+SUBSCRIBE_JS = """function msSubscribe(e){
+  e.preventDefault();
+  var f=e.target, b=f.querySelector('button'), box=f.parentNode;
+  var ok=box.querySelector('.ms-success'), err=box.querySelector('.ms-error');
+  var data=new FormData(f);
+  data.append('ml-submit','1');
+  data.append('anticsrf','true');
+  var endpoint='%s';
+  b.textContent='Sending…';
+  b.disabled=true;
+  if(err) err.hidden=true;
+  function succeed(){ if(ok) ok.hidden=false; f.hidden=true; }
+  function fail(){
+    b.textContent='Send me the checklist';
+    b.disabled=false;
+    f.hidden=false;
+    if(err) err.hidden=false;
+  }
+  function readSuccess(payload){
+    if(payload && payload.success===true) succeed();
+    else fail();
+  }
+  function jsonp(){
+    var cb='msCb'+Date.now()+Math.floor(Math.random()*10000);
+    var params=new URLSearchParams(data).toString();
+    var done=false, s=document.createElement('script');
+    function cleanup(){
+      clearTimeout(timer);
+      try{ delete window[cb]; }catch(ex){ window[cb]=undefined; }
+      if(s.parentNode) s.parentNode.removeChild(s);
+    }
+    var timer=setTimeout(function(){ if(done) return; done=true; cleanup(); fail(); }, 8000);
+    window[cb]=function(payload){ if(done) return; done=true; cleanup(); readSuccess(payload); };
+    s.onerror=function(){ if(done) return; done=true; cleanup(); fail(); };
+    s.src=endpoint+'?callback='+encodeURIComponent(cb)+'&'+params;
+    document.head.appendChild(s);
+  }
+  fetch(endpoint,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(function(r){ return r.text().then(function(t){ try{ return JSON.parse(t); }catch(ex){ return null; } }); })
+    .then(function(j){ if(j) readSuccess(j); else jsonp(); })
+    .catch(jsonp);
+  return false;
+}""" % ML_SUBSCRIBE_URL
+
+
+def subscribe_script() -> str:
+    return "<script>\n" + SUBSCRIBE_JS + "\n</script>"
+
+
+EARLY_CTA = """<!-- earlycta:start -->
+<div class="cta-box">
+  <div><strong>Want this checked for your own plans?</strong><p>Get matched with a vetted local expert — free, and no obligation.</p></div>
+  <a class="btn" href="get-started">Get matched →</a>
+</div>
+<!-- earlycta:end -->"""
+
+
+def checklist_block() -> str:
+    return f"""<!-- checklist:start -->
+<section class="checklist-signup" aria-label="Free checklist">
+  <div class="newsletter">
+    <span class="eyebrow" style="color:var(--gold)">Free checklist</span>
+    <h2>The Americans' Overseas Property Checklist</h2>
+    <p>The legal, tax and financial checks to run before you buy abroad, delivered to your email. Plus new country guides as they drop.</p>
+    <form class="form-row" onsubmit="return msSubscribe(event)">
+      <input type="email" name="fields[email]" placeholder="Your email address" autocomplete="email" required>
+      <button class="btn" type="submit">Send me the checklist</button>
+    </form>
+    <p class="ms-success" hidden>You're in. Check your inbox to confirm — your checklist is on the way.</p>
+    <p class="ms-error" hidden>We couldn't sign you up just now. Email <a href="{ML_MAILTO}">barakn770@gmail.com</a> and we'll send the checklist.</p>
+    <p class="checklist-note">No spam. Unsubscribe anytime. We never share your email.</p>
+  </div>
+</section>
+{subscribe_script()}
+<!-- checklist:end -->"""
+
+
+MOBILE_STICKY = """<!-- mobilecta:start -->
+<a class="mobile-cta-bar" href="get-started" style="display:none">Get matched with a vetted local expert</a>
+<!-- mobilecta:end -->"""
+
+
+def wants_mobile_sticky(site: "Site", slug: str) -> bool:
+    return is_article(site, slug) or slug in site.hubs
+
+
+def _nav_anchors(doc: str) -> list[tuple[str, str]]:
+    m = re.search(r'<nav class="nav-links">(.*?)</nav>', doc, re.S)
+    if not m:
+        return []
+    out = []
+    for attrs, text in re.findall(r"<a\b([^>]*)>(.*?)</a>", m.group(1), re.S):
+        href_m = re.search(r'href="([^"]*)"', attrs)
+        href = href_m.group(1) if href_m else "get-started"
+        label = re.sub(r"\s+", " ", text).strip()
+        out.append((href, label))
+    return out
+
+
+def render_mobile_menu(doc: str) -> str:
+    """Homepage slide-in menu, filled from this page's own nav links."""
+    lines = []
+    seen_matched = False
+    for href, label in _nav_anchors(doc):
+        plain = strip_tags(label)
+        if plain == "Get Matched":
+            seen_matched = True
+            lines.append(f'  <a class="btn" href="{href}">Get Matched</a>')
+        else:
+            lines.append(f'  <a href="{href}">{label}</a>')
+    if not seen_matched:
+        lines.append('  <a class="btn" href="get-started">Get Matched</a>')
+    links = "\n".join(lines)
+    return f"""<!-- mobilemenu:start -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">✕</button>
+{links}
+</div>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobileMenu');
+  const close = document.getElementById('menuClose');
+  if(toggle && menu && close){{
+    toggle.addEventListener('click', () => menu.classList.add('open'));
+    close.addEventListener('click', () => menu.classList.remove('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  }}
+</script>
+<!-- mobilemenu:end -->"""
+
+
+def _strip_nav_scripts(doc: str) -> str:
+    """Drop legacy hamburger handlers (inline nav toggle, or an older mobile menu)."""
+    def repl(m: re.Match) -> str:
+        body = m.group(1)
+        if any(tok in body for tok in ("mobileMenu", "menu-toggle", "menuClose", "closeMenu")):
+            return ""
+        return m.group(0)
+    return re.sub(r"<script\b[^>]*>(.*?)</script>", repl, doc, flags=re.S)
+
+
+def _strip_marker(doc: str, name: str) -> str:
+    """Remove one generated block and the single newline --fix put in front of it."""
+    return re.sub(
+        rf"\n?<!-- {name}:start -->.*?<!-- {name}:end -->",
+        "",
+        doc,
+        count=1,
+        flags=re.S,
+    )
+
+
+def _insert_after_footer(doc: str, block: str) -> str:
+    # One new newline, which content_body strips with the marker. Existing
+    # whitespace after the footer stays put so the content hash does not move.
+    return re.sub(
+        r"</footer>",
+        lambda m: m.group(0) + "\n" + block,
+        doc,
+        count=1,
+        flags=re.I,
+    )
+
+
+def fix_mobile_nav(site: "Site", log: list) -> None:
+    header_cta = (
+        '<a class="btn nav-cta nav-cta-mobile" href="get-started" style="display:none">Get Matched</a>\n'
+    )
+    for slug in sorted(site.slugs):
+        doc = site.docs[slug]
+        block = render_mobile_menu(doc)
+        new = _strip_marker(doc, "mobilemenu")
+        new = re.sub(r'<div class="mobile-menu" id="mobileMenu">.*?</div>', "", new, count=1, flags=re.S)
+        new = _strip_nav_scripts(new)
+        if "nav-cta-mobile" not in new:
+            new2, n = re.subn(
+                r"([ \t]*)<button class=\"menu-toggle\"",
+                lambda m: f"{m.group(1)}{header_cta}{m.group(1)}<button class=\"menu-toggle\"",
+                new,
+                count=1,
+            )
+            if n:
+                new = new2
+        if "</footer>" in new.lower():
+            new = _insert_after_footer(new, block)
+        else:
+            new = re.sub(r"</body>", "\n" + block + "</body>", new, count=1, flags=re.I)
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"mobile nav wired: {slug}")
+
+
+def fix_mobile_sticky(site: "Site", log: list) -> None:
+    for slug in sorted(site.slugs):
+        doc = site.docs[slug]
+        new = _strip_marker(doc, "mobilecta")
+        if wants_mobile_sticky(site, slug):
+            new = re.sub(r"</body>", "\n" + MOBILE_STICKY + "</body>", new, count=1, flags=re.I)
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"mobile sticky CTA {'added' if wants_mobile_sticky(site, slug) else 'removed'}: {slug}")
+
+
+def _early_anchor(doc: str):
+    """End of the intro block a reader sees first: answer box, else Key Facts, else the top disclaimer."""
+    m = re.search(r'<div class="answer-box">.*?</div>', doc, re.S)
+    if m:
+        return m
+    m = re.search(r"<h[23][^>]*>[^<]*[Kk]ey [Ff]acts[^<]*</h[23]>", doc)
+    if m:
+        return m
+    m = re.search(r'<div class="disclaim-box">.*?</div>', doc, re.S)
+    if m:
+        return m
+    return re.search(r'<div class="disclaimer-box">.*?</div>', doc, re.S)
+
+
+def fix_early_cta(site: "Site", log: list) -> None:
+    for slug in sorted(site.slugs):
+        if not is_article(site, slug):
+            continue
+        doc = site.docs[slug]
+        if "<!-- earlycta:start -->" in doc:
+            new = re.sub(r"<!-- earlycta:start -->.*?<!-- earlycta:end -->", EARLY_CTA, doc, count=1, flags=re.S)
+        else:
+            anchor = _early_anchor(doc)
+            if not anchor:
+                log.append(f"early CTA skipped (no answer box): {slug}")
+                continue
+            new = doc[:anchor.end()] + "\n" + EARLY_CTA + doc[anchor.end():]
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"early CTA added: {slug}")
+
+
+def _article_close(doc: str):
+    return re.search(r"\n[ \t]*</article>", doc) or re.search(r"\n[ \t]*</main>", doc)
+
+
+def fix_checklist(site: "Site", log: list) -> None:
+    block = checklist_block()
+    for slug in sorted(site.slugs):
+        if not is_article(site, slug):
+            continue
+        doc = site.docs[slug]
+        if "<!-- checklist:start -->" in doc:
+            new = re.sub(r"<!-- checklist:start -->.*?<!-- checklist:end -->", lambda m: block, doc, count=1, flags=re.S)
+        else:
+            close = _article_close(doc)
+            if not close:
+                log.append(f"checklist skipped (no article close): {slug}")
+                continue
+            new = doc[:close.start()] + "\n" + block + doc[close.start():]
+        if new != doc:
+            site.write(slug, new)
+            log.append(f"checklist signup added: {slug}")
+
+
+def fix_home_subscribe(site: "Site", log: list) -> None:
+    """Homepage newsletter uses the same reader as the article checklist block."""
+    if "index" not in site.docs:
+        return
+    doc = site.docs["index"]
+    new = doc.replace(
+        "A 2-page PDF: the 18 legal, tax and financial checks to run before you buy abroad. Plus new country guides as they drop.",
+        "The legal, tax and financial checks to run before you buy abroad, delivered to your email. Plus new country guides as they drop.",
+    )
+    new = re.sub(
+        r"<script>\s*function msSubscribe\(e\)\{.*?</script>",
+        lambda m: subscribe_script(),
+        new,
+        count=1,
+        flags=re.S,
+    )
+    if 'class="ms-error"' not in new:
+        new = new.replace(
+            '<p class="ms-success" style="display:none;color:#fff;font-size:18px;margin:6px 0 0">✓ You\'re in! Check your inbox to confirm — your checklist is on the way.</p>',
+            '<p class="ms-success" hidden style="color:#fff;font-size:18px;margin:6px 0 0">You\'re in. Check your inbox to confirm — your checklist is on the way.</p>\n'
+            f'      <p class="ms-error" hidden style="color:#ffd0c8;font-size:15.5px;margin:8px 0 0">We couldn\'t sign you up just now. Email <a href="{ML_MAILTO}" style="color:#fff;text-decoration:underline">barakn770@gmail.com</a> and we\'ll send the checklist.</p>',
+            1,
+        )
+    # The shared reader toggles the hidden attribute, so an inline display:none would stick.
+    new = new.replace(
+        '<p class="ms-success" style="display:none;color:#fff;font-size:18px;margin:6px 0 0">',
+        '<p class="ms-success" hidden style="color:#fff;font-size:18px;margin:6px 0 0">',
+        1,
+    )
+    if new != doc:
+        site.write("index", new)
+        log.append("homepage checklist subscribe reads the MailerLite response")
+
+
+def country_option_labels(site: "Site") -> list[str]:
+    labels = []
+    for hub in site.hubs:
+        if hub == "general-guides":
+            continue
+        labels.append(html.unescape(hub_label(hub)))
+    return sorted(set(labels), key=lambda s: s.casefold())
+
+
+def fix_get_started(site: "Site", log: list) -> None:
+    """Country dropdown follows the hub pages. Drop the dead '#' partner links."""
+    if "get-started" not in site.docs:
+        return
+    doc = site.docs["get-started"]
+    lines = ['          <option value="">Select…</option>']
+    for label in country_option_labels(site):
+        lines.append(f"          <option>{html.escape(label)}</option>")
+    lines.append("          <option>Still deciding</option>")
+    lines.append("          <option>Other</option>")
+    inner = "\n" + "\n".join(lines) + "\n        "
+    new, n = re.subn(
+        r'(<select id="lf-country" name="fields\[country\]" required>)(.*?)(</select>)',
+        lambda m: m.group(1) + inner + m.group(3),
+        doc,
+        count=1,
+        flags=re.S,
+    )
+    if n:
+        doc = new
+    doc2, n = re.subn(
+        r'\n[ \t]*<!-- AFFILIATE PARTNERS.*?<div class="partners">.*?</div>\s*(?=</article>)',
+        "\n",
+        doc,
+        count=1,
+        flags=re.S,
+    )
+    if n:
+        doc = doc2
+    doc = doc.replace(
+        "  .partners{background:var(--cream);border-radius:16px;padding:26px;margin:34px 0 0}\n"
+        "  .partners h2{font-size:22px;margin:0 0 6px}\n"
+        "  .partners p{color:var(--muted);margin:0 0 18px;font-size:15.5px}\n"
+        "  .partner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}\n"
+        "  .partner{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}\n"
+        "  .partner h3{font-size:16px;margin:0 0 4px}\n"
+        "  .partner p{font-size:14px;color:var(--muted);margin:0 0 10px}\n"
+        "  .partner a{font-weight:600;color:var(--gold-dark);font-size:14px}\n"
+        "  @media(max-width:680px){.lead-grid,.partner-grid{grid-template-columns:1fr}}\n",
+        "  @media(max-width:680px){.lead-grid{grid-template-columns:1fr}}\n",
+    )
+    if doc != site.docs["get-started"]:
+        site.write("get-started", doc)
+        log.append(f"get-started countries: {len(country_option_labels(site))} hubs, dead partner links removed")
 
 
 # ---------------------------------------------------------------- checkers
@@ -992,8 +1371,24 @@ def run_checks(site: Site) -> dict:
                 problems["missing_sources_block"].append(slug)
             if "<!-- related:start -->" not in doc:
                 problems["missing_related_guides"].append(slug)
-        if slug in NO_ADS and "adsbygoogle.js" in doc:
+        if ads_blocked(site, slug) and "adsbygoogle.js" in doc:
             problems["adsense_on_lead_page"].append(slug)
+        if 'id="mobileMenu"' not in doc:
+            problems["missing_mobile_menu"].append(slug)
+        if "nav-cta-mobile" not in doc:
+            problems["missing_mobile_header_cta"].append(slug)
+        if wants_mobile_sticky(site, slug):
+            if "<!-- mobilecta:start -->" not in doc:
+                problems["missing_mobile_sticky_cta"].append(slug)
+        elif "<!-- mobilecta:start -->" in doc:
+            problems["unexpected_mobile_sticky_cta"].append(slug)
+        if is_article(site, slug):
+            if "<!-- earlycta:start -->" not in doc:
+                problems["missing_early_cta"].append(slug)
+            if "<!-- checklist:start -->" not in doc:
+                problems["missing_checklist"].append(slug)
+        if "no-cors" in doc:
+            problems["subscribe_ignores_response"].append(slug)
         if desc_m and len(html.unescape(desc_m.group(1))) < 110:
             problems["description_too_short"].append(f"{slug} ({len(html.unescape(desc_m.group(1)))})")
 
@@ -1083,9 +1478,15 @@ def main() -> int:
         fix_footer_hubs(site, log)
         fix_adsense(site, log)
         fix_tax_nav(site, log)
+        fix_mobile_nav(site, log)
+        fix_mobile_sticky(site, log)
+        fix_early_cta(site, log)
+        fix_get_started(site, log)
+        fix_home_subscribe(site, log)
         fix_sources(site, log)
         sync_content_dates(site, log)
         fix_related_guides(site, log)
+        fix_checklist(site, log)
         fix_sitemap(site, log)
 
         print(f"\nREPAIRS ({len(log)}):")

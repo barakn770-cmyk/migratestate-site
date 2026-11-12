@@ -133,6 +133,7 @@
       <a href="contact">Contact</a>
       <a class="btn nav-cta" href="get-started">Get Matched</a>
     </nav>
+    <a class="btn nav-cta nav-cta-mobile" href="get-started" style="display:none">Get Matched</a>
     <button class="menu-toggle" aria-label="Menu">&#9776;</button>
   </div>
 </header>
@@ -151,6 +152,12 @@
   <div class="answer-box">
     <strong>Sold a home abroad? The IRS still wants it on paper.</strong> A US citizen reports a foreign property sale on <strong>Form 8949</strong>, with totals carried to <strong>Schedule D</strong> &mdash; proceeds and basis translated to <strong>US dollars</strong> at two different exchange rates. But if the property was ever <em>rented</em>, it goes on <strong>Form 4797</strong> first, not 8949. Getting that fork wrong is the single most common error on a foreign sale.
   </div>
+<!-- earlycta:start -->
+<div class="cta-box">
+  <div><strong>Want this checked for your own plans?</strong><p>Get matched with a vetted local expert — free, and no obligation.</p></div>
+  <a class="btn" href="get-started">Get matched →</a>
+</div>
+<!-- earlycta:end -->
 
   <div class="disclaim-box">
     <strong>Disclaimer:</strong> This article is informational and is not legal, tax, or financial advice. US reporting rules, form line numbers and thresholds change, and the correct form depends on how you used the property, whether it was ever rented, and your filing status. Confirm your position with a US cross-border tax advisor before you file.
@@ -337,6 +344,67 @@
     <a href="depreciation-foreign-rental-property">Depreciating Foreign Rental Property: 30-Year ADS Rule &rarr;</a>
   </nav>
 <!-- related:end -->
+<!-- checklist:start -->
+<section class="checklist-signup" aria-label="Free checklist">
+  <div class="newsletter">
+    <span class="eyebrow" style="color:var(--gold)">Free checklist</span>
+    <h2>The Americans' Overseas Property Checklist</h2>
+    <p>The legal, tax and financial checks to run before you buy abroad, delivered to your email. Plus new country guides as they drop.</p>
+    <form class="form-row" onsubmit="return msSubscribe(event)">
+      <input type="email" name="fields[email]" placeholder="Your email address" autocomplete="email" required>
+      <button class="btn" type="submit">Send me the checklist</button>
+    </form>
+    <p class="ms-success" hidden>You're in. Check your inbox to confirm — your checklist is on the way.</p>
+    <p class="ms-error" hidden>We couldn't sign you up just now. Email <a href="mailto:barakn770@gmail.com?subject=Overseas%20property%20checklist">barakn770@gmail.com</a> and we'll send the checklist.</p>
+    <p class="checklist-note">No spam. Unsubscribe anytime. We never share your email.</p>
+  </div>
+</section>
+<script>
+function msSubscribe(e){
+  e.preventDefault();
+  var f=e.target, b=f.querySelector('button'), box=f.parentNode;
+  var ok=box.querySelector('.ms-success'), err=box.querySelector('.ms-error');
+  var data=new FormData(f);
+  data.append('ml-submit','1');
+  data.append('anticsrf','true');
+  var endpoint='https://assets.mailerlite.com/jsonp/2428927/forms/190085025285276727/subscribe';
+  b.textContent='Sending…';
+  b.disabled=true;
+  if(err) err.hidden=true;
+  function succeed(){ if(ok) ok.hidden=false; f.hidden=true; }
+  function fail(){
+    b.textContent='Send me the checklist';
+    b.disabled=false;
+    f.hidden=false;
+    if(err) err.hidden=false;
+  }
+  function readSuccess(payload){
+    if(payload && payload.success===true) succeed();
+    else fail();
+  }
+  function jsonp(){
+    var cb='msCb'+Date.now()+Math.floor(Math.random()*10000);
+    var params=new URLSearchParams(data).toString();
+    var done=false, s=document.createElement('script');
+    function cleanup(){
+      clearTimeout(timer);
+      try{ delete window[cb]; }catch(ex){ window[cb]=undefined; }
+      if(s.parentNode) s.parentNode.removeChild(s);
+    }
+    var timer=setTimeout(function(){ if(done) return; done=true; cleanup(); fail(); }, 8000);
+    window[cb]=function(payload){ if(done) return; done=true; cleanup(); readSuccess(payload); };
+    s.onerror=function(){ if(done) return; done=true; cleanup(); fail(); };
+    s.src=endpoint+'?callback='+encodeURIComponent(cb)+'&'+params;
+    document.head.appendChild(s);
+  }
+  fetch(endpoint,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+    .then(function(r){ return r.text().then(function(t){ try{ return JSON.parse(t); }catch(ex){ return null; } }); })
+    .then(function(j){ if(j) readSuccess(j); else jsonp(); })
+    .catch(jsonp);
+  return false;
+}
+</script>
+<!-- checklist:end -->
 </article>
 <footer class="site-footer">
   <div class="container">
@@ -359,15 +427,31 @@
     </div>
   </div>
 </footer>
-
+<!-- mobilemenu:start -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">✕</button>
+  <a href="buying-property-abroad-experts">Buy Property</a>
+  <a href="ultimate-guide-golden-visa">Golden Visa</a>
+  <a href="/#about">About</a>
+  <a href="contact">Contact</a>
+  <a class="btn" href="get-started">Get Matched</a>
+</div>
 <script>
-document.querySelector('.menu-toggle').addEventListener('click',function(){
-  var n=document.querySelector('.nav-links');
-  n.style.display=(n.style.display==='flex')?'none':'flex';
-  n.style.flexDirection='column';n.style.position='absolute';n.style.top='72px';n.style.right='24px';
-  n.style.background='#fff';n.style.padding='18px 22px';n.style.borderRadius='12px';n.style.boxShadow='0 24px 60px rgba(15,42,67,.14)';
-});
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobileMenu');
+  const close = document.getElementById('menuClose');
+  if(toggle && menu && close){
+    toggle.addEventListener('click', () => menu.classList.add('open'));
+    close.addEventListener('click', () => menu.classList.remove('open'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  }
 </script>
+<!-- mobilemenu:end -->
+
+
 <script src="anim.js" defer></script>
-</body>
+
+<!-- mobilecta:start -->
+<a class="mobile-cta-bar" href="get-started" style="display:none">Get matched with a vetted local expert</a>
+<!-- mobilecta:end --></body>
 </html>
