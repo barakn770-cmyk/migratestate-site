@@ -409,8 +409,8 @@
     ],
     "mortgage-in-mexico": [
       {
-        "n": "Banco de México (reference rates)",
-        "u": "https://www.banxico.org.mx/"
+        "n": "Banco de México — Anuncio de Política Monetaria, 5 de noviembre de 2026 (tasa objetivo 6.25%)",
+        "u": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/%7B43236252-D06E-5231-27E8-058810A86A52%7D.pdf"
       },
       {
         "n": "CONDUSEF — financial-consumer protection (mortgage comparison)",
@@ -2139,8 +2139,24 @@
     ],
     "colombia-guides": [
       {
-        "n": "Portafolio — Consejo de Estado reactivates the 23% 2026 minimum-wage increase (litigation over the 2026 SMMLV decree)",
-        "u": "https://www.portafolio.co/economia/gobierno/consejo-de-estado-reactiva-el-aumento-del-23-del-salario-minimo-de-2026-esto-determino-498416"
+        "n": "Presidencia de Colombia — Decreto 0159 de 19 de febrero de 2026 (salario mínimo transitorio COP 1.750.905)",
+        "u": "https://dapre.presidencia.gov.co/normativa/normativa/DECRETO%20No.%200159%20DEL%2019%20DE%20FEBRERO%20DE%202026.pdf"
+      }
+    ],
+    "cyprus-guides": [
+      {
+        "n": "Department of the Registrar of Companies — repeal of stamp duty from 1 January 2026, Law 239(I)/2025",
+        "u": "https://www.companies.gov.cy/en/knowledgebase/news/repeal-of-the-stamp-usies-laws-of-1963-to-2025-law-no-239-i-2025"
+      }
+    ],
+    "dominican-republic-guides": [
+      {
+        "n": "DGII — Aviso 10-26, calendario de implementación de la Ley 30-26 (ganancia de capital inmobiliaria de personas físicas, tasa 10%)",
+        "u": "https://dgii.gov.do/publicacionesOficiales/avisosInformativos/Documents/2026/10-26.pdf"
+      },
+      {
+        "n": "DGII — Ley 30-26",
+        "u": "https://dgii.gov.do/legislacion/leyesTributarias/Documents/Codigo%20Tributario%20y%20Leyes%20que%20lo%20modifican%20y%20complementan/30-26.pdf"
       }
     ],
     "costa-rica-guides": [
@@ -2151,6 +2167,10 @@
       {
         "n": "Costa Rica DGME — Regularización Migratoria (investor-residency requirements)",
         "u": "https://migracion.go.cr/regularizacion/"
+      },
+      {
+        "n": "SCIJ — Decreto Ejecutivo 43926, artículo 4 (inversión mínima US$150,000)",
+        "u": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=98909&nValor3=134910&param1=NRTC&strTipM=TC"
       }
     ],
     "croatia-guides": [
@@ -2179,6 +2199,24 @@
       {
         "n": "BOE — Código Civil, Art. 22 (residency periods for Spanish naturalisation)",
         "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763"
+      }
+    ],
+    "self-directed-ira-foreign-real-estate": [
+      {
+        "n": "IRS — Publication 590-A (2025), Contributions to Individual Retirement Arrangements",
+        "u": "https://www.irs.gov/publications/p590a"
+      },
+      {
+        "n": "IRS — Retirement topics: prohibited transactions",
+        "u": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-prohibited-transactions"
+      },
+      {
+        "n": "IRS — 2025 Instructions for Form 990-T",
+        "u": "https://www.irs.gov/instructions/i990t"
+      },
+      {
+        "n": "IRS — Publication 598, Tax on Unrelated Business Income of Exempt Organizations",
+        "u": "https://www.irs.gov/publications/p598"
       }
     ]
   },
