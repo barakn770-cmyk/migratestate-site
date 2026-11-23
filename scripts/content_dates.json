@@ -84,8 +84,8 @@
     "hash": "c8e77da71e6f14ca"
   },
   "buying-property-italy": {
-    "date": "2026-10-27",
-    "hash": "62615167ece02601"
+    "date": "2026-11-23",
+    "hash": "d04f1db408aef5bc"
   },
   "buying-property-japan": {
     "date": "2026-10-27",
@@ -152,8 +152,8 @@
     "hash": "f90d20203d9dddee"
   },
   "capital-gains-property-abroad": {
-    "date": "2026-10-19",
-    "hash": "e07dcd14281f5c81"
+    "date": "2026-11-23",
+    "hash": "5634a3e614434e05"
   },
   "closing-costs-property-abroad": {
     "date": "2026-11-01",
@@ -320,8 +320,8 @@
     "hash": "1fa4e250e4476884"
   },
   "italy-guides": {
-    "date": "2026-10-18",
-    "hash": "62971ad4fa7cbbc2"
+    "date": "2026-11-17",
+    "hash": "29101c925e64c8ae"
   },
   "japan-guides": {
     "date": "2026-10-14",
@@ -418,6 +418,10 @@
   "selling-property-greece-us-citizen": {
     "date": "2026-10-19",
     "hash": "6e07bfe714ecf714"
+  },
+  "selling-property-italy-us-citizen": {
+    "date": "2026-11-17",
+    "hash": "a00bb978e47fa223"
   },
   "selling-property-mexico-us-citizen": {
     "date": "2026-10-20",
