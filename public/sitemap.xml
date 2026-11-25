@@ -302,17 +302,17 @@
   </url>
   <url>
     <loc>https://migratestate.com/france-guides</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://migratestate.com/general-guides</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://migratestate.com/germany-guides</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -377,7 +377,7 @@
   </url>
   <url>
     <loc>https://migratestate.com/inheritance-tax-property-abroad</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -527,7 +527,7 @@
   </url>
   <url>
     <loc>https://migratestate.com/selling-property-italy-us-citizen</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -599,6 +599,11 @@
     <loc>https://migratestate.com/uruguay-guides</loc>
     <lastmod>2026-10-14</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://migratestate.com/us-estate-tax-foreign-property</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://migratestate.com/us-tax-foreign-property</loc>
