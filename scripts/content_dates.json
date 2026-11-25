@@ -240,16 +240,16 @@
     "hash": "86d7f1bdcf3f7dcd"
   },
   "france-guides": {
-    "date": "2026-09-22",
-    "hash": "eb96b4e5c999c7a5"
+    "date": "2026-11-25",
+    "hash": "bd00099176a2f431"
   },
   "general-guides": {
-    "date": "2026-11-21",
-    "hash": "7d8c5c11bed3036a"
+    "date": "2026-11-25",
+    "hash": "720cd12462492d24"
   },
   "germany-guides": {
-    "date": "2026-09-22",
-    "hash": "17cb8a4f749e69b1"
+    "date": "2026-11-25",
+    "hash": "41cba5d84a86b031"
   },
   "get-started": {
     "date": "2026-11-12",
@@ -300,8 +300,8 @@
     "hash": "721aaedf66cc4fcd"
   },
   "inheritance-tax-property-abroad": {
-    "date": "2026-10-19",
-    "hash": "7993737dde12b7be"
+    "date": "2026-11-25",
+    "hash": "e3ab2f9c34a168c6"
   },
   "is-portugal-golden-visa-worth-it": {
     "date": "2026-10-20",
@@ -420,8 +420,8 @@
     "hash": "6e07bfe714ecf714"
   },
   "selling-property-italy-us-citizen": {
-    "date": "2026-11-17",
-    "hash": "a00bb978e47fa223"
+    "date": "2026-11-25",
+    "hash": "4ef0abb0149eea36"
   },
   "selling-property-mexico-us-citizen": {
     "date": "2026-10-20",
@@ -478,6 +478,10 @@
   "uruguay-guides": {
     "date": "2026-10-14",
     "hash": "83029f9485dc3229"
+  },
+  "us-estate-tax-foreign-property": {
+    "date": "2026-11-25",
+    "hash": "35d2a047ea858467"
   },
   "us-tax-foreign-property": {
     "date": "2026-10-19",

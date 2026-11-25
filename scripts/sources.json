@@ -1579,12 +1579,36 @@
       {
         "n": "Direction générale des Finances publiques — IFI 2026 (formulaire 2042-IFI)",
         "u": "https://www.impots.gouv.fr/sites/default/files/formulaires/2042-ifi/2026/2042-ifi_5480.pdf"
+      },
+      {
+        "n": "Légifrance — CGI art. 964 (IFI, threshold €1,300,000)",
+        "u": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036384999/2026-03-20"
+      },
+      {
+        "n": "BOFIP — ACTU-2025-00129 (departmental transfer-tax ceiling through 31 March 2028)",
+        "u": "https://bofip.impots.gouv.fr/bofip/14771-PGP.html/ACTU-2025-00129"
       }
     ],
     "germany-guides": [
       {
         "n": "Bundesfinanzhof — decision upholding the 2025 Grundsteuer reform (12 Nov 2025)",
         "u": "https://www.bundesfinanzhof.de/en/entscheidungen/entscheidungen-online/decision-detail/STRE202620008/"
+      },
+      {
+        "n": "Gesetze im Internet — EStG § 23 (private Veräußerungsgeschäfte)",
+        "u": "https://www.gesetze-im-internet.de/estg/__23.html"
+      },
+      {
+        "n": "Gesetze im Internet — GrEStG § 11 (statutory 3.5% rate)",
+        "u": "https://www.gesetze-im-internet.de/grestg_1983/__11.html"
+      },
+      {
+        "n": "Bayerisches Landesamt für Steuern — Grunderwerbsteuer 3.5%",
+        "u": "https://www.lfst.bayern.de/steuerinfos/haeufig-gestellte-fragen/grunderwerbsteuer"
+      },
+      {
+        "n": "Finanzämter Nordrhein-Westfalen — Grunderwerbsteuer 6.5% from 1 January 2015",
+        "u": "https://www.finanzamt.nrw.de/steuerinfos/privatpersonen/haus-und-grund/grunderwerbsteuer-wissenswertes-beim-grundstuecks-oder"
       }
     ],
     "thailand-ltr-visa": [
@@ -2229,28 +2253,54 @@
     ],
     "selling-property-italy-us-citizen": [
       {
-        "n": "Agenzia delle Entrate — Imposta sostitutiva sulle plusvalenze immobiliari",
-        "u": "https://www.agenziaentrate.gov.it/portale/web/guest/schede/pagamenti/imposta-sostitutiva-sulle-plusvalenze-immobiliari"
+        "n": "Agenzia delle Entrate — Tassazione plusvalenze immobiliari (26% at the deed)",
+        "u": "https://www.agenziaentrate.gov.it/portale/schede/pagamenti/tassazioneplusvalenze/cosa-tassazione-plusvalenze-immobiliari"
       },
       {
-        "n": "Normattiva — Legge 23 dicembre 2005, n. 266 (Finanziaria 2006), art. 1",
-        "u": "https://www.normattiva.it/eli/stato/LEGGE/2005/12/23/266/CONSOLIDATED"
+        "n": "Agenzia delle Entrate — Law 160/2019, art. 1 comma 695 (20% replaced by 26%)",
+        "u": "https://www.agenziaentrate.gov.it/portale/documents/20143/256604/comma+695+legge+di+bilancio+2020.pdf/ea4e63fa-8eb3-2277-7996-b0871f1a0d8f"
       },
       {
-        "n": "Normattiva — TUIR, DPR 917/1986, art. 67 (redditi diversi)",
-        "u": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:1986-12-22;917~art67"
+        "n": "Normattiva — TUIR, DPR 917/1986, art. 67 (letter b and letter b-bis)",
+        "u": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.articolo.numero=67&atto.codiceRedazionale=086U0917&atto.dataPubblicazioneGazzetta=1986-12-31"
       },
       {
-        "n": "IRS — United States income tax treaties A to Z (US–Italy treaty)",
-        "u": "https://www.irs.gov/businesses/international-businesses/united-states-income-tax-treaties-a-to-z"
+        "n": "Normattiva — TUIR art. 11 (2026 IRPEF brackets, in force 1 January 2026)",
+        "u": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.articolo.numero=11&atto.codiceRedazionale=086U0917&atto.dataPubblicazioneGazzetta=1986-12-31&dataVigenza=10%2F11%2F2026&tipoDettaglio=singolavigenza"
       },
       {
-        "n": "IRS — About Form 8949",
-        "u": "https://www.irs.gov/forms-pubs/about-form-8949"
+        "n": "Agenzia delle Entrate — IRPEF rates, updated 13 January 2026",
+        "u": "https://www.agenziaentrate.gov.it/portale/imposta-sul-reddito-delle-persone-fisiche-irpef-/aliquote-e-calcolo-dell-irpef"
       },
       {
         "n": "IRS — Topic no. 701, Sale of your home (Section 121)",
         "u": "https://www.irs.gov/taxtopics/tc701"
+      }
+    ],
+    "us-estate-tax-foreign-property": [
+      {
+        "n": "IRS — Instructions for Form 706 (July 2026), including the 2026 basic exclusion and Table A",
+        "u": "https://www.irs.gov/instructions/i706"
+      },
+      {
+        "n": "IRS — Instructions for Form 706-NA (September 2025)",
+        "u": "https://www.irs.gov/instructions/i706na"
+      },
+      {
+        "n": "eCFR — 26 CFR 20.2104-1 (real property located in the United States)",
+        "u": "https://www.ecfr.gov/current/title-26/chapter-I/subchapter-B/part-20/subject-group-ECFR21d0d73f4ea1775/section-20.2104-1"
+      },
+      {
+        "n": "IRS — Estate and gift tax treaties",
+        "u": "https://www.irs.gov/businesses/small-businesses-self-employed/estate-gift-tax-treaties-international"
+      },
+      {
+        "n": "Office of the Law Revision Counsel — 26 USC 1014 (basis of property acquired from a decedent)",
+        "u": "https://uscode.house.gov/us/usc/119-124/t26/s1014/"
+      },
+      {
+        "n": "IRS — IRM 4.25.4, foreign death-tax credit and qualified domestic trusts",
+        "u": "https://www.irs.gov/irm/part4/irm_04-025-004"
       }
     ]
   },
