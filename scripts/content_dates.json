@@ -48,8 +48,8 @@
     "hash": "124fc692eefbb9f7"
   },
   "buying-property-costa-del-sol": {
-    "date": "2026-10-23",
-    "hash": "bf9a46f232521fdb"
+    "date": "2026-11-25",
+    "hash": "445d4f1b317e261f"
   },
   "buying-property-costa-rica": {
     "date": "2026-11-21",
@@ -136,8 +136,8 @@
     "hash": "5ffcf2d8126b935f"
   },
   "buying-property-tulum": {
-    "date": "2026-10-30",
-    "hash": "635eba46b22bb37a"
+    "date": "2026-11-25",
+    "hash": "a545c4901bd35d10"
   },
   "buying-property-turkey": {
     "date": "2026-10-19",
@@ -208,8 +208,8 @@
     "hash": "c30222ca1194e2b2"
   },
   "fideicomiso": {
-    "date": "2026-11-03",
-    "hash": "880fcf8e0b2d383f"
+    "date": "2026-11-25",
+    "hash": "6fcc6dadc1dd8707"
   },
   "foreign-bank-account-americans": {
     "date": "2026-11-11",
@@ -245,7 +245,7 @@
   },
   "general-guides": {
     "date": "2026-11-25",
-    "hash": "720cd12462492d24"
+    "hash": "a425347158d6f813"
   },
   "germany-guides": {
     "date": "2026-11-25",
@@ -340,8 +340,8 @@
     "hash": "9d697499368da9de"
   },
   "mexico": {
-    "date": "2026-10-27",
-    "hash": "329405eb98e3a8fa"
+    "date": "2026-11-25",
+    "hash": "c952212038193c49"
   },
   "mexico-guides": {
     "date": "2026-11-01",
@@ -404,8 +404,12 @@
     "hash": "63a414f73d9ac590"
   },
   "power-of-attorney-buying-property-abroad": {
-    "date": "2026-10-20",
-    "hash": "e842a436c359c571"
+    "date": "2026-11-25",
+    "hash": "a8da9e0a88055f02"
+  },
+  "property-scams-buying-abroad": {
+    "date": "2026-11-25",
+    "hash": "3d16475066916912"
   },
   "section-121-exclusion-foreign-home-sale": {
     "date": "2026-10-23",

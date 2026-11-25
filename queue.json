@@ -266,7 +266,8 @@
     "hub": "portugal-guides.html",
     "template": "portugal-d7-visa.html",
     "keywords": "portugal digital nomad visa, D8 visa requirements americans",
-    "angle": "Income thresholds, remote-work proof, D8 vs D7, path to residency and the new 10-year citizenship timeline."
+    "angle": "Income thresholds, remote-work proof, D8 vs D7, path to residency and the new 10-year citizenship timeline.",
+    "status": "done"
   },
   {
     "slug": "spain-digital-nomad-visa",
@@ -274,7 +275,8 @@
     "hub": "spain-guides.html",
     "template": "portugal-d7-visa.html",
     "keywords": "spain digital nomad visa americans",
-    "angle": "Startup Law visa, income thresholds, Beckham-regime eligibility, now the main route after the Golden Visa ended April 2025."
+    "angle": "Startup Law visa, income thresholds, Beckham-regime eligibility, now the main route after the Golden Visa ended April 2025.",
+    "status": "done"
   },
   {
     "slug": "self-directed-ira-foreign-real-estate",
@@ -291,7 +293,8 @@
     "hub": "italy-guides.html",
     "template": "selling-property-portugal-us-citizen.html",
     "keywords": "selling property italy us citizen, italy capital gains tax property",
-    "angle": "5-year exemption rule, 26% substitute tax option, notary process, US side."
+    "angle": "5-year exemption rule, 26% substitute tax option, notary process, US side.",
+    "status": "done"
   },
   {
     "slug": "us-estate-tax-foreign-property",
@@ -308,15 +311,16 @@
     "hub": "general-guides.html",
     "template": "power-of-attorney-buying-property-abroad.html",
     "keywords": "overseas property scams, buying property abroad scams red flags",
-    "angle": "Ejido land, off-plan developer failures, fake escrow, POA abuse, title fraud — with country examples and verification steps."
+    "angle": "Ejido land, off-plan developer failures, fake escrow, POA abuse, title fraud — with country examples and verification steps.",
+    "status": "done"
   },
   {
     "slug": "greece-digital-nomad-visa",
     "title": "Greece Digital Nomad Visa for Americans",
     "hub": "greece-guides.html",
     "template": "portugal-d7-visa.html",
-    "keywords": "greece digital nomad visa americans",
-    "angle": "€3,500/month threshold, 50% income-tax break, visa vs residence permit conversion."
+    "keywords": "greece digital nomad visa americans, greece remote worker residence permit",
+    "angle": "How the national visa for remote workers converts into a Greek residence permit, what proof of remote work the file needs, how a long stay can make someone tax-resident, and how this route differs from the financially independent person permit. Keep income figures out of this brief and confirm the current test on the official migration page when the article is written."
   },
   {
     "slug": "selling-property-france-us-citizen",
@@ -538,7 +542,7 @@
     "slug": "buying-property-albania",
     "title": "Buying Property in Albania as a Foreigner",
     "hub": "general-guides.html",
-    "template": "buying-property-montenegro.html",
+    "template": "buying-property-croatia.html",
     "keywords": "buying property albania foreigner",
     "angle": "Apartment ownership open, land restrictions/workarounds, Riviera boom, title-verification caution (post-communist restitution)."
   }
