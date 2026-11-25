@@ -2302,6 +2302,32 @@
         "n": "IRS — IRM 4.25.4, foreign death-tax credit and qualified domestic trusts",
         "u": "https://www.irs.gov/irm/part4/irm_04-025-004"
       }
+    ],
+    "property-scams-buying-abroad": [
+      {
+        "n": "FBI IC3 — 2025 Internet Crime Report (real estate and business email compromise)",
+        "u": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf"
+      },
+      {
+        "n": "FTC — SAFE WEB Act report to Congress, October 2023 (Sanctuary Belize)",
+        "u": "https://www.ftc.gov/system/files/ftc_gov/pdf/ftc_safe_web_congressional_report_oct_2023.pdf"
+      },
+      {
+        "n": "U.S. Department of State — Scams",
+        "u": "https://travel.state.gov/en/international-travel/travel-advisories/scams.html"
+      },
+      {
+        "n": "Cámara de Diputados — Ley Agraria (Registro Agrario Nacional, dominio pleno, arts. 80–84)",
+        "u": "https://www.diputados.gob.mx/LeyesBiblio/pdf_mov/Ley_Agraria.pdf"
+      },
+      {
+        "n": "BOE — Ley 38/1999, disposición adicional primera (cantidades a cuenta; modificada por la Ley 20/2015)",
+        "u": "https://www.boe.es/buscar/act.php?id=BOE-A-1999-21567"
+      },
+      {
+        "n": "gov.pt — Consultar uma certidão permanente do registo predial (IRN)",
+        "u": "https://www.gov.pt/servicos/consultar-uma-certidao-permanente-do-registo-predial"
+      }
     ]
   },
   "rules": [
